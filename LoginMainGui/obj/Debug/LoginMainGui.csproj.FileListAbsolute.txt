@@ -1,0 +1,14 @@
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\bin\Debug\LoginMainGui.exe.config
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\bin\Debug\LoginMainGui.exe
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\bin\Debug\LoginMainGui.pdb
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\obj\Debug\LoginMainGui.csprojResolveAssemblyReference.cache
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\obj\Debug\LoginMainGui.LoginForm.resources
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\obj\Debug\LoginMainGui.Properties.Resources.resources
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\obj\Debug\LoginMainGui.csproj.GenerateResource.Cache
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\obj\Debug\LoginMainGui.exe
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\obj\Debug\LoginMainGui.pdb
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\obj\Debug\LoginMainGui.AdministrateurGui.resources
+C:\Users\Farid\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque\LoginMainGui\obj\Debug\LoginMainGui.LecteurGui.resources
+C:\Users\Farid\Source\Repos\SGBD2016\LoginMainGui\bin\Debug\LoginMainGui.exe.config
+C:\Users\Farid\Source\Repos\SGBD2016\LoginMainGui\obj\Debug\LoginMainGui.exe
+C:\Users\Farid\Source\Repos\SGBD2016\LoginMainGui\obj\Debug\LoginMainGui.pdb
