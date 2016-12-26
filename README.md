@@ -1,6 +1,6 @@
 # ---------- TO DO ----------------
 
-** - [ ] ** Binding sql Users -------> Table-Lecteurs.
+- [ ] Binding sql Users -------> Table-Lecteurs.
 - [ ] Créer les schémas.
 - [x] Connecxions à la DB.
 - [x] Créer les couches sur le WCF
