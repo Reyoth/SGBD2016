@@ -8,8 +8,8 @@ namespace DataAccessLayer
 {
     class Globals
     {
-        public static string AdminConnectionString = "";
-        public static string LecteurConnectionString = "";
+        public static string AdminConnectionString = "Data Source=.;Initial Catalog=SGBD2016_Bibliotheque;User ID=lecteur;Password=admin";
+        public static string LecteurConnectionString = "Data Source=.;Initial Catalog=SGBD2016_Bibliotheque;User ID=lecteur;Password=lecteur";
         public static string SysAdminConnectionString = "";
     }
 }
