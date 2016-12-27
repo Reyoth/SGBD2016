@@ -12,7 +12,7 @@
 - [x] ~~EXE_RetournerExempplaire~~
 
 ### COTE LECTEUR #
-- [ ] RES_ListeReservationsByLEC_Id
+- [x] ~~RES_ListeReservationsByLEC_Id~~
 - [ ] RES_ReserverLivre
 - [ ] RES_AllReservationsByLEC_Id
 - [ ] LIV_LivreByISBN
