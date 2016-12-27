@@ -1,12 +1,12 @@
 # ---------- STOED PRCEDURES ----------------
 
 ### COTE ADMINISTRATEUR #
-- [x] EXE_AllExemplaireByLIV_Id
-- [x] EXE_AllExemplaireBIB_Id
-- [x] EXE_CreerExemplaire
-- [ ] LIV_InsererLivre
-- [ ] EMP_AllEmpruntsAllBib
-- [ ] EMP_AllEmpruntsByBIB_Id
+- [x] ~~EXE_AllExemplaireByLIV_Id~~
+- [x] ~~EXE_AllExemplaireBIB_Id~~
+- [x] ~~EXE_CreerExemplaire~~
+- [x] ~~LIV_InsererLivre~~
+- [x] ~~EMP_AllEmpruntsAllBib~~
+- [x] ~~EMP_AllEmpruntsByBIB_Id~~
 - [ ] EMP_ListeRetardatairesAllBib
 - [ ] EMP_ListeRetardatairesByBIB_Id
 - [ ] EXE_RetournerExempplaire
