@@ -1,9 +1,9 @@
 # ---------- STOED PRCEDURES ----------------
 
 ### COTE ADMINISTRATEUR #
-- [ ] EXE_AllExemplaireByLIV_Id
-- [ ] EXE_AllExemplaireBIB_Id
-- [ ] EXE_CreerExemplaire
+- [x] EXE_AllExemplaireByLIV_Id
+- [x] EXE_AllExemplaireBIB_Id
+- [x] EXE_CreerExemplaire
 - [ ] LIV_InsererLivre
 - [ ] EMP_AllEmpruntsAllBib
 - [ ] EMP_AllEmpruntsByBIB_Id
@@ -20,3 +20,9 @@
 - [ ] EXE_EmprunterExemplaire
 - [ ] EMP_AllEmpruntsByLEC_Id
 - [ ] EMP_ListeREtardsByLEC_Id
+
+### TRIGGERS #
+- [ ] TR_NoSelect
+- [ ] TR_NoInsert
+- [ ] TR_NoDelet
+-
