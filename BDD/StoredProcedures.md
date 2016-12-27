@@ -22,7 +22,6 @@
 - [ ] EMP_ListeREtardsByLEC_Id
 
 ### TRIGGERS #
-- [ ] TR_NoSelect
-- [ ] TR_NoInsert
-- [ ] TR_NoDelet
--
+- [ ] TR_NoDirectSelect
+- [ ] TR_NoDirectInsert
+- [ ] TR_NoDirectDelet
