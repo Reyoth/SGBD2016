@@ -9,7 +9,7 @@
 - [x] ~~EMP_AllEmpruntsByBIB_Id~~
 - [ ] EMP_ListeRetardatairesAllBib
 - [ ] EMP_ListeRetardatairesByBIB_Id
-- [ ] EXE_RetournerExempplaire
+- [x] ~~EXE_RetournerExempplaire~~
 
 ### COTE LECTEUR #
 - [ ] RES_ListeReservationsByLEC_Id
