@@ -1,8 +1,8 @@
 # ---------- STORED PRCEDURES ----------------
 
 ### COTE LGIN #
-- [ ] LEC_CheckLogin
-- [ ] ADM_CheckLogin
+- [x] ~~LEC_CheckLogin~~
+- [x] ~~ADM_CheckLogin~~
 
 ### COTE ADMINISTRATEUR #
 - [x] ~~EXE_AllExemplaireByLIV_Id~~
