@@ -1,4 +1,4 @@
-# ---------- STOED PRCEDURES ----------------
+# ---------- STORED PRCEDURES ----------------
 
 ### COTE ADMINISTRATEUR #
 - [x] ~~EXE_AllExemplaireByLIV_Id~~
@@ -13,11 +13,11 @@
 
 ### COTE LECTEUR #
 - [x] ~~RES_ListeReservationsByLEC_Id~~
-- [ ] RES_ReserverLivre
+- [x] ~~RES_ReserverLivre~~
 - [ ] RES_AllReservationsByLEC_Id
 - [ ] LIV_LivreByISBN
 - [ ] LIV_LivreByTitle
-- [ ] EXE_EmprunterExemplaire
+- [x] ~~EXE_EmprunterExemplaire~~
 - [ ] EMP_AllEmpruntsByLEC_Id
 - [ ] EMP_ListeREtardsByLEC_Id
 
