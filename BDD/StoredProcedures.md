@@ -1,5 +1,9 @@
 # ---------- STORED PRCEDURES ----------------
 
+### COTE LGIN #
+- [ ] LEC_CheckLogin
+- [ ] ADM_CheckLogin
+
 ### COTE ADMINISTRATEUR #
 - [x] ~~EXE_AllExemplaireByLIV_Id~~
 - [x] ~~EXE_AllExemplaireBIB_Id~~
@@ -7,21 +11,21 @@
 - [x] ~~LIV_InsererLivre~~
 - [x] ~~EMP_AllEmpruntsAllBib~~
 - [x] ~~EMP_AllEmpruntsByBIB_Id~~
-- [ ] EMP_ListeRetardatairesAllBib
-- [ ] EMP_ListeRetardatairesByBIB_Id
+- [x] ~~EMP_ListeRetardatairesAllBib~~
+- [x] ~~EMP_ListeRetardatairesByBIB_Id~~
 - [x] ~~EXE_RetournerExempplaire~~
 
 ### COTE LECTEUR #
 - [x] ~~RES_ListeReservationsByLEC_Id~~
 - [x] ~~RES_ReserverLivre~~
-- [ ] RES_AllReservationsByLEC_Id
-- [ ] LIV_LivreByISBN
-- [ ] LIV_LivreByTitle
+- [x] ~~LIV_LivreByISBN~~
+- [x] ~~LIV_LivreByTitle~~
 - [x] ~~EXE_EmprunterExemplaire~~
-- [ ] EMP_AllEmpruntsByLEC_Id
-- [ ] EMP_ListeREtardsByLEC_Id
+- [x] ~~EMP_AllEmpruntsByLEC_Id~~
+- [x] ~~EMP_ListeREtardsByLEC_Id~~
 
 ### TRIGGERS #
-- [ ] TR_NoDirectSelect
-- [ ] TR_NoDirectInsert
-- [ ] TR_NoDirectDelet
+ - [ ] Trigger qui verifie la disponibilité des exemplaire des livre reservés.
+ - [ ] Trigger qui empeche l'insersion d'un emprunt d'un exemplaire de livre indisponible.
+ - [ ] Trigger qui empeche une double reservation d'un livre le meme jour.
+ 
