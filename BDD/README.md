@@ -22,13 +22,12 @@
 - [x] ~~RES_ReserverLivre~~
 - [x] ~~LIV_LivreByISBN~~
 - [x] ~~LIV_LivreByTitle~~
-- [x] ~~EXE_EmprunterExemplaire~~
+- [x] ~~EXE_EmprunterExemplaire~~ etsupprime les reservations liées automatiquement 
 - [x] ~~EMP_AllEmpruntsByLEC_Id~~
 - [x] ~~EMP_ListeREtardsByLEC_Id~~
 - [x] ~~RES_ListeReservationsDisponibleByLEC_Id~~ liste des livres reservés par lecteur et leurs disponibilités.
 
 # ---------- STORED TRIGGERS ----------------
-- [ ] Trigger qui, lors de l'emprunt d'un livre, verifie si il a eu reservation et la supprime.
 - [x] ~~Trigger qui empeche l'insersion d'un emprunt d'un exemplaire de livre indisponible.~~
 - [x] ~~Trigger qui empeche une double reservation d'un livre le meme jour.~~
  
