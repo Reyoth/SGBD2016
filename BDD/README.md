@@ -1,6 +1,6 @@
 # ---------- STORED FUNCTIONS ----------------
 
-### COTE LGIN #
+### COTE LOGIN #
 - [x] ~~LEC_CheckLogin~~
 - [x] ~~ADM_CheckLogin~~
 
@@ -15,7 +15,7 @@
 - [x] ~~EMP_AllEmpruntsByBIB_Id~~
 - [x] ~~EMP_ListeRetardatairesAllBib~~
 - [x] ~~EMP_ListeRetardatairesByBIB_Id~~
-- [x] ~~EXE_RetournerExempplaire~~
+- [x] ~~EXE_RetournerExemplaire~~
 
 ### COTE LECTEUR #
 - [x] ~~RES_ListeReservationsByLEC_Id~~
@@ -25,7 +25,7 @@
 - [x] ~~EXE_EmprunterExemplaire~~
 - [x] ~~EMP_AllEmpruntsByLEC_Id~~
 - [x] ~~EMP_ListeREtardsByLEC_Id~~
-- [ ] procedure qui affiche liste des livres reservés et donne leurs disponibilité.
+- [x] ~~RES_ListeReservationsDisponibleByLEC_Id~~ liste des livres reservés par lecteur et leurs disponibilités.
 
 # ---------- STORED TRIGGERS ----------------
 - [ ] Trigger qui, lors de l'emprunt d'un livre, verifie si il a eu reservation et la supprime.
