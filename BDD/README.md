@@ -1,8 +1,10 @@
-# ---------- STORED PRCEDURES ----------------
+# ---------- STORED FUNCTIONS ----------------
 
 ### COTE LGIN #
 - [x] ~~LEC_CheckLogin~~
 - [x] ~~ADM_CheckLogin~~
+
+# ---------- STORED PRCEDURES ----------------
 
 ### COTE ADMINISTRATEUR #
 - [x] ~~EXE_AllExemplaireByLIV_Id~~
@@ -23,9 +25,10 @@
 - [x] ~~EXE_EmprunterExemplaire~~
 - [x] ~~EMP_AllEmpruntsByLEC_Id~~
 - [x] ~~EMP_ListeREtardsByLEC_Id~~
+- [ ] procedure qui affiche liste des livres reservés et donne leurs disponibilité.
 
-### TRIGGERS #
- - [ ] Trigger qui verifie la disponibilité des exemplaire des livre reservés.
- - [x] ~~Trigger qui empeche l'insersion d'un emprunt d'un exemplaire de livre indisponible.~~
- - [x] ~~Trigger qui empeche une double reservation d'un livre le meme jour.~~
+# ---------- STORED TRIGGERS ----------------
+- [ ] Trigger qui, lors de l'emprunt d'un livre, verifie si il a eu reservation et la supprime.
+- [x] ~~Trigger qui empeche l'insersion d'un emprunt d'un exemplaire de livre indisponible.~~
+- [x] ~~Trigger qui empeche une double reservation d'un livre le meme jour.~~
  
