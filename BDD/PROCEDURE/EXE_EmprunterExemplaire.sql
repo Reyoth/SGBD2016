@@ -27,12 +27,40 @@ BEGIN
 		
 		IF(@DisponibliteExemplaire = 1)
 			BEGIN
-				PRINT 'L"exemplaire que vous essayez d"emprunter est actuellement indisponible'
+				RAISERROR ('L"exemplaire que vous essayez d"emprunter est actuellement indisponible',15,0)
 			END
 		ELSE
 			BEGIN
 				INSERT INTO Emprunt (EMP_DateEmprunt, EXE_Id, LEC_Id) VALUES (GETDATE(), @Exe_Id, @Lec_Id)	
 				
+
+				IF exists(
+				--recherche des reservations par id lecteur et id livre et les supprime si elles existent
+				SELECT	Reservation.RES_Id
+				FROM	Lecteur INNER JOIN
+                         Reservation ON Lecteur.LEC_Id = Reservation.LEC_Id INNER JOIN
+                         Livre ON Reservation.LIV_Id = Livre.LIV_Id
+				WHERE	(Lecteur.LEC_Id = @Lec_Id) AND (Livre.LIV_Id = (SELECT	Livre.LIV_Id
+																		FROM	Livre INNER JOIN
+																				Exemplaire ON Livre.LIV_Id = Exemplaire.LIV_Id
+																		WHERE	(Exemplaire.EXE_Id = @Exe_Id)
+																		)
+														)
+							)
+				BEGIN
+					UPDATE Reservation set RES_Supprimee = 1 where RES_Id in (	SELECT	Reservation.RES_Id
+																				FROM	Lecteur INNER JOIN
+																						 Reservation ON Lecteur.LEC_Id = Reservation.LEC_Id INNER JOIN
+																						 Livre ON Reservation.LIV_Id = Livre.LIV_Id
+																				WHERE	(Lecteur.LEC_Id = @Lec_Id) AND (Livre.LIV_Id = (SELECT	Livre.LIV_Id
+																																		FROM	Livre INNER JOIN
+																																				Exemplaire ON Livre.LIV_Id = Exemplaire.LIV_Id
+																																		WHERE	(Exemplaire.EXE_Id = @Exe_Id)
+																																		)
+																														)
+																			)
+				END
+
 			END
 
 END
