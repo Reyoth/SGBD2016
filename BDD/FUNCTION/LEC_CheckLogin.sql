@@ -20,12 +20,12 @@ RETURNS bit
 AS
 BEGIN
      declare @exist bit
-
-	 IF exists( SELECT  LEC_UserName, LEC_Password FROM Lecteur WHERE LEC_UserName = @UserName AND LEC_Password = @Password)
-	 SET @exist = 1
-
-	 ELSE
 	 SET @exist = 0
+	 
+	 IF exists( SELECT  LEC_UserName, LEC_Password FROM Lecteur WHERE LEC_UserName = @UserName AND LEC_Password = @Password)
+	 BEGIN
+		SET @exist = 1
+	 END
 
 	 RETURN @exist
 END

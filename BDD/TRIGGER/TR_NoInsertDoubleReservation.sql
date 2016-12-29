@@ -26,9 +26,9 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    IF EXISTS(SELECT * FROM Reservation WHERE Reservation.LEC_Id = @LectId AND Reservation.LIV_Id = @LivId AND Reservation.RES_DateReservation = GETDATE())
+    IF EXISTS(SELECT * FROM Reservation WHERE Reservation.LEC_Id = @LectId AND Reservation.LIV_Id = @LivId AND Reservation.RES_Supprimee = 0)
 	BEGIN
-		PRINT 'ATTENTION! VOUS AVEZ DEJA RESERVE CE LIVRE AUJOURD"HUI...'
+		RAISERROR ('action impossible, vous avez déjà reservé ce livre',15,0)
 		ROLLBACK
 	END
 END

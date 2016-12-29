@@ -21,13 +21,13 @@ RETURNS bit
 AS
 BEGIN
      declare @exist bit
-
-	 IF exists( SELECT  ADM_UserName, ADM_Password FROM Administrateur WHERE ADM_UserName = @UserName AND ADM_Password = @Password)
-	 SET @exist = 1
-
-	 ELSE
 	 SET @exist = 0
-
+	 
+	 IF exists( SELECT  ADM_UserName, ADM_Password FROM Administrateur WHERE ADM_UserName = @UserName AND ADM_Password = @Password)
+	 BEGIN
+		SET @exist = 1
+	 END
+	 
 	 RETURN @exist
 END
 

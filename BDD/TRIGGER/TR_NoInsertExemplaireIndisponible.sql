@@ -21,14 +21,16 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-	DECLARE @Disponibilité bit, @insertedExeId int
-	SELECT @insertedExeId = EXE_Id FROM inserted
+	DECLARE @Disponibilité bit
+	
 	SELECT @Disponibilité =  Exemplaire.EXE_Indisponible
-	FROM            Emprunt INNER JOIN
-                         Exemplaire ON Emprunt.EXE_Id = @insertedExeId
-    IF(@Disponibilité=1)
+	FROM   Emprunt, Exemplaire, inserted
+    WHERE  Emprunt.EXE_Id = Exemplaire.EXE_Id
+		AND Emprunt.EXE_Id = inserted.EXE_Id
+    
+	IF(@Disponibilité=1)
 	BEGIN	
-		PRINT 'Emprunt impossible puisque l"esemplaire que vous essayez d"emprunter n"est pas disponible'
+		RAISERROR ('Emprunt impossible, exemplaire indisponible',15,0)
 	END
 	ROLLBACK
 END
