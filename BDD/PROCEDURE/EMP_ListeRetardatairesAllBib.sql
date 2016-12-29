@@ -8,12 +8,10 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-
-
 -- =============================================
--- Author:		<Simon ENCEV>
+-- Author:		<Farid IDBOURHIM, Simon ENCEV>
 -- Create date: <28/12/2016>
--- Description:	<PROCEDURE QUI RETOURNE LA LISTE DES EMPRUNTS PAR RAPPORTS A UN LECTEUR>
+-- Description:	<PROCEDURE QUI affiche LA LISTE DES Retardataires et le montant du>
 -- =============================================
 CREATE PROCEDURE [dbo].[EMP_ListeRetardatairesAllBib]
 	
@@ -23,15 +21,13 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    SELECT			Emprunt.EMP_Id, Exemplaire.EXE_Code, Livre.LIV_Titre, Bibliotheque.BIB_Libelle, Lecteur.LEC_Nom, Lecteur.LEC_Prenom, Emprunt.EMP_DateEmprunt, Emprunt.EMP_Montant
-	FROM            Emprunt INNER JOIN
-                         Exemplaire ON Emprunt.EXE_Id = Exemplaire.EXE_Id INNER JOIN
-                         Lecteur ON Emprunt.LEC_Id = Lecteur.LEC_Id INNER JOIN
-                         Livre ON Exemplaire.LIV_Id = Livre.LIV_Id INNER JOIN
-                         Bibliotheque ON Exemplaire.BIB_ID = Bibliotheque.BIB_ID AND Lecteur.BIB_ID = Bibliotheque.BIB_ID
-	WHERE			(DATEDIFF(day, Emprunt.EMP_DateEmprunt, GETDATE())>10)
+    SELECT	Lecteur.LEC_Id, Lecteur.LEC_Nom, Lecteur.LEC_Prenom, (SUM(Tarif.Tar_Emprunt + dbo.EMP_CalculMontantRetard(Bibliotheque.BIB_ID, YEAR(Emprunt.EMP_DateEmprunt), DATEDIFF(DAY,Emprunt.EMP_DateEmprunt, GETDATE())))) AS Montant_Du
+	FROM	Lecteur INNER JOIN
+			Bibliotheque ON Lecteur.BIB_ID = Bibliotheque.BIB_ID INNER JOIN
+			Emprunt ON Lecteur.LEC_Id = Emprunt.LEC_Id INNER JOIN
+			Tarif ON Bibliotheque.BIB_ID = Tarif.BIB_ID
+	WHERE	(Emprunt.EMP_DateRetour IS NULL)
+	GROUP BY Lecteur.LEC_Id, Lecteur.LEC_Nom, Lecteur.LEC_Prenom
+
 END
-
-
-
 GO
