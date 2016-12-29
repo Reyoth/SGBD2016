@@ -26,6 +26,6 @@
 
 ### TRIGGERS #
  - [ ] Trigger qui verifie la disponibilité des exemplaire des livre reservés.
- - [ ] Trigger qui empeche l'insersion d'un emprunt d'un exemplaire de livre indisponible.
- - [ ] Trigger qui empeche une double reservation d'un livre le meme jour.
+ - [x] ~~Trigger qui empeche l'insersion d'un emprunt d'un exemplaire de livre indisponible.~~
+ - [x] ~~Trigger qui empeche une double reservation d'un livre le meme jour.~~
  
