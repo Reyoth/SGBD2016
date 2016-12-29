@@ -28,7 +28,7 @@ BEGIN
 
     IF EXISTS(SELECT * FROM Reservation WHERE Reservation.LEC_Id = @LectId AND Reservation.LIV_Id = @LivId AND Reservation.RES_Supprimee = 0)
 	BEGIN
-		RAISERROR ('action impossible, vous avez déjà reservé ce livre',15,0)
+		RAISERROR ('Action impossible, vous avez déjà reservé ce livre',15,0)
 		ROLLBACK
 	END
 END
