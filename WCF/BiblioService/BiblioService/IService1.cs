@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Entities;
 
 namespace BiblioService
 {
@@ -17,6 +19,9 @@ namespace BiblioService
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        [OperationContract]
+        IList<EXE_AllExemplaireBIB_Id_Result> EXE_AllExemplaireBIB_Id(int BibId);
+
         // TODO: Add your service operations here
     }
 
@@ -25,15 +30,18 @@ namespace BiblioService
     [DataContract]
     public class CompositeType
     {
-        bool boolValue = true;
+        [DataMember]
+        public bool BoolValue { get; set; } = true; //remplace les coms ci dessous
+
+        //bool boolValue = true;
         string stringValue = "Hello ";
 
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
+        //[DataMember]
+        //public bool BoolValue
+        //{
+        //    get { return boolValue; }
+        //    set { boolValue = value; }
+        //}
 
         [DataMember]
         public string StringValue

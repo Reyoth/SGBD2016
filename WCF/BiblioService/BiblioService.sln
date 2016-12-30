@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioService", "BiblioService\BiblioService.csproj", "{1FE8A944-935B-47DA-A271-FD1D370D251A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiblioServiceWCF", "BiblioService\BiblioServiceWCF.csproj", "{1FE8A944-935B-47DA-A271-FD1D370D251A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{82159178-83EE-499E-86D8-387EB0FF0E88}"
 EndProject
