@@ -27,7 +27,7 @@ FROM            Reservation INNER JOIN
                          Lecteur ON Reservation.LEC_Id = Lecteur.LEC_Id INNER JOIN
                          Exemplaire ON Livre.LIV_Id = Exemplaire.LIV_Id
 GROUP BY Reservation.RES_Id, Livre.LIV_Titre, Reservation.RES_DateReservation, Lecteur.LEC_Nom, Lecteur.LEC_Prenom, Lecteur.LEC_Id
-HAVING        (COUNT(Exemplaire.EXE_Indisponible) <= 1) AND (Lecteur.LEC_Id = @IdLecteur)
+HAVING        (COUNT(Exemplaire.EXE_Indisponible) = 0) AND (Lecteur.LEC_Id = @IdLecteur)
 END
 
 GO
