@@ -22,7 +22,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT        Emprunt.EMP_Id, Emprunt.EMP_DateEmprunt, Emprunt.EMP_DateRetour, Emprunt.EMP_Montant, Bibliotheque.BIB_Libelle
+	SELECT        Emprunt.EMP_Id, Emprunt.EMP_DateEmprunt, Emprunt.EMP_DateRetour, Emprunt.EMP_MontantPaye, Bibliotheque.BIB_Libelle
 FROM            Emprunt INNER JOIN
                          Exemplaire ON Emprunt.EXE_Id = Exemplaire.EXE_Id INNER JOIN
                          Bibliotheque ON Exemplaire.BIB_ID = Bibliotheque.BIB_ID

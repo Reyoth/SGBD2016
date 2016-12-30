@@ -14,7 +14,7 @@ GO
 -- Description:	<FUNCTION QUI VERIFIE L''EXISTANCE D''UN LECETEUR ET SON PASSWORD POUR LUI PERMETTRE L''ACCESS AU GUI LECTEUR>
 -- =============================================
 
-CREATE FUNCTION [dbo].[ADM_CheckLogin] (@UserName nvarchar(50),
+CREATE FUNCTION [dbo].[LEC_CheckLogin] (@UserName nvarchar(50),
 	@Password nvarchar(50))
 RETURNS bit
 AS
