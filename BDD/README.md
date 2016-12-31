@@ -3,21 +3,26 @@
 ### COTE LOGIN #
 - [x] ~~LEC_CheckLogin~~
 - [x] ~~ADM_CheckLogin~~
-
+- [ ] procedure qui affiche les libelles de toute les biliotheques pour la liste des biblio de login.
 # ---------- STORED PRCEDURES ----------------
 
 ### COTE ADMINISTRATEUR #
 - [x] ~~EXE_AllExemplaireByLIV_Id~~
 - [x] ~~EXE_AllExemplaireBIB_Id~~
 - [x] ~~EXE_CreerExemplaire~~
-- [x] ~~LIV_InsererLivre~~
+- [x] LIV_InsererLivre
 - [x] ~~EMP_AllEmpruntsAllBib~~
 - [x] ~~EMP_AllEmpruntsByBIB_Id~~
+- [ ] procedure qui affiche les emprunts coutrants pour cote administrateur.
 - [x] ~~EMP_ListeRetardatairesAllBib~~
 - [x] ~~EMP_ListeRetardatairesByBIB_Id~~
 - [x] ~~EXE_RetournerExemplaire~~
 
+
+
 ### COTE LECTEUR #
+
+- [ ] procedure qui affiche les emprunt courants d4un lecteur.
 - [x] ~~RES_ListeReservationsByLEC_Id~~
 - [x] ~~RES_ReserverLivre~~
 - [x] ~~LIV_LivreByISBN~~
@@ -30,4 +35,4 @@
 # ---------- STORED TRIGGERS ----------------
 - [x] ~~Trigger qui empeche l'insersion d'un emprunt d'un exemplaire de livre indisponible.~~
 - [x] ~~Trigger qui empeche une double reservation d'un livre le meme jour.~~
- 
+- [ ] trigger qui empeche d'empunter plus que 5 exemplaire dala bibliotheque pricipale et 3 dans la bibliotheque annexe.
