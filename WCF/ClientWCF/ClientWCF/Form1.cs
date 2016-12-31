@@ -22,7 +22,7 @@ namespace ClientWCF
             //Lancement du service Client
             var client = new ServiceWCF.Service1Client();
             var exemplaires = client.EXE_AllExemplaireBIB_Id(3);
-
+            DGV.DataSource = exemplaires;
         }
     }
 }
