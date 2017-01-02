@@ -4,11 +4,12 @@
 - [x] ~~LEC_CheckLogin~~
 - [x] ~~ADM_CheckLogin~~
 - [ ] procedure qui affiche les libelles de toute les biliotheques pour la liste des biblio de login.
+
 # ---------- STORED PRCEDURES ----------------
 
 ### COTE ADMINISTRATEUR #
 - [x] ~~EXE_AllExemplaireByLIV_Id~~
-- [x] ~~EXE_AllExemplaireBIB_Id~~
+- [x] ~~EXE_AllExemplaireBIB_Id~~ Remplacer LIV_Id par le titre du livre et BIB_Id par le libelle
 - [x] ~~EXE_CreerExemplaire~~
 - [x] LIV_InsererLivre
 - [x] ~~EMP_AllEmpruntsAllBib~~

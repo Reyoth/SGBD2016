@@ -23,7 +23,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	SELECT * FROM Exemplaire WHERE LIV_Id = @Bib_Id
+	SELECT * FROM Exemplaire WHERE BIB_Id = @Bib_Id
 END
 
 GO
