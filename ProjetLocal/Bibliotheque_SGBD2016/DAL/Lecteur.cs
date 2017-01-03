@@ -13,10 +13,9 @@ namespace DALADO
         //Method qui charge les libellé des bibliotheque
        public static List<string> AllBiblioLibelle()
         {
-            using (SGBD2016_BibliothequeEntities db = new SGBD2016_BibliothequeEntities())
+            using (SGBD2016_BibliothequeEntities context = new SGBD2016_BibliothequeEntities())
             {
-                var dbContext = new SGBD2016_BibliothequeEntities();
-                var x = dbContext.BIB_AllLibelle().ToList();
+                var x = context.BIB_AllLibelle().ToList();
                 return x;
             }
             
