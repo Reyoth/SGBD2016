@@ -16,30 +16,30 @@ namespace BL
 
         public static void AllExemplairesAllBib(ref DataSet ds)
         {
-            DataSet DsBl = new DataSet();
-            DsBl = DALADO.Administrateur.AllExemplairesAllBib(ds);
-            ds = DsBl;
+           
+            DALADO.Administrateur.AllExemplairesAllBib(ds);
+            
 
         }
         public static void AllExemplairesByBibId(ref DataSet ds, int BibId)
         {
-            DataSet DsBl= new DataSet();
-            DsBl = DALADO.Administrateur.AllExemplairesByBibId(ds, BibId);
-            ds = DsBl;
+            
+            DALADO.Administrateur.AllExemplairesByBibId(ds, BibId);
+           
         }
 
         public static void AllRetardataires(ref DataSet ds)
         {
-            DataSet DsBl = new DataSet();
-            DsBl = DALADO.Administrateur.AllRetardataires(ds);
-            ds = DsBl;
+            
+            DALADO.Administrateur.AllRetardataires(ds);
+          
         }
 
         public static void AllLivres(ref DataSet ds)
         {
-            DataSet DsBl = new DataSet();
-            DsBl = DALADO.Administrateur.AllLivres(ds);
-            ds = DsBl;
+            
+            DALADO.Administrateur.AllLivres(ds);
+          
         }
 
         public static void RetournerExemplaire(int exemplaireId)
@@ -49,34 +49,34 @@ namespace BL
 
         public static void AllLecteurs(ref DataSet ds)
         {
-            DataSet DsBl = new DataSet();
-            DsBl = DALADO.Administrateur.AllLecteurs(ds);
-            ds = DsBl;
+            
+            DALADO.Administrateur.AllLecteurs(ds);
+            
         }
         public static void AllEmpruntsEnCours(ref DataSet ds)
         {
-            DataSet DsBl = new DataSet();
-            DsBl = DALADO.Administrateur.AllEmpruntsEnCours(ds);
-            ds = DsBl;
+            
+            DALADO.Administrateur.AllEmpruntsEnCours(ds);
+            
         }
         public static void AllReservationsEnCours(ref DataSet ds)
         {
-            DataSet DsBl = new DataSet();
-            DsBl = DALADO.Administrateur.AllReservationsEnCours(ds);
-            ds = DsBl;
+            
+            DALADO.Administrateur.AllReservationsEnCours(ds);
+            
         }
 
         public static void LivreByISBN(ref DataSet ds, string isbn)
         {
-            DataSet DsBl = new DataSet();
-            DsBl = DALADO.Administrateur.LivreByISBN(ds, isbn );
-            ds = DsBl;
+           
+           DALADO.Administrateur.LivreByISBN(ds, isbn );
+            
         }
         public static void LivreByTitre(ref DataSet ds, string titre)
         {
-            DataSet DsBl = new DataSet();
-            DsBl = DALADO.Administrateur.LivreByTitre(ds, titre);
-            ds = DsBl;
+           
+            DALADO.Administrateur.LivreByTitre(ds, titre);
+           
         }
     }
 }
