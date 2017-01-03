@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,18 +54,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\SGBD_Bibliothèque_Bis\ENTITIES\Entities.csproj">
-      <Project>{95c0c774-beb5-4396-b5b2-013b4651af55}</Project>
-      <Name>Entities</Name>
+    <ProjectReference Include="..\DALEF\DALEF.csproj">
+      <Project>{17168db1-75ca-41f2-9f15-3d4ad92a01eb}</Project>
+      <Name>DALEF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\SGBD_Bibliothèque_Bis\ERRORS\ERRORS.csproj">
-      <Project>{0f8eff5a-6fcb-489b-bfbb-32b4743351f2}</Project>
-      <Name>ERRORS</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL\DAL.csproj">
+    <ProjectReference Include="..\DAL\DALADO.csproj">
       <Project>{2b8f7405-346c-4293-b73a-b04468f4de59}</Project>
-      <Name>DAL</Name>
+      <Name>DALADO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

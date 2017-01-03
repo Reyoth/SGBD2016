@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace DAL
+namespace DALADO
 {
     public class Administrateur
     {

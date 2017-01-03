@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using Entities;
 
-namespace DAL
+namespace DALADO
 {
     public class Lecteur
     {

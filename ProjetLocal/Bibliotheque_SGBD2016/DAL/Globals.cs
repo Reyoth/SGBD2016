@@ -1,4 +1,4 @@
-﻿namespace DAL
+﻿namespace DALADO
 {
     internal class Globals
     {
