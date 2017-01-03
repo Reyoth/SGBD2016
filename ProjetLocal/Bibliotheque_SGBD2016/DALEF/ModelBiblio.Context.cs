@@ -18,7 +18,7 @@ namespace DALEF
     public partial class SGBD2016_BibliothequeEntities : DbContext
     {
         public SGBD2016_BibliothequeEntities()
-            : base("name=SGBD2016_BibliothequeEntities")
+            : base("name=Lecteur")
         {
         }
     

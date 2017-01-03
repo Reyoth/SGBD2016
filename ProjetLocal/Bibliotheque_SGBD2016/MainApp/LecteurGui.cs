@@ -26,7 +26,7 @@ namespace MainApp
         private void LecteurGui_Load(object sender, EventArgs e)
         {
             //UserId = BL.Lecteur.GetUserId(lFullName.Text);
-            ChargerBibliotheques(cbLibLivre);//remplissage du la combobox avec le slibelle biblio
+            /*ChargerBibliotheques(cbLibLivre);*///remplissage du la combobox avec le slibelle biblio
 
             //Remplissage du gridview du volet "recherche un livre" avec la liste entiere des livres de tte les biblio
             List<Entities.LivreAllLivre> livres=null;

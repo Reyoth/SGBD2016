@@ -28,7 +28,7 @@ namespace MainApp
              {
                  CheckUserLogin(txtLogin.Text, txtPwd.Text);
              }*/
-            LecteurGui AdGui = new LecteurGui();
+            AdministrateurGui AdGui = new AdministrateurGui();
             this.Hide();
             // AdGui.ChargerDonnees(cbBibliotheque.SelectedItem.ToString(), txtLogin.Text);
             AdGui.Show();
@@ -43,7 +43,7 @@ namespace MainApp
 
         private void Login_Load(object sender, EventArgs e)
         {
-            ChargerBibliotheques(cbBibliotheque);
+            /*ChargerBibliotheques(cbBibliotheque);*/
         }
         public void ChargerBibliotheques(ComboBox cb)
         {
