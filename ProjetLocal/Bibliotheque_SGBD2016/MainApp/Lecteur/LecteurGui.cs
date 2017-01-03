@@ -12,12 +12,12 @@ using Entities;
 
 namespace MainApp
 {
-   
+
     public partial class LecteurGui : Form
     {
         //varaible qui prend la valeur de l'id u user connecté
         public int UserId;
-        
+
         public LecteurGui()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace MainApp
         private void LecteurGui_Load(object sender, EventArgs e)
         {
             var client = new ServiceWCF.Service1Client();
-            
+
             //UserId = BL.Lecteur.GetUserId(lFullName.Text);
             /*ChargerBibliotheques(cbLibLivre);*///remplissage du la combobox avec le slibelle biblio
 
@@ -55,7 +55,7 @@ namespace MainApp
         //chargement de combobox avec la liste des libellé des bibliothqèues
         public void ChargerBibliotheques(ComboBox cb)
         {
-            List<string> lstBiblio=BL.Lecteur.AllBiblioLibelle();
+            List<string> lstBiblio = BL.Lecteur.AllBiblioLibelle();
             foreach (string libelle in lstBiblio)
             {
                 cb.Items.Add(libelle);

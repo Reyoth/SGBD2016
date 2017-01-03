@@ -90,6 +90,7 @@ namespace BiblioService
 
         public DataSet LivreByISBN(DataSet ds, string isbn)
         {
+            
             BL.Administrateur.LivreByISBN(ref ds, isbn);
             return ds;
         }
@@ -102,7 +103,17 @@ namespace BiblioService
 
         public void RetournerExemplaire(int exemplaireId)
         {
-            throw new NotImplementedException();
+           BL.Administrateur.RetournerExemplaire(exemplaireId);
         }
+    }
+    [DataContract]
+    public class LivreAllLivre
+    {
+        public int Id { get; set; }
+        public string ISBN { get; set; }
+        public string Titre { get; set; }
+        public int AUT_Id { get; set; }
+        public string AUT_Nom { get; set; }
+        public string AUT_Prenom { get; set; }
     }
 }

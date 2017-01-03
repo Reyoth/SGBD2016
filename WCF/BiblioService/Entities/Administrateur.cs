@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class Livre
+    public class Administrateur
     {
         public int Id { get; set; }
-        public string ISBN { get; set; }
-        public string Titre  { get; set; }
-        public string Image { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
     }
 }

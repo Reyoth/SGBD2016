@@ -67,15 +67,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\ProjetLocal\Bibliotheque_SGBD2016\BL\BL.csproj">
+    <ProjectReference Include="..\BL\BL.csproj">
       <Project>{cf3e87a9-36d6-4fc9-b32b-0bd642b9cba7}</Project>
       <Name>BL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\ProjetLocal\Bibliotheque_SGBD2016\ENTITIES\Entities.csproj">
+    <ProjectReference Include="..\ENTITIES\Entities.csproj">
       <Project>{95c0c774-beb5-4396-b5b2-013b4651af55}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\ProjetLocal\Bibliotheque_SGBD2016\ERRORS\ERRORS.csproj">
+    <ProjectReference Include="..\ERRORS\ERRORS.csproj">
       <Project>{0f8eff5a-6fcb-489b-bfbb-32b4743351f2}</Project>
       <Name>ERRORS</Name>
     </ProjectReference>
