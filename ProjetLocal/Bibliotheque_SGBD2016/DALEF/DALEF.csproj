@@ -60,7 +60,6 @@
     <Compile Include="Bibliotheque.cs">
       <DependentUpon>ModelBiblio.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
     <Compile Include="Emprunt.cs">
       <DependentUpon>ModelBiblio.tt</DependentUpon>
     </Compile>

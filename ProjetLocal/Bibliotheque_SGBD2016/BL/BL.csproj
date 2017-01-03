@@ -62,6 +62,14 @@
       <Project>{2b8f7405-346c-4293-b73a-b04468f4de59}</Project>
       <Name>DALADO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ENTITIES\Entities.csproj">
+      <Project>{95c0c774-beb5-4396-b5b2-013b4651af55}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ERRORS\ERRORS.csproj">
+      <Project>{0f8eff5a-6fcb-489b-bfbb-32b4743351f2}</Project>
+      <Name>ERRORS</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

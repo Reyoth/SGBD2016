@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DALEF;
+using Entities;
 
 namespace BL
 {
@@ -30,19 +31,19 @@ namespace BL
 
         public static void LivreByISBN(ref List<Entities.Livre> lst, string isbn)
         {
-            List<Entities.Livre> listeLivres = new List<Livre>();
+            List<Entities.Livre> listeLivres = new List<Entities.Livre>();
             listeLivres = DALADO.Lecteur.LivreByISBN(lst, isbn);
             lst = listeLivres;
         }
 
-        public static void LivreByTitre(ref List<Livre> listL, string Titre)
+        public static void LivreByTitre(ref List<Entities.Livre> listL, string Titre)
         {
-            List<Entities.Livre> listeLivres = new List<Livre>();
+            List<Entities.Livre> listeLivres = new List<Entities.Livre>();
             listeLivres = DALADO.Lecteur.LivreByTitre(listeLivres, Titre);
             listL = listeLivres;
         }
 
-        public static void AllLivres(ref List<LivreAllLivre> livres)
+        public static void AllLivres(ref List<Entities.LivreAllLivre> livres)
         {
             List<Entities.LivreAllLivre> listeLivres = new List<LivreAllLivre>();
             DALADO.Lecteur.LivreByTitre(listeLivres);

@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALADO", "DAL\DALADO.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALEF", "DALEF\DALEF.csproj", "{17168DB1-75CA-41F2-9F15-3D4AD92A01EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "..\..\..\..\..\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque_Bis\ENTITIES\Entities.csproj", "{95C0C774-BEB5-4396-B5B2-013B4651AF55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "ENTITIES\Entities.csproj", "{95C0C774-BEB5-4396-B5B2-013B4651AF55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERRORS", "..\..\..\..\..\Documents\Visual Studio 2015\Projects\SGBD_Bibliothèque_Bis\ERRORS\ERRORS.csproj", "{0F8EFF5A-6FCB-489B-BFBB-32B4743351F2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERRORS", "ERRORS\ERRORS.csproj", "{0F8EFF5A-6FCB-489B-BFBB-32B4743351F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
