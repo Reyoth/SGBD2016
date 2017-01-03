@@ -19,14 +19,20 @@ namespace MainApp
 
         private void AdministrateurGui_Load(object sender, EventArgs e)
         {
+            var client= new ServiceWCF.Service1Client();
             dgvgestExemplaire.DataSource = null;
+            gdvRetardataires.DataSource = null;
+            gdvLecteurs.DataSource = null;
+            gdvEmpruntEnCours.DataSource = null;
+            gdvReservationEnCours.DataSource = null;
+            gdvLivre.DataSource = null;
             DataSet ds = new DataSet();
-            BL.Administrateur.AllExemplairesAllBib(ref ds);
-            BL.Administrateur.AllRetardataires(ref ds);
-            BL.Administrateur.AllLecteurs(ref ds);
-            BL.Administrateur.AllEmpruntsEnCours(ref ds);
-            BL.Administrateur.AllReservationsEnCours(ref ds);
-            BL.Administrateur.AllLivres(ref ds);
+            ds=client.AllExemplairesAllBib(ds);
+            ds=client.AllRetardataires(ds);
+            ds=client.AllLecteurs(ds);
+            ds=client.AllEmpruntsEnCours(ds);
+            ds=client.AllReservationsEnCours(ds);
+            ds=client.AllLivres(ds);
             dgvgestExemplaire.DataSource = ds.Tables[0].DefaultView;
             gdvRetardataires.DataSource = ds.Tables[1].DefaultView;
             gdvLecteurs.DataSource = ds.Tables[2].DefaultView;
@@ -45,18 +51,20 @@ namespace MainApp
         private void btnISBNGoRechLivre_Click_1(object sender, EventArgs e)
         {
             gdvLivre.DataSource = null;
+            var client = new ServiceWCF.Service1Client();
             DataSet ds = new DataSet();
-            BL.Administrateur.LivreByISBN(ref ds, txtISBNRechLivre.Text);
-            gdvLivre.DataSource = ds.Tables[0].DefaultView;
+            var resultat = client.LivreByISBN(ds, txtISBNRechLivre.Text);
+            gdvLivre.DataSource = resultat;
         }
 
         private void btnTitreGoRechLivre_Click_1(object sender, EventArgs e)
         {
             gdvLivre.DataSource = null;
+            var client = new ServiceWCF.Service1Client();
             DataSet ds = new DataSet();
             string LiveTitle = "%" + txtTitreRechLivre.Text + "%";
-            BL.Administrateur.LivreByTitre(ref ds, LiveTitle);
-            gdvLivre.DataSource = ds.Tables[0].DefaultView;
+            var resultat = client.LivreByTitre(ds, LiveTitle);
+            gdvLivre.DataSource = resultat;
         }
     }
 }

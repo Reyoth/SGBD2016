@@ -54,10 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DALEF\DALEF.csproj">
-      <Project>{17168db1-75ca-41f2-9f15-3d4ad92a01eb}</Project>
-      <Name>DALEF</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL\DALADO.csproj">
       <Project>{2b8f7405-346c-4293-b73a-b04468f4de59}</Project>
       <Name>DALADO</Name>

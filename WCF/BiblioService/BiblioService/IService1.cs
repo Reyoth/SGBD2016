@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using Entities;
 
 namespace BiblioService
 {
@@ -19,8 +18,41 @@ namespace BiblioService
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        //[OperationContract]
+        //IList<EXE_AllExemplaireBIB_Id_Result> EXE_AllExemplaireBIB_Id(int BibId);
+
         [OperationContract]
-        IList<EXE_AllExemplaireBIB_Id_Result> EXE_AllExemplaireBIB_Id(int BibId);
+        void EXE_CreerExemplaire(string code, DateTime DateAchat, byte indisponible, int BibId, int LivId);
+
+        [OperationContract]
+        DataSet AllExemplairesAllBib(DataSet ds);
+
+        [OperationContract]
+        DataSet AllExemplairesByBibId(DataSet ds, int BibId);
+
+        [OperationContract]
+        DataSet AllRetardataires(DataSet ds);
+
+        [OperationContract]
+        DataSet AllLivres(DataSet ds);
+
+        [OperationContract]
+        void RetournerExemplaire(int exemplaireId);
+
+        [OperationContract]
+        DataSet AllLecteurs(DataSet ds);
+
+        [OperationContract]
+        DataSet AllEmpruntsEnCours(DataSet ds);
+
+        [OperationContract]
+        DataSet AllReservationsEnCours(DataSet ds);
+
+        [OperationContract]
+        DataSet LivreByISBN(DataSet ds, string isbn);
+
+        [OperationContract]
+        DataSet LivreByTitre(DataSet ds, string titre);
 
         // TODO: Add your service operations here
     }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MainApp
 {
-    public partial class Login : Form
+    public partial class LecteurLogin : Form
     {
-        public Login()
+        public LecteurLogin()
         {
             InitializeComponent();
         }
@@ -52,6 +52,13 @@ namespace MainApp
             {
                 cb.Items.Add(libelle);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Accueil Acc = new Accueil();
+            this.Hide();
+            Acc.Show();
         }
     }
 }

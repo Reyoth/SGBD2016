@@ -25,13 +25,15 @@ namespace MainApp
 
         private void LecteurGui_Load(object sender, EventArgs e)
         {
+            var client = new ServiceWCF.Service1Client();
+            
             //UserId = BL.Lecteur.GetUserId(lFullName.Text);
             /*ChargerBibliotheques(cbLibLivre);*///remplissage du la combobox avec le slibelle biblio
 
             //Remplissage du gridview du volet "recherche un livre" avec la liste entiere des livres de tte les biblio
-            List<Entities.LivreAllLivre> livres=null;
-            BL.Lecteur.AllLivres(ref livres);
-            gvLivre.DataSource = livres;
+            //List<Entities.LivreAllLivre> livres=null;
+            var listLivres = client.AllLivres(listLivres);
+            gvLivre.DataSource = listLivres;
 
             //Remplissage du gridview du volet "Mes emprunts" avec la liste des emprunts en cours du user connecté 
             List<Entities.EmpruntEnCours> EmpruntsEnCours = null;
