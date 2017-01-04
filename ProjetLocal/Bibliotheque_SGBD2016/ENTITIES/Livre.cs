@@ -12,5 +12,6 @@ namespace Entities
         public string ISBN { get; set; }
         public string Titre  { get; set; }
         public string Image { get; set; }
+        public string Authors { get; set; }
     }
 }
