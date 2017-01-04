@@ -1,12 +1,13 @@
 USE [SGBD2016_Bibliotheque]
 GO
 
-/****** Object:  Trigger [dbo].[TR_NoInsertExemplaireIndisponible]    Script Date: 28-12-16 13:35:08 ******/
+/****** Object:  Trigger [dbo].[TR_NoInsertExemplaireIndisponible]    Script Date: 04-Jan-17 04:36:37 ******/
 SET ANSI_NULLS ON
 GO
 
 SET QUOTED_IDENTIFIER ON
 GO
+
 
 -- =============================================
 -- Author:		<Farid ID BOURHIM, Simon ENCEV>
@@ -21,19 +22,21 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-	DECLARE @DisponibilitÃ© bit
+	DECLARE @Disponibilité bit
 	
-	SELECT @DisponibilitÃ© =  Exemplaire.EXE_Indisponible
+	SELECT @Disponibilité =  Exemplaire.EXE_Indisponible
 	FROM   Emprunt, Exemplaire, inserted
     WHERE  Emprunt.EXE_Id = Exemplaire.EXE_Id
 		AND Emprunt.EXE_Id = inserted.EXE_Id
     
-	IF(@DisponibilitÃ©=1)
+	IF(@Disponibilité=1)
 	BEGIN	
 		RAISERROR ('Emprunt impossible, exemplaire indisponible',15,0)
-	END
 	ROLLBACK
+	END
+	
 END
+
 
 GO
 
