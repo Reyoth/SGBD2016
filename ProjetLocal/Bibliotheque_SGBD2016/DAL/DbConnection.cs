@@ -14,7 +14,7 @@ namespace DALADO
                 if ((_db == null) || (_db.State != ConnectionState.Open))
                 {
                     _db = new SqlConnection();
-                    _db.ConnectionString = Globals.DefaultConnectionString;
+                    _db.ConnectionString = Globals.lecteurConnectionString;
                 }
                 return _db;
             }

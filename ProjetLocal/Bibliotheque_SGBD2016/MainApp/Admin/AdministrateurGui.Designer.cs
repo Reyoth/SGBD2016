@@ -281,7 +281,7 @@
             this.tpgestionLecteurs.Controls.Add(this.gbUserDataProfile);
             this.tpgestionLecteurs.Location = new System.Drawing.Point(4, 24);
             this.tpgestionLecteurs.Name = "tpgestionLecteurs";
-            this.tpgestionLecteurs.Size = new System.Drawing.Size(916, 599);
+            this.tpgestionLecteurs.Size = new System.Drawing.Size(916, 590);
             this.tpgestionLecteurs.TabIndex = 4;
             this.tpgestionLecteurs.Text = "Gérer les lecteurs";
             // 
@@ -821,7 +821,7 @@
             this.tpComptabilite.Controls.Add(this.btnActualiserFacturation);
             this.tpComptabilite.Location = new System.Drawing.Point(4, 24);
             this.tpComptabilite.Name = "tpComptabilite";
-            this.tpComptabilite.Size = new System.Drawing.Size(916, 599);
+            this.tpComptabilite.Size = new System.Drawing.Size(916, 590);
             this.tpComptabilite.TabIndex = 3;
             this.tpComptabilite.Text = "Comptablilité";
             // 
@@ -1164,7 +1164,7 @@
             this.tpGestionExemplaires.Controls.Add(this.groupBox4);
             this.tpGestionExemplaires.Location = new System.Drawing.Point(4, 24);
             this.tpGestionExemplaires.Name = "tpGestionExemplaires";
-            this.tpGestionExemplaires.Size = new System.Drawing.Size(916, 599);
+            this.tpGestionExemplaires.Size = new System.Drawing.Size(916, 590);
             this.tpGestionExemplaires.TabIndex = 5;
             this.tpGestionExemplaires.Text = "Gestion des exemplaires";
             // 
@@ -1517,7 +1517,7 @@
             this.tpEmpruntEtReservation.Location = new System.Drawing.Point(4, 24);
             this.tpEmpruntEtReservation.Name = "tpEmpruntEtReservation";
             this.tpEmpruntEtReservation.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEmpruntEtReservation.Size = new System.Drawing.Size(916, 599);
+            this.tpEmpruntEtReservation.Size = new System.Drawing.Size(916, 590);
             this.tpEmpruntEtReservation.TabIndex = 1;
             this.tpEmpruntEtReservation.Text = "Emprunts & résèrvation";
             // 
@@ -2108,6 +2108,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "GO!";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -2132,7 +2133,7 @@
             this.tpGestionRetards.Controls.Add(this.pbReservtaion);
             this.tpGestionRetards.Location = new System.Drawing.Point(4, 24);
             this.tpGestionRetards.Name = "tpGestionRetards";
-            this.tpGestionRetards.Size = new System.Drawing.Size(916, 599);
+            this.tpGestionRetards.Size = new System.Drawing.Size(916, 590);
             this.tpGestionRetards.TabIndex = 2;
             this.tpGestionRetards.Text = "Etat des retards";
             // 

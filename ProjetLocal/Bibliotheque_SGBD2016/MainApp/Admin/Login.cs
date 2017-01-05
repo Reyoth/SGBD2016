@@ -28,5 +28,12 @@ namespace MainApp.Admin
             this.Hide();
             Acc.Show();
         }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            AdministrateurGui adm = new AdministrateurGui();
+            this.Hide();
+            adm.Show();
+        }
     }
 }

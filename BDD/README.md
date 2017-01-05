@@ -11,14 +11,16 @@
 - [x] ~~EXE_AllExemplaireByLIV_Id~~
 - [x] ~~EXE_AllExemplaireBIB_Id~~ Remplacer LIV_Id par le titre du livre et BIB_Id par le libelle
 - [x] ~~EXE_CreerExemplaire~~
-- [x] LIV_InsererLivre
+- [x] ~~LIV_AjoutLivre~~
 - [x] ~~EMP_AllEmpruntsAllBib~~
 - [x] ~~EMP_AllEmpruntsByBIB_Id~~
-- [ ] procedure qui affiche les emprunts coutrants pour cote administrateur.
+- [ ] ~~procedure qui affiche les emprunts coutrants pour cote administrateur.~~
 - [x] ~~EMP_ListeRetardatairesAllBib~~
 - [x] ~~EMP_ListeRetardatairesByBIB_Id~~
 - [x] ~~EXE_RetournerExemplaire~~
-
+- [ ] LIV_UpdateLivre (@ISBN Nvarchar(13))(Met a jour un livre atravers l'ISBN qui passe en param) l update se fait sur les champs ISBN, Titre, Image, Auteur,puisque l'auteur sera dans la table livre,
+- [ ] LEC_UpdateLecteur (@Username nvarchar(50)) Met a jour un lecteur a traver le username passé en param, 
+- [ ] EXE_UpdateExemplaire (@Code nvarchar (50)) met a jour un exemplaire a travers son code unique.
 
 
 ### COTE LECTEUR #

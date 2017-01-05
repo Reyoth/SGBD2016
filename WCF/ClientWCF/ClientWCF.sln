@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientWCF", "ClientWCF\ClientWCF.csproj", "{4B9E147E-8A4D-4716-95FE-DE0D24525F4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "..\..\ProjetLocal\Bibliotheque_SGBD2016\MainApp\MainApp.csproj", "{3C24E720-3441-407C-8393-5208DCD04708}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "MainApp\MainApp.csproj", "{3C24E720-3441-407C-8393-5208DCD04708}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -15,6 +15,7 @@ namespace MainApp
         public AdministrateurGui()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void AdministrateurGui_Load(object sender, EventArgs e)
@@ -65,6 +66,11 @@ namespace MainApp
             string LiveTitle = "%" + txtTitreRechLivre.Text + "%";
             var resultat = client.LivreByTitre(ds, LiveTitle);
             gdvLivre.DataSource = resultat;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

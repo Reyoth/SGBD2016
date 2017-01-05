@@ -64,10 +64,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ENTITIES\Entities.csproj">
-      <Project>{95c0c774-beb5-4396-b5b2-013b4651af55}</Project>
-      <Name>Entities</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ERRORS\ERRORS.csproj">
       <Project>{0f8eff5a-6fcb-489b-bfbb-32b4743351f2}</Project>
       <Name>ERRORS</Name>
