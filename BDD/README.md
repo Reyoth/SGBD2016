@@ -25,8 +25,7 @@
 
 ### COTE LECTEUR #
 - [x] ~~LEC_Login~~
-- [x] ~~procedure qui affiche les libelles de toute les biliotheques pour la liste des biblio de login~~
-- [ ] procedure qui affiche les emprunt courants d4un lecteur.
+- [x] ~~BIB_AllLibelle procedure qui affiche les libelles de toute les biliotheques pour la liste des biblio de login~~
 - [x] ~~RES_ListeReservationsByLEC_Id~~
 - [x] ~~RES_ReserverLivre~~
 - [x] ~~LIV_LivreByISBN~~
