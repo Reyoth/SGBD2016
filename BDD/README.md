@@ -30,7 +30,7 @@
 - [x] ~~LIV_LivreByTitle~~
 - [x] ~~EXE_EmprunterExemplaire~~ etsupprime les reservations liées automatiquement 
 - [x] ~~EMP_AllEmpruntsByLEC_Id~~
-- [x] ~~EMP_ListeREtardsByLEC_Id~~
+- [x] ~~EMP_RetardaresAllBibByLec~~
 - [x] ~~RES_ListeReservationsDisponibleByLEC_Id~~ liste des livres reservés par lecteur et leurs disponibilités.
 
 # ---------- STORED TRIGGERS ----------------
