@@ -54,6 +54,9 @@ namespace BiblioService
         [OperationContract]
         DataSet LivreByTitre(DataSet ds, string titre);
 
+        [OperationContract]
+        List<Entities.Livre> LivreByTitle(string title);
+
         // TODO: Add your service operations here
     }
 

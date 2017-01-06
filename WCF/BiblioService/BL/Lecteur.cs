@@ -1,16 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DALEF;
 using Entities;
 
 namespace BL
 {
     public class Lecteur
     {
-        //Voici un exemple qui retourn la liste des libelles desblibliotheques sans passer par une stockproc
+        public static void BIB_AllBibliotheques(ref List<Bibliotheque> biblios)
+        {
+            using (SGBD2016_BibliothequeEntities context = new SGBD2016_BibliothequeEntities())
+            {
+                var bibs = context.BIB_AllLibelle();
+                foreach (var bib in bibs)
+                {
+                    Console.WriteLine(bib.ToString());
+                }
+            }
+        }
+
+        
         //public static List<string> AllBiblioLibelle()
         //{
         //    using (var context = new SGBD2016_BibliothequeEntities())
@@ -25,15 +37,28 @@ namespace BL
         //        }
         //        return listLibelleBib;
         //    }
-            
+
         //}
 
-        //public static void LivreByISBN(ref List<Entities.Livre> lst, string isbn)
-        //{
-        //    List<Entities.Livre> listeLivres = new List<Entities.Livre>();
-        //    listeLivres = DALADO.Lecteur.LivreByISBN(lst, isbn);
-        //    lst = listeLivres;
-        //}
+        public static void LivreByISBN(ref Entities.Livre livre, string isbn)
+        {
+            
+            using (SGBD2016_BibliothequeEntities lecteurContext = new SGBD2016_BibliothequeEntities())
+            {
+               var  LivreResult = lecteurContext.LIV_LivreByISBN(isbn).ElementAt(0);
+                livre.ISBN = LivreResult.LIV_ISBN;
+                livre.Id = LivreResult.LIV_Id;
+                livre.Titre = LivreResult.LIV_Titre;
+                livre.Authors = LivreResult.LIV_Auteurs;
+                
+            }
+            
+        }
+
+        public static void LivreByTitle(ref List<Livre> livres, string title)
+        {
+            DALEF.Lecteur.LivreByTitle(livres, title);
+        }
 
         //public static void LivreByTitre(ref List<Entities.Livre> listL, string Titre)
         //{

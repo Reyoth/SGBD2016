@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using Entities;
 
 namespace BiblioService
 {
@@ -93,6 +94,13 @@ namespace BiblioService
             
             BL.Administrateur.LivreByISBN(ref ds, isbn);
             return ds;
+        }
+
+        public List<Livre> LivreByTitle(string title)
+        {
+            List<Entities.Livre> Livres = null;
+            BL.Lecteur.LivreByTitle(ref Livres, title);
+            return Livres;
         }
 
         public DataSet LivreByTitre(DataSet ds, string titre)

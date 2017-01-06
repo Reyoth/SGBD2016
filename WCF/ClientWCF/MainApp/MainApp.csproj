@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3C24E720-3441-407C-8393-5208DCD04708}</ProjectGuid>
+    <ProjectGuid>{95E39692-6DF7-434F-A576-1C0D47950D92}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MainApp</RootNamespace>
@@ -35,8 +35,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,17 +52,17 @@
     <Compile Include="Accueil.Designer.cs">
       <DependentUpon>Accueil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\AdministrateurGui.cs">
+    <Compile Include="Administrateur\AdministrateurGui.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\AdministrateurGui.Designer.cs">
+    <Compile Include="Administrateur\AdministrateurGui.Designer.cs">
       <DependentUpon>AdministrateurGui.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Login.cs">
+    <Compile Include="Administrateur\AdmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Administrateur\AdmLogin.Designer.cs">
+      <DependentUpon>AdmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Lecteur\LecteurGui.cs">
       <SubType>Form</SubType>
@@ -72,33 +70,28 @@
     <Compile Include="Lecteur\LecteurGui.Designer.cs">
       <DependentUpon>LecteurGui.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lecteur\Login.cs">
+    <Compile Include="Lecteur\LectLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lecteur\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Lecteur\LectLogin.Designer.cs">
+      <DependentUpon>LectLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ServiceWCF\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\AdministrateurGui.resx">
+    <EmbeddedResource Include="Administrateur\AdministrateurGui.resx">
       <DependentUpon>AdministrateurGui.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Administrateur\AdmLogin.resx">
+      <DependentUpon>AdmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecteur\LecteurGui.resx">
       <DependentUpon>LecteurGui.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lecteur\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Lecteur\LectLogin.resx">
+      <DependentUpon>LectLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,9 +101,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="App.Config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -120,65 +112,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\ServiceWCF\BiblioService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceWCF\MainApp.ServiceWCF.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\ServiceWCF\service.wsdl" />
-    <None Include="Service References\ServiceWCF\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceWCF\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceWCF\service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\livres2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\spiralBooks.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\marche-du-livre1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceWCF\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServiceWCF\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServiceWCF\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServiceWCF\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
-      <Project>{cf3e87a9-36d6-4fc9-b32b-0bd642b9cba7}</Project>
+      <Project>{e4490c89-0ecc-49f8-ac17-c0575f60160e}</Project>
       <Name>BL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENTITIES\Entities.csproj">
-      <Project>{95c0c774-beb5-4396-b5b2-013b4651af55}</Project>
+    <ProjectReference Include="..\DALEF\DALEF.csproj">
+      <Project>{7caf4dcc-2da0-46c4-a431-38d9640bb0ee}</Project>
+      <Name>DALEF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{cc050749-4975-4b77-a9d0-30c5e2738a7c}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ERRORS\ERRORS.csproj">
-      <Project>{0f8eff5a-6fcb-489b-bfbb-32b4743351f2}</Project>
-      <Name>ERRORS</Name>
+    <ProjectReference Include="..\Errors\Errors.csproj">
+      <Project>{8690d2d1-0d4b-46cd-b6e7-2cb7b7ffaa2c}</Project>
+      <Name>Errors</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

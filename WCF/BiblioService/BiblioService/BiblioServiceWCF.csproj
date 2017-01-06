@@ -68,16 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj">
-      <Project>{cf3e87a9-36d6-4fc9-b32b-0bd642b9cba7}</Project>
+      <Project>{e4490c89-0ecc-49f8-ac17-c0575f60160e}</Project>
       <Name>BL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ENTITIES\Entities.csproj">
-      <Project>{95c0c774-beb5-4396-b5b2-013b4651af55}</Project>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{cc050749-4975-4b77-a9d0-30c5e2738a7c}</Project>
       <Name>Entities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ERRORS\ERRORS.csproj">
-      <Project>{0f8eff5a-6fcb-489b-bfbb-32b4743351f2}</Project>
-      <Name>ERRORS</Name>
+    <ProjectReference Include="..\Errors\Errors.csproj">
+      <Project>{8690d2d1-0d4b-46cd-b6e7-2cb7b7ffaa2c}</Project>
+      <Name>Errors</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
