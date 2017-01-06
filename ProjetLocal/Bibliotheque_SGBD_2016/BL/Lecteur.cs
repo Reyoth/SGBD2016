@@ -10,16 +10,21 @@ namespace BL
 {
     public class Lecteur
     {
-        public static void BIB_AllBibliotheques(ref List<Bibliotheque> biblios)
+        //public static void BIB_AllBibliotheques(ref List<Bibliotheque> biblios)
+        //{
+        //    using (SGBD2016_BibliothequeEntities context = new SGBD2016_BibliothequeEntities())
+        //    {
+        //        var bibs = context.BIB_AllLibelle();
+        //        foreach (var bib in bibs)
+        //        {
+        //            Console.WriteLine(bib.ToString());
+        //        }
+        //    }
+        //}
+        public static void AllEmpruntsByLecId(ref List<Entities.EmpruntEnCours> empruntsEnCours,int LecId)
         {
-            using (SGBD2016_BibliothequeEntities context = new SGBD2016_BibliothequeEntities())
-            {
-                var bibs = context.BIB_AllLibelle();
-                foreach (var bib in bibs)
-                {
-                    Console.WriteLine(bib.ToString());
-                }
-            }
+            //var ListEmprunt = DALEF.Lecteur.AllEmpruntsByLecId(LecId);
+            
         }
 
         

@@ -110,6 +110,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.Config" />
     <None Include="packages.config" />
@@ -140,6 +141,21 @@
       <Project>{8690d2d1-0d4b-46cd-b6e7-2cb7b7ffaa2c}</Project>
       <Name>Errors</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignOUt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biblio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\téléchargement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignOUt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignOUt21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

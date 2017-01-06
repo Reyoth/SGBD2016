@@ -153,6 +153,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lBienvenue);
             this.Name = "LectLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LectLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

@@ -78,6 +78,7 @@
             this.Controls.Add(this.Connectionlabel);
             this.Controls.Add(this.ConnectionCombobox);
             this.Name = "Accueil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mode de connexion";
             this.ResumeLayout(false);
             this.PerformLayout();

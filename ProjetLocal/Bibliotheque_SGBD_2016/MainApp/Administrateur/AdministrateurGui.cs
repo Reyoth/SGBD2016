@@ -151,5 +151,20 @@ namespace MainApp.Administrateur
                 txtDateDisResC.Text = datePrevu.ToString();
             }
         }
+
+        private void groupBox8_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lEmpruntsEnCours_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lUserDataUsername_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

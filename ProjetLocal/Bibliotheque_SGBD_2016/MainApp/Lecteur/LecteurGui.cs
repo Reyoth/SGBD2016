@@ -15,20 +15,45 @@ namespace MainApp.Lecteur
         public LecteurGui()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void LecteurGui_Load(object sender, EventArgs e)
         {
-            List<Entities.Bibliotheque> biblios = null;
-            BL.Lecteur.BIB_AllBibliotheques(ref biblios);
-            gvLivre.DataSource = biblios;
+            dgvLivreEmprunt.DataSource = null;
+            dgvEmpruntsEmprunt.DataSource = null;
+            dgvLivreReservation.DataSource = null;
+            dgvReservation.DataSource = null;
+            dgvEmpruntHistorique.DataSource = null;
+            
         }
 
         private void btnISBNGoRechLivre_Click(object sender, EventArgs e)
         {
-            Entities.Livre livre = null;
-            BL.Lecteur.LivreByISBN(ref livre, txtISBNRechLivre.Text);
-            gvLivre.DataSource = livre;
+            
+        }
+
+        private void btnTitreGoRechLivre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            string dateheure = DateTime.Now.ToString();
+            LecteurGui.ActiveForm.Text = "Inteface : Lecteur "+dateheure;
+        }
+
+        private void picSignOut_Click(object sender, EventArgs e)
+        {
+            LectLogin lectLogin = new LectLogin();
+            this.Hide();
+            lectLogin.Show();
+        }
+
+        private void lEmpruntsEnCours_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
