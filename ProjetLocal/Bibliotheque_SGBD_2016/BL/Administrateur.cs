@@ -78,5 +78,20 @@ namespace BL
             DALADO.Administrateur.LivreByTitre(ds, titre);
 
         }
+
+        public static void AjoutManuelLivre(string ISBN, string Titre, string Image, string Auteurs)
+        {
+            DALADO.Administrateur.AjoutManuelLivre(ISBN, Titre, Image, Auteurs);
+        }
+
+        public static void UpdateLivre(string ISBN, string Titre, string Image, string Auteurs)
+        {
+            DALADO.Administrateur.UpdateLivre(ISBN, Titre, Image, Auteurs);
+        }
+
+        public static void DeleteLivre(string ISBN)
+        {
+            DALADO.Administrateur.DeleteLivre(ISBN);
+        }
     }
 }

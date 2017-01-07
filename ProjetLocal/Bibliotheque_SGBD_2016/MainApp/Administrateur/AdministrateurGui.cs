@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entities;
 
 namespace MainApp.Administrateur
 {
@@ -21,56 +23,74 @@ namespace MainApp.Administrateur
 
         private void AdministrateurGui_Load(object sender, EventArgs e)
         {
-            //txt volet Gestion LIvre
+            ////txt volet Gestion LIvre
             txtISBNAjMan.Enabled = false;
             txtTitreAjMan.Enabled = false;
             txtLienAjMan.Enabled = false;
             txtNomAutAjMan.Enabled = false;
-            txtPrenomAutAjMan.Enabled = false;
 
-            //txt volet Emprunts et reservations
+            //txt volet Emprunts et retards
+            //enable
+
+            txtNomEmprunteur.Enabled = false;
+            txtPrenomemprunteur.Enabled = false;
+            txtNbEmpruntsEmprunteur.Enabled = false;
+            txtRetardsEmprunteur.Enabled = false;
+            txtNomretardataire.Enabled = false;
+            txtPrenomRetardataire.Enabled = false;
+            txtNbJoursRetards.Enabled = false;
+            txtMontantRetard.Enabled = false;
+            //readonly
+            txtNomEmprunteur.ReadOnly = true;
+            txtPrenomemprunteur.ReadOnly = true;
+            txtNbEmpruntsEmprunteur.ReadOnly = true;
+            txtRetardsEmprunteur.ReadOnly = true;
+            txtNomretardataire.ReadOnly = true;
+            txtPrenomRetardataire.ReadOnly = true;
+            txtNbJoursRetards.ReadOnly = true;
+            txtMontantRetard.ReadOnly = true;
+
+            //txt volet Lecteur
                 //enable
-                txtNomEmprunteur.Enabled = false;
-                txtPrenomemprunteur.Enabled = false;
-                txtNbEmpruntsEmprunteur.Enabled = false;
-                txtRetardsEmprunteur.Enabled = false;
-                txtNomResEnC.Enabled = false;
-                txtPrenomResC.Enabled = false;
-                txtDateResC.Enabled = false;
-                txtDateDisResC.Enabled = false;
-                //redonly
-                txtNomEmprunteur.ReadOnly = true;
-                txtPrenomemprunteur.ReadOnly = true;
-                txtNbEmpruntsEmprunteur.ReadOnly = true;
-                txtRetardsEmprunteur.ReadOnly = true;
-                txtNomResEnC.ReadOnly = true;
-                txtPrenomResC.ReadOnly = true;
-                txtDateResC.ReadOnly = true;
-                txtDateDisResC.ReadOnly = true;
+            txtUserDataNom.Enabled = false;
+            txtUserDataPrenom.Enabled = false;
+            txtUserDataSexe.Enabled = false;
+            txtUserDataAdresse.Enabled = false;
+            txtUserDataVille.Enabled = false;
+            txtUserDataCodePostal.Enabled = false;
+            txtUserDataEmail.Enabled = false;
+            txtUserDataUsername.Enabled = false;
+            dtUserDataDateNaissance.Enabled = false;
 
-            //txt volet retards
-                
+            //readOnly
+            txtUserDataNom.ReadOnly = true;
+            txtUserDataPrenom.ReadOnly = true;
+            txtUserDataSexe.ReadOnly = true;
+            txtUserDataAdresse.ReadOnly = true;
+            txtUserDataVille.ReadOnly = true;
+            txtUserDataCodePostal.ReadOnly = true;
+            txtUserDataEmail.ReadOnly = true;
+            txtUserDataUsername.ReadOnly = true;
 
-            //Data grid view de tout les volets
-            dgvgestExemplaire.DataSource = null;
+
+            ////Data grid view de tout les volets
+            gdvLivre.DataSource = null;
+            dgvExemplaire.DataSource = null;
+            gdvEmpruntEnCours.DataSource = null;
             gdvRetardataires.DataSource = null;
             gdvLecteurs.DataSource = null;
-            gdvEmpruntEnCours.DataSource = null;
-            gdvReservationEnCours.DataSource = null;
-            gdvLivre.DataSource = null;
             DataSet ds = new DataSet();
+            BL.Administrateur.AllLivres(ref ds);
             BL.Administrateur.AllExemplairesAllBib(ref ds);
+            BL.Administrateur.AllEmpruntsEnCours(ref ds);
             BL.Administrateur.AllRetardataires(ref ds);
             BL.Administrateur.AllLecteurs(ref ds);
-            BL.Administrateur.AllEmpruntsEnCours(ref ds);
-            BL.Administrateur.AllReservationsEnCours(ref ds);
-            BL.Administrateur.AllLivres(ref ds);
-            dgvgestExemplaire.DataSource = ds.Tables[0].DefaultView;
-            gdvRetardataires.DataSource = ds.Tables[1].DefaultView;
-            gdvLecteurs.DataSource = ds.Tables[2].DefaultView;
-            gdvEmpruntEnCours.DataSource = ds.Tables[3].DefaultView;
-            gdvReservationEnCours.DataSource = ds.Tables[4].DefaultView;
-            gdvLivre.DataSource = ds.Tables[5].DefaultView;
+            gdvLivre.DataSource = ds.Tables[0].DefaultView;
+            gdvLivre.Columns[4].Visible = false;
+            dgvExemplaire.DataSource = ds.Tables[1].DefaultView; 
+            gdvEmpruntEnCours.DataSource = ds.Tables[2].DefaultView; 
+            gdvRetardataires.DataSource = ds.Tables[3].DefaultView; 
+            gdvLecteurs.DataSource = ds.Tables[4].DefaultView;
         }
 
         private void btnISBNGoRechLivre_Click(object sender, EventArgs e)
@@ -92,7 +112,7 @@ namespace MainApp.Administrateur
         {
             gdvLivre.DataSource = null;
             DataSet ds = new DataSet();
-            string LiveTitle = "%" + txtTitreRechLivre.Text + "%";
+            string LiveTitle = txtTitreRechLivre.Text;
             BL.Administrateur.LivreByTitre(ref ds, LiveTitle);
             gdvLivre.DataSource = ds.Tables[0].DefaultView;
         }
@@ -103,12 +123,12 @@ namespace MainApp.Administrateur
             txtTitreAjMan.Enabled = true;
             txtLienAjMan.Enabled = true;
             txtNomAutAjMan.Enabled = true;
-            txtPrenomAutAjMan.Enabled = true;
+            txtLienAjMan.Enabled = true;
             txtISBNAjMan.ReadOnly = false;
             txtTitreAjMan.ReadOnly = false;
             txtLienAjMan.ReadOnly = false;
             txtNomAutAjMan.ReadOnly = false;
-            txtPrenomAutAjMan.ReadOnly = false;
+            txtLienAjMan.ReadOnly = false;
         }
 
         private void gdvLivre_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -118,13 +138,16 @@ namespace MainApp.Administrateur
                 txtISBNAjMan.Text = gdvLivre.CurrentRow.Cells[1].Value.ToString();
                 txtTitreAjMan.Text = gdvLivre.CurrentRow.Cells[2].Value.ToString();
                 txtNomAutAjMan.Text = gdvLivre.CurrentRow.Cells[3].Value.ToString();
+                txtLienAjMan.Text = gdvLivre.CurrentRow.Cells[4].Value.ToString();
+                pbLivre.ImageLocation = gdvLivre.CurrentRow.Cells[4].Value.ToString();
+
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime dh = DateTime.Now;
-            lDateHeure.Text = dh.ToString();
+          
         }
 
         private void gdvEmpruntEnCours_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -142,13 +165,13 @@ namespace MainApp.Administrateur
 
         private void gdvReservationEnCours_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gdvReservationEnCours.SelectedCells.Count == 1)
+            if (gdvRetardataires.SelectedCells.Count == 1)
             {
-                txtNomResEnC.Text = gdvReservationEnCours.CurrentRow.Cells[3].Value.ToString();
-                txtPrenomResC.Text = gdvReservationEnCours.CurrentRow.Cells[4].Value.ToString();
-                txtDateResC.Text = gdvReservationEnCours.CurrentRow.Cells[2].Value.ToString();
-                DateTime datePrevu = DateTime.Parse(txtDateResC.Text).AddDays(10) ;
-                txtDateDisResC.Text = datePrevu.ToString();
+                txtNomretardataire.Text = gdvRetardataires.CurrentRow.Cells[1].Value.ToString();
+                txtPrenomRetardataire.Text = gdvRetardataires.CurrentRow.Cells[2].Value.ToString(); ;
+                txtNbJoursRetards.Text = "";
+                txtMontantRetard.Text = gdvRetardataires.CurrentRow.Cells[3].Value.ToString();
+               
             }
         }
 
@@ -165,6 +188,44 @@ namespace MainApp.Administrateur
         private void lUserDataUsername_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAjManLivre_Click(object sender, EventArgs e)
+        {
+            BL.Administrateur.AjoutManuelLivre(txtISBNAjMan.Text, txtTitreAjMan.Text, txtLienAjMan.Text, txtNomAutAjMan.Text);
+        }
+
+        private void btnAjRapLivre_Click(object sender, EventArgs e)
+        {
+            Entities.Livre Livre = new Livre();
+            bool ajouté = BL.GoogleBooks.requestLivre(ref Livre, txtISBNAjRapLivre.Text);
+            if (ajouté)
+            {
+                BL.Administrateur.AjoutManuelLivre(Livre.ISBN, Livre.Titre, Livre.Image, Livre.Authors);
+            }
+            else
+            {
+                //error
+            }
+        }
+
+        private void btnActualiserLivre_Click(object sender, EventArgs e)
+        {
+            gdvLivre.DataSource = null;
+            DataSet ds = new DataSet();
+            BL.Administrateur.AllLivres(ref ds);
+            gdvLivre.DataSource = ds.Tables[0].DefaultView;
+            gdvLivre.Columns[4].Visible = false;
+        }
+
+        private void btnMAJLivre_Click(object sender, EventArgs e)
+        {
+            BL.Administrateur.UpdateLivre(txtISBNAjMan.Text, txtTitreAjMan.Text, txtLienAjMan.Text, txtNomAutAjMan.Text);
+        }
+
+        private void btnEmprunterLivre_Click(object sender, EventArgs e)
+        {
+            BL.Administrateur.DeleteLivre(txtISBNAjMan.Text);
         }
     }
 }

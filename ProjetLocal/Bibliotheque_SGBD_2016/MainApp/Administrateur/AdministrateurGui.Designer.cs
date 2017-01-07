@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.lISBNrechLivre = new System.Windows.Forms.Label();
             this.gbDetReservation = new System.Windows.Forms.GroupBox();
-            this.txtPrenomResC = new System.Windows.Forms.TextBox();
-            this.txtDateDisResC = new System.Windows.Forms.TextBox();
-            this.txtDateResC = new System.Windows.Forms.TextBox();
-            this.txtNomResEnC = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtPrenomRetardataire = new System.Windows.Forms.TextBox();
+            this.txtMontantRetard = new System.Windows.Forms.TextBox();
+            this.txtNbJoursRetards = new System.Windows.Forms.TextBox();
+            this.txtNomretardataire = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lDateReservation = new System.Windows.Forms.Label();
             this.lUserPrenomResrvation = new System.Windows.Forms.Label();
@@ -43,12 +44,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.lHistoriqueEmprunt = new System.Windows.Forms.Label();
             this.lEmpruntsEnCours = new System.Windows.Forms.Label();
-            this.gdvReservationEnCours = new System.Windows.Forms.DataGridView();
+            this.gdvRetardataires = new System.Windows.Forms.DataGridView();
             this.gbUserEmprunt = new System.Windows.Forms.GroupBox();
+            this.txtNomEmprunteur = new System.Windows.Forms.TextBox();
             this.txtPrenomemprunteur = new System.Windows.Forms.TextBox();
             this.txtRetardsEmprunteur = new System.Windows.Forms.TextBox();
             this.txtNbEmpruntsEmprunteur = new System.Windows.Forms.TextBox();
-            this.txtNomEmprunteur = new System.Windows.Forms.TextBox();
             this.lNombreRetards = new System.Windows.Forms.Label();
             this.lUserNbEmprunt = new System.Windows.Forms.Label();
             this.lUserPrenomEmprunt = new System.Windows.Forms.Label();
@@ -62,40 +63,37 @@
             this.button23 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.txtTitreLivreExemp = new System.Windows.Forms.TextBox();
             this.button17 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.button16 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button21 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtCodeExemp = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button22 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbBibLibelle = new System.Windows.Forms.ComboBox();
             this.btnEmprunterLivre = new System.Windows.Forms.Button();
             this.tbnReserverLivre = new System.Windows.Forms.Button();
             this.btnActualiserLivre = new System.Windows.Forms.Button();
             this.gdvLivre = new System.Windows.Forms.DataGridView();
             this.gbRechLivre = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnTitreRechLivre = new System.Windows.Forms.Button();
             this.lTitreRechLivre = new System.Windows.Forms.Label();
             this.txtTitreRechLivre = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.txtISBNRechLivre = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnMAJLivre = new System.Windows.Forms.Button();
+            this.btnAjManLivre = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAjRapLivre = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtISBNAjRapLivre = new System.Windows.Forms.TextBox();
             this.txtNomAutAjMan = new System.Windows.Forms.TextBox();
             this.lListeLivre = new System.Windows.Forms.Label();
             this.tbAdministrateur = new System.Windows.Forms.TabControl();
             this.tpGestionLivre = new System.Windows.Forms.TabPage();
-            this.pbLogoGestLivre = new System.Windows.Forms.PictureBox();
-            this.button30 = new System.Windows.Forms.Button();
             this.gbAjoutManuelLivre = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtLienAjMan = new System.Windows.Forms.TextBox();
@@ -103,17 +101,35 @@
             this.txtTitreAjMan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtISBNAjMan = new System.Windows.Forms.TextBox();
-            this.pbLivre = new System.Windows.Forms.PictureBox();
+            this.tpGestionExemplaires = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dgvExemplaire = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSauveExemp = new System.Windows.Forms.Button();
+            this.cbBiblioExemp = new System.Windows.Forms.ComboBox();
+            this.dateDateAchatExemp = new System.Windows.Forms.DateTimePicker();
+            this.btn = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.tpgestionLecteurs = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.button33 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.gdvLecteurs = new System.Windows.Forms.DataGridView();
             this.gbUserDataProfile = new System.Windows.Forms.GroupBox();
-            this.pbUserPictureProfil = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtUserDataCodePostal = new System.Windows.Forms.TextBox();
+            this.txtUserDataVille = new System.Windows.Forms.TextBox();
+            this.dtUserDataDateNaissance = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.button15 = new System.Windows.Forms.Button();
             this.txtUserDataUsername = new System.Windows.Forms.TextBox();
-            this.txtUserDataDateEmail = new System.Windows.Forms.TextBox();
+            this.txtUserDataEmail = new System.Windows.Forms.TextBox();
             this.txtUserDataAdresse = new System.Windows.Forms.TextBox();
             this.txtUserDataSexe = new System.Windows.Forms.TextBox();
             this.txtUserDataPrenom = new System.Windows.Forms.TextBox();
@@ -124,45 +140,25 @@
             this.lUserDataUsername = new System.Windows.Forms.Label();
             this.lUserDataEmail = new System.Windows.Forms.Label();
             this.lUserDataNom = new System.Windows.Forms.Label();
-            this.tpGestionExemplaires = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.dgvgestExemplaire = new System.Windows.Forms.DataGridView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnSauvGestExemp = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateDateAchatExemp = new System.Windows.Forms.DateTimePicker();
-            this.btn = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtUserDataDateNaissance = new System.Windows.Forms.DateTimePicker();
-            this.txtUserDataVille = new System.Windows.Forms.TextBox();
-            this.txtUserDataCodePostal = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.picSignOut = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.picSignOut = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbLogoGestLivre = new System.Windows.Forms.PictureBox();
+            this.pbLivre = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbLiveRetard = new System.Windows.Forms.PictureBox();
+            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
+            this.pbUserPictureProfil = new System.Windows.Forms.PictureBox();
             this.gbDetReservation.SuspendLayout();
             this.tpEmpruntEtReservation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvReservationEnCours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvRetardataires)).BeginInit();
             this.gbUserEmprunt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvEmpruntEnCours)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
-            this.groupBox9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLivre)).BeginInit();
             this.gbRechLivre.SuspendLayout();
@@ -172,22 +168,22 @@
             this.groupBox2.SuspendLayout();
             this.tbAdministrateur.SuspendLayout();
             this.tpGestionLivre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).BeginInit();
             this.gbAjoutManuelLivre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).BeginInit();
+            this.tpGestionExemplaires.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.tpgestionLecteurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).BeginInit();
             this.gbUserDataProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).BeginInit();
-            this.tpGestionExemplaires.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvgestExemplaire)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).BeginInit();
             this.SuspendLayout();
             // 
             // lISBNrechLivre
@@ -202,11 +198,12 @@
             // 
             // gbDetReservation
             // 
-            this.gbDetReservation.Controls.Add(this.pictureBox4);
-            this.gbDetReservation.Controls.Add(this.txtPrenomResC);
-            this.gbDetReservation.Controls.Add(this.txtDateDisResC);
-            this.gbDetReservation.Controls.Add(this.txtDateResC);
-            this.gbDetReservation.Controls.Add(this.txtNomResEnC);
+            this.gbDetReservation.Controls.Add(this.label12);
+            this.gbDetReservation.Controls.Add(this.pbLiveRetard);
+            this.gbDetReservation.Controls.Add(this.txtPrenomRetardataire);
+            this.gbDetReservation.Controls.Add(this.txtMontantRetard);
+            this.gbDetReservation.Controls.Add(this.txtNbJoursRetards);
+            this.gbDetReservation.Controls.Add(this.txtNomretardataire);
             this.gbDetReservation.Controls.Add(this.label8);
             this.gbDetReservation.Controls.Add(this.lDateReservation);
             this.gbDetReservation.Controls.Add(this.lUserPrenomResrvation);
@@ -217,63 +214,72 @@
             this.gbDetReservation.Size = new System.Drawing.Size(457, 153);
             this.gbDetReservation.TabIndex = 9;
             this.gbDetReservation.TabStop = false;
-            this.gbDetReservation.Text = "Déteneur de reservation :";
+            this.gbDetReservation.Text = "Retardataire :";
             // 
-            // txtPrenomResC
+            // label12
             // 
-            this.txtPrenomResC.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPrenomResC.Location = new System.Drawing.Point(148, 52);
-            this.txtPrenomResC.Name = "txtPrenomResC";
-            this.txtPrenomResC.ReadOnly = true;
-            this.txtPrenomResC.Size = new System.Drawing.Size(177, 25);
-            this.txtPrenomResC.TabIndex = 12;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(302, 123);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(18, 18);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "€";
             // 
-            // txtDateDisResC
+            // txtPrenomRetardataire
             // 
-            this.txtDateDisResC.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDateDisResC.Location = new System.Drawing.Point(148, 119);
-            this.txtDateDisResC.Name = "txtDateDisResC";
-            this.txtDateDisResC.ReadOnly = true;
-            this.txtDateDisResC.Size = new System.Drawing.Size(177, 25);
-            this.txtDateDisResC.TabIndex = 11;
+            this.txtPrenomRetardataire.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPrenomRetardataire.Location = new System.Drawing.Point(148, 52);
+            this.txtPrenomRetardataire.Name = "txtPrenomRetardataire";
+            this.txtPrenomRetardataire.ReadOnly = true;
+            this.txtPrenomRetardataire.Size = new System.Drawing.Size(177, 25);
+            this.txtPrenomRetardataire.TabIndex = 12;
             // 
-            // txtDateResC
+            // txtMontantRetard
             // 
-            this.txtDateResC.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDateResC.Location = new System.Drawing.Point(148, 80);
-            this.txtDateResC.Name = "txtDateResC";
-            this.txtDateResC.ReadOnly = true;
-            this.txtDateResC.Size = new System.Drawing.Size(177, 25);
-            this.txtDateResC.TabIndex = 10;
+            this.txtMontantRetard.BackColor = System.Drawing.SystemColors.Window;
+            this.txtMontantRetard.Location = new System.Drawing.Point(148, 119);
+            this.txtMontantRetard.Name = "txtMontantRetard";
+            this.txtMontantRetard.ReadOnly = true;
+            this.txtMontantRetard.Size = new System.Drawing.Size(147, 25);
+            this.txtMontantRetard.TabIndex = 11;
             // 
-            // txtNomResEnC
+            // txtNbJoursRetards
             // 
-            this.txtNomResEnC.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNomResEnC.Location = new System.Drawing.Point(148, 20);
-            this.txtNomResEnC.Name = "txtNomResEnC";
-            this.txtNomResEnC.ReadOnly = true;
-            this.txtNomResEnC.Size = new System.Drawing.Size(177, 25);
-            this.txtNomResEnC.TabIndex = 9;
+            this.txtNbJoursRetards.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNbJoursRetards.Location = new System.Drawing.Point(148, 80);
+            this.txtNbJoursRetards.Name = "txtNbJoursRetards";
+            this.txtNbJoursRetards.ReadOnly = true;
+            this.txtNbJoursRetards.Size = new System.Drawing.Size(177, 25);
+            this.txtNbJoursRetards.TabIndex = 10;
+            // 
+            // txtNomretardataire
+            // 
+            this.txtNomretardataire.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNomretardataire.Location = new System.Drawing.Point(148, 20);
+            this.txtNomretardataire.Name = "txtNomretardataire";
+            this.txtNomretardataire.ReadOnly = true;
+            this.txtNomretardataire.Size = new System.Drawing.Size(177, 25);
+            this.txtNomretardataire.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(27, 104);
+            this.label8.Location = new System.Drawing.Point(48, 122);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(118, 36);
+            this.label8.Size = new System.Drawing.Size(94, 18);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Date prévu \r\nde disponibilité :";
+            this.label8.Text = "Montant dû :";
             // 
             // lDateReservation
             // 
             this.lDateReservation.AutoSize = true;
             this.lDateReservation.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateReservation.Location = new System.Drawing.Point(4, 82);
+            this.lDateReservation.Location = new System.Drawing.Point(7, 82);
             this.lDateReservation.Name = "lDateReservation";
-            this.lDateReservation.Size = new System.Drawing.Size(141, 18);
+            this.lDateReservation.Size = new System.Drawing.Size(137, 18);
             this.lDateReservation.TabIndex = 3;
-            this.lDateReservation.Text = "Date de résèrvation :";
+            this.lDateReservation.Text = "Nb Jours de retard :";
             // 
             // lUserPrenomResrvation
             // 
@@ -302,7 +308,7 @@
             this.tpEmpruntEtReservation.Controls.Add(this.button6);
             this.tpEmpruntEtReservation.Controls.Add(this.lHistoriqueEmprunt);
             this.tpEmpruntEtReservation.Controls.Add(this.lEmpruntsEnCours);
-            this.tpEmpruntEtReservation.Controls.Add(this.gdvReservationEnCours);
+            this.tpEmpruntEtReservation.Controls.Add(this.gdvRetardataires);
             this.tpEmpruntEtReservation.Controls.Add(this.gbUserEmprunt);
             this.tpEmpruntEtReservation.Controls.Add(this.button8);
             this.tpEmpruntEtReservation.Controls.Add(this.button11);
@@ -310,7 +316,7 @@
             this.tpEmpruntEtReservation.Location = new System.Drawing.Point(4, 27);
             this.tpEmpruntEtReservation.Name = "tpEmpruntEtReservation";
             this.tpEmpruntEtReservation.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEmpruntEtReservation.Size = new System.Drawing.Size(916, 593);
+            this.tpEmpruntEtReservation.Size = new System.Drawing.Size(910, 595);
             this.tpEmpruntEtReservation.TabIndex = 1;
             this.tpEmpruntEtReservation.Text = "Emprunts & Retards";
             // 
@@ -343,28 +349,28 @@
             this.lEmpruntsEnCours.Text = "Liste des emprunts en cours :";
             this.lEmpruntsEnCours.Click += new System.EventHandler(this.lEmpruntsEnCours_Click);
             // 
-            // gdvReservationEnCours
+            // gdvRetardataires
             // 
-            this.gdvReservationEnCours.AllowUserToAddRows = false;
-            this.gdvReservationEnCours.AllowUserToDeleteRows = false;
-            this.gdvReservationEnCours.AllowUserToOrderColumns = true;
-            this.gdvReservationEnCours.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.gdvReservationEnCours.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.gdvReservationEnCours.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdvReservationEnCours.Location = new System.Drawing.Point(6, 385);
-            this.gdvReservationEnCours.Name = "gdvReservationEnCours";
-            this.gdvReservationEnCours.ReadOnly = true;
-            this.gdvReservationEnCours.Size = new System.Drawing.Size(899, 168);
-            this.gdvReservationEnCours.TabIndex = 16;
-            this.gdvReservationEnCours.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvReservationEnCours_CellClick);
+            this.gdvRetardataires.AllowUserToAddRows = false;
+            this.gdvRetardataires.AllowUserToDeleteRows = false;
+            this.gdvRetardataires.AllowUserToOrderColumns = true;
+            this.gdvRetardataires.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gdvRetardataires.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.gdvRetardataires.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gdvRetardataires.Location = new System.Drawing.Point(6, 385);
+            this.gdvRetardataires.Name = "gdvRetardataires";
+            this.gdvRetardataires.ReadOnly = true;
+            this.gdvRetardataires.Size = new System.Drawing.Size(899, 168);
+            this.gdvRetardataires.TabIndex = 16;
+            this.gdvRetardataires.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvReservationEnCours_CellClick);
             // 
             // gbUserEmprunt
             // 
-            this.gbUserEmprunt.Controls.Add(this.pictureBox3);
+            this.gbUserEmprunt.Controls.Add(this.txtNomEmprunteur);
+            this.gbUserEmprunt.Controls.Add(this.pbLivreEmprunt);
             this.gbUserEmprunt.Controls.Add(this.txtPrenomemprunteur);
             this.gbUserEmprunt.Controls.Add(this.txtRetardsEmprunteur);
             this.gbUserEmprunt.Controls.Add(this.txtNbEmpruntsEmprunteur);
-            this.gbUserEmprunt.Controls.Add(this.txtNomEmprunteur);
             this.gbUserEmprunt.Controls.Add(this.lNombreRetards);
             this.gbUserEmprunt.Controls.Add(this.lUserNbEmprunt);
             this.gbUserEmprunt.Controls.Add(this.lUserPrenomEmprunt);
@@ -376,6 +382,16 @@
             this.gbUserEmprunt.TabIndex = 8;
             this.gbUserEmprunt.TabStop = false;
             this.gbUserEmprunt.Text = "Données Emprunteur :";
+            // 
+            // txtNomEmprunteur
+            // 
+            this.txtNomEmprunteur.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNomEmprunteur.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomEmprunteur.Location = new System.Drawing.Point(136, 19);
+            this.txtNomEmprunteur.Name = "txtNomEmprunteur";
+            this.txtNomEmprunteur.ReadOnly = true;
+            this.txtNomEmprunteur.Size = new System.Drawing.Size(167, 25);
+            this.txtNomEmprunteur.TabIndex = 38;
             // 
             // txtPrenomemprunteur
             // 
@@ -406,16 +422,6 @@
             this.txtNbEmpruntsEmprunteur.ReadOnly = true;
             this.txtNbEmpruntsEmprunteur.Size = new System.Drawing.Size(167, 25);
             this.txtNbEmpruntsEmprunteur.TabIndex = 6;
-            // 
-            // txtNomEmprunteur
-            // 
-            this.txtNomEmprunteur.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtNomEmprunteur.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomEmprunteur.Location = new System.Drawing.Point(136, 17);
-            this.txtNomEmprunteur.Name = "txtNomEmprunteur";
-            this.txtNomEmprunteur.ReadOnly = true;
-            this.txtNomEmprunteur.Size = new System.Drawing.Size(167, 25);
-            this.txtNomEmprunteur.TabIndex = 5;
             // 
             // lNombreRetards
             // 
@@ -505,30 +511,30 @@
             // 
             // button25
             // 
-            this.button25.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(655, 556);
+            this.button25.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button25.Location = new System.Drawing.Point(644, 556);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(80, 31);
+            this.button25.Size = new System.Drawing.Size(85, 31);
             this.button25.TabIndex = 32;
             this.button25.Text = "Actualiser";
             this.button25.UseVisualStyleBackColor = true;
             // 
             // button24
             // 
-            this.button24.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(741, 556);
+            this.button24.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button24.Location = new System.Drawing.Point(735, 556);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(80, 31);
             this.button24.TabIndex = 31;
-            this.button24.Text = "Modifier";
+            this.button24.Text = "Editer";
             this.button24.UseVisualStyleBackColor = true;
             // 
             // button23
             // 
-            this.button23.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(827, 556);
+            this.button23.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button23.Location = new System.Drawing.Point(821, 556);
             this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(80, 31);
+            this.button23.Size = new System.Drawing.Size(86, 31);
             this.button23.TabIndex = 30;
             this.button23.Text = "Supprimer";
             this.button23.UseVisualStyleBackColor = true;
@@ -537,7 +543,6 @@
             // 
             this.groupBox5.Controls.Add(this.groupBox10);
             this.groupBox5.Controls.Add(this.groupBox11);
-            this.groupBox5.Controls.Add(this.groupBox9);
             this.groupBox5.Controls.Add(this.groupBox6);
             this.groupBox5.Location = new System.Drawing.Point(405, 3);
             this.groupBox5.Name = "groupBox5";
@@ -548,130 +553,103 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.txtTitreLivreExemp);
             this.groupBox10.Controls.Add(this.button17);
-            this.groupBox10.Controls.Add(this.comboBox4);
-            this.groupBox10.Location = new System.Drawing.Point(9, 66);
+            this.groupBox10.Location = new System.Drawing.Point(10, 89);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(232, 50);
+            this.groupBox10.Size = new System.Drawing.Size(232, 67);
             this.groupBox10.TabIndex = 32;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Par nom du livre :";
+            this.groupBox10.Text = "Par Titre du livre :";
+            // 
+            // txtTitreLivreExemp
+            // 
+            this.txtTitreLivreExemp.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTitreLivreExemp.Location = new System.Drawing.Point(5, 24);
+            this.txtTitreLivreExemp.Name = "txtTitreLivreExemp";
+            this.txtTitreLivreExemp.Size = new System.Drawing.Size(163, 25);
+            this.txtTitreLivreExemp.TabIndex = 8;
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(175, 19);
+            this.button17.Location = new System.Drawing.Point(175, 26);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(51, 23);
+            this.button17.Size = new System.Drawing.Size(51, 25);
             this.button17.TabIndex = 8;
             this.button17.Text = "GO !";
             this.button17.UseVisualStyleBackColor = true;
             // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(6, 17);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(163, 26);
-            this.comboBox4.TabIndex = 28;
-            // 
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.button16);
-            this.groupBox11.Controls.Add(this.textBox8);
+            this.groupBox11.Controls.Add(this.txtCodeExemp);
             this.groupBox11.Location = new System.Drawing.Point(9, 20);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(232, 44);
+            this.groupBox11.Size = new System.Drawing.Size(232, 63);
             this.groupBox11.TabIndex = 32;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Par code d\'exemplaire :";
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(175, 15);
+            this.button16.Location = new System.Drawing.Point(175, 24);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(51, 23);
+            this.button16.Size = new System.Drawing.Size(51, 26);
             this.button16.TabIndex = 7;
             this.button16.Text = "GO !";
             this.button16.UseVisualStyleBackColor = true;
             // 
-            // textBox8
+            // txtCodeExemp
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox8.Location = new System.Drawing.Point(6, 16);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 25);
-            this.textBox8.TabIndex = 6;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.button21);
-            this.groupBox9.Controls.Add(this.dateTimePicker1);
-            this.groupBox9.Location = new System.Drawing.Point(9, 121);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(232, 49);
-            this.groupBox9.TabIndex = 31;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Par date d\'achat :";
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(175, 18);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(51, 23);
-            this.button21.TabIndex = 29;
-            this.button21.Text = "GO !";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 17);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(163, 25);
-            this.dateTimePicker1.TabIndex = 27;
+            this.txtCodeExemp.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCodeExemp.Location = new System.Drawing.Point(6, 23);
+            this.txtCodeExemp.Name = "txtCodeExemp";
+            this.txtCodeExemp.Size = new System.Drawing.Size(163, 25);
+            this.txtCodeExemp.TabIndex = 6;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.button22);
-            this.groupBox6.Controls.Add(this.comboBox3);
-            this.groupBox6.Location = new System.Drawing.Point(10, 175);
+            this.groupBox6.Controls.Add(this.cbBibLibelle);
+            this.groupBox6.Location = new System.Drawing.Point(10, 162);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(231, 50);
+            this.groupBox6.Size = new System.Drawing.Size(231, 63);
             this.groupBox6.TabIndex = 30;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Par Bibliothèque :";
             // 
             // button22
             // 
-            this.button22.Location = new System.Drawing.Point(174, 19);
+            this.button22.Location = new System.Drawing.Point(174, 24);
             this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(51, 23);
+            this.button22.Size = new System.Drawing.Size(51, 25);
             this.button22.TabIndex = 30;
             this.button22.Text = "GO !";
             this.button22.UseVisualStyleBackColor = true;
             // 
-            // comboBox3
+            // cbBibLibelle
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(5, 20);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(163, 26);
-            this.comboBox3.TabIndex = 29;
+            this.cbBibLibelle.FormattingEnabled = true;
+            this.cbBibLibelle.Location = new System.Drawing.Point(5, 23);
+            this.cbBibLibelle.Name = "cbBibLibelle";
+            this.cbBibLibelle.Size = new System.Drawing.Size(163, 26);
+            this.cbBibLibelle.TabIndex = 29;
             // 
             // btnEmprunterLivre
             // 
-            this.btnEmprunterLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmprunterLivre.Location = new System.Drawing.Point(826, 556);
+            this.btnEmprunterLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmprunterLivre.Location = new System.Drawing.Point(820, 556);
             this.btnEmprunterLivre.Name = "btnEmprunterLivre";
-            this.btnEmprunterLivre.Size = new System.Drawing.Size(80, 31);
+            this.btnEmprunterLivre.Size = new System.Drawing.Size(85, 31);
             this.btnEmprunterLivre.TabIndex = 6;
             this.btnEmprunterLivre.Text = "Supprimer";
             this.btnEmprunterLivre.UseVisualStyleBackColor = true;
+            this.btnEmprunterLivre.Click += new System.EventHandler(this.btnEmprunterLivre_Click);
             // 
             // tbnReserverLivre
             // 
-            this.tbnReserverLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnReserverLivre.Location = new System.Drawing.Point(740, 556);
+            this.tbnReserverLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnReserverLivre.Location = new System.Drawing.Point(734, 556);
             this.tbnReserverLivre.Name = "tbnReserverLivre";
             this.tbnReserverLivre.Size = new System.Drawing.Size(80, 31);
             this.tbnReserverLivre.TabIndex = 5;
@@ -681,13 +659,14 @@
             // 
             // btnActualiserLivre
             // 
-            this.btnActualiserLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualiserLivre.Location = new System.Drawing.Point(654, 556);
+            this.btnActualiserLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualiserLivre.Location = new System.Drawing.Point(641, 556);
             this.btnActualiserLivre.Name = "btnActualiserLivre";
-            this.btnActualiserLivre.Size = new System.Drawing.Size(80, 31);
+            this.btnActualiserLivre.Size = new System.Drawing.Size(87, 31);
             this.btnActualiserLivre.TabIndex = 3;
             this.btnActualiserLivre.Text = "Actualiser";
             this.btnActualiserLivre.UseVisualStyleBackColor = true;
+            this.btnActualiserLivre.Click += new System.EventHandler(this.btnActualiserLivre_Click);
             // 
             // gdvLivre
             // 
@@ -710,14 +689,14 @@
             this.gbRechLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbRechLivre.Location = new System.Drawing.Point(6, 88);
             this.gbRechLivre.Name = "gbRechLivre";
-            this.gbRechLivre.Size = new System.Drawing.Size(282, 149);
+            this.gbRechLivre.Size = new System.Drawing.Size(282, 152);
             this.gbRechLivre.TabIndex = 3;
             this.gbRechLivre.TabStop = false;
             this.gbRechLivre.Text = "Recherche de livre :";
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.button35);
+            this.groupBox7.Controls.Add(this.btnTitreRechLivre);
             this.groupBox7.Controls.Add(this.lTitreRechLivre);
             this.groupBox7.Controls.Add(this.txtTitreRechLivre);
             this.groupBox7.Location = new System.Drawing.Point(6, 86);
@@ -726,11 +705,21 @@
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             // 
+            // btnTitreRechLivre
+            // 
+            this.btnTitreRechLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTitreRechLivre.Location = new System.Drawing.Point(221, 15);
+            this.btnTitreRechLivre.Name = "btnTitreRechLivre";
+            this.btnTitreRechLivre.Size = new System.Drawing.Size(43, 29);
+            this.btnTitreRechLivre.TabIndex = 4;
+            this.btnTitreRechLivre.Text = "GO!";
+            this.btnTitreRechLivre.UseVisualStyleBackColor = true;
+            // 
             // lTitreRechLivre
             // 
             this.lTitreRechLivre.AutoSize = true;
             this.lTitreRechLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitreRechLivre.Location = new System.Drawing.Point(6, 20);
+            this.lTitreRechLivre.Location = new System.Drawing.Point(9, 20);
             this.lTitreRechLivre.Name = "lTitreRechLivre";
             this.lTitreRechLivre.Size = new System.Drawing.Size(49, 18);
             this.lTitreRechLivre.TabIndex = 3;
@@ -740,7 +729,7 @@
             // 
             this.txtTitreRechLivre.BackColor = System.Drawing.SystemColors.Window;
             this.txtTitreRechLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTitreRechLivre.Location = new System.Drawing.Point(57, 17);
+            this.txtTitreRechLivre.Location = new System.Drawing.Point(64, 17);
             this.txtTitreRechLivre.Name = "txtTitreRechLivre";
             this.txtTitreRechLivre.Size = new System.Drawing.Size(151, 25);
             this.txtTitreRechLivre.TabIndex = 1;
@@ -766,25 +755,27 @@
             this.txtISBNRechLivre.Size = new System.Drawing.Size(151, 25);
             this.txtISBNRechLivre.TabIndex = 0;
             // 
-            // button3
+            // btnMAJLivre
             // 
-            this.button3.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(121, 191);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 31);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Mettre à jour";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnMAJLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMAJLivre.Location = new System.Drawing.Point(121, 191);
+            this.btnMAJLivre.Name = "btnMAJLivre";
+            this.btnMAJLivre.Size = new System.Drawing.Size(102, 31);
+            this.btnMAJLivre.TabIndex = 27;
+            this.btnMAJLivre.Text = "Mettre à jour";
+            this.btnMAJLivre.UseVisualStyleBackColor = true;
+            this.btnMAJLivre.Click += new System.EventHandler(this.btnMAJLivre_Click);
             // 
-            // button4
+            // btnAjManLivre
             // 
-            this.button4.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(35, 191);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(80, 31);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Ajouter";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAjManLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjManLivre.Location = new System.Drawing.Point(35, 191);
+            this.btnAjManLivre.Name = "btnAjManLivre";
+            this.btnAjManLivre.Size = new System.Drawing.Size(80, 31);
+            this.btnAjManLivre.TabIndex = 26;
+            this.btnAjManLivre.Text = "Ajouter";
+            this.btnAjManLivre.UseVisualStyleBackColor = true;
+            this.btnAjManLivre.Click += new System.EventHandler(this.btnAjManLivre_Click);
             // 
             // label2
             // 
@@ -802,21 +793,32 @@
             this.groupBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(6, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 71);
+            this.groupBox1.Size = new System.Drawing.Size(282, 73);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajout rapide de livre :";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnAjRapLivre);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 20);
+            this.groupBox2.Controls.Add(this.txtISBNAjRapLivre);
+            this.groupBox2.Location = new System.Drawing.Point(6, 15);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(270, 52);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
+            // 
+            // btnAjRapLivre
+            // 
+            this.btnAjRapLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjRapLivre.Location = new System.Drawing.Point(221, 14);
+            this.btnAjRapLivre.Name = "btnAjRapLivre";
+            this.btnAjRapLivre.Size = new System.Drawing.Size(43, 29);
+            this.btnAjRapLivre.TabIndex = 3;
+            this.btnAjRapLivre.Text = "GO!";
+            this.btnAjRapLivre.UseVisualStyleBackColor = true;
+            this.btnAjRapLivre.Click += new System.EventHandler(this.btnAjRapLivre_Click);
             // 
             // label1
             // 
@@ -828,14 +830,14 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "ISBN :";
             // 
-            // textBox1
+            // txtISBNAjRapLivre
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(64, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 25);
-            this.textBox1.TabIndex = 0;
+            this.txtISBNAjRapLivre.BackColor = System.Drawing.SystemColors.Window;
+            this.txtISBNAjRapLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtISBNAjRapLivre.Location = new System.Drawing.Point(64, 16);
+            this.txtISBNAjRapLivre.Name = "txtISBNAjRapLivre";
+            this.txtISBNAjRapLivre.Size = new System.Drawing.Size(151, 25);
+            this.txtISBNAjRapLivre.TabIndex = 0;
             // 
             // txtNomAutAjMan
             // 
@@ -875,7 +877,6 @@
             // 
             this.tpGestionLivre.BackColor = System.Drawing.SystemColors.Control;
             this.tpGestionLivre.Controls.Add(this.pbLogoGestLivre);
-            this.tpGestionLivre.Controls.Add(this.button30);
             this.tpGestionLivre.Controls.Add(this.gbAjoutManuelLivre);
             this.tpGestionLivre.Controls.Add(this.groupBox1);
             this.tpGestionLivre.Controls.Add(this.lListeLivre);
@@ -891,31 +892,12 @@
             this.tpGestionLivre.TabIndex = 0;
             this.tpGestionLivre.Text = "Livres";
             // 
-            // pbLogoGestLivre
-            // 
-            this.pbLogoGestLivre.Location = new System.Drawing.Point(699, 18);
-            this.pbLogoGestLivre.Name = "pbLogoGestLivre";
-            this.pbLogoGestLivre.Size = new System.Drawing.Size(203, 222);
-            this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogoGestLivre.TabIndex = 36;
-            this.pbLogoGestLivre.TabStop = false;
-            // 
-            // button30
-            // 
-            this.button30.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button30.Location = new System.Drawing.Point(5, 558);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(80, 31);
-            this.button30.TabIndex = 35;
-            this.button30.Text = "Imprimer";
-            this.button30.UseVisualStyleBackColor = true;
-            // 
             // gbAjoutManuelLivre
             // 
             this.gbAjoutManuelLivre.Controls.Add(this.label5);
             this.gbAjoutManuelLivre.Controls.Add(this.txtLienAjMan);
-            this.gbAjoutManuelLivre.Controls.Add(this.button3);
-            this.gbAjoutManuelLivre.Controls.Add(this.button4);
+            this.gbAjoutManuelLivre.Controls.Add(this.btnMAJLivre);
+            this.gbAjoutManuelLivre.Controls.Add(this.btnAjManLivre);
             this.gbAjoutManuelLivre.Controls.Add(this.label2);
             this.gbAjoutManuelLivre.Controls.Add(this.txtNomAutAjMan);
             this.gbAjoutManuelLivre.Controls.Add(this.label4);
@@ -987,15 +969,157 @@
             this.txtISBNAjMan.Size = new System.Drawing.Size(151, 25);
             this.txtISBNAjMan.TabIndex = 6;
             // 
-            // pbLivre
+            // tpGestionExemplaires
             // 
-            this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivre.Location = new System.Drawing.Point(231, 19);
-            this.pbLivre.Name = "pbLivre";
-            this.pbLivre.Size = new System.Drawing.Size(161, 202);
-            this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivre.TabIndex = 4;
-            this.pbLivre.TabStop = false;
+            this.tpGestionExemplaires.BackColor = System.Drawing.SystemColors.Control;
+            this.tpGestionExemplaires.Controls.Add(this.pictureBox2);
+            this.tpGestionExemplaires.Controls.Add(this.button25);
+            this.tpGestionExemplaires.Controls.Add(this.button24);
+            this.tpGestionExemplaires.Controls.Add(this.button23);
+            this.tpGestionExemplaires.Controls.Add(this.groupBox5);
+            this.tpGestionExemplaires.Controls.Add(this.label17);
+            this.tpGestionExemplaires.Controls.Add(this.dgvExemplaire);
+            this.tpGestionExemplaires.Controls.Add(this.groupBox4);
+            this.tpGestionExemplaires.Location = new System.Drawing.Point(4, 27);
+            this.tpGestionExemplaires.Name = "tpGestionExemplaires";
+            this.tpGestionExemplaires.Size = new System.Drawing.Size(910, 595);
+            this.tpGestionExemplaires.TabIndex = 5;
+            this.tpGestionExemplaires.Text = "Exemplaires";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(2, 241);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(155, 18);
+            this.label17.TabIndex = 27;
+            this.label17.Text = "Liste des exemplaires :";
+            // 
+            // dgvExemplaire
+            // 
+            this.dgvExemplaire.AllowUserToAddRows = false;
+            this.dgvExemplaire.AllowUserToDeleteRows = false;
+            this.dgvExemplaire.AllowUserToResizeColumns = false;
+            this.dgvExemplaire.AllowUserToResizeRows = false;
+            this.dgvExemplaire.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvExemplaire.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvExemplaire.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExemplaire.Location = new System.Drawing.Point(0, 262);
+            this.dgvExemplaire.Name = "dgvExemplaire";
+            this.dgvExemplaire.Size = new System.Drawing.Size(907, 288);
+            this.dgvExemplaire.TabIndex = 26;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.btnSauveExemp);
+            this.groupBox4.Controls.Add(this.cbBiblioExemp);
+            this.groupBox4.Controls.Add(this.dateDateAchatExemp);
+            this.groupBox4.Controls.Add(this.btn);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.textBox12);
+            this.groupBox4.Controls.Add(this.pictureBox1);
+            this.groupBox4.Location = new System.Drawing.Point(3, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(396, 233);
+            this.groupBox4.TabIndex = 25;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Ajouter / Modifier  un exemplaire :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(88, 63);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(151, 25);
+            this.textBox1.TabIndex = 31;
+            // 
+            // btnSauveExemp
+            // 
+            this.btnSauveExemp.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSauveExemp.Location = new System.Drawing.Point(283, 195);
+            this.btnSauveExemp.Name = "btnSauveExemp";
+            this.btnSauveExemp.Size = new System.Drawing.Size(107, 31);
+            this.btnSauveExemp.TabIndex = 30;
+            this.btnSauveExemp.Text = "Sauveguarder";
+            this.btnSauveExemp.UseVisualStyleBackColor = true;
+            // 
+            // cbBiblioExemp
+            // 
+            this.cbBiblioExemp.FormattingEnabled = true;
+            this.cbBiblioExemp.Location = new System.Drawing.Point(88, 159);
+            this.cbBiblioExemp.Name = "cbBiblioExemp";
+            this.cbBiblioExemp.Size = new System.Drawing.Size(151, 26);
+            this.cbBiblioExemp.TabIndex = 29;
+            // 
+            // dateDateAchatExemp
+            // 
+            this.dateDateAchatExemp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateDateAchatExemp.Location = new System.Drawing.Point(88, 108);
+            this.dateDateAchatExemp.Name = "dateDateAchatExemp";
+            this.dateDateAchatExemp.Size = new System.Drawing.Size(151, 25);
+            this.dateDateAchatExemp.TabIndex = 27;
+            // 
+            // btn
+            // 
+            this.btn.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.Location = new System.Drawing.Point(197, 195);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(80, 31);
+            this.btn.TabIndex = 26;
+            this.btn.Text = "Ajouter";
+            this.btn.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(25, 162);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 18);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Biblio  :";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(25, 97);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(63, 36);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Date \r\nd\'achat :";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(36, 69);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 18);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Livre :";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(41, 23);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(47, 18);
+            this.label16.TabIndex = 7;
+            this.label16.Text = "Code :";
+            // 
+            // textBox12
+            // 
+            this.textBox12.BackColor = System.Drawing.SystemColors.Window;
+            this.textBox12.Location = new System.Drawing.Point(88, 20);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(151, 25);
+            this.textBox12.TabIndex = 6;
             // 
             // tpgestionLecteurs
             // 
@@ -1007,7 +1131,7 @@
             this.tpgestionLecteurs.Controls.Add(this.gbUserDataProfile);
             this.tpgestionLecteurs.Location = new System.Drawing.Point(4, 27);
             this.tpgestionLecteurs.Name = "tpgestionLecteurs";
-            this.tpgestionLecteurs.Size = new System.Drawing.Size(916, 593);
+            this.tpgestionLecteurs.Size = new System.Drawing.Size(910, 595);
             this.tpgestionLecteurs.TabIndex = 4;
             this.tpgestionLecteurs.Text = "Lecteurs";
             // 
@@ -1053,7 +1177,7 @@
             this.gdvLecteurs.Location = new System.Drawing.Point(3, 194);
             this.gdvLecteurs.Name = "gdvLecteurs";
             this.gdvLecteurs.ReadOnly = true;
-            this.gdvLecteurs.Size = new System.Drawing.Size(909, 359);
+            this.gdvLecteurs.Size = new System.Drawing.Size(904, 359);
             this.gdvLecteurs.TabIndex = 9;
             // 
             // gbUserDataProfile
@@ -1067,7 +1191,7 @@
             this.gbUserDataProfile.Controls.Add(this.pbUserPictureProfil);
             this.gbUserDataProfile.Controls.Add(this.button15);
             this.gbUserDataProfile.Controls.Add(this.txtUserDataUsername);
-            this.gbUserDataProfile.Controls.Add(this.txtUserDataDateEmail);
+            this.gbUserDataProfile.Controls.Add(this.txtUserDataEmail);
             this.gbUserDataProfile.Controls.Add(this.txtUserDataAdresse);
             this.gbUserDataProfile.Controls.Add(this.txtUserDataSexe);
             this.gbUserDataProfile.Controls.Add(this.txtUserDataPrenom);
@@ -1078,7 +1202,7 @@
             this.gbUserDataProfile.Controls.Add(this.lUserDataUsername);
             this.gbUserDataProfile.Controls.Add(this.lUserDataEmail);
             this.gbUserDataProfile.Controls.Add(this.lUserDataNom);
-            this.gbUserDataProfile.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbUserDataProfile.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUserDataProfile.Location = new System.Drawing.Point(3, 3);
             this.gbUserDataProfile.Name = "gbUserDataProfile";
             this.gbUserDataProfile.Size = new System.Drawing.Size(904, 156);
@@ -1086,14 +1210,60 @@
             this.gbUserDataProfile.TabStop = false;
             this.gbUserDataProfile.Text = "Utilisateur :";
             // 
-            // pbUserPictureProfil
+            // label10
             // 
-            this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUserPictureProfil.Location = new System.Drawing.Point(796, 12);
-            this.pbUserPictureProfil.Name = "pbUserPictureProfil";
-            this.pbUserPictureProfil.Size = new System.Drawing.Size(104, 131);
-            this.pbUserPictureProfil.TabIndex = 13;
-            this.pbUserPictureProfil.TabStop = false;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(281, 128);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 18);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Code Postal :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(324, 99);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 18);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Ville :";
+            // 
+            // txtUserDataCodePostal
+            // 
+            this.txtUserDataCodePostal.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserDataCodePostal.Location = new System.Drawing.Point(373, 125);
+            this.txtUserDataCodePostal.Name = "txtUserDataCodePostal";
+            this.txtUserDataCodePostal.Size = new System.Drawing.Size(164, 25);
+            this.txtUserDataCodePostal.TabIndex = 23;
+            // 
+            // txtUserDataVille
+            // 
+            this.txtUserDataVille.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserDataVille.Location = new System.Drawing.Point(373, 96);
+            this.txtUserDataVille.Name = "txtUserDataVille";
+            this.txtUserDataVille.Size = new System.Drawing.Size(164, 25);
+            this.txtUserDataVille.TabIndex = 22;
+            // 
+            // dtUserDataDateNaissance
+            // 
+            this.dtUserDataDateNaissance.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtUserDataDateNaissance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtUserDataDateNaissance.Location = new System.Drawing.Point(86, 119);
+            this.dtUserDataDateNaissance.Name = "dtUserDataDateNaissance";
+            this.dtUserDataDateNaissance.Size = new System.Drawing.Size(193, 25);
+            this.dtUserDataDateNaissance.TabIndex = 21;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 18);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Sexe  :";
             // 
             // button15
             // 
@@ -1113,13 +1283,13 @@
             this.txtUserDataUsername.Size = new System.Drawing.Size(169, 25);
             this.txtUserDataUsername.TabIndex = 16;
             // 
-            // txtUserDataDateEmail
+            // txtUserDataEmail
             // 
-            this.txtUserDataDateEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserDataDateEmail.Location = new System.Drawing.Point(596, 20);
-            this.txtUserDataDateEmail.Name = "txtUserDataDateEmail";
-            this.txtUserDataDateEmail.Size = new System.Drawing.Size(194, 25);
-            this.txtUserDataDateEmail.TabIndex = 15;
+            this.txtUserDataEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserDataEmail.Location = new System.Drawing.Point(596, 20);
+            this.txtUserDataEmail.Name = "txtUserDataEmail";
+            this.txtUserDataEmail.Size = new System.Drawing.Size(194, 25);
+            this.txtUserDataEmail.TabIndex = 15;
             // 
             // txtUserDataAdresse
             // 
@@ -1215,275 +1385,19 @@
             this.lUserDataNom.TabIndex = 1;
             this.lUserDataNom.Text = "Nom :";
             // 
-            // tpGestionExemplaires
-            // 
-            this.tpGestionExemplaires.BackColor = System.Drawing.SystemColors.Control;
-            this.tpGestionExemplaires.Controls.Add(this.pictureBox2);
-            this.tpGestionExemplaires.Controls.Add(this.button25);
-            this.tpGestionExemplaires.Controls.Add(this.button24);
-            this.tpGestionExemplaires.Controls.Add(this.button23);
-            this.tpGestionExemplaires.Controls.Add(this.groupBox5);
-            this.tpGestionExemplaires.Controls.Add(this.label17);
-            this.tpGestionExemplaires.Controls.Add(this.dgvgestExemplaire);
-            this.tpGestionExemplaires.Controls.Add(this.groupBox4);
-            this.tpGestionExemplaires.Location = new System.Drawing.Point(4, 27);
-            this.tpGestionExemplaires.Name = "tpGestionExemplaires";
-            this.tpGestionExemplaires.Size = new System.Drawing.Size(916, 593);
-            this.tpGestionExemplaires.TabIndex = 5;
-            this.tpGestionExemplaires.Text = "Exemplaires";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(680, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 222);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 37;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(2, 241);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(155, 18);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "Liste des exemplaires :";
-            // 
-            // dgvgestExemplaire
-            // 
-            this.dgvgestExemplaire.AllowUserToAddRows = false;
-            this.dgvgestExemplaire.AllowUserToDeleteRows = false;
-            this.dgvgestExemplaire.AllowUserToResizeColumns = false;
-            this.dgvgestExemplaire.AllowUserToResizeRows = false;
-            this.dgvgestExemplaire.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvgestExemplaire.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvgestExemplaire.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvgestExemplaire.Location = new System.Drawing.Point(0, 262);
-            this.dgvgestExemplaire.Name = "dgvgestExemplaire";
-            this.dgvgestExemplaire.Size = new System.Drawing.Size(907, 288);
-            this.dgvgestExemplaire.TabIndex = 26;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.btnSauvGestExemp);
-            this.groupBox4.Controls.Add(this.comboBox2);
-            this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Controls.Add(this.dateDateAchatExemp);
-            this.groupBox4.Controls.Add(this.btn);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.label14);
-            this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.textBox12);
-            this.groupBox4.Controls.Add(this.pictureBox1);
-            this.groupBox4.Location = new System.Drawing.Point(3, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(396, 233);
-            this.groupBox4.TabIndex = 25;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Ajouter / Modifier  un exemplaire :";
-            // 
-            // btnSauvGestExemp
-            // 
-            this.btnSauvGestExemp.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSauvGestExemp.Location = new System.Drawing.Point(297, 195);
-            this.btnSauvGestExemp.Name = "btnSauvGestExemp";
-            this.btnSauvGestExemp.Size = new System.Drawing.Size(93, 31);
-            this.btnSauvGestExemp.TabIndex = 30;
-            this.btnSauvGestExemp.Text = "Sauveguarder";
-            this.btnSauvGestExemp.UseVisualStyleBackColor = true;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(87, 136);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(151, 26);
-            this.comboBox2.TabIndex = 29;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(88, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(151, 26);
-            this.comboBox1.TabIndex = 28;
-            // 
-            // dateDateAchatExemp
-            // 
-            this.dateDateAchatExemp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateDateAchatExemp.Location = new System.Drawing.Point(88, 95);
-            this.dateDateAchatExemp.Name = "dateDateAchatExemp";
-            this.dateDateAchatExemp.Size = new System.Drawing.Size(151, 25);
-            this.dateDateAchatExemp.TabIndex = 27;
-            // 
-            // btn
-            // 
-            this.btn.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.Location = new System.Drawing.Point(211, 195);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(80, 31);
-            this.btn.TabIndex = 26;
-            this.btn.Text = "Ajouter";
-            this.btn.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 121);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 45);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Bibliothèque  \r\npossèant cet \r\nexemplaire :";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(4, 95);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 15);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "Date d\'achat :";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(25, 60);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(43, 15);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Livre :";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(21, 20);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 15);
-            this.label16.TabIndex = 7;
-            this.label16.Text = "Code :";
-            // 
-            // textBox12
-            // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox12.Location = new System.Drawing.Point(88, 20);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(151, 25);
-            this.textBox12.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(245, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 174);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // button2
+            // label11
             // 
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(221, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "GO!";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button35
-            // 
-            this.button35.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button35.Location = new System.Drawing.Point(221, 15);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(43, 29);
-            this.button35.TabIndex = 4;
-            this.button35.Text = "GO!";
-            this.button35.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(309, 15);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(118, 132);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 37;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Location = new System.Drawing.Point(331, 14);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(118, 132);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 38;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(21, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 18);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Sexe  :";
-            // 
-            // dtUserDataDateNaissance
-            // 
-            this.dtUserDataDateNaissance.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtUserDataDateNaissance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtUserDataDateNaissance.Location = new System.Drawing.Point(86, 119);
-            this.dtUserDataDateNaissance.Name = "dtUserDataDateNaissance";
-            this.dtUserDataDateNaissance.Size = new System.Drawing.Size(193, 25);
-            this.dtUserDataDateNaissance.TabIndex = 21;
-            // 
-            // txtUserDataVille
-            // 
-            this.txtUserDataVille.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserDataVille.Location = new System.Drawing.Point(373, 96);
-            this.txtUserDataVille.Name = "txtUserDataVille";
-            this.txtUserDataVille.Size = new System.Drawing.Size(164, 25);
-            this.txtUserDataVille.TabIndex = 22;
-            // 
-            // txtUserDataCodePostal
-            // 
-            this.txtUserDataCodePostal.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserDataCodePostal.Location = new System.Drawing.Point(373, 125);
-            this.txtUserDataCodePostal.Name = "txtUserDataCodePostal";
-            this.txtUserDataCodePostal.Size = new System.Drawing.Size(164, 25);
-            this.txtUserDataCodePostal.TabIndex = 23;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(324, 99);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 18);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Ville :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(281, 128);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 18);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Code Postal :";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(712, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 20);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Username";
             // 
             // picSignOut
             // 
@@ -1497,16 +1411,6 @@
             this.picSignOut.TabStop = false;
             this.picSignOut.Tag = "Deconnecter?";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(712, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 20);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Username";
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::MainApp.Properties.Resources.téléchargement;
@@ -1516,6 +1420,75 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
+            // 
+            // pbLogoGestLivre
+            // 
+            this.pbLogoGestLivre.Image = global::MainApp.Properties.Resources.Livre_2;
+            this.pbLogoGestLivre.Location = new System.Drawing.Point(699, 18);
+            this.pbLogoGestLivre.Name = "pbLogoGestLivre";
+            this.pbLogoGestLivre.Size = new System.Drawing.Size(203, 222);
+            this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoGestLivre.TabIndex = 36;
+            this.pbLogoGestLivre.TabStop = false;
+            // 
+            // pbLivre
+            // 
+            this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivre.Location = new System.Drawing.Point(231, 19);
+            this.pbLivre.Name = "pbLivre";
+            this.pbLivre.Size = new System.Drawing.Size(161, 202);
+            this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivre.TabIndex = 4;
+            this.pbLivre.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MainApp.Properties.Resources.Livre_2;
+            this.pictureBox2.Location = new System.Drawing.Point(680, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(214, 222);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(245, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 174);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbLiveRetard
+            // 
+            this.pbLiveRetard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLiveRetard.Location = new System.Drawing.Point(331, 14);
+            this.pbLiveRetard.Name = "pbLiveRetard";
+            this.pbLiveRetard.Size = new System.Drawing.Size(118, 132);
+            this.pbLiveRetard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLiveRetard.TabIndex = 38;
+            this.pbLiveRetard.TabStop = false;
+            // 
+            // pbLivreEmprunt
+            // 
+            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivreEmprunt.Location = new System.Drawing.Point(309, 15);
+            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
+            this.pbLivreEmprunt.Size = new System.Drawing.Size(118, 132);
+            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivreEmprunt.TabIndex = 37;
+            this.pbLivreEmprunt.TabStop = false;
+            // 
+            // pbUserPictureProfil
+            // 
+            this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbUserPictureProfil.Location = new System.Drawing.Point(796, 12);
+            this.pbUserPictureProfil.Name = "pbUserPictureProfil";
+            this.pbUserPictureProfil.Size = new System.Drawing.Size(104, 131);
+            this.pbUserPictureProfil.TabIndex = 13;
+            this.pbUserPictureProfil.TabStop = false;
             // 
             // AdministrateurGui
             // 
@@ -1528,21 +1501,22 @@
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.tbAdministrateur);
             this.Name = "AdministrateurGui";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdministrateurGui";
             this.Load += new System.EventHandler(this.AdministrateurGui_Load);
             this.gbDetReservation.ResumeLayout(false);
             this.gbDetReservation.PerformLayout();
             this.tpEmpruntEtReservation.ResumeLayout(false);
             this.tpEmpruntEtReservation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gdvReservationEnCours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gdvRetardataires)).EndInit();
             this.gbUserEmprunt.ResumeLayout(false);
             this.gbUserEmprunt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvEmpruntEnCours)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdvLivre)).EndInit();
             this.gbRechLivre.ResumeLayout(false);
@@ -1556,27 +1530,27 @@
             this.tbAdministrateur.ResumeLayout(false);
             this.tpGestionLivre.ResumeLayout(false);
             this.tpGestionLivre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).EndInit();
             this.gbAjoutManuelLivre.ResumeLayout(false);
             this.gbAjoutManuelLivre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).EndInit();
+            this.tpGestionExemplaires.ResumeLayout(false);
+            this.tpGestionExemplaires.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.tpgestionLecteurs.ResumeLayout(false);
             this.tpgestionLecteurs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).EndInit();
             this.gbUserDataProfile.ResumeLayout(false);
             this.gbUserDataProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).EndInit();
-            this.tpGestionExemplaires.ResumeLayout(false);
-            this.tpGestionExemplaires.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvgestExemplaire)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1586,10 +1560,10 @@
 
         private System.Windows.Forms.Label lISBNrechLivre;
         private System.Windows.Forms.GroupBox gbDetReservation;
-        private System.Windows.Forms.TextBox txtPrenomResC;
-        private System.Windows.Forms.TextBox txtDateDisResC;
-        private System.Windows.Forms.TextBox txtDateResC;
-        private System.Windows.Forms.TextBox txtNomResEnC;
+        private System.Windows.Forms.TextBox txtPrenomRetardataire;
+        private System.Windows.Forms.TextBox txtMontantRetard;
+        private System.Windows.Forms.TextBox txtNbJoursRetards;
+        private System.Windows.Forms.TextBox txtNomretardataire;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lDateReservation;
         private System.Windows.Forms.Label lUserPrenomResrvation;
@@ -1598,12 +1572,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lHistoriqueEmprunt;
         private System.Windows.Forms.Label lEmpruntsEnCours;
-        private System.Windows.Forms.DataGridView gdvReservationEnCours;
+        private System.Windows.Forms.DataGridView gdvRetardataires;
         private System.Windows.Forms.GroupBox gbUserEmprunt;
         private System.Windows.Forms.TextBox txtPrenomemprunteur;
         private System.Windows.Forms.TextBox txtRetardsEmprunteur;
         private System.Windows.Forms.TextBox txtNbEmpruntsEmprunteur;
-        private System.Windows.Forms.TextBox txtNomEmprunteur;
         private System.Windows.Forms.Label lNombreRetards;
         private System.Windows.Forms.Label lUserNbEmprunt;
         private System.Windows.Forms.Label lUserPrenomEmprunt;
@@ -1618,16 +1591,12 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox txtCodeExemp;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbBibLibelle;
         private System.Windows.Forms.Button btnEmprunterLivre;
         private System.Windows.Forms.Button tbnReserverLivre;
         private System.Windows.Forms.Button btnActualiserLivre;
@@ -1638,19 +1607,18 @@
         private System.Windows.Forms.TextBox txtTitreRechLivre;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox txtISBNRechLivre;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnMAJLivre;
+        private System.Windows.Forms.Button btnAjManLivre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtISBNAjRapLivre;
         private System.Windows.Forms.TextBox txtNomAutAjMan;
         private System.Windows.Forms.Label lListeLivre;
         private System.Windows.Forms.TabControl tbAdministrateur;
         private System.Windows.Forms.TabPage tpGestionLivre;
         private System.Windows.Forms.PictureBox pbLogoGestLivre;
-        private System.Windows.Forms.Button button30;
         private System.Windows.Forms.GroupBox gbAjoutManuelLivre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTitreAjMan;
@@ -1666,7 +1634,7 @@
         private System.Windows.Forms.PictureBox pbUserPictureProfil;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.TextBox txtUserDataUsername;
-        private System.Windows.Forms.TextBox txtUserDataDateEmail;
+        private System.Windows.Forms.TextBox txtUserDataEmail;
         private System.Windows.Forms.TextBox txtUserDataAdresse;
         private System.Windows.Forms.TextBox txtUserDataSexe;
         private System.Windows.Forms.TextBox txtUserDataPrenom;
@@ -1680,11 +1648,10 @@
         private System.Windows.Forms.TabPage tpGestionExemplaires;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DataGridView dgvgestExemplaire;
+        private System.Windows.Forms.DataGridView dgvExemplaire;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnSauvGestExemp;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnSauveExemp;
+        private System.Windows.Forms.ComboBox cbBiblioExemp;
         private System.Windows.Forms.DateTimePicker dateDateAchatExemp;
         private System.Windows.Forms.Button btn;
         private System.Windows.Forms.Label label13;
@@ -1696,10 +1663,10 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtLienAjMan;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pbLiveRetard;
+        private System.Windows.Forms.PictureBox pbLivreEmprunt;
+        private System.Windows.Forms.Button btnTitreRechLivre;
+        private System.Windows.Forms.Button btnAjRapLivre;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtUserDataCodePostal;
@@ -1709,5 +1676,9 @@
         private System.Windows.Forms.PictureBox picSignOut;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtTitreLivreExemp;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomEmprunteur;
     }
 }

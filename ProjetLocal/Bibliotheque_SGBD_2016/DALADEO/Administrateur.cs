@@ -68,6 +68,94 @@ namespace DALADO
             }
             return ds;
         }
+
+        public static void UpdateLivre(string iSBN, string titre, string image, string auteurs)
+        {
+            var com = new SqlCommand();
+            var da = new SqlDataAdapter();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[LIV_UpdateLivre]";
+                com.Parameters.Add(new SqlParameter("isbn", iSBN));
+                com.Parameters.Add(new SqlParameter("titre", titre));
+                com.Parameters.Add(new SqlParameter("image", image));
+                com.Parameters.Add(new SqlParameter("author", auteurs));
+                da.InsertCommand = com;
+                com.ExecuteNonQuery();
+            }
+
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+        }
+
+        public static void DeleteLivre(string iSBN)
+        {
+            var com = new SqlCommand();
+            var da = new SqlDataAdapter();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[LIV_DeleteLivre]";
+                com.Parameters.Add(new SqlParameter("isbn", iSBN));
+                da.InsertCommand = com;
+                com.ExecuteNonQuery();
+            }
+
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+        }
+
+        public static void AjoutManuelLivre(string iSBN, string titre, string image, string auteurs)
+        {
+            var com = new SqlCommand();
+            var da = new SqlDataAdapter();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[LIV_AjoutLivre]";
+                com.Parameters.Add(new SqlParameter("ISBN", iSBN));
+                com.Parameters.Add(new SqlParameter("titre", titre));
+                com.Parameters.Add(new SqlParameter("image", image));
+                com.Parameters.Add(new SqlParameter("auteurs", auteurs));
+                da.InsertCommand = com;
+                com.ExecuteNonQuery();
+            }
+
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+        }
+
         //Affichage des livre par ISBN = Fonctionne
         public static DataSet LivreByISBN(DataSet ds, string isbn)
         {

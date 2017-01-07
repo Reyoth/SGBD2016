@@ -131,6 +131,7 @@
             this.Controls.Add(this.lBienvenue);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AdmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

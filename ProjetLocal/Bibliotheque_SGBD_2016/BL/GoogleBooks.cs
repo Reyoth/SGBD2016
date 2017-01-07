@@ -9,7 +9,7 @@ using Google.Apis.Books.v1.Data;
 
 namespace BL
 {
-    class GoogleBooks
+    public class GoogleBooks
     {
         /// <summary>
         /// Methode qui prend un ref Entities livre et un isbn en parmetre
