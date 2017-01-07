@@ -25,9 +25,9 @@
 
 ### COTE LECTEUR #
 
- - [ ]  !!!!! Procedure : Modifier EXE_AllExemplaireByBibId en  EXE_AllExemplairesDispoByBibId (input: Id de biblio) (output : IdExemplaire,                TitreLivre, ISBNLivre, CodeExemplaire, Auteurs, Bibliotheque )
- - [ ]  !!!!! Procedure : Modifier EXE_AllExemplaireByTitle en  EXE_AllExemplairesDispoByTitle (input: titre du livre) (output : IdExemplaire,         TitreLivre, ISBNLivre, CodeExemplaire, Auteurs, Bibliotheque ) 
-  - [ ]  !!!!! Procedure : Modifier EXE_AllExemplaireByISBN en  EXE_AllExemplairesDispoByISBN (input: ISBN du livre) (output : IdExemplaire,          TitreLivre, ISBNLivre, CodeExemplaire, Auteurs, Bibliotheque ) 
+- [x]  ~~!!!!! Procedure : Modifier EXE_AllExemplaireByBibId en  EXE_AllExemplairesDispoByBibId (input: Id de biblio) (output : IdExemplaire,                TitreLivre, ISBNLivre, CodeExemplaire, Auteurs, Bibliotheque )~~
+- [x]  ~~!!!!! Procedure : Modifier EXE_AllExemplaireByTitle en  EXE_AllExemplairesDispoByBibByTitle (input: titre du livre) (output : IdExemplaire,         TitreLivre, ISBNLivre, CodeExemplaire, Auteurs, Bibliotheque )~~
+- [x]  ~~!!!!! Procedure : Modifier EXE_AllExemplaireByISBN en  EXE_AllExemplairesDispoByBibByISBN (input: ISBN du livre) (output : IdExemplaire,          TitreLivre, ISBNLivre, CodeExemplaire, Auteurs, Bibliotheque )~~
 - [x] ~~LEC_Login~~
 - [x] ~~BIB_AllLibelle procedure qui affiche les libelles de toute les biliotheques pour la liste des biblio de login~~
 - [x] ~~RES_ListeReservationsByLEC_Id~~
