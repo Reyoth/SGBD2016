@@ -11,12 +11,9 @@ namespace DALEF
 {
     using System;
     
-    public partial class LIV_LivreByTitle_Result
+    public partial class LEC_Login_Result
     {
-        public int ID { get; set; }
-        public string ISBN { get; set; }
-        public string Titre { get; set; }
-        public string Image { get; set; }
-        public string Auteurs { get; set; }
+        public int LEC_Id { get; set; }
+        public string LEC_UserName { get; set; }
     }
 }

@@ -13,10 +13,10 @@ namespace DALEF
     
     public partial class LIV_LivreByISBN_Result
     {
-        public int LIV_Id { get; set; }
-        public string LIV_ISBN { get; set; }
-        public string LIV_Titre { get; set; }
-        public string LIV_Image { get; set; }
-        public string LIV_Auteurs { get; set; }
+        public int ID { get; set; }
+        public string ISBN { get; set; }
+        public string Titre { get; set; }
+        public string Image { get; set; }
+        public string Auteurs { get; set; }
     }
 }

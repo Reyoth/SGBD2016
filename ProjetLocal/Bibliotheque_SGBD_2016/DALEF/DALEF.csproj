@@ -51,67 +51,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BiblioModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiblioModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BiblioModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiblioModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BiblioModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BiblioModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BIB_AllLibelle_Result.cs">
+      <DependentUpon>BiblioModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EMP_AllEmpruntsByLEC_Id_Result.cs">
-      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+      <DependentUpon>BiblioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EMP_RetardsAllBibByLec_Result.cs">
-      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+      <DependentUpon>BiblioModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EXE_AllExemplairesDispoByBibByISBN_Result.cs">
+      <DependentUpon>BiblioModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EXE_AllExemplairesDispoByBibByTitle_Result.cs">
+      <DependentUpon>BiblioModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EXE_AllExemplairesDispoByBibId_Result.cs">
+      <DependentUpon>BiblioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="Lecteur.cs" />
+    <Compile Include="LEC_Login_Result.cs">
+      <DependentUpon>BiblioModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="LIV_LivreByISBN_Result.cs">
-      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+      <DependentUpon>BiblioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LIV_LivreByTitle_Result.cs">
-      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelBiblioLecteur.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBiblioLecteur.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelBiblioLecteur.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelBiblioLecteur.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelBiblioLecteur.edmx</DependentUpon>
+      <DependentUpon>BiblioModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RES_ListeReservationsByLEC_Id_Result.cs">
-      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+      <DependentUpon>BiblioModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="RES_ListeReservationsDisponibleByLEC_Id_Result.cs">
-      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    <Compile Include="RES_ListeReservationsDisponibleByLEC_IdAllBib_Result.cs">
+      <DependentUpon>BiblioModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RES_ListeReservationsDisponibleByLEC_IdByBib_Result.cs">
+      <DependentUpon>BiblioModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="ModelBiblioLecteur.edmx">
+    <EntityDeploy Include="BiblioModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBiblioLecteur.Designer.cs</LastGenOutput>
+      <LastGenOutput>BiblioModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="ModelBiblioLecteur.edmx.diagram">
-      <DependentUpon>ModelBiblioLecteur.edmx</DependentUpon>
+    <None Include="BiblioModel.edmx.diagram">
+      <DependentUpon>BiblioModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ModelBiblioLecteur.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBiblioLecteur.edmx</DependentUpon>
-      <LastGenOutput>ModelBiblioLecteur.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelBiblioLecteur.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelBiblioLecteur.edmx</DependentUpon>
-      <LastGenOutput>ModelBiblioLecteur.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -125,6 +129,18 @@
       <Project>{8690d2d1-0d4b-46cd-b6e7-2cb7b7ffaa2c}</Project>
       <Name>Errors</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BiblioModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BiblioModel.edmx</DependentUpon>
+      <LastGenOutput>BiblioModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BiblioModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BiblioModel.edmx</DependentUpon>
+      <LastGenOutput>BiblioModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

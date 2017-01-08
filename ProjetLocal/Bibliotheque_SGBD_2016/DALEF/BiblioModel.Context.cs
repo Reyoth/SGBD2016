@@ -28,9 +28,9 @@ namespace DALEF
         }
     
     
-        public virtual ObjectResult<string> BIB_AllLibelle()
+        public virtual ObjectResult<BIB_AllLibelle_Result> BIB_AllLibelle()
         {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("BIB_AllLibelle");
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BIB_AllLibelle_Result>("BIB_AllLibelle");
         }
     
         public virtual ObjectResult<EMP_AllEmpruntsByLEC_Id_Result> EMP_AllEmpruntsByLEC_Id(Nullable<int> lec_Id)
@@ -51,6 +51,41 @@ namespace DALEF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_RetardsAllBibByLec_Result>("EMP_RetardsAllBibByLec", lec_idParameter);
         }
     
+        public virtual ObjectResult<EXE_AllExemplairesDispoByBibByISBN_Result> EXE_AllExemplairesDispoByBibByISBN(Nullable<int> bib_Id, string iSBN)
+        {
+            var bib_IdParameter = bib_Id.HasValue ?
+                new ObjectParameter("Bib_Id", bib_Id) :
+                new ObjectParameter("Bib_Id", typeof(int));
+    
+            var iSBNParameter = iSBN != null ?
+                new ObjectParameter("ISBN", iSBN) :
+                new ObjectParameter("ISBN", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EXE_AllExemplairesDispoByBibByISBN_Result>("EXE_AllExemplairesDispoByBibByISBN", bib_IdParameter, iSBNParameter);
+        }
+    
+        public virtual ObjectResult<EXE_AllExemplairesDispoByBibByTitle_Result> EXE_AllExemplairesDispoByBibByTitle(Nullable<int> bib_Id, string titre)
+        {
+            var bib_IdParameter = bib_Id.HasValue ?
+                new ObjectParameter("Bib_Id", bib_Id) :
+                new ObjectParameter("Bib_Id", typeof(int));
+    
+            var titreParameter = titre != null ?
+                new ObjectParameter("Titre", titre) :
+                new ObjectParameter("Titre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EXE_AllExemplairesDispoByBibByTitle_Result>("EXE_AllExemplairesDispoByBibByTitle", bib_IdParameter, titreParameter);
+        }
+    
+        public virtual ObjectResult<EXE_AllExemplairesDispoByBibId_Result> EXE_AllExemplairesDispoByBibId(Nullable<int> bib_Id)
+        {
+            var bib_IdParameter = bib_Id.HasValue ?
+                new ObjectParameter("Bib_Id", bib_Id) :
+                new ObjectParameter("Bib_Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EXE_AllExemplairesDispoByBibId_Result>("EXE_AllExemplairesDispoByBibId", bib_IdParameter);
+        }
+    
         public virtual int EXE_EmprunterExemplaire(Nullable<int> exe_Id, Nullable<int> lec_Id)
         {
             var exe_IdParameter = exe_Id.HasValue ?
@@ -64,7 +99,7 @@ namespace DALEF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("EXE_EmprunterExemplaire", exe_IdParameter, lec_IdParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> LEC_Login(string userName, string password)
+        public virtual ObjectResult<LEC_Login_Result> LEC_Login(string userName, string password)
         {
             var userNameParameter = userName != null ?
                 new ObjectParameter("UserName", userName) :
@@ -74,7 +109,7 @@ namespace DALEF
                 new ObjectParameter("Password", password) :
                 new ObjectParameter("Password", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LEC_Login", userNameParameter, passwordParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LEC_Login_Result>("LEC_Login", userNameParameter, passwordParameter);
         }
     
         public virtual ObjectResult<LIV_LivreByISBN_Result> LIV_LivreByISBN(string iSBN)
@@ -104,13 +139,30 @@ namespace DALEF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsByLEC_Id_Result>("RES_ListeReservationsByLEC_Id", lec_IdParameter);
         }
     
-        public virtual ObjectResult<RES_ListeReservationsDisponibleByLEC_Id_Result> RES_ListeReservationsDisponibleByLEC_Id(Nullable<int> idLecteur)
+        public virtual ObjectResult<RES_ListeReservationsDisponibleByLEC_IdAllBib_Result> RES_ListeReservationsDisponibleByLEC_IdAllBib(Nullable<int> idLecteur, Nullable<int> idBibliotheque)
         {
             var idLecteurParameter = idLecteur.HasValue ?
                 new ObjectParameter("IdLecteur", idLecteur) :
                 new ObjectParameter("IdLecteur", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsDisponibleByLEC_Id_Result>("RES_ListeReservationsDisponibleByLEC_Id", idLecteurParameter);
+            var idBibliothequeParameter = idBibliotheque.HasValue ?
+                new ObjectParameter("IdBibliotheque", idBibliotheque) :
+                new ObjectParameter("IdBibliotheque", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsDisponibleByLEC_IdAllBib_Result>("RES_ListeReservationsDisponibleByLEC_IdAllBib", idLecteurParameter, idBibliothequeParameter);
+        }
+    
+        public virtual ObjectResult<RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(Nullable<int> idLecteur, Nullable<int> idBibliotheque)
+        {
+            var idLecteurParameter = idLecteur.HasValue ?
+                new ObjectParameter("IdLecteur", idLecteur) :
+                new ObjectParameter("IdLecteur", typeof(int));
+    
+            var idBibliothequeParameter = idBibliotheque.HasValue ?
+                new ObjectParameter("IdBibliotheque", idBibliotheque) :
+                new ObjectParameter("IdBibliotheque", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsDisponibleByLEC_IdByBib_Result>("RES_ListeReservationsDisponibleByLEC_IdByBib", idLecteurParameter, idBibliothequeParameter);
         }
     
         public virtual int RES_ReserverLivre(Nullable<int> liv_Id, Nullable<int> lec_Id)
