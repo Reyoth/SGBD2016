@@ -331,7 +331,8 @@ namespace MainApp.Administrateur
         {
             DataSet ds=null;
             BL.Administrateur.AllExemplairesByTitle(ref ds, txtTitreLivreRechExemp.Text);
-
+            dgvExemplaire.DataSource = null;
+            dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
         }
     }
 }
