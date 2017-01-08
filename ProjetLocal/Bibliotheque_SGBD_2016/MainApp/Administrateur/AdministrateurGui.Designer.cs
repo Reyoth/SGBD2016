@@ -62,20 +62,18 @@
             this.button8 = new System.Windows.Forms.Button();
             this.gdvEmpruntEnCours = new System.Windows.Forms.DataGridView();
             this.btnISBNGoRechLivre = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
+            this.btnExempActualiser = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtTitreLivreRechExemp = new System.Windows.Forms.TextBox();
-            this.tbnGoRchExmpTitre = new System.Windows.Forms.Button();
+            this.btnGoRchExmpTitre = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.tbnGoRchExmpCode = new System.Windows.Forms.Button();
+            this.btnGoRchExmpCode = new System.Windows.Forms.Button();
             this.txtCodeRechExemp = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tbnGoRchExmpBib = new System.Windows.Forms.Button();
             this.cbBibLibelle = new System.Windows.Forms.ComboBox();
-            this.btnEmprunterLivre = new System.Windows.Forms.Button();
             this.tbnReserverLivre = new System.Windows.Forms.Button();
             this.btnActualiserLivre = new System.Windows.Forms.Button();
             this.gdvLivre = new System.Windows.Forms.DataGridView();
@@ -551,36 +549,27 @@
             this.btnISBNGoRechLivre.UseVisualStyleBackColor = true;
             this.btnISBNGoRechLivre.Click += new System.EventHandler(this.btnISBNGoRechLivre_Click);
             // 
-            // button25
+            // btnExempActualiser
             // 
-            this.button25.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(807, 555);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(85, 31);
-            this.button25.TabIndex = 32;
-            this.button25.Text = "Actualiser";
-            this.button25.UseVisualStyleBackColor = true;
+            this.btnExempActualiser.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExempActualiser.Location = new System.Drawing.Point(900, 555);
+            this.btnExempActualiser.Name = "btnExempActualiser";
+            this.btnExempActualiser.Size = new System.Drawing.Size(85, 31);
+            this.btnExempActualiser.TabIndex = 32;
+            this.btnExempActualiser.Text = "Actualiser";
+            this.btnExempActualiser.UseVisualStyleBackColor = true;
+            this.btnExempActualiser.Click += new System.EventHandler(this.button25_Click);
             // 
             // button24
             // 
             this.button24.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(898, 555);
+            this.button24.Location = new System.Drawing.Point(991, 555);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(80, 31);
             this.button24.TabIndex = 31;
             this.button24.Text = "Editer";
             this.button24.UseVisualStyleBackColor = true;
             this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // button23
-            // 
-            this.button23.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(984, 555);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(86, 31);
-            this.button23.TabIndex = 30;
-            this.button23.Text = "Supprimer";
-            this.button23.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -597,7 +586,7 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.txtTitreLivreRechExemp);
-            this.groupBox10.Controls.Add(this.tbnGoRchExmpTitre);
+            this.groupBox10.Controls.Add(this.btnGoRchExmpTitre);
             this.groupBox10.Location = new System.Drawing.Point(10, 89);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(232, 67);
@@ -613,19 +602,19 @@
             this.txtTitreLivreRechExemp.Size = new System.Drawing.Size(163, 25);
             this.txtTitreLivreRechExemp.TabIndex = 8;
             // 
-            // tbnGoRchExmpTitre
+            // btnGoRchExmpTitre
             // 
-            this.tbnGoRchExmpTitre.Location = new System.Drawing.Point(175, 26);
-            this.tbnGoRchExmpTitre.Name = "tbnGoRchExmpTitre";
-            this.tbnGoRchExmpTitre.Size = new System.Drawing.Size(51, 25);
-            this.tbnGoRchExmpTitre.TabIndex = 8;
-            this.tbnGoRchExmpTitre.Text = "GO !";
-            this.tbnGoRchExmpTitre.UseVisualStyleBackColor = true;
-            this.tbnGoRchExmpTitre.Click += new System.EventHandler(this.tbnGoRchExmpTitre_Click);
+            this.btnGoRchExmpTitre.Location = new System.Drawing.Point(175, 26);
+            this.btnGoRchExmpTitre.Name = "btnGoRchExmpTitre";
+            this.btnGoRchExmpTitre.Size = new System.Drawing.Size(51, 25);
+            this.btnGoRchExmpTitre.TabIndex = 8;
+            this.btnGoRchExmpTitre.Text = "GO !";
+            this.btnGoRchExmpTitre.UseVisualStyleBackColor = true;
+            this.btnGoRchExmpTitre.Click += new System.EventHandler(this.tbnGoRchExmpTitre_Click);
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.tbnGoRchExmpCode);
+            this.groupBox11.Controls.Add(this.btnGoRchExmpCode);
             this.groupBox11.Controls.Add(this.txtCodeRechExemp);
             this.groupBox11.Location = new System.Drawing.Point(9, 20);
             this.groupBox11.Name = "groupBox11";
@@ -634,15 +623,15 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Par code d\'exemplaire :";
             // 
-            // tbnGoRchExmpCode
+            // btnGoRchExmpCode
             // 
-            this.tbnGoRchExmpCode.Location = new System.Drawing.Point(175, 24);
-            this.tbnGoRchExmpCode.Name = "tbnGoRchExmpCode";
-            this.tbnGoRchExmpCode.Size = new System.Drawing.Size(51, 26);
-            this.tbnGoRchExmpCode.TabIndex = 7;
-            this.tbnGoRchExmpCode.Text = "GO !";
-            this.tbnGoRchExmpCode.UseVisualStyleBackColor = true;
-            this.tbnGoRchExmpCode.Click += new System.EventHandler(this.tbnGoRchExmpCode_Click);
+            this.btnGoRchExmpCode.Location = new System.Drawing.Point(175, 24);
+            this.btnGoRchExmpCode.Name = "btnGoRchExmpCode";
+            this.btnGoRchExmpCode.Size = new System.Drawing.Size(51, 26);
+            this.btnGoRchExmpCode.TabIndex = 7;
+            this.btnGoRchExmpCode.Text = "GO !";
+            this.btnGoRchExmpCode.UseVisualStyleBackColor = true;
+            this.btnGoRchExmpCode.Click += new System.EventHandler(this.tbnGoRchExmpCode_Click);
             // 
             // txtCodeRechExemp
             // 
@@ -680,21 +669,10 @@
             this.cbBibLibelle.Size = new System.Drawing.Size(163, 26);
             this.cbBibLibelle.TabIndex = 29;
             // 
-            // btnEmprunterLivre
-            // 
-            this.btnEmprunterLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmprunterLivre.Location = new System.Drawing.Point(986, 555);
-            this.btnEmprunterLivre.Name = "btnEmprunterLivre";
-            this.btnEmprunterLivre.Size = new System.Drawing.Size(85, 31);
-            this.btnEmprunterLivre.TabIndex = 6;
-            this.btnEmprunterLivre.Text = "Supprimer";
-            this.btnEmprunterLivre.UseVisualStyleBackColor = true;
-            this.btnEmprunterLivre.Click += new System.EventHandler(this.btnEmprunterLivre_Click);
-            // 
             // tbnReserverLivre
             // 
             this.tbnReserverLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnReserverLivre.Location = new System.Drawing.Point(900, 555);
+            this.tbnReserverLivre.Location = new System.Drawing.Point(989, 558);
             this.tbnReserverLivre.Name = "tbnReserverLivre";
             this.tbnReserverLivre.Size = new System.Drawing.Size(80, 31);
             this.tbnReserverLivre.TabIndex = 5;
@@ -705,7 +683,7 @@
             // btnActualiserLivre
             // 
             this.btnActualiserLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualiserLivre.Location = new System.Drawing.Point(807, 555);
+            this.btnActualiserLivre.Location = new System.Drawing.Point(896, 558);
             this.btnActualiserLivre.Name = "btnActualiserLivre";
             this.btnActualiserLivre.Size = new System.Drawing.Size(87, 31);
             this.btnActualiserLivre.TabIndex = 3;
@@ -760,6 +738,7 @@
             this.btnTitreRechLivre.TabIndex = 4;
             this.btnTitreRechLivre.Text = "GO!";
             this.btnTitreRechLivre.UseVisualStyleBackColor = true;
+            this.btnTitreRechLivre.Click += new System.EventHandler(this.btnTitreRechLivre_Click);
             // 
             // lTitreRechLivre
             // 
@@ -927,7 +906,6 @@
             this.tpGestionLivre.Controls.Add(this.gbAjoutManuelLivre);
             this.tpGestionLivre.Controls.Add(this.groupBox1);
             this.tpGestionLivre.Controls.Add(this.lListeLivre);
-            this.tpGestionLivre.Controls.Add(this.btnEmprunterLivre);
             this.tpGestionLivre.Controls.Add(this.tbnReserverLivre);
             this.tpGestionLivre.Controls.Add(this.btnActualiserLivre);
             this.tpGestionLivre.Controls.Add(this.gdvLivre);
@@ -1040,9 +1018,8 @@
             // 
             this.tpGestionExemplaires.BackColor = System.Drawing.SystemColors.Control;
             this.tpGestionExemplaires.Controls.Add(this.pictureBox2);
-            this.tpGestionExemplaires.Controls.Add(this.button25);
+            this.tpGestionExemplaires.Controls.Add(this.btnExempActualiser);
             this.tpGestionExemplaires.Controls.Add(this.button24);
-            this.tpGestionExemplaires.Controls.Add(this.button23);
             this.tpGestionExemplaires.Controls.Add(this.groupBox5);
             this.tpGestionExemplaires.Controls.Add(this.label17);
             this.tpGestionExemplaires.Controls.Add(this.dgvExemplaire);
@@ -1122,7 +1099,7 @@
             this.btnSauveExemp.Name = "btnSauveExemp";
             this.btnSauveExemp.Size = new System.Drawing.Size(107, 31);
             this.btnSauveExemp.TabIndex = 30;
-            this.btnSauveExemp.Text = "Sauveguarder";
+            this.btnSauveExemp.Text = "Mettre à jour";
             this.btnSauveExemp.UseVisualStyleBackColor = true;
             // 
             // cbBiblioExemp
@@ -1597,19 +1574,17 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridView gdvEmpruntEnCours;
         private System.Windows.Forms.Button btnISBNGoRechLivre;
-        private System.Windows.Forms.Button button25;
+        private System.Windows.Forms.Button btnExempActualiser;
         private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button23;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button tbnGoRchExmpTitre;
+        private System.Windows.Forms.Button btnGoRchExmpTitre;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button tbnGoRchExmpCode;
+        private System.Windows.Forms.Button btnGoRchExmpCode;
         private System.Windows.Forms.TextBox txtCodeRechExemp;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button tbnGoRchExmpBib;
         private System.Windows.Forms.ComboBox cbBibLibelle;
-        private System.Windows.Forms.Button btnEmprunterLivre;
         private System.Windows.Forms.Button tbnReserverLivre;
         private System.Windows.Forms.Button btnActualiserLivre;
         private System.Windows.Forms.DataGridView gdvLivre;

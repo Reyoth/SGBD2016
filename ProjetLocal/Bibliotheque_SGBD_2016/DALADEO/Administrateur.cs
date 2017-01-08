@@ -43,6 +43,39 @@ namespace DALADO
                 DbConnection.db.Close();
             }
         }
+
+        public static List<string> BIB_AllLibelle()
+        {
+            List<string> bibs = new List<string>();
+            SqlCommand com = new SqlCommand();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[BIB_AllLibelle]";
+                SqlDataReader dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    bibs.Add(dr.GetString(0));
+                }
+                dr.Close();
+
+
+            }
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+            return bibs;
+        }
+
         //Afficher tous les livres = Fonctionne
         public static DataSet AllLivres(DataSet ds)
         {
@@ -98,6 +131,34 @@ namespace DALADO
             {
                 DbConnection.db.Close();
             }
+        }
+
+        public static DataSet AllExemplairesByExeCode(string exeCode)
+        {
+            DataSet ds = new DataSet();
+            var com = new SqlCommand();
+            var da = new SqlDataAdapter();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[EXE_AllExemplaireByExeCode]";
+                com.Parameters.Add(new SqlParameter("ExeCode", exeCode));
+                da.SelectCommand = com;
+                da.Fill(ds, "ListeExemplairesByExeCode");
+            }
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+            return ds;
         }
 
         public static DataSet AllExemplairesByTitle(string title)

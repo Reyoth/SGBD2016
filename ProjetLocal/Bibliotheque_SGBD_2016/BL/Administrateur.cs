@@ -44,6 +44,11 @@ namespace BL
 
         }
 
+        public static void BIB_AllLibelle(ref List<string> bibliotheques)
+        {
+            bibliotheques = DALADO.Administrateur.BIB_AllLibelle();
+        }
+
         public static void RetournerExemplaire(int exemplaireId)
         {
             DALADO.Administrateur.RetournerExemplaire(exemplaireId);
@@ -112,6 +117,11 @@ namespace BL
             DataSet dset = null;
             dset = DALADO.Administrateur.AllExemplairesByTitle(Title);
             ds = dset;
+        }
+
+        public static void AllExemplairesByExeCode(ref DataSet ds, string ExeCode)
+        {
+            ds = DALADO.Administrateur.AllExemplairesByExeCode(ExeCode);
         }
     }
 }

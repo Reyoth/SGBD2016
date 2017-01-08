@@ -14,7 +14,7 @@ namespace MainApp.Administrateur
 {
     public partial class AdministrateurGui : Form
     {
-        
+        public List<string> bibliotheques = new List<string>();
         public AdministrateurGui()
         {
             InitializeComponent();
@@ -23,6 +23,10 @@ namespace MainApp.Administrateur
 
         private void AdministrateurGui_Load(object sender, EventArgs e)
         {
+            //replissage des comboBox
+            ChargerBibLibelle(cbBiblioExemp);
+            ChargerBibLibelle(cbBibLibelle);
+
             ////txt volet Gestion LIvre
             txtISBNAjMan.Enabled = false;
             txtTitreAjMan.Enabled = false;
@@ -35,6 +39,7 @@ namespace MainApp.Administrateur
             dtDateAchatExemp.Enabled = false;
             txtCodeExemplaire.ReadOnly = true;
             txtLivreExemplaire.ReadOnly = true;
+            cbBiblioExemp.Enabled = false;
 
             //txt volet Emprunts et retards
             //enable
@@ -107,7 +112,6 @@ namespace MainApp.Administrateur
             gdvRetardataires.Columns[7].Visible = false;
             gdvRetardataires.Columns[10].Visible = false;
             gdvRetardataires.Columns[12].Visible = false;
-
             gdvLecteurs.DataSource = ds.Tables[4].DefaultView;
         }
 
@@ -253,6 +257,7 @@ namespace MainApp.Administrateur
             dtDateAchatExemp.Enabled = true;
             txtCodeExemplaire.ReadOnly = false;
             txtLivreExemplaire.ReadOnly = false;
+            cbBiblioExemp.Enabled = true;
         }
 
         private void gdvLecteurs_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -304,6 +309,7 @@ namespace MainApp.Administrateur
                 txtCodeExemplaire.Text = dgvExemplaire.CurrentRow.Cells[1].Value.ToString();
                 txtLivreExemplaire.Text = dgvExemplaire.CurrentRow.Cells[2].Value.ToString(); 
                 dtDateAchatExemp.Text = dgvExemplaire.CurrentRow.Cells[4].Value.ToString();
+                cbBiblioExemp.Text = dgvExemplaire.CurrentRow.Cells[6].Value.ToString();
                 pbExemplaire.ImageLocation = dgvExemplaire.CurrentRow.Cells[7].Value.ToString();
             }
             
@@ -324,7 +330,10 @@ namespace MainApp.Administrateur
 
         private void tbnGoRchExmpCode_Click(object sender, EventArgs e)
         {
-
+            DataSet ds = null;
+            BL.Administrateur.AllExemplairesByExeCode(ref ds, txtCodeExemplaire.Text);
+            dgvExemplaire.DataSource = null;
+            dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
         }
 
         private void tbnGoRchExmpTitre_Click(object sender, EventArgs e)
@@ -333,6 +342,33 @@ namespace MainApp.Administrateur
             BL.Administrateur.AllExemplairesByTitle(ref ds, txtTitreLivreRechExemp.Text);
             dgvExemplaire.DataSource = null;
             dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            dgvExemplaire.DataSource = null;
+            DataSet ds = new DataSet();
+            BL.Administrateur.AllExemplairesAllBib(ref ds);
+            dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
+            dgvExemplaire.Columns[0].Visible = false;
+            dgvExemplaire.Columns[7].Visible = false;
+        }
+        public void ChargerBibLibelle(ComboBox cb)
+        {
+
+            BL.Administrateur.BIB_AllLibelle(ref bibliotheques);
+            foreach (var bib in bibliotheques)
+            {
+                cb.Items.Add(bib);
+            }
+
+        }
+
+        private void btnTitreRechLivre_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            BL.Administrateur.LivreByTitre(ref ds, txtTitreRechLivre.Text);
+            gdvLivre.DataSource = ds.Tables[0].DefaultView;
         }
     }
 }
