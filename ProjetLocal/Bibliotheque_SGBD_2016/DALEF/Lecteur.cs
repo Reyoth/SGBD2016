@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -11,11 +12,17 @@ namespace DALEF
 {
     public class Lecteur
     {
-        public static List<BIB_AllLibelle_Result> BIB_AllLibelle()
+        public static List<Entities.Bibliotheque> BIB_AllLibelle()
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                return dbContext.BIB_AllLibelle().ToList();
+                List<Entities.Bibliotheque> biblios = null;
+                var listBib = dbContext.BIB_AllLibelle();
+                foreach (var bib in listBib)
+                {
+                    biblios.Add(new Bibliotheque {Id = bib.BIB_ID, Libelle = bib.Libelle});
+                }
+                return biblios;
             }
         }
 

@@ -27,23 +27,11 @@ namespace BL
             
         }
 
-        
-        //public static List<string> AllBiblioLibelle()
-        //{
-        //    using (var context = new SGBD2016_BibliothequeEntities())
-        //    {
-        //        List<string> listLibelleBib = new List<string>();
 
-        //        var biblio = context.Bibliotheques.ToList();
-
-        //        foreach (var bib  in biblio)
-        //        {
-        //            listLibelleBib.Add(bib.BIB_Libelle);
-        //        }
-        //        return listLibelleBib;
-        //    }
-
-        //}
+        public static void BIB_AllLibelle(ref List<Entities.Bibliotheque> ListBiblio)
+        {
+            ListBiblio = DALEF.Lecteur.BIB_AllLibelle();
+        }
 
         public static void LivreByISBN(ref Entities.Livre livre, string isbn)
         {
@@ -51,10 +39,10 @@ namespace BL
             using (SGBD2016_BibliothequeEntities lecteurContext = new SGBD2016_BibliothequeEntities())
             {
                var  LivreResult = lecteurContext.LIV_LivreByISBN(isbn).ElementAt(0);
-                livre.ISBN = LivreResult.LIV_ISBN;
-                livre.Id = LivreResult.LIV_Id;
-                livre.Titre = LivreResult.LIV_Titre;
-                livre.Authors = LivreResult.LIV_Auteurs;
+                livre.ISBN = LivreResult.ISBN;
+                livre.Id = LivreResult.ID;
+                livre.Titre = LivreResult.Titre;
+                livre.Authors = LivreResult.Auteurs;
                 
             }
             

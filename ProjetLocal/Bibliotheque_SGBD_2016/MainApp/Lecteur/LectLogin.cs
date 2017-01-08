@@ -12,6 +12,7 @@ namespace MainApp.Lecteur
 {
     public partial class LectLogin : Form
     {
+        
         public LectLogin()
         {
             InitializeComponent();
@@ -33,9 +34,18 @@ namespace MainApp.Lecteur
 
         private void LectLogin_Load(object sender, EventArgs e)
         {
-            List<String> Bibliotheques = null;
-            BL.Biblio.ChargerBiblioLib(ref Bibliotheques);
-            cbBibliotheque.DataSource = Bibliotheques;
+           ChargerListBiblio(cbBibliotheque);
+        }
+
+        public void ChargerListBiblio(ComboBox cb)
+        {
+            List<Entities.Bibliotheque> Bibliotheques = null ;
+            BL.Lecteur.BIB_AllLibelle(ref Bibliotheques);
+            foreach (var bib in Bibliotheques)
+            {
+                cb.Items.Add(bib.Libelle);
+            }
+            
         }
     }
 }

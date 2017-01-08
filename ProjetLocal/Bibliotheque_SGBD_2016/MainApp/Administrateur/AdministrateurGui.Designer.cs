@@ -81,7 +81,7 @@
             this.gdvLivre = new System.Windows.Forms.DataGridView();
             this.gbRechLivre = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.btnTitreRechLivre = new System.Windows.Forms.Button();
+            this.btnGoRchExmpTitre = new System.Windows.Forms.Button();
             this.lTitreRechLivre = new System.Windows.Forms.Label();
             this.txtTitreRechLivre = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -615,7 +615,7 @@
             // 
             // tbnGoRchExmpTitre
             // 
-            this.tbnGoRchExmpTitre.Location = new System.Drawing.Point(175, 26);
+            this.tbnGoRchExmpTitre.Location = new System.Drawing.Point(175, 25);
             this.tbnGoRchExmpTitre.Name = "tbnGoRchExmpTitre";
             this.tbnGoRchExmpTitre.Size = new System.Drawing.Size(51, 25);
             this.tbnGoRchExmpTitre.TabIndex = 8;
@@ -742,7 +742,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.btnTitreRechLivre);
+            this.groupBox7.Controls.Add(this.btnGoRchExmpTitre);
             this.groupBox7.Controls.Add(this.lTitreRechLivre);
             this.groupBox7.Controls.Add(this.txtTitreRechLivre);
             this.groupBox7.Location = new System.Drawing.Point(6, 86);
@@ -751,15 +751,16 @@
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             // 
-            // btnTitreRechLivre
+            // btnGoRchExmpTitre
             // 
-            this.btnTitreRechLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTitreRechLivre.Location = new System.Drawing.Point(221, 15);
-            this.btnTitreRechLivre.Name = "btnTitreRechLivre";
-            this.btnTitreRechLivre.Size = new System.Drawing.Size(43, 29);
-            this.btnTitreRechLivre.TabIndex = 4;
-            this.btnTitreRechLivre.Text = "GO!";
-            this.btnTitreRechLivre.UseVisualStyleBackColor = true;
+            this.btnGoRchExmpTitre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoRchExmpTitre.Location = new System.Drawing.Point(221, 15);
+            this.btnGoRchExmpTitre.Name = "btnGoRchExmpTitre";
+            this.btnGoRchExmpTitre.Size = new System.Drawing.Size(43, 29);
+            this.btnGoRchExmpTitre.TabIndex = 4;
+            this.btnGoRchExmpTitre.Text = "GO!";
+            this.btnGoRchExmpTitre.UseVisualStyleBackColor = true;
+            this.btnGoRchExmpTitre.Click += new System.EventHandler(this.btnTitreRechLivre_Click);
             // 
             // lTitreRechLivre
             // 
@@ -1675,7 +1676,7 @@
         private System.Windows.Forms.TextBox txtLienAjMan;
         private System.Windows.Forms.PictureBox pbLiveRetard;
         private System.Windows.Forms.PictureBox pbLivreEmprunt;
-        private System.Windows.Forms.Button btnTitreRechLivre;
+        private System.Windows.Forms.Button btnGoRchExmpTitre;
         private System.Windows.Forms.Button btnAjRapLivre;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;

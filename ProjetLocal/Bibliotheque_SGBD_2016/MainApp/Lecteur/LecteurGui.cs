@@ -25,6 +25,7 @@ namespace MainApp.Lecteur
             dgvLivreReservation.DataSource = null;
             dgvReservation.DataSource = null;
             dgvEmpruntHistorique.DataSource = null;
+
             
         }
 

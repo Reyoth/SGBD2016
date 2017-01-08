@@ -334,5 +334,10 @@ namespace MainApp.Administrateur
             dgvExemplaire.DataSource = null;
             dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
         }
+
+        private void btnTitreRechLivre_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
