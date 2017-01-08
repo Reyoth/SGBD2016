@@ -60,6 +60,7 @@
             this.cbBibliotheque.Name = "cbBibliotheque";
             this.cbBibliotheque.Size = new System.Drawing.Size(136, 28);
             this.cbBibliotheque.TabIndex = 41;
+            this.cbBibliotheque.SelectionChangeCommitted += new System.EventHandler(this.cbBibliotheque_SelectionChangeCommitted);
             // 
             // lBibliotheque
             // 

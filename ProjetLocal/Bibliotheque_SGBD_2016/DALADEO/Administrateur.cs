@@ -102,7 +102,7 @@ namespace DALADO
 
         public static DataSet AllExemplairesByTitle(string title)
         {
-            DataSet ds=null;
+            DataSet ds=new DataSet();
             var com = new SqlCommand();
             var da = new SqlDataAdapter();
             try
@@ -111,7 +111,7 @@ namespace DALADO
                 com.Connection = DbConnection.db;
                 com.CommandType = CommandType.StoredProcedure;
                 com.CommandText = "[adminBiblio].[EXE_AllExemplaireByTitre]";
-                com.Parameters.Add(new SqlParameter("Bib_Id", title));
+                com.Parameters.Add(new SqlParameter("Titre", title));
                 da.SelectCommand = com;
                 da.Fill(ds, "ListeExemplairesByTitre");
             }

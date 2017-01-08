@@ -16,12 +16,7 @@ namespace DALEF
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                /*List<Entities.Bibliotheque> biblios = null;
-                var listBib = dbContext.BIB_AllLibelle();
-                foreach (var bib in listBib)
-                {
-                    biblios.Add(new Bibliotheque { Id = bib.BIB_ID, Libelle = bib.BIB_Libelle });
-                }*/
+                
                 return dbContext.BIB_AllLibelle().ToList();
             }
         }

@@ -11,13 +11,11 @@ namespace BL
     public class Lecteur
     {
 
-        public static void BIB_AllLibelle()
+        public static void BIB_AllLibelle(ref List<BIB_AllLibelle_Result> bibs )
         {
-            var a = DALEF.Lecteur.BIB_AllLibelle();
-            foreach (var ligne in a)
-            {
-                Console.WriteLine(ligne.BIB_Libelle);
-            }
+            
+            bibs = DALEF.Lecteur.BIB_AllLibelle();
+            
         }
         //public static void BIB_AllBibliotheques(ref List<Bibliotheque> biblios)
         //{

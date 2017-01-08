@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DALEF;
 
 namespace MainApp.Lecteur
 {
     public partial class LecteurGui : Form
     {
-        public LecteurGui()
+        BIB_AllLibelle_Result biblio = new BIB_AllLibelle_Result();
+        public LecteurGui(BIB_AllLibelle_Result biblio)
         {
             InitializeComponent();
+            this.biblio = biblio;
             timer1.Start();
         }
 
