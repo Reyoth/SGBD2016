@@ -33,9 +33,10 @@ namespace MainApp.Lecteur
 
         private void LectLogin_Load(object sender, EventArgs e)
         {
-            List<String> Bibliotheques = null;
-            BL.Biblio.ChargerBiblioLib(ref Bibliotheques);
-            cbBibliotheque.DataSource = Bibliotheques;
+            BL.Lecteur.BIB_AllLibelle();
+            //List<String> Bibliotheques = null;
+            //BL.Biblio.ChargerBiblioLib(ref Bibliotheques);
+            //cbBibliotheque.DataSource = Bibliotheques;
         }
     }
 }

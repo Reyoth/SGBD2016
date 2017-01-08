@@ -51,10 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BIB_AllLibelle_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
     <Compile Include="EMP_AllEmpruntsByLEC_Id_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>
     <Compile Include="EMP_RetardsAllBibByLec_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EXE_AllExemplairesDispoByBibByISBN_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EXE_AllExemplairesDispoByBibByTitle_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EXE_AllExemplairesDispoByBibId_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>
     <Compile Include="Globals.cs" />
@@ -82,6 +94,12 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RES_ListeReservationsByLEC_Id_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RES_ListeReservationsDisponibleByLEC_IdAllBib_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RES_ListeReservationsDisponibleByLEC_IdByBib_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>
     <Compile Include="RES_ListeReservationsDisponibleByLEC_Id_Result.cs">
