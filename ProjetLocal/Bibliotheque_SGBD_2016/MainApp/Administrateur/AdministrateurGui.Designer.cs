@@ -32,6 +32,7 @@
             this.lISBNrechLivre = new System.Windows.Forms.Label();
             this.gbDetReservation = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.pbLiveRetard = new System.Windows.Forms.PictureBox();
             this.txtPrenomRetardataire = new System.Windows.Forms.TextBox();
             this.txtMontantRetard = new System.Windows.Forms.TextBox();
             this.txtNbJoursRetards = new System.Windows.Forms.TextBox();
@@ -41,12 +42,16 @@
             this.lUserPrenomResrvation = new System.Windows.Forms.Label();
             this.lUserNomResevation = new System.Windows.Forms.Label();
             this.tpEmpruntEtReservation = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.lHistoriqueEmprunt = new System.Windows.Forms.Label();
             this.lEmpruntsEnCours = new System.Windows.Forms.Label();
             this.gdvRetardataires = new System.Windows.Forms.DataGridView();
             this.gbUserEmprunt = new System.Windows.Forms.GroupBox();
             this.txtNomEmprunteur = new System.Windows.Forms.TextBox();
+            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
             this.txtPrenomemprunteur = new System.Windows.Forms.TextBox();
             this.txtRetardsEmprunteur = new System.Windows.Forms.TextBox();
             this.txtNbEmpruntsEmprunteur = new System.Windows.Forms.TextBox();
@@ -55,7 +60,6 @@
             this.lUserPrenomEmprunt = new System.Windows.Forms.Label();
             this.lUserNameEmprunt = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.gdvEmpruntEnCours = new System.Windows.Forms.DataGridView();
             this.btnISBNGoRechLivre = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
@@ -63,11 +67,11 @@
             this.button23 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.txtTitreLivreExemp = new System.Windows.Forms.TextBox();
+            this.txtTitreLivreRechExemp = new System.Windows.Forms.TextBox();
             this.button17 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.button16 = new System.Windows.Forms.Button();
-            this.txtCodeExemp = new System.Windows.Forms.TextBox();
+            this.txtCodeRechExemp = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.button22 = new System.Windows.Forms.Button();
             this.cbBibLibelle = new System.Windows.Forms.ComboBox();
@@ -94,6 +98,7 @@
             this.lListeLivre = new System.Windows.Forms.Label();
             this.tbAdministrateur = new System.Windows.Forms.TabControl();
             this.tpGestionLivre = new System.Windows.Forms.TabPage();
+            this.pbLogoGestLivre = new System.Windows.Forms.PictureBox();
             this.gbAjoutManuelLivre = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtLienAjMan = new System.Windows.Forms.TextBox();
@@ -101,20 +106,23 @@
             this.txtTitreAjMan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtISBNAjMan = new System.Windows.Forms.TextBox();
+            this.pbLivre = new System.Windows.Forms.PictureBox();
             this.tpGestionExemplaires = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dgvExemplaire = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLivreExemplaire = new System.Windows.Forms.TextBox();
             this.btnSauveExemp = new System.Windows.Forms.Button();
             this.cbBiblioExemp = new System.Windows.Forms.ComboBox();
-            this.dateDateAchatExemp = new System.Windows.Forms.DateTimePicker();
+            this.dtDateAchatExemp = new System.Windows.Forms.DateTimePicker();
             this.btn = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtCodeExemplaire = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpgestionLecteurs = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.button33 = new System.Windows.Forms.Button();
@@ -127,9 +135,9 @@
             this.txtUserDataVille = new System.Windows.Forms.TextBox();
             this.dtUserDataDateNaissance = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
+            this.pbUserPictureProfil = new System.Windows.Forms.PictureBox();
             this.button15 = new System.Windows.Forms.Button();
             this.txtUserDataUsername = new System.Windows.Forms.TextBox();
-            this.txtUserDataEmail = new System.Windows.Forms.TextBox();
             this.txtUserDataAdresse = new System.Windows.Forms.TextBox();
             this.txtUserDataSexe = new System.Windows.Forms.TextBox();
             this.txtUserDataPrenom = new System.Windows.Forms.TextBox();
@@ -138,23 +146,17 @@
             this.lUserDataAdresse = new System.Windows.Forms.Label();
             this.lUserDataDateNaissance = new System.Windows.Forms.Label();
             this.lUserDataUsername = new System.Windows.Forms.Label();
-            this.lUserDataEmail = new System.Windows.Forms.Label();
             this.lUserDataNom = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label11 = new System.Windows.Forms.Label();
             this.picSignOut = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pbLogoGestLivre = new System.Windows.Forms.PictureBox();
-            this.pbLivre = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbLiveRetard = new System.Windows.Forms.PictureBox();
-            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
-            this.pbUserPictureProfil = new System.Windows.Forms.PictureBox();
             this.gbDetReservation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).BeginInit();
             this.tpEmpruntEtReservation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvRetardataires)).BeginInit();
             this.gbUserEmprunt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvEmpruntEnCours)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -168,22 +170,20 @@
             this.groupBox2.SuspendLayout();
             this.tbAdministrateur.SuspendLayout();
             this.tpGestionLivre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).BeginInit();
             this.gbAjoutManuelLivre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).BeginInit();
             this.tpGestionExemplaires.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpgestionLecteurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).BeginInit();
             this.gbUserDataProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).BeginInit();
             this.SuspendLayout();
             // 
             // lISBNrechLivre
@@ -225,6 +225,16 @@
             this.label12.TabIndex = 39;
             this.label12.Text = "€";
             // 
+            // pbLiveRetard
+            // 
+            this.pbLiveRetard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLiveRetard.Location = new System.Drawing.Point(331, 14);
+            this.pbLiveRetard.Name = "pbLiveRetard";
+            this.pbLiveRetard.Size = new System.Drawing.Size(118, 132);
+            this.pbLiveRetard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLiveRetard.TabIndex = 38;
+            this.pbLiveRetard.TabStop = false;
+            // 
             // txtPrenomRetardataire
             // 
             this.txtPrenomRetardataire.BackColor = System.Drawing.SystemColors.Window;
@@ -246,7 +256,7 @@
             // txtNbJoursRetards
             // 
             this.txtNbJoursRetards.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNbJoursRetards.Location = new System.Drawing.Point(148, 80);
+            this.txtNbJoursRetards.Location = new System.Drawing.Point(148, 84);
             this.txtNbJoursRetards.Name = "txtNbJoursRetards";
             this.txtNbJoursRetards.ReadOnly = true;
             this.txtNbJoursRetards.Size = new System.Drawing.Size(177, 25);
@@ -275,7 +285,7 @@
             // 
             this.lDateReservation.AutoSize = true;
             this.lDateReservation.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateReservation.Location = new System.Drawing.Point(7, 82);
+            this.lDateReservation.Location = new System.Drawing.Point(7, 87);
             this.lDateReservation.Name = "lDateReservation";
             this.lDateReservation.Size = new System.Drawing.Size(137, 18);
             this.lDateReservation.TabIndex = 3;
@@ -304,6 +314,9 @@
             // tpEmpruntEtReservation
             // 
             this.tpEmpruntEtReservation.BackColor = System.Drawing.SystemColors.Control;
+            this.tpEmpruntEtReservation.Controls.Add(this.button1);
+            this.tpEmpruntEtReservation.Controls.Add(this.button3);
+            this.tpEmpruntEtReservation.Controls.Add(this.button2);
             this.tpEmpruntEtReservation.Controls.Add(this.gbDetReservation);
             this.tpEmpruntEtReservation.Controls.Add(this.button6);
             this.tpEmpruntEtReservation.Controls.Add(this.lHistoriqueEmprunt);
@@ -311,7 +324,6 @@
             this.tpEmpruntEtReservation.Controls.Add(this.gdvRetardataires);
             this.tpEmpruntEtReservation.Controls.Add(this.gbUserEmprunt);
             this.tpEmpruntEtReservation.Controls.Add(this.button8);
-            this.tpEmpruntEtReservation.Controls.Add(this.button11);
             this.tpEmpruntEtReservation.Controls.Add(this.gdvEmpruntEnCours);
             this.tpEmpruntEtReservation.Location = new System.Drawing.Point(4, 27);
             this.tpEmpruntEtReservation.Name = "tpEmpruntEtReservation";
@@ -320,14 +332,44 @@
             this.tpEmpruntEtReservation.TabIndex = 1;
             this.tpEmpruntEtReservation.Text = "Emprunts & Retards";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(667, 558);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 31);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Actualiser";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(753, 558);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(152, 31);
+            this.button3.TabIndex = 24;
+            this.button3.Text = "Rendre Exemplaire";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(666, 348);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 31);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Actualiser";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(824, 348);
+            this.button6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(752, 348);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 31);
+            this.button6.Size = new System.Drawing.Size(152, 31);
             this.button6.TabIndex = 21;
-            this.button6.Text = "Actualiser";
+            this.button6.Text = "Rendre Exemplaire";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // lHistoriqueEmprunt
@@ -392,6 +434,16 @@
             this.txtNomEmprunteur.ReadOnly = true;
             this.txtNomEmprunteur.Size = new System.Drawing.Size(167, 25);
             this.txtNomEmprunteur.TabIndex = 38;
+            // 
+            // pbLivreEmprunt
+            // 
+            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivreEmprunt.Location = new System.Drawing.Point(309, 15);
+            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
+            this.pbLivreEmprunt.Size = new System.Drawing.Size(118, 132);
+            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivreEmprunt.TabIndex = 37;
+            this.pbLivreEmprunt.TabStop = false;
             // 
             // txtPrenomemprunteur
             // 
@@ -473,16 +525,6 @@
             this.button8.Text = "GO!";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(825, 559);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(80, 31);
-            this.button11.TabIndex = 10;
-            this.button11.Text = "Actualiser";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
             // gdvEmpruntEnCours
             // 
             this.gdvEmpruntEnCours.AllowUserToAddRows = false;
@@ -528,6 +570,7 @@
             this.button24.TabIndex = 31;
             this.button24.Text = "Editer";
             this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // button23
             // 
@@ -553,7 +596,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.txtTitreLivreExemp);
+            this.groupBox10.Controls.Add(this.txtTitreLivreRechExemp);
             this.groupBox10.Controls.Add(this.button17);
             this.groupBox10.Location = new System.Drawing.Point(10, 89);
             this.groupBox10.Name = "groupBox10";
@@ -562,13 +605,13 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Par Titre du livre :";
             // 
-            // txtTitreLivreExemp
+            // txtTitreLivreRechExemp
             // 
-            this.txtTitreLivreExemp.BackColor = System.Drawing.SystemColors.Window;
-            this.txtTitreLivreExemp.Location = new System.Drawing.Point(5, 24);
-            this.txtTitreLivreExemp.Name = "txtTitreLivreExemp";
-            this.txtTitreLivreExemp.Size = new System.Drawing.Size(163, 25);
-            this.txtTitreLivreExemp.TabIndex = 8;
+            this.txtTitreLivreRechExemp.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTitreLivreRechExemp.Location = new System.Drawing.Point(5, 24);
+            this.txtTitreLivreRechExemp.Name = "txtTitreLivreRechExemp";
+            this.txtTitreLivreRechExemp.Size = new System.Drawing.Size(163, 25);
+            this.txtTitreLivreRechExemp.TabIndex = 8;
             // 
             // button17
             // 
@@ -582,7 +625,7 @@
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.button16);
-            this.groupBox11.Controls.Add(this.txtCodeExemp);
+            this.groupBox11.Controls.Add(this.txtCodeRechExemp);
             this.groupBox11.Location = new System.Drawing.Point(9, 20);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(232, 63);
@@ -599,13 +642,13 @@
             this.button16.Text = "GO !";
             this.button16.UseVisualStyleBackColor = true;
             // 
-            // txtCodeExemp
+            // txtCodeRechExemp
             // 
-            this.txtCodeExemp.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCodeExemp.Location = new System.Drawing.Point(6, 23);
-            this.txtCodeExemp.Name = "txtCodeExemp";
-            this.txtCodeExemp.Size = new System.Drawing.Size(163, 25);
-            this.txtCodeExemp.TabIndex = 6;
+            this.txtCodeRechExemp.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCodeRechExemp.Location = new System.Drawing.Point(6, 23);
+            this.txtCodeRechExemp.Name = "txtCodeRechExemp";
+            this.txtCodeRechExemp.Size = new System.Drawing.Size(163, 25);
+            this.txtCodeRechExemp.TabIndex = 6;
             // 
             // groupBox6
             // 
@@ -681,6 +724,7 @@
             this.gdvLivre.Size = new System.Drawing.Size(899, 293);
             this.gdvLivre.TabIndex = 1;
             this.gdvLivre.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvLivre_CellClick);
+            this.gdvLivre.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvLivre_CellValueChanged);
             // 
             // gbRechLivre
             // 
@@ -872,6 +916,7 @@
             this.tbAdministrateur.SelectedIndex = 0;
             this.tbAdministrateur.Size = new System.Drawing.Size(918, 626);
             this.tbAdministrateur.TabIndex = 22;
+            this.tbAdministrateur.SelectedIndexChanged += new System.EventHandler(this.tbAdministrateur_SelectedIndexChanged);
             // 
             // tpGestionLivre
             // 
@@ -891,6 +936,16 @@
             this.tpGestionLivre.Size = new System.Drawing.Size(910, 595);
             this.tpGestionLivre.TabIndex = 0;
             this.tpGestionLivre.Text = "Livres";
+            // 
+            // pbLogoGestLivre
+            // 
+            this.pbLogoGestLivre.Image = global::MainApp.Properties.Resources.Livre_2;
+            this.pbLogoGestLivre.Location = new System.Drawing.Point(699, 17);
+            this.pbLogoGestLivre.Name = "pbLogoGestLivre";
+            this.pbLogoGestLivre.Size = new System.Drawing.Size(203, 222);
+            this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoGestLivre.TabIndex = 36;
+            this.pbLogoGestLivre.TabStop = false;
             // 
             // gbAjoutManuelLivre
             // 
@@ -969,6 +1024,16 @@
             this.txtISBNAjMan.Size = new System.Drawing.Size(151, 25);
             this.txtISBNAjMan.TabIndex = 6;
             // 
+            // pbLivre
+            // 
+            this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivre.Location = new System.Drawing.Point(231, 19);
+            this.pbLivre.Name = "pbLivre";
+            this.pbLivre.Size = new System.Drawing.Size(161, 202);
+            this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivre.TabIndex = 4;
+            this.pbLivre.TabStop = false;
+            // 
             // tpGestionExemplaires
             // 
             this.tpGestionExemplaires.BackColor = System.Drawing.SystemColors.Control;
@@ -985,6 +1050,16 @@
             this.tpGestionExemplaires.Size = new System.Drawing.Size(910, 595);
             this.tpGestionExemplaires.TabIndex = 5;
             this.tpGestionExemplaires.Text = "Exemplaires";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MainApp.Properties.Resources.Livre_2;
+            this.pictureBox2.Location = new System.Drawing.Point(680, 7);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(214, 222);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
             // 
             // label17
             // 
@@ -1011,16 +1086,16 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.txtLivreExemplaire);
             this.groupBox4.Controls.Add(this.btnSauveExemp);
             this.groupBox4.Controls.Add(this.cbBiblioExemp);
-            this.groupBox4.Controls.Add(this.dateDateAchatExemp);
+            this.groupBox4.Controls.Add(this.dtDateAchatExemp);
             this.groupBox4.Controls.Add(this.btn);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.textBox12);
+            this.groupBox4.Controls.Add(this.txtCodeExemplaire);
             this.groupBox4.Controls.Add(this.pictureBox1);
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
@@ -1029,13 +1104,13 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ajouter / Modifier  un exemplaire :";
             // 
-            // textBox1
+            // txtLivreExemplaire
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(88, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 25);
-            this.textBox1.TabIndex = 31;
+            this.txtLivreExemplaire.BackColor = System.Drawing.SystemColors.Window;
+            this.txtLivreExemplaire.Location = new System.Drawing.Point(88, 63);
+            this.txtLivreExemplaire.Name = "txtLivreExemplaire";
+            this.txtLivreExemplaire.Size = new System.Drawing.Size(151, 25);
+            this.txtLivreExemplaire.TabIndex = 31;
             // 
             // btnSauveExemp
             // 
@@ -1055,13 +1130,13 @@
             this.cbBiblioExemp.Size = new System.Drawing.Size(151, 26);
             this.cbBiblioExemp.TabIndex = 29;
             // 
-            // dateDateAchatExemp
+            // dtDateAchatExemp
             // 
-            this.dateDateAchatExemp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateDateAchatExemp.Location = new System.Drawing.Point(88, 108);
-            this.dateDateAchatExemp.Name = "dateDateAchatExemp";
-            this.dateDateAchatExemp.Size = new System.Drawing.Size(151, 25);
-            this.dateDateAchatExemp.TabIndex = 27;
+            this.dtDateAchatExemp.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtDateAchatExemp.Location = new System.Drawing.Point(88, 108);
+            this.dtDateAchatExemp.Name = "dtDateAchatExemp";
+            this.dtDateAchatExemp.Size = new System.Drawing.Size(151, 25);
+            this.dtDateAchatExemp.TabIndex = 27;
             // 
             // btn
             // 
@@ -1113,13 +1188,23 @@
             this.label16.TabIndex = 7;
             this.label16.Text = "Code :";
             // 
-            // textBox12
+            // txtCodeExemplaire
             // 
-            this.textBox12.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox12.Location = new System.Drawing.Point(88, 20);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(151, 25);
-            this.textBox12.TabIndex = 6;
+            this.txtCodeExemplaire.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCodeExemplaire.Location = new System.Drawing.Point(88, 20);
+            this.txtCodeExemplaire.Name = "txtCodeExemplaire";
+            this.txtCodeExemplaire.Size = new System.Drawing.Size(151, 25);
+            this.txtCodeExemplaire.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(245, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 174);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // tpgestionLecteurs
             // 
@@ -1134,6 +1219,7 @@
             this.tpgestionLecteurs.Size = new System.Drawing.Size(910, 595);
             this.tpgestionLecteurs.TabIndex = 4;
             this.tpgestionLecteurs.Text = "Lecteurs";
+            this.tpgestionLecteurs.Click += new System.EventHandler(this.tpgestionLecteurs_Click);
             // 
             // label7
             // 
@@ -1147,7 +1233,7 @@
             // button33
             // 
             this.button33.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button33.Location = new System.Drawing.Point(736, 559);
+            this.button33.Location = new System.Drawing.Point(732, 559);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(90, 31);
             this.button33.TabIndex = 21;
@@ -1157,12 +1243,13 @@
             // button32
             // 
             this.button32.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.Location = new System.Drawing.Point(832, 559);
+            this.button32.Location = new System.Drawing.Point(828, 559);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(80, 31);
             this.button32.TabIndex = 20;
-            this.button32.Text = "Mdifier";
+            this.button32.Text = "Editer";
             this.button32.UseVisualStyleBackColor = true;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // gdvLecteurs
             // 
@@ -1179,6 +1266,7 @@
             this.gdvLecteurs.ReadOnly = true;
             this.gdvLecteurs.Size = new System.Drawing.Size(904, 359);
             this.gdvLecteurs.TabIndex = 9;
+            this.gdvLecteurs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvLecteurs_CellClick);
             // 
             // gbUserDataProfile
             // 
@@ -1191,7 +1279,6 @@
             this.gbUserDataProfile.Controls.Add(this.pbUserPictureProfil);
             this.gbUserDataProfile.Controls.Add(this.button15);
             this.gbUserDataProfile.Controls.Add(this.txtUserDataUsername);
-            this.gbUserDataProfile.Controls.Add(this.txtUserDataEmail);
             this.gbUserDataProfile.Controls.Add(this.txtUserDataAdresse);
             this.gbUserDataProfile.Controls.Add(this.txtUserDataSexe);
             this.gbUserDataProfile.Controls.Add(this.txtUserDataPrenom);
@@ -1200,7 +1287,6 @@
             this.gbUserDataProfile.Controls.Add(this.lUserDataAdresse);
             this.gbUserDataProfile.Controls.Add(this.lUserDataDateNaissance);
             this.gbUserDataProfile.Controls.Add(this.lUserDataUsername);
-            this.gbUserDataProfile.Controls.Add(this.lUserDataEmail);
             this.gbUserDataProfile.Controls.Add(this.lUserDataNom);
             this.gbUserDataProfile.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUserDataProfile.Location = new System.Drawing.Point(3, 3);
@@ -1265,6 +1351,16 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Sexe  :";
             // 
+            // pbUserPictureProfil
+            // 
+            this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbUserPictureProfil.Location = new System.Drawing.Point(796, 12);
+            this.pbUserPictureProfil.Name = "pbUserPictureProfil";
+            this.pbUserPictureProfil.Size = new System.Drawing.Size(104, 131);
+            this.pbUserPictureProfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUserPictureProfil.TabIndex = 13;
+            this.pbUserPictureProfil.TabStop = false;
+            // 
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1278,18 +1374,10 @@
             // txtUserDataUsername
             // 
             this.txtUserDataUsername.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserDataUsername.Location = new System.Drawing.Point(621, 51);
+            this.txtUserDataUsername.Location = new System.Drawing.Point(621, 21);
             this.txtUserDataUsername.Name = "txtUserDataUsername";
             this.txtUserDataUsername.Size = new System.Drawing.Size(169, 25);
             this.txtUserDataUsername.TabIndex = 16;
-            // 
-            // txtUserDataEmail
-            // 
-            this.txtUserDataEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserDataEmail.Location = new System.Drawing.Point(596, 20);
-            this.txtUserDataEmail.Name = "txtUserDataEmail";
-            this.txtUserDataEmail.Size = new System.Drawing.Size(194, 25);
-            this.txtUserDataEmail.TabIndex = 15;
             // 
             // txtUserDataAdresse
             // 
@@ -1358,22 +1446,12 @@
             // 
             this.lUserDataUsername.AutoSize = true;
             this.lUserDataUsername.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUserDataUsername.Location = new System.Drawing.Point(543, 54);
+            this.lUserDataUsername.Location = new System.Drawing.Point(539, 23);
             this.lUserDataUsername.Name = "lUserDataUsername";
             this.lUserDataUsername.Size = new System.Drawing.Size(80, 18);
             this.lUserDataUsername.TabIndex = 4;
             this.lUserDataUsername.Text = "Username :";
             this.lUserDataUsername.Click += new System.EventHandler(this.lUserDataUsername_Click);
-            // 
-            // lUserDataEmail
-            // 
-            this.lUserDataEmail.AutoSize = true;
-            this.lUserDataEmail.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUserDataEmail.Location = new System.Drawing.Point(543, 21);
-            this.lUserDataEmail.Name = "lUserDataEmail";
-            this.lUserDataEmail.Size = new System.Drawing.Size(57, 18);
-            this.lUserDataEmail.TabIndex = 2;
-            this.lUserDataEmail.Text = "Email :";
             // 
             // lUserDataNom
             // 
@@ -1403,13 +1481,14 @@
             // 
             this.picSignOut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picSignOut.Image = global::MainApp.Properties.Resources.SignOUt21;
-            this.picSignOut.Location = new System.Drawing.Point(883, 3);
+            this.picSignOut.Location = new System.Drawing.Point(880, 5);
             this.picSignOut.Name = "picSignOut";
             this.picSignOut.Size = new System.Drawing.Size(29, 29);
             this.picSignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSignOut.TabIndex = 32;
             this.picSignOut.TabStop = false;
             this.picSignOut.Tag = "Deconnecter?";
+            this.picSignOut.Click += new System.EventHandler(this.picSignOut_Click);
             // 
             // pictureBox5
             // 
@@ -1420,75 +1499,6 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
-            // 
-            // pbLogoGestLivre
-            // 
-            this.pbLogoGestLivre.Image = global::MainApp.Properties.Resources.Livre_2;
-            this.pbLogoGestLivre.Location = new System.Drawing.Point(699, 18);
-            this.pbLogoGestLivre.Name = "pbLogoGestLivre";
-            this.pbLogoGestLivre.Size = new System.Drawing.Size(203, 222);
-            this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogoGestLivre.TabIndex = 36;
-            this.pbLogoGestLivre.TabStop = false;
-            // 
-            // pbLivre
-            // 
-            this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivre.Location = new System.Drawing.Point(231, 19);
-            this.pbLivre.Name = "pbLivre";
-            this.pbLivre.Size = new System.Drawing.Size(161, 202);
-            this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivre.TabIndex = 4;
-            this.pbLivre.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MainApp.Properties.Resources.Livre_2;
-            this.pictureBox2.Location = new System.Drawing.Point(680, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 222);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 37;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(245, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 174);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbLiveRetard
-            // 
-            this.pbLiveRetard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLiveRetard.Location = new System.Drawing.Point(331, 14);
-            this.pbLiveRetard.Name = "pbLiveRetard";
-            this.pbLiveRetard.Size = new System.Drawing.Size(118, 132);
-            this.pbLiveRetard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLiveRetard.TabIndex = 38;
-            this.pbLiveRetard.TabStop = false;
-            // 
-            // pbLivreEmprunt
-            // 
-            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivreEmprunt.Location = new System.Drawing.Point(309, 15);
-            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
-            this.pbLivreEmprunt.Size = new System.Drawing.Size(118, 132);
-            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivreEmprunt.TabIndex = 37;
-            this.pbLivreEmprunt.TabStop = false;
-            // 
-            // pbUserPictureProfil
-            // 
-            this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUserPictureProfil.Location = new System.Drawing.Point(796, 12);
-            this.pbUserPictureProfil.Name = "pbUserPictureProfil";
-            this.pbUserPictureProfil.Size = new System.Drawing.Size(104, 131);
-            this.pbUserPictureProfil.TabIndex = 13;
-            this.pbUserPictureProfil.TabStop = false;
             // 
             // AdministrateurGui
             // 
@@ -1506,11 +1516,13 @@
             this.Load += new System.EventHandler(this.AdministrateurGui_Load);
             this.gbDetReservation.ResumeLayout(false);
             this.gbDetReservation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).EndInit();
             this.tpEmpruntEtReservation.ResumeLayout(false);
             this.tpEmpruntEtReservation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvRetardataires)).EndInit();
             this.gbUserEmprunt.ResumeLayout(false);
             this.gbUserEmprunt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvEmpruntEnCours)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
@@ -1530,27 +1542,25 @@
             this.tbAdministrateur.ResumeLayout(false);
             this.tpGestionLivre.ResumeLayout(false);
             this.tpGestionLivre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).EndInit();
             this.gbAjoutManuelLivre.ResumeLayout(false);
             this.gbAjoutManuelLivre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).EndInit();
             this.tpGestionExemplaires.ResumeLayout(false);
             this.tpGestionExemplaires.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tpgestionLecteurs.ResumeLayout(false);
             this.tpgestionLecteurs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).EndInit();
             this.gbUserDataProfile.ResumeLayout(false);
             this.gbUserDataProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1582,7 +1592,6 @@
         private System.Windows.Forms.Label lUserPrenomEmprunt;
         private System.Windows.Forms.Label lUserNameEmprunt;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.DataGridView gdvEmpruntEnCours;
         private System.Windows.Forms.Button btnISBNGoRechLivre;
         private System.Windows.Forms.Button button25;
@@ -1593,7 +1602,7 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.TextBox txtCodeExemp;
+        private System.Windows.Forms.TextBox txtCodeRechExemp;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.ComboBox cbBibLibelle;
@@ -1634,7 +1643,6 @@
         private System.Windows.Forms.PictureBox pbUserPictureProfil;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.TextBox txtUserDataUsername;
-        private System.Windows.Forms.TextBox txtUserDataEmail;
         private System.Windows.Forms.TextBox txtUserDataAdresse;
         private System.Windows.Forms.TextBox txtUserDataSexe;
         private System.Windows.Forms.TextBox txtUserDataPrenom;
@@ -1643,7 +1651,6 @@
         private System.Windows.Forms.Label lUserDataAdresse;
         private System.Windows.Forms.Label lUserDataDateNaissance;
         private System.Windows.Forms.Label lUserDataUsername;
-        private System.Windows.Forms.Label lUserDataEmail;
         private System.Windows.Forms.Label lUserDataNom;
         private System.Windows.Forms.TabPage tpGestionExemplaires;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1652,13 +1659,13 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnSauveExemp;
         private System.Windows.Forms.ComboBox cbBiblioExemp;
-        private System.Windows.Forms.DateTimePicker dateDateAchatExemp;
+        private System.Windows.Forms.DateTimePicker dtDateAchatExemp;
         private System.Windows.Forms.Button btn;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtCodeExemplaire;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label5;
@@ -1677,8 +1684,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtTitreLivreExemp;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTitreLivreRechExemp;
+        private System.Windows.Forms.TextBox txtLivreExemplaire;
         private System.Windows.Forms.TextBox txtNomEmprunteur;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
     }
 }

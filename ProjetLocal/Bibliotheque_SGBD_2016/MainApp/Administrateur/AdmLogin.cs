@@ -31,5 +31,10 @@ namespace MainApp.Administrateur
             this.Hide();
             acc.Show();
         }
+
+        private void AdmLogin_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

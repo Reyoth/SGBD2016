@@ -30,5 +30,12 @@ namespace MainApp.Lecteur
             this.Hide();
             acc.Show();
         }
+
+        private void LectLogin_Load(object sender, EventArgs e)
+        {
+            List<String> Bibliotheques = null;
+            BL.Biblio.ChargerBiblioLib(ref Bibliotheques);
+            cbBibliotheque.DataSource = Bibliotheques;
+        }
     }
 }

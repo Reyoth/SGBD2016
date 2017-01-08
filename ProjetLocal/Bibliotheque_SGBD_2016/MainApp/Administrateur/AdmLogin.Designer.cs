@@ -65,7 +65,7 @@
             // 
             this.lPassword.AutoSize = true;
             this.lPassword.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPassword.Location = new System.Drawing.Point(271, 119);
+            this.lPassword.Location = new System.Drawing.Point(275, 116);
             this.lPassword.Name = "lPassword";
             this.lPassword.Size = new System.Drawing.Size(100, 18);
             this.lPassword.TabIndex = 42;
@@ -121,6 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(572, 234);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConnect);
@@ -133,6 +134,7 @@
             this.Name = "AdmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdmLogin";
+            this.Load += new System.EventHandler(this.AdmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

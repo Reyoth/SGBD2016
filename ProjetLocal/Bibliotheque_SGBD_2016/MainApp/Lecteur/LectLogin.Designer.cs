@@ -54,10 +54,11 @@
             // 
             // cbBibliotheque
             // 
+            this.cbBibliotheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBibliotheque.FormattingEnabled = true;
             this.cbBibliotheque.Location = new System.Drawing.Point(462, 73);
             this.cbBibliotheque.Name = "cbBibliotheque";
-            this.cbBibliotheque.Size = new System.Drawing.Size(136, 21);
+            this.cbBibliotheque.Size = new System.Drawing.Size(136, 28);
             this.cbBibliotheque.TabIndex = 41;
             // 
             // lBibliotheque
@@ -155,6 +156,7 @@
             this.Name = "LectLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LectLogin";
+            this.Load += new System.EventHandler(this.LectLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

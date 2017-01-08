@@ -29,6 +29,13 @@ namespace MainApp.Administrateur
             txtLienAjMan.Enabled = false;
             txtNomAutAjMan.Enabled = false;
 
+            //txt volet Exemplaires
+            txtCodeExemplaire.Enabled = false;
+            txtLivreExemplaire.Enabled = false;
+            dtDateAchatExemp.Enabled = false;
+            txtCodeExemplaire.ReadOnly = true;
+            txtLivreExemplaire.ReadOnly = true;
+
             //txt volet Emprunts et retards
             //enable
 
@@ -58,7 +65,6 @@ namespace MainApp.Administrateur
             txtUserDataAdresse.Enabled = false;
             txtUserDataVille.Enabled = false;
             txtUserDataCodePostal.Enabled = false;
-            txtUserDataEmail.Enabled = false;
             txtUserDataUsername.Enabled = false;
             dtUserDataDateNaissance.Enabled = false;
 
@@ -69,7 +75,6 @@ namespace MainApp.Administrateur
             txtUserDataAdresse.ReadOnly = true;
             txtUserDataVille.ReadOnly = true;
             txtUserDataCodePostal.ReadOnly = true;
-            txtUserDataEmail.ReadOnly = true;
             txtUserDataUsername.ReadOnly = true;
 
 
@@ -81,15 +86,17 @@ namespace MainApp.Administrateur
             gdvLecteurs.DataSource = null;
             DataSet ds = new DataSet();
             BL.Administrateur.AllLivres(ref ds);
+            var x = ds;
             BL.Administrateur.AllExemplairesAllBib(ref ds);
             BL.Administrateur.AllEmpruntsEnCours(ref ds);
             BL.Administrateur.AllRetardataires(ref ds);
             BL.Administrateur.AllLecteurs(ref ds);
             gdvLivre.DataSource = ds.Tables[0].DefaultView;
+            gdvLivre.Columns[0].Visible = false;
             gdvLivre.Columns[4].Visible = false;
-            dgvExemplaire.DataSource = ds.Tables[1].DefaultView; 
-            gdvEmpruntEnCours.DataSource = ds.Tables[2].DefaultView; 
-            gdvRetardataires.DataSource = ds.Tables[3].DefaultView; 
+            dgvExemplaire.DataSource = ds.Tables[1].DefaultView;
+            gdvEmpruntEnCours.DataSource = ds.Tables[2].DefaultView;
+            gdvRetardataires.DataSource = ds.Tables[3].DefaultView;
             gdvLecteurs.DataSource = ds.Tables[4].DefaultView;
         }
 
@@ -226,6 +233,57 @@ namespace MainApp.Administrateur
         private void btnEmprunterLivre_Click(object sender, EventArgs e)
         {
             BL.Administrateur.DeleteLivre(txtISBNAjMan.Text);
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            txtCodeExemplaire.Enabled = true;
+            txtLivreExemplaire.Enabled = true;
+            dtDateAchatExemp.Enabled = true;
+            txtCodeExemplaire.ReadOnly = false;
+            txtLivreExemplaire.ReadOnly = false;
+        }
+
+        private void gdvLecteurs_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gdvLecteurs.SelectedCells.Count == 1)
+            {
+                txtUserDataNom.Text = gdvLecteurs.CurrentRow.Cells[1].Value.ToString();
+                txtUserDataPrenom.Text = gdvLecteurs.CurrentRow.Cells[2].Value.ToString();
+                txtUserDataSexe.Text = gdvLecteurs.CurrentRow.Cells[3].Value.ToString();
+                dtUserDataDateNaissance.Value = DateTime.Parse(gdvLecteurs.CurrentRow.Cells[4].Value.ToString());
+                txtUserDataAdresse.Text = gdvLecteurs.CurrentRow.Cells[5].Value.ToString();
+                txtUserDataVille.Text = gdvLecteurs.CurrentRow.Cells[6].Value.ToString();
+                txtUserDataCodePostal.Text = gdvLecteurs.CurrentRow.Cells[7].Value.ToString();
+                txtUserDataUsername.Text = gdvLecteurs.CurrentRow.Cells[8].Value.ToString();
+                pbUserPictureProfil.ImageLocation = gdvLecteurs.CurrentRow.Cells[10].Value.ToString();
+            }
+        }
+
+        private void tpgestionLecteurs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void gdvLivre_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void tbAdministrateur_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picSignOut_Click(object sender, EventArgs e)
+        {
+            AdmLogin Adlog = new AdmLogin();
+            this.Hide();
+            Adlog.Show();
         }
     }
 }

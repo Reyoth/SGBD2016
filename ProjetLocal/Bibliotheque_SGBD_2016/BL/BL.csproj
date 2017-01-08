@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrateur.cs" />
+    <Compile Include="Biblio.cs" />
     <Compile Include="GoogleBooks.cs" />
     <Compile Include="Lecteur.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
