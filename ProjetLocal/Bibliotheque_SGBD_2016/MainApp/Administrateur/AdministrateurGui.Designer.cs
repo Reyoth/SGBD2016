@@ -68,12 +68,12 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtTitreLivreRechExemp = new System.Windows.Forms.TextBox();
-            this.button17 = new System.Windows.Forms.Button();
+            this.tbnGoRchExmpTitre = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.button16 = new System.Windows.Forms.Button();
+            this.tbnGoRchExmpCode = new System.Windows.Forms.Button();
             this.txtCodeRechExemp = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button22 = new System.Windows.Forms.Button();
+            this.tbnGoRchExmpBib = new System.Windows.Forms.Button();
             this.cbBibLibelle = new System.Windows.Forms.ComboBox();
             this.btnEmprunterLivre = new System.Windows.Forms.Button();
             this.tbnReserverLivre = new System.Windows.Forms.Button();
@@ -122,7 +122,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtCodeExemplaire = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbExemplaire = new System.Windows.Forms.PictureBox();
             this.tpgestionLecteurs = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.button33 = new System.Windows.Forms.Button();
@@ -177,7 +177,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).BeginInit();
             this.tpgestionLecteurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).BeginInit();
             this.gbUserDataProfile.SuspendLayout();
@@ -209,9 +209,9 @@
             this.gbDetReservation.Controls.Add(this.lUserPrenomResrvation);
             this.gbDetReservation.Controls.Add(this.lUserNomResevation);
             this.gbDetReservation.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDetReservation.Location = new System.Drawing.Point(447, 3);
+            this.gbDetReservation.Location = new System.Drawing.Point(582, 3);
             this.gbDetReservation.Name = "gbDetReservation";
-            this.gbDetReservation.Size = new System.Drawing.Size(457, 153);
+            this.gbDetReservation.Size = new System.Drawing.Size(487, 170);
             this.gbDetReservation.TabIndex = 9;
             this.gbDetReservation.TabStop = false;
             this.gbDetReservation.Text = "Retardataire :";
@@ -228,9 +228,9 @@
             // pbLiveRetard
             // 
             this.pbLiveRetard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLiveRetard.Location = new System.Drawing.Point(331, 14);
+            this.pbLiveRetard.Location = new System.Drawing.Point(337, 14);
             this.pbLiveRetard.Name = "pbLiveRetard";
-            this.pbLiveRetard.Size = new System.Drawing.Size(118, 132);
+            this.pbLiveRetard.Size = new System.Drawing.Size(137, 150);
             this.pbLiveRetard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLiveRetard.TabIndex = 38;
             this.pbLiveRetard.TabStop = false;
@@ -328,14 +328,14 @@
             this.tpEmpruntEtReservation.Location = new System.Drawing.Point(4, 27);
             this.tpEmpruntEtReservation.Name = "tpEmpruntEtReservation";
             this.tpEmpruntEtReservation.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEmpruntEtReservation.Size = new System.Drawing.Size(910, 595);
+            this.tpEmpruntEtReservation.Size = new System.Drawing.Size(1076, 595);
             this.tpEmpruntEtReservation.TabIndex = 1;
             this.tpEmpruntEtReservation.Text = "Emprunts & Retards";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(667, 558);
+            this.button1.Location = new System.Drawing.Point(833, 558);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 31);
             this.button1.TabIndex = 25;
@@ -345,7 +345,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(753, 558);
+            this.button3.Location = new System.Drawing.Point(919, 558);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(152, 31);
             this.button3.TabIndex = 24;
@@ -355,7 +355,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(666, 348);
+            this.button2.Location = new System.Drawing.Point(833, 348);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(80, 31);
             this.button2.TabIndex = 23;
@@ -365,7 +365,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(752, 348);
+            this.button6.Location = new System.Drawing.Point(919, 348);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(152, 31);
             this.button6.TabIndex = 21;
@@ -402,9 +402,9 @@
             this.gdvRetardataires.Location = new System.Drawing.Point(6, 385);
             this.gdvRetardataires.Name = "gdvRetardataires";
             this.gdvRetardataires.ReadOnly = true;
-            this.gdvRetardataires.Size = new System.Drawing.Size(899, 168);
+            this.gdvRetardataires.Size = new System.Drawing.Size(1065, 168);
             this.gdvRetardataires.TabIndex = 16;
-            this.gdvRetardataires.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvReservationEnCours_CellClick);
+            this.gdvRetardataires.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvRetardataires_CellClick);
             // 
             // gbUserEmprunt
             // 
@@ -420,7 +420,7 @@
             this.gbUserEmprunt.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUserEmprunt.Location = new System.Drawing.Point(5, 1);
             this.gbUserEmprunt.Name = "gbUserEmprunt";
-            this.gbUserEmprunt.Size = new System.Drawing.Size(436, 155);
+            this.gbUserEmprunt.Size = new System.Drawing.Size(495, 155);
             this.gbUserEmprunt.TabIndex = 8;
             this.gbUserEmprunt.TabStop = false;
             this.gbUserEmprunt.Text = "Données Emprunteur :";
@@ -438,7 +438,7 @@
             // pbLivreEmprunt
             // 
             this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivreEmprunt.Location = new System.Drawing.Point(309, 15);
+            this.pbLivreEmprunt.Location = new System.Drawing.Point(349, 17);
             this.pbLivreEmprunt.Name = "pbLivreEmprunt";
             this.pbLivreEmprunt.Size = new System.Drawing.Size(118, 132);
             this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -536,7 +536,7 @@
             this.gdvEmpruntEnCours.Location = new System.Drawing.Point(5, 179);
             this.gdvEmpruntEnCours.Name = "gdvEmpruntEnCours";
             this.gdvEmpruntEnCours.ReadOnly = true;
-            this.gdvEmpruntEnCours.Size = new System.Drawing.Size(899, 163);
+            this.gdvEmpruntEnCours.Size = new System.Drawing.Size(1066, 163);
             this.gdvEmpruntEnCours.TabIndex = 7;
             this.gdvEmpruntEnCours.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvEmpruntEnCours_CellClick);
             // 
@@ -554,7 +554,7 @@
             // button25
             // 
             this.button25.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button25.Location = new System.Drawing.Point(644, 556);
+            this.button25.Location = new System.Drawing.Point(807, 555);
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(85, 31);
             this.button25.TabIndex = 32;
@@ -564,7 +564,7 @@
             // button24
             // 
             this.button24.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(735, 556);
+            this.button24.Location = new System.Drawing.Point(898, 555);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(80, 31);
             this.button24.TabIndex = 31;
@@ -575,7 +575,7 @@
             // button23
             // 
             this.button23.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button23.Location = new System.Drawing.Point(821, 556);
+            this.button23.Location = new System.Drawing.Point(984, 555);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(86, 31);
             this.button23.TabIndex = 30;
@@ -587,9 +587,9 @@
             this.groupBox5.Controls.Add(this.groupBox10);
             this.groupBox5.Controls.Add(this.groupBox11);
             this.groupBox5.Controls.Add(this.groupBox6);
-            this.groupBox5.Location = new System.Drawing.Point(405, 3);
+            this.groupBox5.Location = new System.Drawing.Point(529, 5);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(247, 233);
+            this.groupBox5.Size = new System.Drawing.Size(247, 244);
             this.groupBox5.TabIndex = 28;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Chercher  un exemplaire :";
@@ -597,7 +597,7 @@
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.txtTitreLivreRechExemp);
-            this.groupBox10.Controls.Add(this.button17);
+            this.groupBox10.Controls.Add(this.tbnGoRchExmpTitre);
             this.groupBox10.Location = new System.Drawing.Point(10, 89);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(232, 67);
@@ -613,18 +613,18 @@
             this.txtTitreLivreRechExemp.Size = new System.Drawing.Size(163, 25);
             this.txtTitreLivreRechExemp.TabIndex = 8;
             // 
-            // button17
+            // tbnGoRchExmpTitre
             // 
-            this.button17.Location = new System.Drawing.Point(175, 26);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(51, 25);
-            this.button17.TabIndex = 8;
-            this.button17.Text = "GO !";
-            this.button17.UseVisualStyleBackColor = true;
+            this.tbnGoRchExmpTitre.Location = new System.Drawing.Point(175, 26);
+            this.tbnGoRchExmpTitre.Name = "tbnGoRchExmpTitre";
+            this.tbnGoRchExmpTitre.Size = new System.Drawing.Size(51, 25);
+            this.tbnGoRchExmpTitre.TabIndex = 8;
+            this.tbnGoRchExmpTitre.Text = "GO !";
+            this.tbnGoRchExmpTitre.UseVisualStyleBackColor = true;
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.button16);
+            this.groupBox11.Controls.Add(this.tbnGoRchExmpCode);
             this.groupBox11.Controls.Add(this.txtCodeRechExemp);
             this.groupBox11.Location = new System.Drawing.Point(9, 20);
             this.groupBox11.Name = "groupBox11";
@@ -633,14 +633,14 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Par code d\'exemplaire :";
             // 
-            // button16
+            // tbnGoRchExmpCode
             // 
-            this.button16.Location = new System.Drawing.Point(175, 24);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(51, 26);
-            this.button16.TabIndex = 7;
-            this.button16.Text = "GO !";
-            this.button16.UseVisualStyleBackColor = true;
+            this.tbnGoRchExmpCode.Location = new System.Drawing.Point(175, 24);
+            this.tbnGoRchExmpCode.Name = "tbnGoRchExmpCode";
+            this.tbnGoRchExmpCode.Size = new System.Drawing.Size(51, 26);
+            this.tbnGoRchExmpCode.TabIndex = 7;
+            this.tbnGoRchExmpCode.Text = "GO !";
+            this.tbnGoRchExmpCode.UseVisualStyleBackColor = true;
             // 
             // txtCodeRechExemp
             // 
@@ -652,7 +652,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.button22);
+            this.groupBox6.Controls.Add(this.tbnGoRchExmpBib);
             this.groupBox6.Controls.Add(this.cbBibLibelle);
             this.groupBox6.Location = new System.Drawing.Point(10, 162);
             this.groupBox6.Name = "groupBox6";
@@ -661,14 +661,14 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Par Bibliothèque :";
             // 
-            // button22
+            // tbnGoRchExmpBib
             // 
-            this.button22.Location = new System.Drawing.Point(174, 24);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(51, 25);
-            this.button22.TabIndex = 30;
-            this.button22.Text = "GO !";
-            this.button22.UseVisualStyleBackColor = true;
+            this.tbnGoRchExmpBib.Location = new System.Drawing.Point(174, 24);
+            this.tbnGoRchExmpBib.Name = "tbnGoRchExmpBib";
+            this.tbnGoRchExmpBib.Size = new System.Drawing.Size(51, 25);
+            this.tbnGoRchExmpBib.TabIndex = 30;
+            this.tbnGoRchExmpBib.Text = "GO !";
+            this.tbnGoRchExmpBib.UseVisualStyleBackColor = true;
             // 
             // cbBibLibelle
             // 
@@ -681,7 +681,7 @@
             // btnEmprunterLivre
             // 
             this.btnEmprunterLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmprunterLivre.Location = new System.Drawing.Point(820, 556);
+            this.btnEmprunterLivre.Location = new System.Drawing.Point(986, 555);
             this.btnEmprunterLivre.Name = "btnEmprunterLivre";
             this.btnEmprunterLivre.Size = new System.Drawing.Size(85, 31);
             this.btnEmprunterLivre.TabIndex = 6;
@@ -692,7 +692,7 @@
             // tbnReserverLivre
             // 
             this.tbnReserverLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnReserverLivre.Location = new System.Drawing.Point(734, 556);
+            this.tbnReserverLivre.Location = new System.Drawing.Point(900, 555);
             this.tbnReserverLivre.Name = "tbnReserverLivre";
             this.tbnReserverLivre.Size = new System.Drawing.Size(80, 31);
             this.tbnReserverLivre.TabIndex = 5;
@@ -703,7 +703,7 @@
             // btnActualiserLivre
             // 
             this.btnActualiserLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualiserLivre.Location = new System.Drawing.Point(641, 556);
+            this.btnActualiserLivre.Location = new System.Drawing.Point(807, 555);
             this.btnActualiserLivre.Name = "btnActualiserLivre";
             this.btnActualiserLivre.Size = new System.Drawing.Size(87, 31);
             this.btnActualiserLivre.TabIndex = 3;
@@ -721,7 +721,7 @@
             this.gdvLivre.Location = new System.Drawing.Point(6, 259);
             this.gdvLivre.Name = "gdvLivre";
             this.gdvLivre.ReadOnly = true;
-            this.gdvLivre.Size = new System.Drawing.Size(899, 293);
+            this.gdvLivre.Size = new System.Drawing.Size(1063, 293);
             this.gdvLivre.TabIndex = 1;
             this.gdvLivre.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvLivre_CellClick);
             this.gdvLivre.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvLivre_CellValueChanged);
@@ -914,7 +914,7 @@
             this.tbAdministrateur.Location = new System.Drawing.Point(-2, 72);
             this.tbAdministrateur.Name = "tbAdministrateur";
             this.tbAdministrateur.SelectedIndex = 0;
-            this.tbAdministrateur.Size = new System.Drawing.Size(918, 626);
+            this.tbAdministrateur.Size = new System.Drawing.Size(1084, 626);
             this.tbAdministrateur.TabIndex = 22;
             this.tbAdministrateur.SelectedIndexChanged += new System.EventHandler(this.tbAdministrateur_SelectedIndexChanged);
             // 
@@ -933,16 +933,16 @@
             this.tpGestionLivre.Location = new System.Drawing.Point(4, 27);
             this.tpGestionLivre.Name = "tpGestionLivre";
             this.tpGestionLivre.Padding = new System.Windows.Forms.Padding(3);
-            this.tpGestionLivre.Size = new System.Drawing.Size(910, 595);
+            this.tpGestionLivre.Size = new System.Drawing.Size(1076, 595);
             this.tpGestionLivre.TabIndex = 0;
             this.tpGestionLivre.Text = "Livres";
             // 
             // pbLogoGestLivre
             // 
             this.pbLogoGestLivre.Image = global::MainApp.Properties.Resources.Livre_2;
-            this.pbLogoGestLivre.Location = new System.Drawing.Point(699, 17);
+            this.pbLogoGestLivre.Location = new System.Drawing.Point(845, 14);
             this.pbLogoGestLivre.Name = "pbLogoGestLivre";
-            this.pbLogoGestLivre.Size = new System.Drawing.Size(203, 222);
+            this.pbLogoGestLivre.Size = new System.Drawing.Size(223, 236);
             this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogoGestLivre.TabIndex = 36;
             this.pbLogoGestLivre.TabStop = false;
@@ -960,9 +960,9 @@
             this.gbAjoutManuelLivre.Controls.Add(this.label3);
             this.gbAjoutManuelLivre.Controls.Add(this.txtISBNAjMan);
             this.gbAjoutManuelLivre.Controls.Add(this.pbLivre);
-            this.gbAjoutManuelLivre.Location = new System.Drawing.Point(294, 7);
+            this.gbAjoutManuelLivre.Location = new System.Drawing.Point(339, 9);
             this.gbAjoutManuelLivre.Name = "gbAjoutManuelLivre";
-            this.gbAjoutManuelLivre.Size = new System.Drawing.Size(399, 233);
+            this.gbAjoutManuelLivre.Size = new System.Drawing.Size(466, 233);
             this.gbAjoutManuelLivre.TabIndex = 24;
             this.gbAjoutManuelLivre.TabStop = false;
             this.gbAjoutManuelLivre.Text = "Ajouter manuel / Mise a jour";
@@ -1027,7 +1027,7 @@
             // pbLivre
             // 
             this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivre.Location = new System.Drawing.Point(231, 19);
+            this.pbLivre.Location = new System.Drawing.Point(266, 19);
             this.pbLivre.Name = "pbLivre";
             this.pbLivre.Size = new System.Drawing.Size(161, 202);
             this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1047,16 +1047,16 @@
             this.tpGestionExemplaires.Controls.Add(this.groupBox4);
             this.tpGestionExemplaires.Location = new System.Drawing.Point(4, 27);
             this.tpGestionExemplaires.Name = "tpGestionExemplaires";
-            this.tpGestionExemplaires.Size = new System.Drawing.Size(910, 595);
+            this.tpGestionExemplaires.Size = new System.Drawing.Size(1076, 595);
             this.tpGestionExemplaires.TabIndex = 5;
             this.tpGestionExemplaires.Text = "Exemplaires";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::MainApp.Properties.Resources.Livre_2;
-            this.pictureBox2.Location = new System.Drawing.Point(680, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(842, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 222);
+            this.pictureBox2.Size = new System.Drawing.Size(227, 249);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 37;
             this.pictureBox2.TabStop = false;
@@ -1081,8 +1081,9 @@
             this.dgvExemplaire.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvExemplaire.Location = new System.Drawing.Point(0, 262);
             this.dgvExemplaire.Name = "dgvExemplaire";
-            this.dgvExemplaire.Size = new System.Drawing.Size(907, 288);
+            this.dgvExemplaire.Size = new System.Drawing.Size(1069, 288);
             this.dgvExemplaire.TabIndex = 26;
+            this.dgvExemplaire.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvExemplaire_CellClick);
             // 
             // groupBox4
             // 
@@ -1096,10 +1097,10 @@
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Controls.Add(this.txtCodeExemplaire);
-            this.groupBox4.Controls.Add(this.pictureBox1);
+            this.groupBox4.Controls.Add(this.pbExemplaire);
             this.groupBox4.Location = new System.Drawing.Point(3, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(396, 233);
+            this.groupBox4.Size = new System.Drawing.Size(487, 233);
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ajouter / Modifier  un exemplaire :";
@@ -1115,7 +1116,7 @@
             // btnSauveExemp
             // 
             this.btnSauveExemp.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSauveExemp.Location = new System.Drawing.Point(283, 195);
+            this.btnSauveExemp.Location = new System.Drawing.Point(130, 196);
             this.btnSauveExemp.Name = "btnSauveExemp";
             this.btnSauveExemp.Size = new System.Drawing.Size(107, 31);
             this.btnSauveExemp.TabIndex = 30;
@@ -1141,7 +1142,7 @@
             // btn
             // 
             this.btn.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.Location = new System.Drawing.Point(197, 195);
+            this.btn.Location = new System.Drawing.Point(44, 196);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(80, 31);
             this.btn.TabIndex = 26;
@@ -1196,15 +1197,15 @@
             this.txtCodeExemplaire.Size = new System.Drawing.Size(151, 25);
             this.txtCodeExemplaire.TabIndex = 6;
             // 
-            // pictureBox1
+            // pbExemplaire
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(245, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 174);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pbExemplaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbExemplaire.Location = new System.Drawing.Point(303, 11);
+            this.pbExemplaire.Name = "pbExemplaire";
+            this.pbExemplaire.Size = new System.Drawing.Size(174, 216);
+            this.pbExemplaire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExemplaire.TabIndex = 4;
+            this.pbExemplaire.TabStop = false;
             // 
             // tpgestionLecteurs
             // 
@@ -1216,7 +1217,7 @@
             this.tpgestionLecteurs.Controls.Add(this.gbUserDataProfile);
             this.tpgestionLecteurs.Location = new System.Drawing.Point(4, 27);
             this.tpgestionLecteurs.Name = "tpgestionLecteurs";
-            this.tpgestionLecteurs.Size = new System.Drawing.Size(910, 595);
+            this.tpgestionLecteurs.Size = new System.Drawing.Size(1076, 595);
             this.tpgestionLecteurs.TabIndex = 4;
             this.tpgestionLecteurs.Text = "Lecteurs";
             this.tpgestionLecteurs.Click += new System.EventHandler(this.tpgestionLecteurs_Click);
@@ -1233,7 +1234,7 @@
             // button33
             // 
             this.button33.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button33.Location = new System.Drawing.Point(732, 559);
+            this.button33.Location = new System.Drawing.Point(893, 559);
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(90, 31);
             this.button33.TabIndex = 21;
@@ -1243,7 +1244,7 @@
             // button32
             // 
             this.button32.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.Location = new System.Drawing.Point(828, 559);
+            this.button32.Location = new System.Drawing.Point(989, 559);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(80, 31);
             this.button32.TabIndex = 20;
@@ -1264,7 +1265,7 @@
             this.gdvLecteurs.Location = new System.Drawing.Point(3, 194);
             this.gdvLecteurs.Name = "gdvLecteurs";
             this.gdvLecteurs.ReadOnly = true;
-            this.gdvLecteurs.Size = new System.Drawing.Size(904, 359);
+            this.gdvLecteurs.Size = new System.Drawing.Size(1066, 359);
             this.gdvLecteurs.TabIndex = 9;
             this.gdvLecteurs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvLecteurs_CellClick);
             // 
@@ -1291,7 +1292,7 @@
             this.gbUserDataProfile.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUserDataProfile.Location = new System.Drawing.Point(3, 3);
             this.gbUserDataProfile.Name = "gbUserDataProfile";
-            this.gbUserDataProfile.Size = new System.Drawing.Size(904, 156);
+            this.gbUserDataProfile.Size = new System.Drawing.Size(1066, 167);
             this.gbUserDataProfile.TabIndex = 8;
             this.gbUserDataProfile.TabStop = false;
             this.gbUserDataProfile.Text = "Utilisateur :";
@@ -1354,9 +1355,9 @@
             // pbUserPictureProfil
             // 
             this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUserPictureProfil.Location = new System.Drawing.Point(796, 12);
+            this.pbUserPictureProfil.Location = new System.Drawing.Point(925, 12);
             this.pbUserPictureProfil.Name = "pbUserPictureProfil";
-            this.pbUserPictureProfil.Size = new System.Drawing.Size(104, 131);
+            this.pbUserPictureProfil.Size = new System.Drawing.Size(135, 149);
             this.pbUserPictureProfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUserPictureProfil.TabIndex = 13;
             this.pbUserPictureProfil.TabStop = false;
@@ -1374,7 +1375,7 @@
             // txtUserDataUsername
             // 
             this.txtUserDataUsername.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserDataUsername.Location = new System.Drawing.Point(621, 21);
+            this.txtUserDataUsername.Location = new System.Drawing.Point(628, 19);
             this.txtUserDataUsername.Name = "txtUserDataUsername";
             this.txtUserDataUsername.Size = new System.Drawing.Size(169, 25);
             this.txtUserDataUsername.TabIndex = 16;
@@ -1446,7 +1447,7 @@
             // 
             this.lUserDataUsername.AutoSize = true;
             this.lUserDataUsername.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUserDataUsername.Location = new System.Drawing.Point(539, 23);
+            this.lUserDataUsername.Location = new System.Drawing.Point(545, 23);
             this.lUserDataUsername.Name = "lUserDataUsername";
             this.lUserDataUsername.Size = new System.Drawing.Size(80, 18);
             this.lUserDataUsername.TabIndex = 4;
@@ -1471,7 +1472,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(712, 16);
+            this.label11.Location = new System.Drawing.Point(853, 16);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(83, 20);
             this.label11.TabIndex = 31;
@@ -1481,7 +1482,7 @@
             // 
             this.picSignOut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picSignOut.Image = global::MainApp.Properties.Resources.SignOUt21;
-            this.picSignOut.Location = new System.Drawing.Point(880, 5);
+            this.picSignOut.Location = new System.Drawing.Point(1049, 7);
             this.picSignOut.Name = "picSignOut";
             this.picSignOut.Size = new System.Drawing.Size(29, 29);
             this.picSignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1493,7 +1494,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::MainApp.Properties.Resources.téléchargement;
-            this.pictureBox5.Location = new System.Drawing.Point(682, 12);
+            this.pictureBox5.Location = new System.Drawing.Point(823, 12);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1505,7 +1506,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(914, 697);
+            this.ClientSize = new System.Drawing.Size(1083, 697);
             this.Controls.Add(this.picSignOut);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox5);
@@ -1552,7 +1553,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).EndInit();
             this.tpgestionLecteurs.ResumeLayout(false);
             this.tpgestionLecteurs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).EndInit();
@@ -1599,12 +1600,12 @@
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button tbnGoRchExmpTitre;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button tbnGoRchExmpCode;
         private System.Windows.Forms.TextBox txtCodeRechExemp;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button22;
+        private System.Windows.Forms.Button tbnGoRchExmpBib;
         private System.Windows.Forms.ComboBox cbBibLibelle;
         private System.Windows.Forms.Button btnEmprunterLivre;
         private System.Windows.Forms.Button tbnReserverLivre;
@@ -1666,7 +1667,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtCodeExemplaire;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbExemplaire;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtLienAjMan;

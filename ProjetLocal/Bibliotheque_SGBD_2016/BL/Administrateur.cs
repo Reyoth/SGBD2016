@@ -93,5 +93,16 @@ namespace BL
         {
             DALADO.Administrateur.DeleteLivre(ISBN);
         }
+
+        public static void NbEmpruntsByLecId(ref int nbreEmprunts, int LecId)
+        {
+            int Nbemp = DALADO.Administrateur.NbEmpruntsByLecId(LecId);
+            nbreEmprunts = Nbemp;
+        }
+
+        public static void NbRetardByLecId(ref int nbRetards, int LecId)
+        {
+            int NbRet = DALADO.Administrateur.NbRetardsByLecId(LecId);
+        }
     }
 }

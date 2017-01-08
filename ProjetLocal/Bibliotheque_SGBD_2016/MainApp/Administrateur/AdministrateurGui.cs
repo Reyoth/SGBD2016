@@ -95,8 +95,19 @@ namespace MainApp.Administrateur
             gdvLivre.Columns[0].Visible = false;
             gdvLivre.Columns[4].Visible = false;
             dgvExemplaire.DataSource = ds.Tables[1].DefaultView;
+            dgvExemplaire.Columns[0].Visible = false;
+            dgvExemplaire.Columns[7].Visible = false;
             gdvEmpruntEnCours.DataSource = ds.Tables[2].DefaultView;
+            gdvEmpruntEnCours.Columns[0].Visible = false;
+            gdvEmpruntEnCours.Columns[5].Visible = false;
+            gdvEmpruntEnCours.Columns[8].Visible = false;
             gdvRetardataires.DataSource = ds.Tables[3].DefaultView;
+            gdvRetardataires.Columns[0].Visible = false;
+            gdvRetardataires.Columns[5].Visible = false;
+            gdvRetardataires.Columns[7].Visible = false;
+            gdvRetardataires.Columns[10].Visible = false;
+            gdvRetardataires.Columns[12].Visible = false;
+
             gdvLecteurs.DataSource = ds.Tables[4].DefaultView;
         }
 
@@ -163,23 +174,23 @@ namespace MainApp.Administrateur
             {
                 txtNomEmprunteur.Text = gdvEmpruntEnCours.CurrentRow.Cells[6].Value.ToString();
                 txtPrenomemprunteur.Text = gdvEmpruntEnCours.CurrentRow.Cells[7].Value.ToString();
-                //exemple 5
-                txtNbEmpruntsEmprunteur.Text = 5.ToString();
-                //exempe 2
-                txtRetardsEmprunteur.Text = 2.ToString();
+                pbLivreEmprunt.ImageLocation = gdvEmpruntEnCours.CurrentRow.Cells[8].Value.ToString();
+                //Calcul du nombre d'emprunt par id
+                int LecId = 0;
+                LecId = Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[5].Value.ToString());
+                int NbreEmprunts = 0;
+                BL.Administrateur.NbEmpruntsByLecId(ref NbreEmprunts, LecId);
+                txtNbEmpruntsEmprunteur.Text = NbreEmprunts.ToString();
+                //Calcul du nombre des retards
+                int NbRetards = 0;
+                BL.Administrateur.NbRetardByLecId(ref NbRetards, LecId);
+                txtRetardsEmprunteur.Text = NbRetards.ToString();
             }
         }
 
         private void gdvReservationEnCours_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gdvRetardataires.SelectedCells.Count == 1)
-            {
-                txtNomretardataire.Text = gdvRetardataires.CurrentRow.Cells[1].Value.ToString();
-                txtPrenomRetardataire.Text = gdvRetardataires.CurrentRow.Cells[2].Value.ToString(); ;
-                txtNbJoursRetards.Text = "";
-                txtMontantRetard.Text = gdvRetardataires.CurrentRow.Cells[3].Value.ToString();
-               
-            }
+            
         }
 
         private void groupBox8_Enter(object sender, EventArgs e)
@@ -284,6 +295,31 @@ namespace MainApp.Administrateur
             AdmLogin Adlog = new AdmLogin();
             this.Hide();
             Adlog.Show();
+        }
+
+        private void dgvExemplaire_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvExemplaire.SelectedCells.Count == 1)
+            {
+                txtCodeExemplaire.Text = dgvExemplaire.CurrentRow.Cells[1].Value.ToString();
+                txtLivreExemplaire.Text = dgvExemplaire.CurrentRow.Cells[2].Value.ToString(); 
+                dtDateAchatExemp.Text = dgvExemplaire.CurrentRow.Cells[4].Value.ToString();
+                pbExemplaire.ImageLocation = dgvExemplaire.CurrentRow.Cells[7].Value.ToString();
+            }
+            
+        }
+
+        private void gdvRetardataires_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gdvRetardataires.SelectedCells.Count == 1)
+            {
+                txtNomretardataire.Text = gdvRetardataires.CurrentRow.Cells[1].Value.ToString();
+                txtPrenomRetardataire.Text = gdvRetardataires.CurrentRow.Cells[2].Value.ToString(); 
+                txtNbJoursRetards.Text = gdvRetardataires.CurrentRow.Cells[3].Value.ToString(); ;
+                txtMontantRetard.Text = gdvRetardataires.CurrentRow.Cells[4].Value.ToString();
+                pbLiveRetard.ImageLocation = gdvRetardataires.CurrentRow.Cells[10].Value.ToString();
+
+            }
         }
     }
 }

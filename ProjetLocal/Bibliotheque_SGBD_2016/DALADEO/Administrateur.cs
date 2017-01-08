@@ -99,6 +99,68 @@ namespace DALADO
             }
         }
 
+        public static int NbRetardsByLecId(int lecId)
+        {
+            int nbretards = 0;
+            SqlCommand com = new SqlCommand();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[EMP_NbRetardByLEC_ID]";
+                com.Parameters.Add(new SqlParameter("Lec_Id", lecId));
+                SqlDataReader dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    nbretards = dr.GetInt32(0);
+                }
+                dr.Close();
+            }
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+            return nbretards;
+        }
+
+        public static int NbEmpruntsByLecId(int LecId)
+        {
+            int nbreEmprunts = 0;
+            SqlCommand com = new SqlCommand();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[EMP_NbEmpruntsByLEC_ID]";
+                com.Parameters.Add(new SqlParameter("Lec_Id", LecId));
+                SqlDataReader dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                   nbreEmprunts= dr.GetInt32(0);
+                }
+                dr.Close();
+            }
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+            return nbreEmprunts;
+        }
+
         public static void DeleteLivre(string iSBN)
         {
             var com = new SqlCommand();
