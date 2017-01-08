@@ -139,17 +139,13 @@ namespace DALEF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsByLEC_Id_Result>("RES_ListeReservationsByLEC_Id", lec_IdParameter);
         }
     
-        public virtual ObjectResult<RES_ListeReservationsDisponibleByLEC_IdAllBib_Result> RES_ListeReservationsDisponibleByLEC_IdAllBib(Nullable<int> idLecteur, Nullable<int> idBibliotheque)
+        public virtual ObjectResult<RES_ListeReservationsDisponibleByLEC_IdAllBib_Result> RES_ListeReservationsDisponibleByLEC_IdAllBib(Nullable<int> idLecteur)
         {
             var idLecteurParameter = idLecteur.HasValue ?
                 new ObjectParameter("IdLecteur", idLecteur) :
                 new ObjectParameter("IdLecteur", typeof(int));
     
-            var idBibliothequeParameter = idBibliotheque.HasValue ?
-                new ObjectParameter("IdBibliotheque", idBibliotheque) :
-                new ObjectParameter("IdBibliotheque", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsDisponibleByLEC_IdAllBib_Result>("RES_ListeReservationsDisponibleByLEC_IdAllBib", idLecteurParameter, idBibliothequeParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsDisponibleByLEC_IdAllBib_Result>("RES_ListeReservationsDisponibleByLEC_IdAllBib", idLecteurParameter);
         }
     
         public virtual ObjectResult<RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(Nullable<int> idLecteur, Nullable<int> idBibliotheque)

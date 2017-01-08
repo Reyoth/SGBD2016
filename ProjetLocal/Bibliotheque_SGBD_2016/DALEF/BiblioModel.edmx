@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SGBD2016_BibliothequeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SGBD2016_BibliothequeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <Function Name="BIB_AllLibelle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur" />
         <Function Name="EMP_AllEmpruntsByLEC_Id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
           <Parameter Name="Lec_Id" Type="int" Mode="In" />
@@ -42,7 +42,6 @@
         </Function>
         <Function Name="RES_ListeReservationsDisponibleByLEC_IdAllBib" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
           <Parameter Name="IdLecteur" Type="int" Mode="In" />
-          <Parameter Name="IdBibliotheque" Type="int" Mode="In" />
         </Function>
         <Function Name="RES_ListeReservationsDisponibleByLEC_IdByBib" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
           <Parameter Name="IdLecteur" Type="int" Mode="In" />
@@ -53,18 +52,17 @@
           <Parameter Name="Lec_Id" Type="int" Mode="In" />
         </Function>
         <EntityContainer Name="SGBD2016_BibliothequeModelStoreContainer" />
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SGBD2016_BibliothequeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="SGBD2016_BibliothequeEntities" annotation:LazyLoadingEnabled="true" >
           <FunctionImport Name="BIB_AllLibelle" ReturnType="Collection(SGBD2016_BibliothequeModel.BIB_AllLibelle_Result)" />
           <FunctionImport Name="EMP_AllEmpruntsByLEC_Id" ReturnType="Collection(SGBD2016_BibliothequeModel.EMP_AllEmpruntsByLEC_Id_Result)">
-            <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
+          <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="EMP_RetardsAllBibByLec" ReturnType="Collection(SGBD2016_BibliothequeModel.EMP_RetardsAllBibByLec_Result)">
-            <Parameter Name="Lec_id" Mode="In" Type="Int32" />
+          <Parameter Name="Lec_id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="EXE_AllExemplairesDispoByBibByISBN" ReturnType="Collection(SGBD2016_BibliothequeModel.EXE_AllExemplairesDispoByBibByISBN_Result)">
             <Parameter Name="Bib_Id" Mode="In" Type="Int32" />
@@ -75,7 +73,7 @@
             <Parameter Name="Titre" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="EXE_AllExemplairesDispoByBibId" ReturnType="Collection(SGBD2016_BibliothequeModel.EXE_AllExemplairesDispoByBibId_Result)">
-            <Parameter Name="Bib_Id" Mode="In" Type="Int32" />
+          <Parameter Name="Bib_Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="EXE_EmprunterExemplaire">
             <Parameter Name="Exe_Id" Mode="In" Type="Int32" />
@@ -86,17 +84,16 @@
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="LIV_LivreByISBN" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByISBN_Result)">
-            <Parameter Name="ISBN" Mode="In" Type="String" />
+          <Parameter Name="ISBN" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="LIV_LivreByTitle" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByTitle_Result)">
-            <Parameter Name="Liv_Title" Mode="In" Type="String" />
+          <Parameter Name="Liv_Title" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="RES_ListeReservationsByLEC_Id" ReturnType="Collection(SGBD2016_BibliothequeModel.RES_ListeReservationsByLEC_Id_Result)">
-            <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
+          <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="RES_ListeReservationsDisponibleByLEC_IdAllBib" ReturnType="Collection(SGBD2016_BibliothequeModel.RES_ListeReservationsDisponibleByLEC_IdAllBib_Result)">
             <Parameter Name="IdLecteur" Mode="In" Type="Int32" />
-            <Parameter Name="IdBibliotheque" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="RES_ListeReservationsDisponibleByLEC_IdByBib" ReturnType="Collection(SGBD2016_BibliothequeModel.RES_ListeReservationsDisponibleByLEC_IdByBib_Result)">
             <Parameter Name="IdLecteur" Mode="In" Type="Int32" />
