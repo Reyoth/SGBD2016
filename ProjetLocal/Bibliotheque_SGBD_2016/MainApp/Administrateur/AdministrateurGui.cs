@@ -14,7 +14,7 @@ namespace MainApp.Administrateur
 {
     public partial class AdministrateurGui : Form
     {
-        
+        public List<Entities.Bibliotheque> bibList;
         public AdministrateurGui()
         {
             InitializeComponent();
@@ -107,7 +107,6 @@ namespace MainApp.Administrateur
             gdvRetardataires.Columns[7].Visible = false;
             gdvRetardataires.Columns[10].Visible = false;
             gdvRetardataires.Columns[12].Visible = false;
-
             gdvLecteurs.DataSource = ds.Tables[4].DefaultView;
         }
 
@@ -329,8 +328,13 @@ namespace MainApp.Administrateur
 
         private void tbnGoRchExmpTitre_Click(object sender, EventArgs e)
         {
-            DataSet ds=null;
-            BL.Administrateur.AllExemplairesByTitle(ref ds, txtTitreLivreRechExemp.Text);
+            //Recuperation de l'id de la bibliothèque a partir de la liste des bibliotheque globale 
+            var Bib = from b in bibList
+                where b.Libelle.Equals(cbBiblioExemp.Text) 
+                select b.Id;
+            int BibId = Convert.ToInt32(Bib);
+            DataSet ds=new DataSet();
+            BL.Administrateur.AllExemplairesByTitle(ref ds, txtTitreLivreRechExemp.Text, BibId);
             dgvExemplaire.DataSource = null;
             dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
         }
@@ -339,5 +343,13 @@ namespace MainApp.Administrateur
         {
 
         }
+        public void ChargerListBiblio(ComboBox cb)
+        {
+            List<Entities.Bibliotheque> Bibliotheques = null;
+            BL.Lecteur.BIB_AllLibelle(ref Bibliotheques);
+            bibList = Bibliotheques;
+
+        }
     }
+    
 }

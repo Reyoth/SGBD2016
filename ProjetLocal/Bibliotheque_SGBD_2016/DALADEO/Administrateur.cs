@@ -100,9 +100,9 @@ namespace DALADO
             }
         }
 
-        public static DataSet AllExemplairesByTitle(string title)
+        public static DataSet AllExemplairesByTitle(string title, int BibId)
         {
-            DataSet ds = null;
+            DataSet ds = new DataSet();
             
             SqlCommand com = new SqlCommand();
             SqlDataAdapter da = new SqlDataAdapter();
@@ -112,10 +112,9 @@ namespace DALADO
                 com.Connection = DbConnection.db;
                 com.CommandType = CommandType.StoredProcedure;
                 com.CommandText = "[adminBiblio].[EXE_AllExemplaireByTitre]";
-                SqlParameter titre = new SqlParameter("@Titre", title);
-                com.Parameters.Add(titre);
+                com.Parameters.Add(new SqlParameter("Bib_Id", BibId));
+                com.Parameters.Add(new SqlParameter("Titre",title));
                 da.SelectCommand = com;
-                com.ExecuteNonQuery();
                 da.Fill(ds, "ListeExemplairesByTitre");
             }
             catch (Exception)

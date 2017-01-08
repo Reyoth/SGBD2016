@@ -107,10 +107,10 @@ namespace BL
             int NbRet = DALADO.Administrateur.NbRetardsByLecId(LecId);
         }
 
-        public static void AllExemplairesByTitle(ref DataSet ds, string Title)
+        public static void AllExemplairesByTitle(ref DataSet ds, string Title, int BibId)
         {
-            DataSet dset = null;
-            dset = DALADO.Administrateur.AllExemplairesByTitle(Title);
+            DataSet dset = new DataSet();
+            dset = DALADO.Administrateur.AllExemplairesByTitle(Title, BibId);
             ds = dset;
         }
     }
