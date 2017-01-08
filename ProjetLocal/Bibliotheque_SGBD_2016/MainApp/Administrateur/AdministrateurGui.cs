@@ -321,5 +321,17 @@ namespace MainApp.Administrateur
 
             }
         }
+
+        private void tbnGoRchExmpCode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbnGoRchExmpTitre_Click(object sender, EventArgs e)
+        {
+            DataSet ds=null;
+            BL.Administrateur.AllExemplairesByTitle(ref ds, txtTitreLivreRechExemp.Text);
+
+        }
     }
 }

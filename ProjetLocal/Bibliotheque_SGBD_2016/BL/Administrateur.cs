@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities;
+
 
 namespace BL
 {
@@ -11,7 +13,7 @@ namespace BL
     {
         public static void EXE_CreerExemplaire(string code, DateTime DateAchat, byte indisponible, int BibId, int LivId)
         {
-            DALADO.Administrateur.EXE_CreerExemplaire(code, DateAchat, indisponible, BibId, LivId);
+           DALADO.Administrateur.EXE_CreerExemplaire(code, DateAchat, indisponible, BibId, LivId);
         }
 
         public static void AllExemplairesAllBib(ref DataSet ds)
@@ -103,6 +105,13 @@ namespace BL
         public static void NbRetardByLecId(ref int nbRetards, int LecId)
         {
             int NbRet = DALADO.Administrateur.NbRetardsByLecId(LecId);
+        }
+
+        public static DataSet AllExemplairesByTitle(string Title)
+        {
+            DataSet dset = null;
+            dset = DALADO.Administrateur.AllExemplairesByTitle(Title);
+            return exemplairesList;
         }
     }
 }

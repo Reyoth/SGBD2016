@@ -621,6 +621,7 @@
             this.tbnGoRchExmpTitre.TabIndex = 8;
             this.tbnGoRchExmpTitre.Text = "GO !";
             this.tbnGoRchExmpTitre.UseVisualStyleBackColor = true;
+            this.tbnGoRchExmpTitre.Click += new System.EventHandler(this.tbnGoRchExmpTitre_Click);
             // 
             // groupBox11
             // 
@@ -641,6 +642,7 @@
             this.tbnGoRchExmpCode.TabIndex = 7;
             this.tbnGoRchExmpCode.Text = "GO !";
             this.tbnGoRchExmpCode.UseVisualStyleBackColor = true;
+            this.tbnGoRchExmpCode.Click += new System.EventHandler(this.tbnGoRchExmpCode_Click);
             // 
             // txtCodeRechExemp
             // 

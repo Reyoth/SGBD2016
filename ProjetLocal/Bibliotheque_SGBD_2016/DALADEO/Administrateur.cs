@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DALADO;
+using Entities;
 
 namespace DALADO
 {
@@ -97,6 +98,35 @@ namespace DALADO
             {
                 DbConnection.db.Close();
             }
+        }
+
+        public static DataSet AllExemplairesByTitle(string title)
+        {
+            DataSet ds = null;
+            var com = new SqlCommand();
+            var da = new SqlDataAdapter();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[EXE_AllExemplaireByTitre]";
+                da.SelectCommand = com;
+                da.Fill(ds, "ListeExemplaires");
+            }
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+            return ds;
+        }
+            return ds;
         }
 
         public static int NbRetardsByLecId(int lecId)
