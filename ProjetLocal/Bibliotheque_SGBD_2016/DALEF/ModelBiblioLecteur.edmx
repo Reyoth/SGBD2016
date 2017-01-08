@@ -67,10 +67,6 @@
             <Parameter Name="Exe_Id" Mode="In" Type="Int32" />
             <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="LEC_Login" ReturnType="Collection(Int32)">
-            <Parameter Name="UserName" Mode="In" Type="String" />
-            <Parameter Name="Password" Mode="In" Type="String" />
-          </FunctionImport>
           <FunctionImport Name="LIV_LivreByISBN" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByISBN_Result)">
           <Parameter Name="ISBN" Mode="In" Type="String" />
           </FunctionImport>
@@ -106,6 +102,10 @@
             <Parameter Name="IdBibliotheque" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="BIB_AllLibelle" ReturnType="Collection(SGBD2016_BibliothequeModel.BIB_AllLibelle_Result)" />
+          <FunctionImport Name="LEC_Login" ReturnType="Collection(SGBD2016_BibliothequeModel.LEC_Login_Result)">
+            <Parameter Name="UserName" Mode="In" Type="String" />
+            <Parameter Name="Password" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="EMP_AllEmpruntsByLEC_Id_Result">
           <Property Type="String" Name="Exemplaire" Nullable="false" MaxLength="50" />
@@ -192,6 +192,10 @@
           <Property Type="Int32" Name="BIB_ID" Nullable="false" />
           <Property Type="String" Name="BIB_Libelle" Nullable="false" MaxLength="50" />
         </ComplexType>
+        <ComplexType Name="LEC_Login_Result">
+          <Property Type="Int32" Name="LEC_Id" Nullable="false" />
+          <Property Type="String" Name="LEC_UserName" Nullable="false" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -221,7 +225,6 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="EXE_EmprunterExemplaire" FunctionName="SGBD2016_BibliothequeModel.Store.EXE_EmprunterExemplaire" />
-          <FunctionImportMapping FunctionImportName="LEC_Login" FunctionName="SGBD2016_BibliothequeModel.Store.LEC_Login" />
           <FunctionImportMapping FunctionImportName="LIV_LivreByISBN" FunctionName="SGBD2016_BibliothequeModel.Store.LIV_LivreByISBN">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.LIV_LivreByISBN_Result">
@@ -321,6 +324,14 @@
               <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.BIB_AllLibelle_Result">
                 <ScalarProperty Name="BIB_ID" ColumnName="BIB_ID" />
                 <ScalarProperty Name="BIB_Libelle" ColumnName="BIB_Libelle" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LEC_Login" FunctionName="SGBD2016_BibliothequeModel.Store.LEC_Login">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.LEC_Login_Result">
+                <ScalarProperty Name="LEC_Id" ColumnName="LEC_Id" />
+                <ScalarProperty Name="LEC_UserName" ColumnName="LEC_UserName" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

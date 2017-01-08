@@ -13,11 +13,13 @@ namespace MainApp.Lecteur
 {
     public partial class LecteurGui : Form
     {
-        BIB_AllLibelle_Result biblio = new BIB_AllLibelle_Result();
-        public LecteurGui(BIB_AllLibelle_Result biblio)
+        private BIB_AllLibelle_Result biblio = new BIB_AllLibelle_Result();
+        private LEC_Login_Result session = new LEC_Login_Result();
+        public LecteurGui(BIB_AllLibelle_Result biblio, LEC_Login_Result session)
         {
             InitializeComponent();
             this.biblio = biblio;
+            this.session = session;
             timer1.Start();
         }
 
@@ -28,7 +30,9 @@ namespace MainApp.Lecteur
             dgvLivreReservation.DataSource = null;
             dgvReservation.DataSource = null;
             dgvEmpruntHistorique.DataSource = null;
-            
+            userName.Text = session.LEC_UserName;
+            bibliotheque.Text = biblio.BIB_Libelle;
+
         }
 
         private void btnISBNGoRechLivre_Click(object sender, EventArgs e)

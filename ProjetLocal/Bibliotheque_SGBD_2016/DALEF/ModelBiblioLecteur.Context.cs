@@ -59,19 +59,6 @@ namespace DALEF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("EXE_EmprunterExemplaire", exe_IdParameter, lec_IdParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> LEC_Login(string userName, string password)
-        {
-            var userNameParameter = userName != null ?
-                new ObjectParameter("UserName", userName) :
-                new ObjectParameter("UserName", typeof(string));
-    
-            var passwordParameter = password != null ?
-                new ObjectParameter("Password", password) :
-                new ObjectParameter("Password", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("LEC_Login", userNameParameter, passwordParameter);
-        }
-    
         public virtual ObjectResult<LIV_LivreByISBN_Result> LIV_LivreByISBN(string iSBN)
         {
             var iSBNParameter = iSBN != null ?
@@ -181,6 +168,19 @@ namespace DALEF
         public virtual ObjectResult<BIB_AllLibelle_Result> BIB_AllLibelle()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BIB_AllLibelle_Result>("BIB_AllLibelle");
+        }
+    
+        public virtual ObjectResult<LEC_Login_Result> LEC_Login(string userName, string password)
+        {
+            var userNameParameter = userName != null ?
+                new ObjectParameter("UserName", userName) :
+                new ObjectParameter("UserName", typeof(string));
+    
+            var passwordParameter = password != null ?
+                new ObjectParameter("Password", password) :
+                new ObjectParameter("Password", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LEC_Login_Result>("LEC_Login", userNameParameter, passwordParameter);
         }
     }
 }

@@ -59,13 +59,13 @@ namespace DALEF
                 dbContext.EXE_EmprunterExemplaire(exeId, lecId);
             }
         }
-        //public static LEC_Login_Result LEC_Login(string username, string password)
-        //{
-        //    using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
-        //    {
-        //        return dbContext.LEC_Login(username, password).ElementAt(0);
-        //    }
-        //}
+        public static LEC_Login_Result LEC_Login(string username, string password)
+        {
+            using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbContext.LEC_Login(username, password).ElementAt(0);
+            }
+        }
         public static List<LIV_LivreByISBN_Result> LIV_LivreByISBN(string isbn)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())

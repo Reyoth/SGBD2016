@@ -15,7 +15,7 @@ namespace MainApp.Lecteur
     {
         List<BIB_AllLibelle_Result> biblios = new List<BIB_AllLibelle_Result>();
         BIB_AllLibelle_Result biblio = new BIB_AllLibelle_Result();
-        //LEC_Login_Result session = new LEC_Login_Result();
+        LEC_Login_Result session = new LEC_Login_Result();
         
         public LectLogin()
         {
@@ -25,8 +25,8 @@ namespace MainApp.Lecteur
         private void btnConnect_Click(object sender, EventArgs e)
         {
             
-           // session = BL.Lecteur.LEC_Login(txtLogin.Text, txtPwd.Text);
-            LecteurGui lectGui = new LecteurGui(biblio/*, session*/);
+            session = BL.Lecteur.LEC_Login(txtLogin.Text, txtPwd.Text);
+            LecteurGui lectGui = new LecteurGui(biblio, session);
             this.Hide();
             lectGui.Show();
         }

@@ -17,6 +17,12 @@ namespace BL
             bibs = DALEF.Lecteur.BIB_AllLibelle();
             
         }
+        public static LEC_Login_Result LEC_Login(string login, string password)
+        {
+
+            return  DALEF.Lecteur.LEC_Login(login,password);
+
+        }
         //public static void BIB_AllBibliotheques(ref List<Bibliotheque> biblios)
         //{
         //    using (SGBD2016_BibliothequeEntities context = new SGBD2016_BibliothequeEntities())
