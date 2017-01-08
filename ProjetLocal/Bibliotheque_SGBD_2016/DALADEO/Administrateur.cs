@@ -113,10 +113,10 @@ namespace DALADO
                 com.Connection = DbConnection.db;
                 com.CommandType = CommandType.StoredProcedure;
                 com.CommandText = "[adminBiblio].[LIV_UpdateLivre]";
-                com.Parameters.Add(new SqlParameter("isbn", iSBN));
+                com.Parameters.Add(new SqlParameter("ISBN", iSBN));
                 com.Parameters.Add(new SqlParameter("titre", titre));
                 com.Parameters.Add(new SqlParameter("image", image));
-                com.Parameters.Add(new SqlParameter("author", auteurs));
+                com.Parameters.Add(new SqlParameter("auteur", auteurs));
                 da.InsertCommand = com;
                 com.ExecuteNonQuery();
             }
@@ -131,6 +131,34 @@ namespace DALADO
             {
                 DbConnection.db.Close();
             }
+        }
+
+        public static DataTable EXE_AllExemplaireByBIB_Libelle(string libelle)
+        {
+            DataTable Dt = new DataTable();
+            var com = new SqlCommand();
+            var da = new SqlDataAdapter();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[EXE_AllExemplaireByBIB_Libelle]";
+                com.Parameters.Add(new SqlParameter("BibLibelle", libelle));
+                da.SelectCommand = com;
+                da.Fill(Dt);
+            }
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+            return Dt;
         }
 
         public static DataSet AllExemplairesByExeCode(string exeCode)

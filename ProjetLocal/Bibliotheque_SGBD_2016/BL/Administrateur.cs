@@ -123,5 +123,10 @@ namespace BL
         {
             ds = DALADO.Administrateur.AllExemplairesByExeCode(ExeCode);
         }
+
+        public static void EXE_AllExemplaireByBIB_Libelle(ref DataTable dt, string Libelle)
+        {
+            dt = DALADO.Administrateur.EXE_AllExemplaireByBIB_Libelle(Libelle);
+        }
     }
 }

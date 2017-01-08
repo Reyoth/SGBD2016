@@ -104,14 +104,16 @@ namespace MainApp.Administrateur
             dgvExemplaire.Columns[7].Visible = false;
             gdvEmpruntEnCours.DataSource = ds.Tables[2].DefaultView;
             gdvEmpruntEnCours.Columns[0].Visible = false;
+            gdvEmpruntEnCours.Columns[1].Visible = false;
             gdvEmpruntEnCours.Columns[5].Visible = false;
-            gdvEmpruntEnCours.Columns[8].Visible = false;
+            gdvEmpruntEnCours.Columns[9].Visible = false;
             gdvRetardataires.DataSource = ds.Tables[3].DefaultView;
             gdvRetardataires.Columns[0].Visible = false;
             gdvRetardataires.Columns[5].Visible = false;
             gdvRetardataires.Columns[7].Visible = false;
             gdvRetardataires.Columns[10].Visible = false;
             gdvRetardataires.Columns[12].Visible = false;
+            gdvRetardataires.Columns[13].Visible = false;
             gdvLecteurs.DataSource = ds.Tables[4].DefaultView;
         }
 
@@ -181,7 +183,7 @@ namespace MainApp.Administrateur
                 pbLivreEmprunt.ImageLocation = gdvEmpruntEnCours.CurrentRow.Cells[8].Value.ToString();
                 //Calcul du nombre d'emprunt par id
                 int LecId = 0;
-                LecId = Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[5].Value.ToString());
+                LecId = Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[6].Value.ToString());
                 int NbreEmprunts = 0;
                 BL.Administrateur.NbEmpruntsByLecId(ref NbreEmprunts, LecId);
                 txtNbEmpruntsEmprunteur.Text = NbreEmprunts.ToString();
@@ -214,6 +216,16 @@ namespace MainApp.Administrateur
 
         private void btnAjManLivre_Click(object sender, EventArgs e)
         {
+            txtISBNAjMan.Enabled = true;
+            txtTitreAjMan.Enabled = true;
+            txtLienAjMan.Enabled = true;
+            txtNomAutAjMan.Enabled = true;
+            txtLienAjMan.Enabled = true;
+            txtISBNAjMan.ReadOnly = false;
+            txtTitreAjMan.ReadOnly = false;
+            txtLienAjMan.ReadOnly = false;
+            txtNomAutAjMan.ReadOnly = false;
+            txtLienAjMan.ReadOnly = false;
             BL.Administrateur.AjoutManuelLivre(txtISBNAjMan.Text, txtTitreAjMan.Text, txtLienAjMan.Text, txtNomAutAjMan.Text);
         }
 
@@ -243,6 +255,16 @@ namespace MainApp.Administrateur
         private void btnMAJLivre_Click(object sender, EventArgs e)
         {
             BL.Administrateur.UpdateLivre(txtISBNAjMan.Text, txtTitreAjMan.Text, txtLienAjMan.Text, txtNomAutAjMan.Text);
+            txtISBNAjMan.Enabled = false;
+            txtTitreAjMan.Enabled = false;
+            txtLienAjMan.Enabled = false;
+            txtNomAutAjMan.Enabled = false;
+            txtLienAjMan.Enabled = false;
+            txtISBNAjMan.ReadOnly = true;
+            txtTitreAjMan.ReadOnly = true;
+            txtLienAjMan.ReadOnly = true;
+            txtNomAutAjMan.ReadOnly = true;
+            txtLienAjMan.ReadOnly = true;
         }
 
         private void btnEmprunterLivre_Click(object sender, EventArgs e)
@@ -369,6 +391,26 @@ namespace MainApp.Administrateur
             DataSet ds = new DataSet();
             BL.Administrateur.LivreByTitre(ref ds, txtTitreRechLivre.Text);
             gdvLivre.DataSource = ds.Tables[0].DefaultView;
+        }
+
+        private void tbnGoRchExmpBib_Click(object sender, EventArgs e)
+        {
+            dgvExemplaire.DataSource = null;
+            DataTable dt = new DataTable();
+            BL.Administrateur.EXE_AllExemplaireByBIB_Libelle(ref dt, cbBibLibelle.SelectedItem.ToString());
+            dgvExemplaire.DataSource = dt.DefaultView;
+            dgvExemplaire.Columns[0].Visible = false;
+            dgvExemplaire.Columns[7].Visible = false;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            BL.Administrateur.RetournerExemplaire(Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[0].Value.ToString()));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            BL.Administrateur.RetournerExemplaire(Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[13].Value.ToString()));
         }
     }
 }
