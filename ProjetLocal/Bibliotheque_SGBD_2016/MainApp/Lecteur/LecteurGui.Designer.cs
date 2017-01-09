@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LecteurGui));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tpReservation = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnReserver = new System.Windows.Forms.Button();
             this.lLivresRes = new System.Windows.Forms.Label();
             this.dgvLivreReservation = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -45,16 +45,13 @@
             this.btnGoISBNReservation = new System.Windows.Forms.Button();
             this.txtISBNReservation = new System.Windows.Forms.TextBox();
             this.lListReservation = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnActuReservation = new System.Windows.Forms.Button();
             this.dgvReservation = new System.Windows.Forms.DataGridView();
+            this.pbReservation = new System.Windows.Forms.PictureBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.dgvEmpruntsEmprunt = new System.Windows.Forms.DataGridView();
-            this.lEmpruntsEmp = new System.Windows.Forms.Label();
-            this.gbResumeLivreEmprunt = new System.Windows.Forms.GroupBox();
             this.tpEmprunt = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
-            this.lLivreEmp = new System.Windows.Forms.Label();
+            this.lExempEmp = new System.Windows.Forms.Label();
             this.dgvLivreEmprunt = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -65,18 +62,22 @@
             this.label5 = new System.Windows.Forms.Label();
             this.bntGoISBNEmprunt = new System.Windows.Forms.Button();
             this.txtISBNEmprunt = new System.Windows.Forms.TextBox();
+            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tpFacturation = new System.Windows.Forms.TabPage();
             this.lHistoriqueEmprunt = new System.Windows.Forms.Label();
             this.dgvEmpruntHistorique = new System.Windows.Forms.DataGridView();
             this.btnActualiserFacturation = new System.Windows.Forms.Button();
+            this.pbLivreHistorique = new System.Windows.Forms.PictureBox();
             this.tpProfile = new System.Windows.Forms.TabPage();
             this.gbUserDataProfile = new System.Windows.Forms.GroupBox();
+            this.dtUserDataDateNaissance = new System.Windows.Forms.DateTimePicker();
             this.lUserDataCodePostal = new System.Windows.Forms.Label();
             this.lUserDataVille = new System.Windows.Forms.Label();
             this.txtUserDataPassword = new System.Windows.Forms.TextBox();
+            this.txtUserDataUserName = new System.Windows.Forms.TextBox();
             this.lUserDataSexe = new System.Windows.Forms.Label();
-            this.btUserDataModifier = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtUserDataCodePostal = new System.Windows.Forms.TextBox();
             this.txtUserDataVille = new System.Windows.Forms.TextBox();
             this.txtUserDataAdresse = new System.Windows.Forms.TextBox();
@@ -90,49 +91,56 @@
             this.lUserDataPassword = new System.Windows.Forms.Label();
             this.lUserDataNom = new System.Windows.Forms.Label();
             this.gbUserPictureProfile = new System.Windows.Forms.GroupBox();
+            this.lUserPhoto = new System.Windows.Forms.Label();
+            this.txtLienPhoto = new System.Windows.Forms.TextBox();
+            this.pbUserPictureProfile = new System.Windows.Forms.PictureBox();
             this.btnMettreAJourProfile = new System.Windows.Forms.Button();
+            this.pbUserLogo = new System.Windows.Forms.PictureBox();
+            this.btUserDataModifier = new System.Windows.Forms.Button();
             this.userName = new System.Windows.Forms.Label();
             this.bibliotheque = new System.Windows.Forms.Label();
             this.picSignOut = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbEmprunt = new System.Windows.Forms.PictureBox();
-            this.pbReservation = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbUserPictureProfile = new System.Windows.Forms.PictureBox();
-            this.pbUserLogo = new System.Windows.Forms.PictureBox();
-            this.txtUserDataUserName = new System.Windows.Forms.TextBox();
-            this.dtUserDataDateNaissance = new System.Windows.Forms.DateTimePicker();
-            this.txtLienPhoto = new System.Windows.Forms.TextBox();
-            this.lUserPhoto = new System.Windows.Forms.Label();
+            this.lexempDispo = new System.Windows.Forms.Label();
+            this.dgvExempDispo = new System.Windows.Forms.DataGridView();
+            this.dgvEmpruntsEmprunt = new System.Windows.Forms.DataGridView();
+            this.lEmpruntsEmp = new System.Windows.Forms.Label();
+            this.dgvRetardsEmprunt = new System.Windows.Forms.DataGridView();
+            this.lretards = new System.Windows.Forms.Label();
+            this.lTotal = new System.Windows.Forms.Label();
+            this.lMontant = new System.Windows.Forms.Label();
+            this.lEuro = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.tpReservation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivreReservation)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntsEmprunt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).BeginInit();
             this.tpEmprunt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivreEmprunt)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tpFacturation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntHistorique)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreHistorique)).BeginInit();
             this.tpProfile.SuspendLayout();
             this.gbUserDataProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.gbUserPictureProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmprunt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExempDispo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntsEmprunt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRetardsEmprunt)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -142,35 +150,36 @@
             // tpReservation
             // 
             this.tpReservation.BackColor = System.Drawing.SystemColors.Control;
-            this.tpReservation.Controls.Add(this.button2);
+            this.tpReservation.Controls.Add(this.button1);
+            this.tpReservation.Controls.Add(this.btnReserver);
             this.tpReservation.Controls.Add(this.lLivresRes);
             this.tpReservation.Controls.Add(this.dgvLivreReservation);
             this.tpReservation.Controls.Add(this.groupBox1);
             this.tpReservation.Controls.Add(this.lListReservation);
-            this.tpReservation.Controls.Add(this.groupBox9);
-            this.tpReservation.Controls.Add(this.button10);
+            this.tpReservation.Controls.Add(this.btnActuReservation);
             this.tpReservation.Controls.Add(this.dgvReservation);
             this.tpReservation.Controls.Add(this.pbReservation);
             this.tpReservation.Location = new System.Drawing.Point(4, 29);
             this.tpReservation.Name = "tpReservation";
-            this.tpReservation.Size = new System.Drawing.Size(958, 599);
+            this.tpReservation.Size = new System.Drawing.Size(1371, 599);
             this.tpReservation.TabIndex = 2;
             this.tpReservation.Text = "Réservations";
             // 
-            // button2
+            // btnReserver
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(756, 564);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 31);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Emprunter";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnReserver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReserver.Location = new System.Drawing.Point(1196, 506);
+            this.btnReserver.Name = "btnReserver";
+            this.btnReserver.Size = new System.Drawing.Size(168, 31);
+            this.btnReserver.TabIndex = 35;
+            this.btnReserver.Text = "Reserver";
+            this.btnReserver.UseVisualStyleBackColor = true;
+            this.btnReserver.Click += new System.EventHandler(this.btnReserver_Click);
             // 
             // lLivresRes
             // 
             this.lLivresRes.AutoSize = true;
-            this.lLivresRes.Location = new System.Drawing.Point(6, 202);
+            this.lLivresRes.Location = new System.Drawing.Point(331, 3);
             this.lLivresRes.Name = "lLivresRes";
             this.lLivresRes.Size = new System.Drawing.Size(120, 20);
             this.lLivresRes.TabIndex = 34;
@@ -178,11 +187,16 @@
             // 
             // dgvLivreReservation
             // 
+            this.dgvLivreReservation.AllowUserToAddRows = false;
+            this.dgvLivreReservation.AllowUserToDeleteRows = false;
+            this.dgvLivreReservation.AllowUserToResizeColumns = false;
+            this.dgvLivreReservation.AllowUserToResizeRows = false;
+            this.dgvLivreReservation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLivreReservation.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvLivreReservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLivreReservation.Location = new System.Drawing.Point(5, 223);
+            this.dgvLivreReservation.Location = new System.Drawing.Point(334, 23);
             this.dgvLivreReservation.Name = "dgvLivreReservation";
-            this.dgvLivreReservation.Size = new System.Drawing.Size(945, 155);
+            this.dgvLivreReservation.Size = new System.Drawing.Size(1032, 155);
             this.dgvLivreReservation.TabIndex = 33;
             // 
             // groupBox1
@@ -190,9 +204,9 @@
             this.groupBox1.Controls.Add(this.groupBox5);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 26);
+            this.groupBox1.Location = new System.Drawing.Point(10, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(319, 128);
+            this.groupBox1.Size = new System.Drawing.Size(319, 139);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recherche de livre :";
@@ -279,123 +293,112 @@
             // lListReservation
             // 
             this.lListReservation.AutoSize = true;
-            this.lListReservation.Location = new System.Drawing.Point(8, 381);
+            this.lListReservation.Location = new System.Drawing.Point(6, 158);
             this.lListReservation.Name = "lListReservation";
-            this.lListReservation.Size = new System.Drawing.Size(152, 20);
+            this.lListReservation.Size = new System.Drawing.Size(171, 20);
             this.lListReservation.TabIndex = 31;
-            this.lListReservation.Text = "Liste des emprunts :";
+            this.lListReservation.Text = "Liste des réservations :";
             // 
-            // groupBox9
+            // btnActuReservation
             // 
-            this.groupBox9.Location = new System.Drawing.Point(335, 6);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(437, 210);
-            this.groupBox9.TabIndex = 30;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Petit résumé :";
-            // 
-            // button10
-            // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(855, 565);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(93, 31);
-            this.button10.TabIndex = 28;
-            this.button10.Text = "Actualiser";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnActuReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActuReservation.Location = new System.Drawing.Point(1196, 543);
+            this.btnActuReservation.Name = "btnActuReservation";
+            this.btnActuReservation.Size = new System.Drawing.Size(168, 51);
+            this.btnActuReservation.TabIndex = 28;
+            this.btnActuReservation.Text = "Actualiser reservations";
+            this.btnActuReservation.UseVisualStyleBackColor = true;
             // 
             // dgvReservation
             // 
+            this.dgvReservation.AllowUserToAddRows = false;
+            this.dgvReservation.AllowUserToDeleteRows = false;
+            this.dgvReservation.AllowUserToResizeColumns = false;
+            this.dgvReservation.AllowUserToResizeRows = false;
+            this.dgvReservation.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservation.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvReservation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReservation.Location = new System.Drawing.Point(6, 402);
+            this.dgvReservation.Location = new System.Drawing.Point(6, 184);
             this.dgvReservation.Name = "dgvReservation";
-            this.dgvReservation.Size = new System.Drawing.Size(942, 157);
+            this.dgvReservation.Size = new System.Drawing.Size(1184, 410);
             this.dgvReservation.TabIndex = 27;
+            // 
+            // pbReservation
+            // 
+            this.pbReservation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbReservation.Location = new System.Drawing.Point(1196, 286);
+            this.pbReservation.Name = "pbReservation";
+            this.pbReservation.Size = new System.Drawing.Size(170, 201);
+            this.pbReservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbReservation.TabIndex = 29;
+            this.pbReservation.TabStop = false;
             // 
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(855, 565);
+            this.button11.Location = new System.Drawing.Point(1279, 563);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(93, 31);
             this.button11.TabIndex = 10;
             this.button11.Text = "Actualiser";
             this.button11.UseVisualStyleBackColor = true;
             // 
-            // dgvEmpruntsEmprunt
-            // 
-            this.dgvEmpruntsEmprunt.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvEmpruntsEmprunt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpruntsEmprunt.Location = new System.Drawing.Point(6, 402);
-            this.dgvEmpruntsEmprunt.Name = "dgvEmpruntsEmprunt";
-            this.dgvEmpruntsEmprunt.Size = new System.Drawing.Size(942, 157);
-            this.dgvEmpruntsEmprunt.TabIndex = 7;
-            // 
-            // lEmpruntsEmp
-            // 
-            this.lEmpruntsEmp.AutoSize = true;
-            this.lEmpruntsEmp.Location = new System.Drawing.Point(8, 381);
-            this.lEmpruntsEmp.Name = "lEmpruntsEmp";
-            this.lEmpruntsEmp.Size = new System.Drawing.Size(152, 20);
-            this.lEmpruntsEmp.TabIndex = 17;
-            this.lEmpruntsEmp.Text = "Liste des emprunts :";
-            this.lEmpruntsEmp.Click += new System.EventHandler(this.lEmpruntsEnCours_Click);
-            // 
-            // gbResumeLivreEmprunt
-            // 
-            this.gbResumeLivreEmprunt.Location = new System.Drawing.Point(335, 6);
-            this.gbResumeLivreEmprunt.Name = "gbResumeLivreEmprunt";
-            this.gbResumeLivreEmprunt.Size = new System.Drawing.Size(437, 210);
-            this.gbResumeLivreEmprunt.TabIndex = 15;
-            this.gbResumeLivreEmprunt.TabStop = false;
-            this.gbResumeLivreEmprunt.Text = "Petit résumé :";
-            // 
             // tpEmprunt
             // 
             this.tpEmprunt.BackColor = System.Drawing.SystemColors.Control;
+            this.tpEmprunt.Controls.Add(this.lEuro);
+            this.tpEmprunt.Controls.Add(this.lMontant);
+            this.tpEmprunt.Controls.Add(this.lTotal);
+            this.tpEmprunt.Controls.Add(this.lretards);
+            this.tpEmprunt.Controls.Add(this.dgvRetardsEmprunt);
+            this.tpEmprunt.Controls.Add(this.lexempDispo);
+            this.tpEmprunt.Controls.Add(this.dgvExempDispo);
             this.tpEmprunt.Controls.Add(this.button6);
-            this.tpEmprunt.Controls.Add(this.lLivreEmp);
+            this.tpEmprunt.Controls.Add(this.lExempEmp);
             this.tpEmprunt.Controls.Add(this.dgvLivreEmprunt);
             this.tpEmprunt.Controls.Add(this.groupBox2);
             this.tpEmprunt.Controls.Add(this.lEmpruntsEmp);
-            this.tpEmprunt.Controls.Add(this.gbResumeLivreEmprunt);
             this.tpEmprunt.Controls.Add(this.button11);
             this.tpEmprunt.Controls.Add(this.dgvEmpruntsEmprunt);
-            this.tpEmprunt.Controls.Add(this.pbEmprunt);
+            this.tpEmprunt.Controls.Add(this.pbLivreEmprunt);
             this.tpEmprunt.Location = new System.Drawing.Point(4, 29);
             this.tpEmprunt.Name = "tpEmprunt";
-            this.tpEmprunt.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tpEmprunt.Size = new System.Drawing.Size(958, 599);
+            this.tpEmprunt.Padding = new System.Windows.Forms.Padding(3);
+            this.tpEmprunt.Size = new System.Drawing.Size(1371, 599);
             this.tpEmprunt.TabIndex = 1;
             this.tpEmprunt.Text = "Emprunts";
             // 
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(756, 564);
+            this.button6.Location = new System.Drawing.Point(1180, 562);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 31);
             this.button6.TabIndex = 26;
             this.button6.Text = "Emprunter";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // lLivreEmp
+            // lExempEmp
             // 
-            this.lLivreEmp.AutoSize = true;
-            this.lLivreEmp.Location = new System.Drawing.Point(6, 202);
-            this.lLivreEmp.Name = "lLivreEmp";
-            this.lLivreEmp.Size = new System.Drawing.Size(120, 20);
-            this.lLivreEmp.TabIndex = 25;
-            this.lLivreEmp.Text = "Liste des livres :";
+            this.lExempEmp.AutoSize = true;
+            this.lExempEmp.Location = new System.Drawing.Point(336, 2);
+            this.lExempEmp.Name = "lExempEmp";
+            this.lExempEmp.Size = new System.Drawing.Size(169, 20);
+            this.lExempEmp.TabIndex = 25;
+            this.lExempEmp.Text = "Liste des exemplaires :";
             // 
             // dgvLivreEmprunt
             // 
+            this.dgvLivreEmprunt.AllowUserToAddRows = false;
+            this.dgvLivreEmprunt.AllowUserToDeleteRows = false;
+            this.dgvLivreEmprunt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLivreEmprunt.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvLivreEmprunt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLivreEmprunt.Location = new System.Drawing.Point(5, 223);
+            this.dgvLivreEmprunt.EnableHeadersVisualStyles = false;
+            this.dgvLivreEmprunt.Location = new System.Drawing.Point(318, 26);
             this.dgvLivreEmprunt.Name = "dgvLivreEmprunt";
-            this.dgvLivreEmprunt.Size = new System.Drawing.Size(945, 155);
+            this.dgvLivreEmprunt.ReadOnly = true;
+            this.dgvLivreEmprunt.Size = new System.Drawing.Size(1053, 155);
             this.dgvLivreEmprunt.TabIndex = 24;
             // 
             // groupBox2
@@ -403,9 +406,9 @@
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 26);
+            this.groupBox2.Location = new System.Drawing.Point(10, 17);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(319, 128);
+            this.groupBox2.Size = new System.Drawing.Size(292, 137);
             this.groupBox2.TabIndex = 23;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recherche de livre :";
@@ -415,9 +418,9 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.bntGoTitleEmprunt);
             this.groupBox3.Controls.Add(this.txtTitleEmprunt);
-            this.groupBox3.Location = new System.Drawing.Point(6, 65);
+            this.groupBox3.Location = new System.Drawing.Point(6, 74);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(302, 50);
+            this.groupBox3.Size = new System.Drawing.Size(278, 50);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             // 
@@ -434,9 +437,9 @@
             // bntGoTitleEmprunt
             // 
             this.bntGoTitleEmprunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntGoTitleEmprunt.Location = new System.Drawing.Point(242, 14);
+            this.bntGoTitleEmprunt.Location = new System.Drawing.Point(216, 14);
             this.bntGoTitleEmprunt.Name = "bntGoTitleEmprunt";
-            this.bntGoTitleEmprunt.Size = new System.Drawing.Size(54, 26);
+            this.bntGoTitleEmprunt.Size = new System.Drawing.Size(54, 30);
             this.bntGoTitleEmprunt.TabIndex = 2;
             this.bntGoTitleEmprunt.Text = "GO !";
             this.bntGoTitleEmprunt.UseVisualStyleBackColor = true;
@@ -446,7 +449,7 @@
             this.txtTitleEmprunt.BackColor = System.Drawing.SystemColors.Window;
             this.txtTitleEmprunt.Location = new System.Drawing.Point(64, 15);
             this.txtTitleEmprunt.Name = "txtTitleEmprunt";
-            this.txtTitleEmprunt.Size = new System.Drawing.Size(172, 26);
+            this.txtTitleEmprunt.Size = new System.Drawing.Size(149, 26);
             this.txtTitleEmprunt.TabIndex = 1;
             this.txtTitleEmprunt.Tag = ":partly_sunny:";
             // 
@@ -457,7 +460,7 @@
             this.groupBox4.Controls.Add(this.txtISBNEmprunt);
             this.groupBox4.Location = new System.Drawing.Point(6, 16);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(302, 46);
+            this.groupBox4.Size = new System.Drawing.Size(278, 57);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             // 
@@ -474,7 +477,7 @@
             // bntGoISBNEmprunt
             // 
             this.bntGoISBNEmprunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bntGoISBNEmprunt.Location = new System.Drawing.Point(242, 14);
+            this.bntGoISBNEmprunt.Location = new System.Drawing.Point(217, 15);
             this.bntGoISBNEmprunt.Name = "bntGoISBNEmprunt";
             this.bntGoISBNEmprunt.Size = new System.Drawing.Size(54, 28);
             this.bntGoISBNEmprunt.TabIndex = 1;
@@ -486,8 +489,18 @@
             this.txtISBNEmprunt.BackColor = System.Drawing.SystemColors.Window;
             this.txtISBNEmprunt.Location = new System.Drawing.Point(64, 15);
             this.txtISBNEmprunt.Name = "txtISBNEmprunt";
-            this.txtISBNEmprunt.Size = new System.Drawing.Size(172, 26);
+            this.txtISBNEmprunt.Size = new System.Drawing.Size(149, 26);
             this.txtISBNEmprunt.TabIndex = 0;
+            // 
+            // pbLivreEmprunt
+            // 
+            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivreEmprunt.Location = new System.Drawing.Point(1243, 187);
+            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
+            this.pbLivreEmprunt.Size = new System.Drawing.Size(128, 157);
+            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivreEmprunt.TabIndex = 12;
+            this.pbLivreEmprunt.TabStop = false;
             // 
             // tabControl2
             // 
@@ -499,29 +512,29 @@
             this.tabControl2.Controls.Add(this.tpFacturation);
             this.tabControl2.Controls.Add(this.tpProfile);
             this.tabControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl2.Location = new System.Drawing.Point(0, 61);
+            this.tabControl2.Location = new System.Drawing.Point(-1, 64);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(966, 632);
+            this.tabControl2.Size = new System.Drawing.Size(1379, 632);
             this.tabControl2.TabIndex = 23;
             // 
             // tpFacturation
             // 
             this.tpFacturation.BackColor = System.Drawing.SystemColors.Control;
+            this.tpFacturation.Controls.Add(this.pbLivreHistorique);
             this.tpFacturation.Controls.Add(this.lHistoriqueEmprunt);
             this.tpFacturation.Controls.Add(this.dgvEmpruntHistorique);
             this.tpFacturation.Controls.Add(this.btnActualiserFacturation);
-            this.tpFacturation.Controls.Add(this.pictureBox1);
             this.tpFacturation.Location = new System.Drawing.Point(4, 29);
             this.tpFacturation.Name = "tpFacturation";
-            this.tpFacturation.Size = new System.Drawing.Size(958, 599);
+            this.tpFacturation.Size = new System.Drawing.Size(1371, 599);
             this.tpFacturation.TabIndex = 3;
             this.tpFacturation.Text = "Historique";
             // 
             // lHistoriqueEmprunt
             // 
             this.lHistoriqueEmprunt.AutoSize = true;
-            this.lHistoriqueEmprunt.Location = new System.Drawing.Point(1, 95);
+            this.lHistoriqueEmprunt.Location = new System.Drawing.Point(1, 90);
             this.lHistoriqueEmprunt.Name = "lHistoriqueEmprunt";
             this.lHistoriqueEmprunt.Size = new System.Drawing.Size(190, 20);
             this.lHistoriqueEmprunt.TabIndex = 34;
@@ -529,22 +542,37 @@
             // 
             // dgvEmpruntHistorique
             // 
+            this.dgvEmpruntHistorique.AllowUserToAddRows = false;
+            this.dgvEmpruntHistorique.AllowUserToDeleteRows = false;
+            this.dgvEmpruntHistorique.AllowUserToResizeColumns = false;
+            this.dgvEmpruntHistorique.AllowUserToResizeRows = false;
+            this.dgvEmpruntHistorique.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEmpruntHistorique.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEmpruntHistorique.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmpruntHistorique.Location = new System.Drawing.Point(3, 116);
+            this.dgvEmpruntHistorique.Location = new System.Drawing.Point(5, 113);
             this.dgvEmpruntHistorique.Name = "dgvEmpruntHistorique";
-            this.dgvEmpruntHistorique.Size = new System.Drawing.Size(950, 443);
+            this.dgvEmpruntHistorique.Size = new System.Drawing.Size(1363, 446);
             this.dgvEmpruntHistorique.TabIndex = 33;
+            this.dgvEmpruntHistorique.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpruntHistorique_CellClick);
             // 
             // btnActualiserFacturation
             // 
             this.btnActualiserFacturation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualiserFacturation.Location = new System.Drawing.Point(867, 565);
+            this.btnActualiserFacturation.Location = new System.Drawing.Point(1274, 562);
             this.btnActualiserFacturation.Name = "btnActualiserFacturation";
-            this.btnActualiserFacturation.Size = new System.Drawing.Size(86, 31);
+            this.btnActualiserFacturation.Size = new System.Drawing.Size(93, 31);
             this.btnActualiserFacturation.TabIndex = 10;
             this.btnActualiserFacturation.Text = "Actualiser";
             this.btnActualiserFacturation.UseVisualStyleBackColor = true;
+            // 
+            // pbLivreHistorique
+            // 
+            this.pbLivreHistorique.Location = new System.Drawing.Point(1274, 3);
+            this.pbLivreHistorique.Name = "pbLivreHistorique";
+            this.pbLivreHistorique.Size = new System.Drawing.Size(94, 107);
+            this.pbLivreHistorique.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivreHistorique.TabIndex = 32;
+            this.pbLivreHistorique.TabStop = false;
             // 
             // tpProfile
             // 
@@ -556,7 +584,7 @@
             this.tpProfile.Controls.Add(this.btUserDataModifier);
             this.tpProfile.Location = new System.Drawing.Point(4, 29);
             this.tpProfile.Name = "tpProfile";
-            this.tpProfile.Size = new System.Drawing.Size(958, 599);
+            this.tpProfile.Size = new System.Drawing.Size(1004, 599);
             this.tpProfile.TabIndex = 4;
             this.tpProfile.Text = "Profile";
             // 
@@ -589,6 +617,15 @@
             this.gbUserDataProfile.TabStop = false;
             this.gbUserDataProfile.Text = "Utilisateur :";
             // 
+            // dtUserDataDateNaissance
+            // 
+            this.dtUserDataDateNaissance.Enabled = false;
+            this.dtUserDataDateNaissance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtUserDataDateNaissance.Location = new System.Drawing.Point(196, 374);
+            this.dtUserDataDateNaissance.Name = "dtUserDataDateNaissance";
+            this.dtUserDataDateNaissance.Size = new System.Drawing.Size(161, 26);
+            this.dtUserDataDateNaissance.TabIndex = 26;
+            // 
             // lUserDataCodePostal
             // 
             this.lUserDataCodePostal.AutoSize = true;
@@ -617,6 +654,15 @@
             this.txtUserDataPassword.TabIndex = 23;
             this.txtUserDataPassword.UseSystemPasswordChar = true;
             // 
+            // txtUserDataUserName
+            // 
+            this.txtUserDataUserName.Enabled = false;
+            this.txtUserDataUserName.Location = new System.Drawing.Point(196, 416);
+            this.txtUserDataUserName.Name = "txtUserDataUserName";
+            this.txtUserDataUserName.ReadOnly = true;
+            this.txtUserDataUserName.Size = new System.Drawing.Size(161, 26);
+            this.txtUserDataUserName.TabIndex = 22;
+            // 
             // lUserDataSexe
             // 
             this.lUserDataSexe.AutoSize = true;
@@ -626,16 +672,14 @@
             this.lUserDataSexe.TabIndex = 21;
             this.lUserDataSexe.Text = "Sexe :";
             // 
-            // btUserDataModifier
+            // pictureBox3
             // 
-            this.btUserDataModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUserDataModifier.Location = new System.Drawing.Point(813, 301);
-            this.btUserDataModifier.Name = "btUserDataModifier";
-            this.btUserDataModifier.Size = new System.Drawing.Size(80, 31);
-            this.btUserDataModifier.TabIndex = 18;
-            this.btUserDataModifier.Text = "Modifier";
-            this.btUserDataModifier.UseVisualStyleBackColor = true;
-            this.btUserDataModifier.Click += new System.EventHandler(this.btUserDataModifier_Click);
+            this.pictureBox3.Location = new System.Drawing.Point(405, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
             // 
             // txtUserDataCodePostal
             // 
@@ -751,115 +795,30 @@
             this.gbUserPictureProfile.Controls.Add(this.lUserPhoto);
             this.gbUserPictureProfile.Controls.Add(this.txtLienPhoto);
             this.gbUserPictureProfile.Controls.Add(this.pbUserPictureProfile);
-            this.gbUserPictureProfile.Location = new System.Drawing.Point(534, 23);
+            this.gbUserPictureProfile.Location = new System.Drawing.Point(553, 30);
             this.gbUserPictureProfile.Name = "gbUserPictureProfile";
             this.gbUserPictureProfile.Size = new System.Drawing.Size(359, 272);
             this.gbUserPictureProfile.TabIndex = 15;
             this.gbUserPictureProfile.TabStop = false;
             this.gbUserPictureProfile.Text = "Photo ";
             // 
-            // btnMettreAJourProfile
+            // lUserPhoto
             // 
-            this.btnMettreAJourProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMettreAJourProfile.Location = new System.Drawing.Point(697, 301);
-            this.btnMettreAJourProfile.Name = "btnMettreAJourProfile";
-            this.btnMettreAJourProfile.Size = new System.Drawing.Size(110, 31);
-            this.btnMettreAJourProfile.TabIndex = 10;
-            this.btnMettreAJourProfile.Text = "Mettre à jour";
-            this.btnMettreAJourProfile.UseVisualStyleBackColor = true;
-            this.btnMettreAJourProfile.Click += new System.EventHandler(this.btnMettreAJourProfile_Click);
+            this.lUserPhoto.AutoSize = true;
+            this.lUserPhoto.Location = new System.Drawing.Point(6, 234);
+            this.lUserPhoto.Name = "lUserPhoto";
+            this.lUserPhoto.Size = new System.Drawing.Size(93, 20);
+            this.lUserPhoto.TabIndex = 15;
+            this.lUserPhoto.Text = "Lien Photo :";
             // 
-            // userName
+            // txtLienPhoto
             // 
-            this.userName.AutoSize = true;
-            this.userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userName.Location = new System.Drawing.Point(765, 19);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(83, 20);
-            this.userName.TabIndex = 26;
-            this.userName.Text = "Username";
-            // 
-            // bibliotheque
-            // 
-            this.bibliotheque.AutoSize = true;
-            this.bibliotheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bibliotheque.Location = new System.Drawing.Point(769, 52);
-            this.bibliotheque.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.bibliotheque.Name = "bibliotheque";
-            this.bibliotheque.Size = new System.Drawing.Size(95, 20);
-            this.bibliotheque.TabIndex = 30;
-            this.bibliotheque.Text = "bibliotheque";
-            // 
-            // picSignOut
-            // 
-            this.picSignOut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picSignOut.Image = global::MainApp.Properties.Resources.SignOUt21;
-            this.picSignOut.Location = new System.Drawing.Point(936, 6);
-            this.picSignOut.Name = "picSignOut";
-            this.picSignOut.Size = new System.Drawing.Size(29, 29);
-            this.picSignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picSignOut.TabIndex = 29;
-            this.picSignOut.TabStop = false;
-            this.picSignOut.Tag = "Deconnecter?";
-            this.picSignOut.Click += new System.EventHandler(this.picSignOut_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::MainApp.Properties.Resources.biblio;
-            this.pictureBox4.Location = new System.Drawing.Point(735, 52);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 21);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 25;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MainApp.Properties.Resources.téléchargement;
-            this.pictureBox2.Location = new System.Drawing.Point(735, 15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pbEmprunt
-            // 
-            this.pbEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbEmprunt.Location = new System.Drawing.Point(778, 15);
-            this.pbEmprunt.Name = "pbEmprunt";
-            this.pbEmprunt.Size = new System.Drawing.Size(170, 201);
-            this.pbEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEmprunt.TabIndex = 12;
-            this.pbEmprunt.TabStop = false;
-            // 
-            // pbReservation
-            // 
-            this.pbReservation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbReservation.Location = new System.Drawing.Point(778, 15);
-            this.pbReservation.Name = "pbReservation";
-            this.pbReservation.Size = new System.Drawing.Size(170, 201);
-            this.pbReservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbReservation.TabIndex = 29;
-            this.pbReservation.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(781, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 107);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(405, 20);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 86);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
+            this.txtLienPhoto.Enabled = false;
+            this.txtLienPhoto.Location = new System.Drawing.Point(99, 231);
+            this.txtLienPhoto.Name = "txtLienPhoto";
+            this.txtLienPhoto.ReadOnly = true;
+            this.txtLienPhoto.Size = new System.Drawing.Size(255, 26);
+            this.txtLienPhoto.TabIndex = 14;
             // 
             // pbUserPictureProfile
             // 
@@ -871,58 +830,211 @@
             this.pbUserPictureProfile.TabIndex = 13;
             this.pbUserPictureProfile.TabStop = false;
             // 
+            // btnMettreAJourProfile
+            // 
+            this.btnMettreAJourProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMettreAJourProfile.Location = new System.Drawing.Point(716, 308);
+            this.btnMettreAJourProfile.Name = "btnMettreAJourProfile";
+            this.btnMettreAJourProfile.Size = new System.Drawing.Size(110, 31);
+            this.btnMettreAJourProfile.TabIndex = 10;
+            this.btnMettreAJourProfile.Text = "Mettre à jour";
+            this.btnMettreAJourProfile.UseVisualStyleBackColor = true;
+            this.btnMettreAJourProfile.Click += new System.EventHandler(this.btnMettreAJourProfile_Click);
+            // 
             // pbUserLogo
             // 
             this.pbUserLogo.Image = global::MainApp.Properties.Resources.images__1_;
-            this.pbUserLogo.Location = new System.Drawing.Point(591, 368);
+            this.pbUserLogo.Location = new System.Drawing.Point(610, 375);
             this.pbUserLogo.Name = "pbUserLogo";
             this.pbUserLogo.Size = new System.Drawing.Size(234, 205);
             this.pbUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUserLogo.TabIndex = 16;
             this.pbUserLogo.TabStop = false;
             // 
-            // txtUserDataUserName
+            // btUserDataModifier
             // 
-            this.txtUserDataUserName.Enabled = false;
-            this.txtUserDataUserName.Location = new System.Drawing.Point(196, 416);
-            this.txtUserDataUserName.Name = "txtUserDataUserName";
-            this.txtUserDataUserName.ReadOnly = true;
-            this.txtUserDataUserName.Size = new System.Drawing.Size(161, 26);
-            this.txtUserDataUserName.TabIndex = 22;
+            this.btUserDataModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUserDataModifier.Location = new System.Drawing.Point(832, 308);
+            this.btUserDataModifier.Name = "btUserDataModifier";
+            this.btUserDataModifier.Size = new System.Drawing.Size(80, 31);
+            this.btUserDataModifier.TabIndex = 18;
+            this.btUserDataModifier.Text = "Modifier";
+            this.btUserDataModifier.UseVisualStyleBackColor = true;
+            this.btUserDataModifier.Click += new System.EventHandler(this.btUserDataModifier_Click);
             // 
-            // dtUserDataDateNaissance
+            // userName
             // 
-            this.dtUserDataDateNaissance.Enabled = false;
-            this.dtUserDataDateNaissance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtUserDataDateNaissance.Location = new System.Drawing.Point(196, 374);
-            this.dtUserDataDateNaissance.Name = "dtUserDataDateNaissance";
-            this.dtUserDataDateNaissance.Size = new System.Drawing.Size(161, 26);
-            this.dtUserDataDateNaissance.TabIndex = 26;
+            this.userName.AutoSize = true;
+            this.userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userName.Location = new System.Drawing.Point(1010, 23);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(83, 20);
+            this.userName.TabIndex = 26;
+            this.userName.Text = "Username";
             // 
-            // txtLienPhoto
+            // bibliotheque
             // 
-            this.txtLienPhoto.Enabled = false;
-            this.txtLienPhoto.Location = new System.Drawing.Point(99, 231);
-            this.txtLienPhoto.Name = "txtLienPhoto";
-            this.txtLienPhoto.ReadOnly = true;
-            this.txtLienPhoto.Size = new System.Drawing.Size(255, 26);
-            this.txtLienPhoto.TabIndex = 14;
+            this.bibliotheque.AutoSize = true;
+            this.bibliotheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bibliotheque.Location = new System.Drawing.Point(1014, 56);
+            this.bibliotheque.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bibliotheque.Name = "bibliotheque";
+            this.bibliotheque.Size = new System.Drawing.Size(95, 20);
+            this.bibliotheque.TabIndex = 30;
+            this.bibliotheque.Text = "bibliotheque";
             // 
-            // lUserPhoto
+            // picSignOut
             // 
-            this.lUserPhoto.AutoSize = true;
-            this.lUserPhoto.Location = new System.Drawing.Point(6, 234);
-            this.lUserPhoto.Name = "lUserPhoto";
-            this.lUserPhoto.Size = new System.Drawing.Size(93, 20);
-            this.lUserPhoto.TabIndex = 15;
-            this.lUserPhoto.Text = "Lien Photo :";
+            this.picSignOut.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picSignOut.Image = global::MainApp.Properties.Resources.SignOUt21;
+            this.picSignOut.Location = new System.Drawing.Point(1168, 14);
+            this.picSignOut.Name = "picSignOut";
+            this.picSignOut.Size = new System.Drawing.Size(29, 29);
+            this.picSignOut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSignOut.TabIndex = 29;
+            this.picSignOut.TabStop = false;
+            this.picSignOut.Tag = "Deconnecter?";
+            this.picSignOut.Click += new System.EventHandler(this.picSignOut_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::MainApp.Properties.Resources.biblio;
+            this.pictureBox4.Location = new System.Drawing.Point(980, 56);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(24, 21);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MainApp.Properties.Resources.téléchargement;
+            this.pictureBox2.Location = new System.Drawing.Point(980, 19);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lexempDispo
+            // 
+            this.lexempDispo.AutoSize = true;
+            this.lexempDispo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lexempDispo.Location = new System.Drawing.Point(11, 161);
+            this.lexempDispo.Name = "lexempDispo";
+            this.lexempDispo.Size = new System.Drawing.Size(304, 18);
+            this.lexempDispo.TabIndex = 39;
+            this.lexempDispo.Text = "Exemplaires disponibles de vos réservations:";
+            this.lexempDispo.Click += new System.EventHandler(this.lexempDispo_Click);
+            // 
+            // dgvExempDispo
+            // 
+            this.dgvExempDispo.AllowUserToAddRows = false;
+            this.dgvExempDispo.AllowUserToDeleteRows = false;
+            this.dgvExempDispo.AllowUserToResizeColumns = false;
+            this.dgvExempDispo.AllowUserToResizeRows = false;
+            this.dgvExempDispo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvExempDispo.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvExempDispo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvExempDispo.Location = new System.Drawing.Point(12, 187);
+            this.dgvExempDispo.Name = "dgvExempDispo";
+            this.dgvExempDispo.Size = new System.Drawing.Size(1225, 157);
+            this.dgvExempDispo.TabIndex = 38;
+            // 
+            // dgvEmpruntsEmprunt
+            // 
+            this.dgvEmpruntsEmprunt.AllowUserToAddRows = false;
+            this.dgvEmpruntsEmprunt.AllowUserToDeleteRows = false;
+            this.dgvEmpruntsEmprunt.AllowUserToResizeColumns = false;
+            this.dgvEmpruntsEmprunt.AllowUserToResizeRows = false;
+            this.dgvEmpruntsEmprunt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEmpruntsEmprunt.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvEmpruntsEmprunt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpruntsEmprunt.Location = new System.Drawing.Point(10, 368);
+            this.dgvEmpruntsEmprunt.Name = "dgvEmpruntsEmprunt";
+            this.dgvEmpruntsEmprunt.Size = new System.Drawing.Size(679, 191);
+            this.dgvEmpruntsEmprunt.TabIndex = 7;
+            // 
+            // lEmpruntsEmp
+            // 
+            this.lEmpruntsEmp.AutoSize = true;
+            this.lEmpruntsEmp.Location = new System.Drawing.Point(12, 347);
+            this.lEmpruntsEmp.Name = "lEmpruntsEmp";
+            this.lEmpruntsEmp.Size = new System.Drawing.Size(152, 20);
+            this.lEmpruntsEmp.TabIndex = 17;
+            this.lEmpruntsEmp.Text = "Liste des emprunts :";
+            this.lEmpruntsEmp.Click += new System.EventHandler(this.lEmpruntsEnCours_Click);
+            // 
+            // dgvRetardsEmprunt
+            // 
+            this.dgvRetardsEmprunt.AllowUserToAddRows = false;
+            this.dgvRetardsEmprunt.AllowUserToDeleteRows = false;
+            this.dgvRetardsEmprunt.AllowUserToResizeColumns = false;
+            this.dgvRetardsEmprunt.AllowUserToResizeRows = false;
+            this.dgvRetardsEmprunt.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRetardsEmprunt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvRetardsEmprunt.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvRetardsEmprunt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRetardsEmprunt.Location = new System.Drawing.Point(695, 368);
+            this.dgvRetardsEmprunt.Name = "dgvRetardsEmprunt";
+            this.dgvRetardsEmprunt.Size = new System.Drawing.Size(676, 191);
+            this.dgvRetardsEmprunt.TabIndex = 40;
+            // 
+            // lretards
+            // 
+            this.lretards.AutoSize = true;
+            this.lretards.Location = new System.Drawing.Point(691, 345);
+            this.lretards.Name = "lretards";
+            this.lretards.Size = new System.Drawing.Size(135, 20);
+            this.lretards.TabIndex = 41;
+            this.lretards.Text = "Liste des retards :";
+            // 
+            // lTotal
+            // 
+            this.lTotal.AutoSize = true;
+            this.lTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTotal.Location = new System.Drawing.Point(701, 568);
+            this.lTotal.Name = "lTotal";
+            this.lTotal.Size = new System.Drawing.Size(59, 20);
+            this.lTotal.TabIndex = 42;
+            this.lTotal.Text = "Total :";
+            // 
+            // lMontant
+            // 
+            this.lMontant.AutoSize = true;
+            this.lMontant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lMontant.Location = new System.Drawing.Point(766, 568);
+            this.lMontant.Name = "lMontant";
+            this.lMontant.Size = new System.Drawing.Size(35, 20);
+            this.lMontant.TabIndex = 43;
+            this.lMontant.Text = "Val";
+            // 
+            // lEuro
+            // 
+            this.lEuro.AutoSize = true;
+            this.lEuro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lEuro.Location = new System.Drawing.Point(840, 568);
+            this.lEuro.Name = "lEuro";
+            this.lEuro.Size = new System.Drawing.Size(19, 20);
+            this.lEuro.TabIndex = 44;
+            this.lEuro.Text = "€";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1198, 184);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(168, 31);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Actualiser lives";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // LecteurGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(971, 696);
+            this.ClientSize = new System.Drawing.Size(1375, 696);
             this.Controls.Add(this.bibliotheque);
             this.Controls.Add(this.picSignOut);
             this.Controls.Add(this.userName);
@@ -943,7 +1055,7 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntsEmprunt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).EndInit();
             this.tpEmprunt.ResumeLayout(false);
             this.tpEmprunt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivreEmprunt)).EndInit();
@@ -952,38 +1064,37 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tpFacturation.ResumeLayout(false);
             this.tpFacturation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntHistorique)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreHistorique)).EndInit();
             this.tpProfile.ResumeLayout(false);
             this.gbUserDataProfile.ResumeLayout(false);
             this.gbUserDataProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.gbUserPictureProfile.ResumeLayout(false);
             this.gbUserPictureProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEmprunt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvExempDispo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntsEmprunt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRetardsEmprunt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbLivreHistorique;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tpReservation;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.DataGridView dgvEmpruntsEmprunt;
-        private System.Windows.Forms.PictureBox pbEmprunt;
-        private System.Windows.Forms.Label lEmpruntsEmp;
-        private System.Windows.Forms.GroupBox gbResumeLivreEmprunt;
+        private System.Windows.Forms.PictureBox pbLivreEmprunt;
         private System.Windows.Forms.TabPage tpEmprunt;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tpFacturation;
@@ -1027,7 +1138,7 @@
         private System.Windows.Forms.TextBox txtISBNEmprunt;
         private System.Windows.Forms.Label lHistoriqueEmprunt;
         private System.Windows.Forms.DataGridView dgvEmpruntHistorique;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnReserver;
         private System.Windows.Forms.Label lLivresRes;
         private System.Windows.Forms.DataGridView dgvLivreReservation;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1040,17 +1151,26 @@
         private System.Windows.Forms.Button btnGoISBNReservation;
         private System.Windows.Forms.TextBox txtISBNReservation;
         private System.Windows.Forms.Label lListReservation;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnActuReservation;
         private System.Windows.Forms.DataGridView dgvReservation;
         private System.Windows.Forms.PictureBox pbReservation;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label lLivreEmp;
+        private System.Windows.Forms.Label lExempEmp;
         private System.Windows.Forms.DataGridView dgvLivreEmprunt;
         private System.Windows.Forms.Label bibliotheque;
         private System.Windows.Forms.DateTimePicker dtUserDataDateNaissance;
         private System.Windows.Forms.TextBox txtUserDataUserName;
         private System.Windows.Forms.Label lUserPhoto;
         private System.Windows.Forms.TextBox txtLienPhoto;
+        private System.Windows.Forms.Label lexempDispo;
+        private System.Windows.Forms.DataGridView dgvExempDispo;
+        private System.Windows.Forms.Label lEmpruntsEmp;
+        private System.Windows.Forms.DataGridView dgvEmpruntsEmprunt;
+        private System.Windows.Forms.Label lretards;
+        private System.Windows.Forms.DataGridView dgvRetardsEmprunt;
+        private System.Windows.Forms.Label lEuro;
+        private System.Windows.Forms.Label lMontant;
+        private System.Windows.Forms.Label lTotal;
+        private System.Windows.Forms.Button button1;
     }
 }

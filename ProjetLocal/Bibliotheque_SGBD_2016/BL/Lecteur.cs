@@ -34,10 +34,9 @@ namespace BL
         //        }
         //    }
         //}
-        public static void AllEmpruntsByLecId(ref List<Entities.EmpruntEnCours> empruntsEnCours,int LecId)
+        public static List<EMP_AllEmpruntsByLEC_Id_Result> AllEmpruntsByLecId(int LecId)
         {
-            //var ListEmprunt = DALEF.Lecteur.AllEmpruntsByLecId(LecId);
-            
+            return DALEF.Lecteur.AllEmpruntsByLecId(LecId); 
         }
 
         public static LEC_GetUserData_Result GetUserData(int lEC_Id)
@@ -49,6 +48,31 @@ namespace BL
         public static void UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissanceDateTime, string username, string password, string image)
         {
             DALEF.Lecteur.UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissanceDateTime, username, password, image);
+        }
+
+        public static List<RES_ListeReservationsDisponibleByLEC_IdByBib_Result> AllExemplairesReserveDispo(int lEC_Id, int bib_ID)
+        {
+            return DALEF.Lecteur.RES_ListeReservationsDisponibleByLEC_IdByBib(lEC_Id, bib_ID);
+        }
+
+        public static List<EMP_RetardsAllBibByLec_Result> AllRetardsByLecIdAllbib(int lEC_Id)
+        {
+            return DALEF.Lecteur.AllRetardsByLecIdAllbib(lEC_Id);
+        }
+
+        public static List<RES_ListeReservationsByLEC_Id_Result> AllReservationsByLecId(int lEC_Id)
+        {
+            return DALEF.Lecteur.AllReservationsByLecId(lEC_Id);
+        }
+
+        public static List<EMP_AllEmpruntsEnCoursByLEC_Id_Result> AllEmpruntsEncoursByLecId(int lEC_Id)
+        {
+            return DALEF.Lecteur.AllEmpruntsEnCoursByLecId(lEC_Id);
+        }
+
+        public static List<EXE_AllExemplairesByBibId_Result> AllExemplairesByBibId(int bib_ID)
+        {
+            return DALEF.Lecteur.AllExemplaireBybBibId(bib_ID);
         }
 
 

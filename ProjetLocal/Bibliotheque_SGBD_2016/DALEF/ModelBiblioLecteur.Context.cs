@@ -37,15 +37,6 @@ namespace DALEF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_AllEmpruntsByLEC_Id_Result>("EMP_AllEmpruntsByLEC_Id", lec_IdParameter);
         }
     
-        public virtual ObjectResult<EMP_RetardsAllBibByLec_Result> EMP_RetardsAllBibByLec(Nullable<int> lec_id)
-        {
-            var lec_idParameter = lec_id.HasValue ?
-                new ObjectParameter("Lec_id", lec_id) :
-                new ObjectParameter("Lec_id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_RetardsAllBibByLec_Result>("EMP_RetardsAllBibByLec", lec_idParameter);
-        }
-    
         public virtual int EXE_EmprunterExemplaire(Nullable<int> exe_Id, Nullable<int> lec_Id)
         {
             var exe_IdParameter = exe_Id.HasValue ?
@@ -239,6 +230,33 @@ namespace DALEF
                 new ObjectParameter("LEC_Photo", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("LEC_UpdateUserData", userIdParameter, lEC_NomParameter, lEC_PrenomParameter, lEC_SexeParameter, lEC_AdresseParameter, lEC_VilleParameter, lEC_CodePostalParameter, lEC_DateDeNaissanceParameter, lEC_UserNameParameter, lEC_PasswordParameter, lEC_PhotoParameter);
+        }
+    
+        public virtual ObjectResult<EXE_AllExemplairesByBibId_Result> EXE_AllExemplairesByBibId(Nullable<int> bib_Id)
+        {
+            var bib_IdParameter = bib_Id.HasValue ?
+                new ObjectParameter("Bib_Id", bib_Id) :
+                new ObjectParameter("Bib_Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EXE_AllExemplairesByBibId_Result>("EXE_AllExemplairesByBibId", bib_IdParameter);
+        }
+    
+        public virtual ObjectResult<EMP_AllEmpruntsEnCoursByLEC_Id_Result> EMP_AllEmpruntsEnCoursByLEC_Id(Nullable<int> lec_Id)
+        {
+            var lec_IdParameter = lec_Id.HasValue ?
+                new ObjectParameter("Lec_Id", lec_Id) :
+                new ObjectParameter("Lec_Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_AllEmpruntsEnCoursByLEC_Id_Result>("EMP_AllEmpruntsEnCoursByLEC_Id", lec_IdParameter);
+        }
+    
+        public virtual ObjectResult<EMP_RetardsAllBibByLec_Result> EMP_RetardsAllBibByLec(Nullable<int> lec_id)
+        {
+            var lec_idParameter = lec_id.HasValue ?
+                new ObjectParameter("Lec_id", lec_id) :
+                new ObjectParameter("Lec_id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_RetardsAllBibByLec_Result>("EMP_RetardsAllBibByLec", lec_idParameter);
         }
     }
 }

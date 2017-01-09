@@ -37,11 +37,51 @@ namespace DALEF
             }
         }
 
+        public static List<EMP_AllEmpruntsByLEC_Id_Result> AllEmpruntsByLecId(int lecId)
+        {
+            using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbContext.EMP_AllEmpruntsByLEC_Id(lecId).ToList();
+            }
+        }
+
         public static List<EXE_AllExemplairesDispoByBibByISBN_Result> EXE_AllExemplairesDispoByBibByISBN(int bibId, string isbn)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
                 return dbContext.EXE_AllExemplairesDispoByBibByISBN(bibId, isbn).ToList();
+            }
+        }
+
+        public static List<EXE_AllExemplairesByBibId_Result> AllExemplaireBybBibId(int bib_ID)
+        {
+            using (SGBD2016_BibliothequeEntities dbcontext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbcontext.EXE_AllExemplairesByBibId(bib_ID).ToList();
+            }
+        }
+
+        public static List<EMP_RetardsAllBibByLec_Result> AllRetardsByLecIdAllbib(int lEC_Id)
+        {
+            using (SGBD2016_BibliothequeEntities dbcontext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbcontext.EMP_RetardsAllBibByLec(lEC_Id).ToList();
+            }
+        }
+
+        public static List<RES_ListeReservationsByLEC_Id_Result> AllReservationsByLecId(int lEC_Id)
+        {
+            using (SGBD2016_BibliothequeEntities dbcontext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbcontext.RES_ListeReservationsByLEC_Id(lEC_Id).ToList();
+            }
+        }
+
+        public static List<EMP_AllEmpruntsEnCoursByLEC_Id_Result> AllEmpruntsEnCoursByLecId(int lEC_Id)
+        {
+            using (SGBD2016_BibliothequeEntities dbcontext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbcontext.EMP_AllEmpruntsEnCoursByLEC_Id(lEC_Id).ToList();
             }
         }
 

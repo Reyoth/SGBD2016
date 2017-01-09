@@ -57,7 +57,13 @@
     <Compile Include="EMP_AllEmpruntsByLEC_Id_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>
+    <Compile Include="EMP_AllEmpruntsEnCoursByLEC_Id_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
     <Compile Include="EMP_RetardsAllBibByLec_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EXE_AllExemplairesByBibId_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>
     <Compile Include="EXE_AllExemplairesDispoByBibByISBN_Result.cs">

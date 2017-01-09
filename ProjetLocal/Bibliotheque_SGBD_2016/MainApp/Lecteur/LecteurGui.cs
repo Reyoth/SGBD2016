@@ -26,14 +26,58 @@ namespace MainApp.Lecteur
 
         private void LecteurGui_Load(object sender, EventArgs e)
         {
-            dgvLivreEmprunt.DataSource = null;
-            dgvEmpruntsEmprunt.DataSource = null;
-            dgvLivreReservation.DataSource = null;
-            dgvReservation.DataSource = null;
-            dgvEmpruntHistorique.DataSource = null;
+
+            //Chargemenet data username et bibliotheque 
             userName.Text = session.LEC_UserName;
             bibliotheque.Text = biblio.BIB_Libelle;
+            
+            //chargement data volet Emprunt
+            dgvLivreEmprunt.DataSource = null;
+            dgvExempDispo.DataSource = null;
+            dgvEmpruntsEmprunt.DataSource = null;
+            dgvRetardsEmprunt.DataSource = null;
+            var ListExemplairesByBibId = BL.Lecteur.AllExemplairesByBibId(biblio.BIB_ID);
+            dgvLivreEmprunt.DataSource = ListExemplairesByBibId;
+            dgvLivreEmprunt.Columns[0].Visible = false;
+            var ListExempplaireReservedispo = BL.Lecteur.AllExemplairesReserveDispo(session.LEC_Id, biblio.BIB_ID);
+            dgvExempDispo.DataSource = ListExempplaireReservedispo;
+            var ListEmpruntsEnCoursByLecId = BL.Lecteur.AllEmpruntsEncoursByLecId(session.LEC_Id);
+            dgvEmpruntsEmprunt.DataSource = ListEmpruntsEnCoursByLecId;
+            dgvEmpruntsEmprunt.Columns[0].Visible = false;
+            dgvEmpruntsEmprunt.Columns[4].Visible = false;
+            dgvEmpruntsEmprunt.Columns[5].Visible = false;
+            dgvEmpruntsEmprunt.Columns[7].Visible = false;
+            var ListRetards = BL.Lecteur.AllRetardsByLecIdAllbib(session.LEC_Id);
+            dgvRetardsEmprunt.DataSource = ListRetards;
+            dgvRetardsEmprunt.Columns[0].Visible = false;
+            dgvRetardsEmprunt.Columns[1].Visible = false;
+            dgvRetardsEmprunt.Columns[2].Visible = false;
+            dgvRetardsEmprunt.Columns[5].Visible = false;
+            dgvRetardsEmprunt.Columns[7].Visible = false;
+            dgvRetardsEmprunt.Columns[8].Visible = false;
+            dgvRetardsEmprunt.Columns[10].Visible = false;
+            dgvRetardsEmprunt.Columns[11].Visible = false;
+            
+
+            //chargement data volet Reservation
+            dgvLivreReservation.DataSource = null;
+            dgvReservation.DataSource = null;
+            dgvLivreReservation.DataSource = ListExemplairesByBibId;
+            var ListReservations = BL.Lecteur.AllReservationsByLecId(session.LEC_Id);
+            dgvReservation.DataSource = ListReservations;
+
+            //chargement data volet Historique
+            dgvEmpruntHistorique.DataSource = null;
+            var ListEmprunts = BL.Lecteur.AllEmpruntsByLecId(session.LEC_Id);
+            dgvEmpruntHistorique.DataSource = ListEmprunts;
+
+            //chargement data volet Profil
             ChargeruserProfil();
+
+
+
+
+
 
 
 
@@ -119,6 +163,21 @@ namespace MainApp.Lecteur
                                       txtUserDataUserName.Text,
                                       txtUserDataPassword.Text,
                                       pbUserPictureProfile.ImageLocation);
+        }
+
+        private void lexempDispo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReserver_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvEmpruntHistorique_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
