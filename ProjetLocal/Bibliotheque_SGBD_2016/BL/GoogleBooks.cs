@@ -52,7 +52,10 @@ namespace BL
                                     livre.ISBN = isbn;
                                     livre.Titre = livreVolume.VolumeInfo.Title;
                                     livre.Image = livreVolume.VolumeInfo.ImageLinks.Thumbnail;
-                                    livre.Authors = livreVolume.VolumeInfo.Authors.ToString();
+                                    foreach (string auteurs in livreVolume.VolumeInfo.Authors)
+                                    {
+                                        livre.Authors += auteurs+", ";
+                                    }
                                     status = true;
                                 }
                             }
