@@ -91,7 +91,7 @@ namespace MainApp.Administrateur
             gdvLecteurs.DataSource = null;
             DataSet ds = new DataSet();
             BL.Administrateur.AllLivres(ref ds);
-            var x = ds;
+           
             BL.Administrateur.AllExemplairesAllBib(ref ds);
             BL.Administrateur.AllEmpruntsEnCours(ref ds);
             BL.Administrateur.AllRetardataires(ref ds);
@@ -411,6 +411,18 @@ namespace MainApp.Administrateur
         private void button3_Click(object sender, EventArgs e)
         {
             BL.Administrateur.RetournerExemplaire(Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[13].Value.ToString()));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            gdvEmpruntEnCours.DataSource = null;
+            DataSet ds = new DataSet();
+            BL.Administrateur.AllEmpruntsEnCours(ref ds);
+            gdvEmpruntEnCours.DataSource = ds.Tables[2].DefaultView;
+            gdvEmpruntEnCours.Columns[0].Visible = false;
+            gdvEmpruntEnCours.Columns[1].Visible = false;
+            gdvEmpruntEnCours.Columns[5].Visible = false;
+            gdvEmpruntEnCours.Columns[9].Visible = false;
         }
     }
 }
