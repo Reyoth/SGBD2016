@@ -57,8 +57,8 @@
 ##Une application pour le lecteur…
 
 - [ ] Se connecter = Qui et où
-- [ ] Avoir la liste des disponibilités des réservations en fonction de la bibliothèque choisie et emprunter en fonction de la bibliothèque choisie
-- [ ] Avoir la liste des disponibilités de mes réservations de toute les bibliothèques (afficher la liste complète des disponibilités des exemplaires et le nombre d’exemplaire disponibles dans chaque bibliothèque) -> **question d’examen**
+- [ ] Dans emprunt : avoir la liste des disponibilités des réservations en fonction de la bibliothèque ou on est connectée et emprunter en fonction de cette bibliotheque
+- [ ] Dans reservation : avoir la liste de mes réservations avec leurs disponibilités pour toute les bibliothèques -> **question d’examen**
 - [ ] Pouvoir réserver… Recherche d’un livre dans la bibliothèque choisie et réservation si pas disponible…
 - [ ] Pouvoir emprunter… Même chose
 - [ ] Pouvoir consulter ma liste des retards et combien je dois payer au total et par retard…
