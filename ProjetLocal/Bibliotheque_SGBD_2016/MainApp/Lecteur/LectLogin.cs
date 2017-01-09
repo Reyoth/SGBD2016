@@ -25,7 +25,7 @@ namespace MainApp.Lecteur
         private void btnConnect_Click(object sender, EventArgs e)
         {
             
-            session = BL.Lecteur.LEC_Login(txtLogin.Text, txtPwd.Text);
+            /*session = BL.Lecteur.LEC_Login(txtLogin.Text, txtPwd.Text);*/
             LecteurGui lectGui = new LecteurGui(biblio, session);
             this.Hide();
             lectGui.Show();
