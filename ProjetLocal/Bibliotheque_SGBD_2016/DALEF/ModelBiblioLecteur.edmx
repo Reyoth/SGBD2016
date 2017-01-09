@@ -27,9 +27,25 @@
           <Parameter Name="Exe_Id" Type="int" Mode="In" />
           <Parameter Name="Lec_Id" Type="int" Mode="In" />
         </Function>
+        <Function Name="LEC_GetUserData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+        </Function>
         <Function Name="LEC_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
           <Parameter Name="UserName" Type="nvarchar" Mode="In" />
           <Parameter Name="Password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="LEC_UpdateUserData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
+          <Parameter Name="UserId" Type="int" Mode="In" />
+          <Parameter Name="LEC_Nom" Type="nvarchar" Mode="In" />
+          <Parameter Name="LEC_Prenom" Type="nvarchar" Mode="In" />
+          <Parameter Name="LEC_Sexe" Type="char" Mode="In" />
+          <Parameter Name="LEC_Adresse" Type="nvarchar" Mode="In" />
+          <Parameter Name="LEC_Ville" Type="nvarchar" Mode="In" />
+          <Parameter Name="LEC_CodePostal" Type="int" Mode="In" />
+          <Parameter Name="LEC_DateDeNaissance" Type="date" Mode="In" />
+          <Parameter Name="LEC_UserName" Type="nvarchar" Mode="In" />
+          <Parameter Name="LEC_Password" Type="nvarchar" Mode="In" />
+          <Parameter Name="LEC_Photo" Type="nvarchar(max)" Mode="In" />
         </Function>
         <Function Name="LIV_LivreByISBN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
           <Parameter Name="ISBN" Type="nvarchar" Mode="In" />
@@ -105,6 +121,22 @@
           <FunctionImport Name="LEC_Login" ReturnType="Collection(SGBD2016_BibliothequeModel.LEC_Login_Result)">
             <Parameter Name="UserName" Mode="In" Type="String" />
             <Parameter Name="Password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="LEC_GetUserData" ReturnType="Collection(SGBD2016_BibliothequeModel.LEC_GetUserData_Result)">
+          <Parameter Name="UserId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="LEC_UpdateUserData">
+            <Parameter Name="UserId" Mode="In" Type="Int32" />
+            <Parameter Name="LEC_Nom" Mode="In" Type="String" />
+            <Parameter Name="LEC_Prenom" Mode="In" Type="String" />
+            <Parameter Name="LEC_Sexe" Mode="In" Type="String" />
+            <Parameter Name="LEC_Adresse" Mode="In" Type="String" />
+            <Parameter Name="LEC_Ville" Mode="In" Type="String" />
+            <Parameter Name="LEC_CodePostal" Mode="In" Type="Int32" />
+            <Parameter Name="LEC_DateDeNaissance" Mode="In" Type="DateTime" />
+            <Parameter Name="LEC_UserName" Mode="In" Type="String" />
+            <Parameter Name="LEC_Password" Mode="In" Type="String" />
+            <Parameter Name="LEC_Photo" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="EMP_AllEmpruntsByLEC_Id_Result">
@@ -195,6 +227,18 @@
         <ComplexType Name="LEC_Login_Result">
           <Property Type="Int32" Name="LEC_Id" Nullable="false" />
           <Property Type="String" Name="LEC_UserName" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="LEC_GetUserData_Result">
+          <Property Type="String" Name="LEC_Nom" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LEC_Prenom" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LEC_Sexe" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="LEC_Adresse" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="LEC_Ville" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="LEC_CodePostal" Nullable="false" />
+          <Property Type="String" Name="LEC_DateDeNaissance" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LEC_UserName" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LEC_Password" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LEC_Photo" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -335,6 +379,23 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LEC_GetUserData" FunctionName="SGBD2016_BibliothequeModel.Store.LEC_GetUserData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.LEC_GetUserData_Result">
+                <ScalarProperty Name="LEC_Nom" ColumnName="LEC_Nom" />
+                <ScalarProperty Name="LEC_Prenom" ColumnName="LEC_Prenom" />
+                <ScalarProperty Name="LEC_Sexe" ColumnName="LEC_Sexe" />
+                <ScalarProperty Name="LEC_Adresse" ColumnName="LEC_Adresse" />
+                <ScalarProperty Name="LEC_Ville" ColumnName="LEC_Ville" />
+                <ScalarProperty Name="LEC_CodePostal" ColumnName="LEC_CodePostal" />
+                <ScalarProperty Name="LEC_DateDeNaissance" ColumnName="LEC_DateDeNaissance" />
+                <ScalarProperty Name="LEC_UserName" ColumnName="LEC_UserName" />
+                <ScalarProperty Name="LEC_Password" ColumnName="LEC_Password" />
+                <ScalarProperty Name="LEC_Photo" ColumnName="LEC_Photo" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LEC_UpdateUserData" FunctionName="SGBD2016_BibliothequeModel.Store.LEC_UpdateUserData" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

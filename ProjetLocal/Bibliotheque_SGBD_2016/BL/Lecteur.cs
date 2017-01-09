@@ -40,7 +40,18 @@ namespace BL
             
         }
 
-        
+        public static LEC_GetUserData_Result GetUserData(int lEC_Id)
+        {
+            LEC_GetUserData_Result user = DALEF.Lecteur.GetUserData(lEC_Id);
+            return user;
+        }
+
+        public static void UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissanceDateTime, string username, string password, string image)
+        {
+            DALEF.Lecteur.UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissanceDateTime, username, password, image);
+        }
+
+
         //public static List<string> AllBiblioLibelle()
         //{
         //    using (var context = new SGBD2016_BibliothequeEntities())
@@ -60,7 +71,7 @@ namespace BL
 
         //public static void LivreByISBN(ref Entities.Livre livre, string isbn)
         //{
-            
+
         //    using (SGBD2016_BibliothequeEntities lecteurContext = new SGBD2016_BibliothequeEntities())
         //    {
         //       var  LivreResult = lecteurContext.LIV_LivreByISBN(isbn).ElementAt(0);
@@ -68,9 +79,9 @@ namespace BL
         //        livre.Id = LivreResult.LIV_Id;
         //        livre.Titre = LivreResult.LIV_Titre;
         //        livre.Authors = LivreResult.LIV_Auteurs;
-                
+
         //    }
-            
+
         //}
 
         //public static void LivreByTitre(ref List<Entities.Livre> listL, string Titre)

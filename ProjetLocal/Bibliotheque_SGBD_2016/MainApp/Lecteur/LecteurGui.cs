@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -32,6 +33,9 @@ namespace MainApp.Lecteur
             dgvEmpruntHistorique.DataSource = null;
             userName.Text = session.LEC_UserName;
             bibliotheque.Text = biblio.BIB_Libelle;
+            ChargeruserProfil();
+
+
 
         }
 
@@ -48,7 +52,7 @@ namespace MainApp.Lecteur
         private void timer1_Tick(object sender, EventArgs e)
         {
             string dateheure = DateTime.Now.ToString();
-            LecteurGui.ActiveForm.Text = "Inteface : Lecteur "+dateheure;
+            
         }
 
         private void picSignOut_Click(object sender, EventArgs e)
@@ -61,6 +65,60 @@ namespace MainApp.Lecteur
         private void lEmpruntsEnCours_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btUserDataModifier_Click(object sender, EventArgs e)
+        {
+            txtUserDataNom.Enabled = true;
+            txtUserDataPrenom.Enabled = true;
+            txtUserDataSexe.Enabled = true;
+            txtUserDataAdresse.Enabled = true;
+            txtUserDataVille.Enabled = true;
+            txtUserDataCodePostal.Enabled = true;
+            dtUserDataDateNaissance.Enabled = true;
+            txtUserDataUserName.Enabled = true;
+            txtUserDataPassword.Enabled = true;
+            txtLienPhoto.Enabled = true;
+
+            txtUserDataNom.ReadOnly = false;
+            txtUserDataPrenom.ReadOnly = false;
+            txtUserDataSexe.ReadOnly = false;
+            txtUserDataAdresse.ReadOnly = false;
+            txtUserDataVille.ReadOnly = false;
+            txtUserDataCodePostal.ReadOnly = false;
+            txtUserDataUserName.ReadOnly = false;
+            txtUserDataPassword.ReadOnly = false;
+            txtLienPhoto.ReadOnly = false;
+        }
+
+        public void ChargeruserProfil()
+        {
+            var user = BL.Lecteur.GetUserData(session.LEC_Id);
+            txtUserDataNom.Text = user.LEC_Nom;
+            txtUserDataPrenom.Text = user.LEC_Prenom;
+            txtUserDataSexe.Text = user.LEC_Sexe;
+            txtUserDataAdresse.Text = user.LEC_Adresse;
+            txtUserDataVille.Text = user.LEC_Ville;
+            txtUserDataCodePostal.Text = user.LEC_CodePostal.ToString();
+            dtUserDataDateNaissance.Text = user.LEC_DateDeNaissance;
+            txtUserDataUserName.Text = user.LEC_UserName;
+            txtUserDataPassword.Text = user.LEC_Password;
+            pbUserPictureProfile.ImageLocation = user.LEC_Photo;
+            
+        }
+
+        private void btnMettreAJourProfile_Click(object sender, EventArgs e)
+        {
+            BL.Lecteur.UpdateUserData(session.LEC_Id, txtUserDataNom.Text, 
+                                      txtUserDataPrenom.Text, 
+                                      txtUserDataSexe.Text,
+                                      txtUserDataAdresse.Text,
+                                      txtUserDataVille.Text,
+                                      Int32.Parse(txtUserDataCodePostal.Text),
+                                      dtUserDataDateNaissance.Value.Date,
+                                      txtUserDataUserName.Text,
+                                      txtUserDataPassword.Text,
+                                      pbUserPictureProfile.ImageLocation);
         }
     }
 }

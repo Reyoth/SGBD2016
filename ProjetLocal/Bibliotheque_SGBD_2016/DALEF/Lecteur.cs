@@ -44,6 +44,23 @@ namespace DALEF
                 return dbContext.EXE_AllExemplairesDispoByBibByISBN(bibId, isbn).ToList();
             }
         }
+
+        public static LEC_GetUserData_Result GetUserData(int Lec_Id)
+        {
+            using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbContext.LEC_GetUserData(Lec_Id).ElementAt(0);
+            }
+        }
+
+        public static void UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissance, string username, string password, string image)
+        {
+            using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
+            {
+                dbContext.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissance, username, password, image);
+            }
+        }
+
         public static List<EXE_AllExemplairesDispoByBibByTitle_Result> EXE_AllExemplairesDispoByBibByTitle(int bibId, string titre)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())

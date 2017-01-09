@@ -182,5 +182,63 @@ namespace DALEF
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LEC_Login_Result>("LEC_Login", userNameParameter, passwordParameter);
         }
+    
+        public virtual ObjectResult<LEC_GetUserData_Result> LEC_GetUserData(Nullable<int> userId)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LEC_GetUserData_Result>("LEC_GetUserData", userIdParameter);
+        }
+    
+        public virtual int LEC_UpdateUserData(Nullable<int> userId, string lEC_Nom, string lEC_Prenom, string lEC_Sexe, string lEC_Adresse, string lEC_Ville, Nullable<int> lEC_CodePostal, Nullable<System.DateTime> lEC_DateDeNaissance, string lEC_UserName, string lEC_Password, string lEC_Photo)
+        {
+            var userIdParameter = userId.HasValue ?
+                new ObjectParameter("UserId", userId) :
+                new ObjectParameter("UserId", typeof(int));
+    
+            var lEC_NomParameter = lEC_Nom != null ?
+                new ObjectParameter("LEC_Nom", lEC_Nom) :
+                new ObjectParameter("LEC_Nom", typeof(string));
+    
+            var lEC_PrenomParameter = lEC_Prenom != null ?
+                new ObjectParameter("LEC_Prenom", lEC_Prenom) :
+                new ObjectParameter("LEC_Prenom", typeof(string));
+    
+            var lEC_SexeParameter = lEC_Sexe != null ?
+                new ObjectParameter("LEC_Sexe", lEC_Sexe) :
+                new ObjectParameter("LEC_Sexe", typeof(string));
+    
+            var lEC_AdresseParameter = lEC_Adresse != null ?
+                new ObjectParameter("LEC_Adresse", lEC_Adresse) :
+                new ObjectParameter("LEC_Adresse", typeof(string));
+    
+            var lEC_VilleParameter = lEC_Ville != null ?
+                new ObjectParameter("LEC_Ville", lEC_Ville) :
+                new ObjectParameter("LEC_Ville", typeof(string));
+    
+            var lEC_CodePostalParameter = lEC_CodePostal.HasValue ?
+                new ObjectParameter("LEC_CodePostal", lEC_CodePostal) :
+                new ObjectParameter("LEC_CodePostal", typeof(int));
+    
+            var lEC_DateDeNaissanceParameter = lEC_DateDeNaissance.HasValue ?
+                new ObjectParameter("LEC_DateDeNaissance", lEC_DateDeNaissance) :
+                new ObjectParameter("LEC_DateDeNaissance", typeof(System.DateTime));
+    
+            var lEC_UserNameParameter = lEC_UserName != null ?
+                new ObjectParameter("LEC_UserName", lEC_UserName) :
+                new ObjectParameter("LEC_UserName", typeof(string));
+    
+            var lEC_PasswordParameter = lEC_Password != null ?
+                new ObjectParameter("LEC_Password", lEC_Password) :
+                new ObjectParameter("LEC_Password", typeof(string));
+    
+            var lEC_PhotoParameter = lEC_Photo != null ?
+                new ObjectParameter("LEC_Photo", lEC_Photo) :
+                new ObjectParameter("LEC_Photo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("LEC_UpdateUserData", userIdParameter, lEC_NomParameter, lEC_PrenomParameter, lEC_SexeParameter, lEC_AdresseParameter, lEC_VilleParameter, lEC_CodePostalParameter, lEC_DateDeNaissanceParameter, lEC_UserNameParameter, lEC_PasswordParameter, lEC_PhotoParameter);
+        }
     }
 }

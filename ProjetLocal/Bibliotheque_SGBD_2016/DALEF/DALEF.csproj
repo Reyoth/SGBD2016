@@ -71,6 +71,9 @@
     </Compile>
     <Compile Include="Globals.cs" />
     <Compile Include="Lecteur.cs" />
+    <Compile Include="LEC_GetUserData_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
     <Compile Include="LEC_Login_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>
