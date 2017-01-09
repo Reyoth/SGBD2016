@@ -14,8 +14,9 @@ namespace MainApp.Administrateur
 {
     public partial class AdministrateurGui : Form
     {
+        public string user; 
         public List<string> bibliotheques = new List<string>();
-        public AdministrateurGui()
+        public AdministrateurGui(string userName)
         {
             InitializeComponent();
             timer1.Start();
@@ -23,9 +24,13 @@ namespace MainApp.Administrateur
 
         private void AdministrateurGui_Load(object sender, EventArgs e)
         {
+            //Chargement username
+            lusername.Text = user;
+
             //replissage des comboBox
             ChargerBibLibelle(cbBiblioExemp);
             ChargerBibLibelle(cbBibLibelle);
+            ChargerLivreTitres(cbLivreExemp);
 
             ////txt volet Gestion LIvre
             txtISBNAjMan.Enabled = false;
@@ -35,10 +40,9 @@ namespace MainApp.Administrateur
 
             //txt volet Exemplaires
             txtCodeExemplaire.Enabled = false;
-            txtLivreExemplaire.Enabled = false;
+            cbLivreExemp.Enabled = false;
             dtDateAchatExemp.Enabled = false;
             txtCodeExemplaire.ReadOnly = true;
-            txtLivreExemplaire.ReadOnly = true;
             cbBiblioExemp.Enabled = false;
 
             //txt volet Emprunts et retards
@@ -275,10 +279,9 @@ namespace MainApp.Administrateur
         private void button24_Click(object sender, EventArgs e)
         {
             txtCodeExemplaire.Enabled = true;
-            txtLivreExemplaire.Enabled = true;
+            cbLivreExemp.Enabled = true;
             dtDateAchatExemp.Enabled = true;
             txtCodeExemplaire.ReadOnly = false;
-            txtLivreExemplaire.ReadOnly = false;
             cbBiblioExemp.Enabled = true;
         }
 
@@ -329,7 +332,7 @@ namespace MainApp.Administrateur
             if (dgvExemplaire.SelectedCells.Count == 1)
             {
                 txtCodeExemplaire.Text = dgvExemplaire.CurrentRow.Cells[1].Value.ToString();
-                txtLivreExemplaire.Text = dgvExemplaire.CurrentRow.Cells[2].Value.ToString(); 
+                cbLivreExemp.Text = dgvExemplaire.CurrentRow.Cells[2].Value.ToString(); 
                 dtDateAchatExemp.Text = dgvExemplaire.CurrentRow.Cells[4].Value.ToString();
                 cbBiblioExemp.Text = dgvExemplaire.CurrentRow.Cells[6].Value.ToString();
                 pbExemplaire.ImageLocation = dgvExemplaire.CurrentRow.Cells[7].Value.ToString();
@@ -418,11 +421,40 @@ namespace MainApp.Administrateur
             gdvEmpruntEnCours.DataSource = null;
             DataSet ds = new DataSet();
             BL.Administrateur.AllEmpruntsEnCours(ref ds);
-            gdvEmpruntEnCours.DataSource = ds.Tables[2].DefaultView;
+            gdvEmpruntEnCours.DataSource = ds.Tables[0].DefaultView;
             gdvEmpruntEnCours.Columns[0].Visible = false;
             gdvEmpruntEnCours.Columns[1].Visible = false;
             gdvEmpruntEnCours.Columns[5].Visible = false;
             gdvEmpruntEnCours.Columns[9].Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            gdvRetardataires.DataSource = null;
+            BL.Administrateur.AllRetardataires(ref ds);
+            gdvRetardataires.DataSource = ds.Tables[0].DefaultView;
+            gdvRetardataires.Columns[0].Visible = false;
+            gdvRetardataires.Columns[5].Visible = false;
+            gdvRetardataires.Columns[7].Visible = false;
+            gdvRetardataires.Columns[10].Visible = false;
+            gdvRetardataires.Columns[12].Visible = false;
+            gdvRetardataires.Columns[13].Visible = false;
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            BL.Administrateur.EXE_CreerExemplaire(txtCodeExemplaire.Text, (dtDateAchatExemp.Value.Date), 0, cbBiblioExemp.SelectedItem.ToString(), cbLivreExemp.SelectedItem.ToString());
+        }
+
+        public void ChargerLivreTitres(ComboBox cb)
+        {
+            List<string> titres = new List<string>();
+            BL.Administrateur.ChargerLivreTitres(ref titres);
+            foreach (var t in titres)
+            {
+                cb.Items.Add(t);
+            }
         }
     }
 }

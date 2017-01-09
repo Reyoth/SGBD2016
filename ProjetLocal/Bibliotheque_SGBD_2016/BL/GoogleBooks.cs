@@ -46,7 +46,8 @@ namespace BL
                                     var reader = new StreamReader(stream, Encoding.UTF8);
                                     string responseString = reader.ReadToEnd();
 
-                                    Volume livreVolume = Newtonsoft.Json.JsonConvert.DeserializeObject<Volumes>(responseString).Items[0];
+                                    Volume livreVolume = new Volume();
+                                    livreVolume = Newtonsoft.Json.JsonConvert.DeserializeObject<Volumes>(responseString).Items[0];
 
                                     livre.ISBN = isbn;
                                     livre.Titre = livreVolume.VolumeInfo.Title;

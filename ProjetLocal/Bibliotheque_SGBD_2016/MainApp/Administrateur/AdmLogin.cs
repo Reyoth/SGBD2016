@@ -13,7 +13,7 @@ namespace MainApp.Administrateur
 {
     public partial class AdmLogin : Form
     {
-        
+
         public AdmLogin()
         {
             InitializeComponent();
@@ -21,9 +21,25 @@ namespace MainApp.Administrateur
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            AdministrateurGui AdmGui = new AdministrateurGui();
-            this.Hide();
-            AdmGui.Show();
+            try
+            {
+                string userName = BL.Administrateur.ADM_Lgin(txtLogin.Text, txtPwd.Text);
+                if (userName == txtLogin.Text)
+                {
+                    AdministrateurGui AdmGui = new AdministrateurGui(userName);
+                    this.Hide();
+                    AdmGui.Show();
+                }
+                
+               
+
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

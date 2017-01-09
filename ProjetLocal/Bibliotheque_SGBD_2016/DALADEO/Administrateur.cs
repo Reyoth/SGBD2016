@@ -13,7 +13,7 @@ namespace DALADO
     public class Administrateur
     {
         //Methode pour inserer un exemplaire = Fonctionne
-        public static void EXE_CreerExemplaire(string code, DateTime DateAchat, byte indisponible, int BibId, int LivId)
+        public static void EXE_CreerExemplaire(string code, DateTime DateAchat, byte indisponible, string BibLibelle, string LivTitre)
         {
             var com = new SqlCommand();
             var da = new SqlDataAdapter();
@@ -26,8 +26,8 @@ namespace DALADO
                 com.Parameters.Add(new SqlParameter("Code", code));
                 com.Parameters.Add(new SqlParameter("DateAChat", DateAchat));
                 com.Parameters.Add(new SqlParameter("Indisponible", indisponible));
-                com.Parameters.Add(new SqlParameter("Bib_Id", BibId));
-                com.Parameters.Add(new SqlParameter("Liv_Id", LivId));
+                com.Parameters.Add(new SqlParameter("Bib_Libelle", BibLibelle));
+                com.Parameters.Add(new SqlParameter("LivTitre", LivTitre));
                 da.InsertCommand = com;
                 com.ExecuteNonQuery();
             }
@@ -42,6 +42,48 @@ namespace DALADO
             {
                 DbConnection.db.Close();
             }
+        }
+
+        public static string  ADM_Login(string userName, string password)
+        {
+            
+            SqlCommand com = new SqlCommand();
+            SqlDataReader dr;
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[ADM_Login]";
+                com.Parameters.Add(new SqlParameter("UserName", userName));
+                com.Parameters.Add(new SqlParameter("Password", password));
+                int resultat = com.ExecuteNonQuery();
+                if (resultat == 0)
+                {
+                    userName = "";
+                }
+                else
+                {
+                    dr = com.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        userName = dr.GetString(0);
+                    }
+                }
+                
+            }
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+            
+            return userName;
         }
 
         public static List<string> BIB_AllLibelle()
@@ -102,6 +144,39 @@ namespace DALADO
             }
             return ds;
         }
+
+        public static List<string> ChargerLivreTitres()
+        {
+            List<string> Titres = new List<string>();
+            SqlCommand com = new SqlCommand();
+            try
+            {
+                DbConnection.db.Open();
+                com.Connection = DbConnection.db;
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = "[adminBiblio].[LIV_AllLivresTitres]";
+                SqlDataReader dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    Titres.Add(dr.GetString(0));
+                }
+                dr.Close();
+
+
+            }
+            catch (Exception)
+            {
+                //int IdError = 999;
+
+                //throw new BusinessError.CustomError(IdError);
+            }
+            finally
+            {
+                DbConnection.db.Close();
+            }
+            return Titres;
+        
+    }
 
         public static void UpdateLivre(string iSBN, string titre, string image, string auteurs)
         {
@@ -319,7 +394,7 @@ namespace DALADO
                 com.Parameters.Add(new SqlParameter("ISBN", iSBN));
                 com.Parameters.Add(new SqlParameter("titre", titre));
                 com.Parameters.Add(new SqlParameter("image", image));
-                com.Parameters.Add(new SqlParameter("auteurs", auteurs));
+                com.Parameters.Add(new SqlParameter("auteur", auteurs));
                 da.InsertCommand = com;
                 com.ExecuteNonQuery();
             }

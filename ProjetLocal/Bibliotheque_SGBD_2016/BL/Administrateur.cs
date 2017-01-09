@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,9 @@ namespace BL
 {
     public class Administrateur
     {
-        public static void EXE_CreerExemplaire(string code, DateTime DateAchat, byte indisponible, int BibId, int LivId)
+        public static void EXE_CreerExemplaire(string code, DateTime DateAchat, byte indisponible, string BibLibelle, string LivTitre)
         {
-           DALADO.Administrateur.EXE_CreerExemplaire(code, DateAchat, indisponible, BibId, LivId);
+           DALADO.Administrateur.EXE_CreerExemplaire(code, DateAchat, indisponible, BibLibelle, LivTitre);
         }
 
         public static void AllExemplairesAllBib(ref DataSet ds)
@@ -23,6 +24,13 @@ namespace BL
 
 
         }
+
+        public static string ADM_Lgin(string userName, string password)
+        {
+            string userN = DALADO.Administrateur.ADM_Login(userName, password);
+            return userN;
+        }
+
         public static void AllExemplairesByBibId(ref DataSet ds, int BibId)
         {
 
@@ -127,6 +135,11 @@ namespace BL
         public static void EXE_AllExemplaireByBIB_Libelle(ref DataTable dt, string Libelle)
         {
             dt = DALADO.Administrateur.EXE_AllExemplaireByBIB_Libelle(Libelle);
+        }
+
+        public static void ChargerLivreTitres(ref List<string> titres )
+        {
+            titres = DALADO.Administrateur.ChargerLivreTitres();
         }
     }
 }
