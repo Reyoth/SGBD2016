@@ -258,5 +258,40 @@ namespace DALEF
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_RetardsAllBibByLec_Result>("EMP_RetardsAllBibByLec", lec_idParameter);
         }
+    
+        public virtual ObjectResult<LIV_LivreByBib_idByISBN_Result> LIV_LivreByBib_idByISBN(Nullable<int> bibId, string iSBN)
+        {
+            var bibIdParameter = bibId.HasValue ?
+                new ObjectParameter("BibId", bibId) :
+                new ObjectParameter("BibId", typeof(int));
+    
+            var iSBNParameter = iSBN != null ?
+                new ObjectParameter("ISBN", iSBN) :
+                new ObjectParameter("ISBN", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LIV_LivreByBib_idByISBN_Result>("LIV_LivreByBib_idByISBN", bibIdParameter, iSBNParameter);
+        }
+    
+        public virtual ObjectResult<LIV_LivreByBib_id_Result> LIV_LivreByBib_id(Nullable<int> bibId)
+        {
+            var bibIdParameter = bibId.HasValue ?
+                new ObjectParameter("BibId", bibId) :
+                new ObjectParameter("BibId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LIV_LivreByBib_id_Result>("LIV_LivreByBib_id", bibIdParameter);
+        }
+    
+        public virtual ObjectResult<LIV_LivreByBib_idByTitre_Result> LIV_LivreByBib_idByTitre(Nullable<int> bibId, string titre)
+        {
+            var bibIdParameter = bibId.HasValue ?
+                new ObjectParameter("BibId", bibId) :
+                new ObjectParameter("BibId", typeof(int));
+    
+            var titreParameter = titre != null ?
+                new ObjectParameter("titre", titre) :
+                new ObjectParameter("titre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LIV_LivreByBib_idByTitre_Result>("LIV_LivreByBib_idByTitre", bibIdParameter, titreParameter);
+        }
     }
 }

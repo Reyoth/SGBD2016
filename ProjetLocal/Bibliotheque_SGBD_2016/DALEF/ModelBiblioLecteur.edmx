@@ -53,6 +53,17 @@
           <Parameter Name="LEC_Password" Type="nvarchar" Mode="In" />
           <Parameter Name="LEC_Photo" Type="nvarchar(max)" Mode="In" />
         </Function>
+        <Function Name="LIV_LivreByBib_id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
+          <Parameter Name="BibId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="LIV_LivreByBib_idByISBN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
+          <Parameter Name="BibId" Type="int" Mode="In" />
+          <Parameter Name="ISBN" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="LIV_LivreByBib_idByTitre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
+          <Parameter Name="BibId" Type="int" Mode="In" />
+          <Parameter Name="titre" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="LIV_LivreByISBN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
           <Parameter Name="ISBN" Type="nvarchar" Mode="In" />
         </Function>
@@ -148,7 +159,18 @@
           <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="EMP_RetardsAllBibByLec" ReturnType="Collection(SGBD2016_BibliothequeModel.EMP_RetardsAllBibByLec_Result)">
-            <Parameter Name="Lec_id" Mode="In" Type="Int32" />
+          <Parameter Name="Lec_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="LIV_LivreByBib_idByISBN" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByBib_idByISBN_Result)">
+            <Parameter Name="BibId" Mode="In" Type="Int32" />
+            <Parameter Name="ISBN" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="LIV_LivreByBib_id" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByBib_id_Result)">
+            <Parameter Name="BibId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="LIV_LivreByBib_idByTitre" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByBib_idByTitre_Result)">
+            <Parameter Name="BibId" Mode="In" Type="Int32" />
+            <Parameter Name="titre" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="EMP_AllEmpruntsByLEC_Id_Result">
@@ -266,7 +288,7 @@
           <Property Type="Int32" Name="ID_Lecteur" Nullable="false" />
           <Property Type="String" Name="Nom" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Prénom" Nullable="false" MaxLength="50" />
-          <Property Type="Int32" Name="Nombre_de_jours_de_retard" Nullable="true" />
+          <Property Type="Int32" Name="Jours_de_retard" Nullable="true" />
           <Property Type="Decimal" Name="Montant_total_du__" Nullable="true" Precision="26" Scale="0" />
           <Property Type="Int32" Name="ID_Emprunt" Nullable="false" />
           <Property Type="DateTime" Name="Date_d_emprunt" Nullable="false" Precision="23" />
@@ -276,6 +298,27 @@
           <Property Type="String" Name="ISBN" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Code_Bibliotheque" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="Bibliotheque" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="LIV_LivreByBib_idByISBN_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ISBN" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Titre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Image" Nullable="true" />
+          <Property Type="String" Name="Auteurs" Nullable="true" MaxLength="250" />
+        </ComplexType>
+        <ComplexType Name="LIV_LivreByBib_id_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ISBN" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Titre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Image" Nullable="true" />
+          <Property Type="String" Name="Auteurs" Nullable="true" MaxLength="250" />
+        </ComplexType>
+        <ComplexType Name="LIV_LivreByBib_idByTitre_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="ISBN" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Titre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Image" Nullable="true" />
+          <Property Type="String" Name="Auteurs" Nullable="true" MaxLength="250" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -453,7 +496,7 @@
                 <ScalarProperty Name="ID_Lecteur" ColumnName="ID Lecteur" />
                 <ScalarProperty Name="Nom" ColumnName="Nom" />
                 <ScalarProperty Name="Prénom" ColumnName="Prénom" />
-                <ScalarProperty Name="Nombre_de_jours_de_retard" ColumnName="Nombre de jours de retard" />
+                <ScalarProperty Name="Jours_de_retard" ColumnName="Jours de retard" />
                 <ScalarProperty Name="Montant_total_du__" ColumnName="Montant total du €" />
                 <ScalarProperty Name="ID_Emprunt" ColumnName="ID Emprunt" />
                 <ScalarProperty Name="Date_d_emprunt" ColumnName="Date d'emprunt" />
@@ -463,6 +506,39 @@
                 <ScalarProperty Name="ISBN" ColumnName="ISBN" />
                 <ScalarProperty Name="Code_Bibliotheque" ColumnName="Code Bibliotheque" />
                 <ScalarProperty Name="Bibliotheque" ColumnName="Bibliotheque" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LIV_LivreByBib_idByISBN" FunctionName="SGBD2016_BibliothequeModel.Store.LIV_LivreByBib_idByISBN">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.LIV_LivreByBib_idByISBN_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="Titre" ColumnName="Titre" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Auteurs" ColumnName="Auteurs" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LIV_LivreByBib_id" FunctionName="SGBD2016_BibliothequeModel.Store.LIV_LivreByBib_id">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.LIV_LivreByBib_id_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="Titre" ColumnName="Titre" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Auteurs" ColumnName="Auteurs" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LIV_LivreByBib_idByTitre" FunctionName="SGBD2016_BibliothequeModel.Store.LIV_LivreByBib_idByTitre">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.LIV_LivreByBib_idByTitre_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="Titre" ColumnName="Titre" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Auteurs" ColumnName="Auteurs" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

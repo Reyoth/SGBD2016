@@ -93,6 +93,30 @@ namespace DALEF
             }
         }
 
+        public static List<LIV_LivreByBib_idByISBN_Result> AllLivresByISBN(int bibId, string isbn)
+        {
+            using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbContext.LIV_LivreByBib_idByISBN(bibId, isbn).ToList();
+            }
+        }
+
+        public static List<LIV_LivreByBib_idByTitre_Result> AllLivresByTitle(int bibId, string titre)
+        {
+            using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbContext.LIV_LivreByBib_idByTitre(bibId, titre).ToList();
+            }
+        }
+
+        public static List<LIV_LivreByBib_id_Result> AllLivreByBibId(int bibId)
+        {
+            using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
+            {
+                return dbContext.LIV_LivreByBib_id(bibId).ToList();
+            }
+        }
+
         public static void UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissance, string username, string password, string image)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
@@ -123,11 +147,11 @@ namespace DALEF
                 return dbContext.LEC_Login(username, password).ElementAt(0);
             }
         }
-        public static List<LIV_LivreByISBN_Result> LIV_LivreByISBN(string isbn)
+        public static List<EXE_AllExemplairesDispoByBibByISBN_Result> AllExeplairesByISBN(int bibId, string isbn)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                return dbContext.LIV_LivreByISBN(isbn).ToList();
+                return dbContext.EXE_AllExemplairesDispoByBibByISBN(bibId, isbn).ToList();
             }
         }
         public static List<EXE_AllExemplairesDispoByBibId_Result> EXE_AllExemplairesDispoByBibId(int bibId)
@@ -138,11 +162,11 @@ namespace DALEF
             }
         }
 
-        public static List<LIV_LivreByTitle_Result> LIV_LivreByTitle(string titre)
+        public static List<EXE_AllExemplairesDispoByBibByTitle_Result> AllExemplairesByTitle(int bibId, string titre)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                return dbContext.LIV_LivreByTitle(titre).ToList();
+                return dbContext.EXE_AllExemplairesDispoByBibByTitle(bibId, titre).ToList();
             }
         }
         public static List<RES_ListeReservationsByLEC_Id_Result> RES_ListeReservationsByLEC_Id(int lecId)

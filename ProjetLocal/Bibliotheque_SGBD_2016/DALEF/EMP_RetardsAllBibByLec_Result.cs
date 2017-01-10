@@ -16,7 +16,7 @@ namespace DALEF
         public int ID_Lecteur { get; set; }
         public string Nom { get; set; }
         public string Prénom { get; set; }
-        public Nullable<int> Nombre_de_jours_de_retard { get; set; }
+        public Nullable<int> Jours_de_retard { get; set; }
         public Nullable<decimal> Montant_total_du__ { get; set; }
         public int ID_Emprunt { get; set; }
         public System.DateTime Date_d_emprunt { get; set; }

@@ -83,6 +83,15 @@
     <Compile Include="LEC_Login_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>
+    <Compile Include="LIV_LivreByBib_idByISBN_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIV_LivreByBib_idByTitre_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LIV_LivreByBib_id_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
     <Compile Include="LIV_LivreByISBN_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>

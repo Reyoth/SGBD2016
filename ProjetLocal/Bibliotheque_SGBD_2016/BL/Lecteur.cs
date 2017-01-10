@@ -75,78 +75,41 @@ namespace BL
             return DALEF.Lecteur.AllExemplaireBybBibId(bib_ID);
         }
 
+        public static List<EXE_AllExemplairesDispoByBibByISBN_Result> AllExeplairesByISBN(int bibId, string isbn)
+        {
+            return DALEF.Lecteur.AllExeplairesByISBN(bibId, isbn);
+        }
 
-        //public static List<string> AllBiblioLibelle()
-        //{
-        //    using (var context = new SGBD2016_BibliothequeEntities())
-        //    {
-        //        List<string> listLibelleBib = new List<string>();
+        public static List<EXE_AllExemplairesDispoByBibByTitle_Result> AllExeplairesByTitle(int bibId, string titre)
+        {
+            return DALEF.Lecteur.AllExemplairesByTitle(bibId, titre);
+        }
 
-        //        var biblio = context.Bibliotheques.ToList();
+        public static void EmprunterExemplaire(int exeId, int lecId)
+        {
+            DALEF.Lecteur.EXE_EmprunterExemplaire(exeId, lecId);
+        }
 
-        //        foreach (var bib  in biblio)
-        //        {
-        //            listLibelleBib.Add(bib.BIB_Libelle);
-        //        }
-        //        return listLibelleBib;
-        //    }
+        public static List<LIV_LivreByBib_idByISBN_Result> AllLivresByISBN(int bibId, string isbn)
+        {
+            return DALEF.Lecteur.AllLivresByISBN(bibId, isbn);
+        }
 
-        //}
+       
 
-        //public static void LivreByISBN(ref Entities.Livre livre, string isbn)
-        //{
+        public static List<LIV_LivreByBib_idByTitre_Result> AllLivresByTitle(int bibId, string titre)
+        {
+            return DALEF.Lecteur.AllLivresByTitle(bibId, titre);
+        }
 
-        //    using (SGBD2016_BibliothequeEntities lecteurContext = new SGBD2016_BibliothequeEntities())
-        //    {
-        //       var  LivreResult = lecteurContext.LIV_LivreByISBN(isbn).ElementAt(0);
-        //        livre.ISBN = LivreResult.LIV_ISBN;
-        //        livre.Id = LivreResult.LIV_Id;
-        //        livre.Titre = LivreResult.LIV_Titre;
-        //        livre.Authors = LivreResult.LIV_Auteurs;
+        public static void ReserverLivre(int livId, int lecId)
+        {
+           DALEF.Lecteur.RES_ReserverLivre(livId, lecId);
+        }
 
-        //    }
-
-        //}
-
-        //public static void LivreByTitre(ref List<Entities.Livre> listL, string Titre)
-        //{
-        //    List<Entities.Livre> listeLivres = new List<Entities.Livre>();
-        //    listeLivres = DALADO.Lecteur.LivreByTitre(listeLivres, Titre);
-        //    listL = listeLivres;
-        //}
-
-        //public static void AllLivres(ref List<Entities.LivreAllLivre> livres)
-        //{
-        //    List<Entities.LivreAllLivre> listeLivres = new List<LivreAllLivre>();
-        //    DALADO.Lecteur.LivreByTitre(listeLivres);
-        //    livres = listeLivres;
-        //}
-
-        //public static void EmpruntsEnCours(ref List<Entities.EmpruntEnCours> empruntsEnCours, int userId)
-        //{
-        //    List<Entities.EmpruntEnCours> listeEmpruntsEnCours = new List<Entities.EmpruntEnCours>();
-        //    DALADO.Lecteur.EmpruntsEnCours(listeEmpruntsEnCours, userId);
-        //    empruntsEnCours = listeEmpruntsEnCours;
-        //}
-
-        //public static void ReservationsEnCours(ref List<Entities.ReservationEnCours> emprunts, int userId)
-        //{
-        //    List<Entities.ReservationEnCours> listeReservations = new List<Entities.ReservationEnCours>();
-        //    DALADO.Lecteur.ReservationsEnCours(listeReservations, userId);
-        //    emprunts = listeReservations;
-        //}
-
-        //public static void Emprunts(ref List<EmpruntEnCours> emprunts, int userId)
-        //{
-        //    List<Entities.EmpruntEnCours> listeEmprunts = new List<Entities.EmpruntEnCours>();
-        //    DALADO.Lecteur.Emprunts(listeEmprunts, userId);
-        //    emprunts = listeEmprunts;
-        //}
-
-        //public static int GetUserId(string userName)
-        //{
-        //    int Id = DAL.Lecteur.GetUserId(userName);
-        //    return Id;
-        //}
+        public static List<LIV_LivreByBib_id_Result> AllLLivresByBibId(int bIB_ID)
+        {
+            return DALEF.Lecteur.AllLivreByBibId(bIB_ID);
+        }
     }
 }
