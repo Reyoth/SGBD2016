@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DALEF;
+using Entities;
 
 namespace MainApp.Lecteur
 {

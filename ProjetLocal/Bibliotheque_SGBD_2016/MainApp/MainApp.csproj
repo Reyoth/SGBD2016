@@ -129,10 +129,6 @@
       <Project>{e4490c89-0ecc-49f8-ac17-c0575f60160e}</Project>
       <Name>BL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DALEF\DALEF.csproj">
-      <Project>{7caf4dcc-2da0-46c4-a431-38d9640bb0ee}</Project>
-      <Name>DALEF</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{cc050749-4975-4b77-a9d0-30c5e2738a7c}</Project>
       <Name>Entities</Name>

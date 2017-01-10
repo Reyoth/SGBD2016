@@ -42,15 +42,33 @@
   <ItemGroup>
     <Compile Include="Auteur.cs" />
     <Compile Include="Bibliotheque.cs" />
+    <Compile Include="BIB_AllLibelle_Result.cs" />
     <Compile Include="Emprunt.cs" />
     <Compile Include="EmpruntEnCours.cs" />
+    <Compile Include="EMP_AllEmpruntsByLEC_Id_Result.cs" />
+    <Compile Include="EMP_AllEmpruntsEnCoursByLEC_Id_Result.cs" />
+    <Compile Include="EMP_AllEmpruntsRenduByLEC_Id_Result.cs" />
+    <Compile Include="EMP_RetardsAllBibByLec_Result.cs" />
     <Compile Include="Exemplaire.cs" />
+    <Compile Include="EXE_AllExemplairesByBibId_Result.cs" />
+    <Compile Include="EXE_AllExemplairesDispoByBibByISBN_Result.cs" />
+    <Compile Include="EXE_AllExemplairesDispoByBibByTitle_Result.cs" />
+    <Compile Include="EXE_AllExemplairesDispoByBibId_Result.cs" />
     <Compile Include="Lecteur.cs" />
+    <Compile Include="LEC_GetUserData_Result.cs" />
+    <Compile Include="LEC_Login_Result.cs" />
     <Compile Include="Livre.cs" />
     <Compile Include="LivreAllLivre.cs" />
+    <Compile Include="LIV_LivreByBib_idByISBN_Result.cs" />
+    <Compile Include="LIV_LivreByBib_idByTitre_Result.cs" />
+    <Compile Include="LIV_LivreByBib_id_Result.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />
     <Compile Include="ReservationEnCours.cs" />
+    <Compile Include="RES_ListeReservationsByLEC_Id_Result.cs" />
+    <Compile Include="RES_ListeReservationsDisponibleByLEC_IdAllBib_Result.cs" />
+    <Compile Include="RES_ListeReservationsDisponibleByLEC_IdByBib_Result.cs" />
+    <Compile Include="RES_ListeReservationsDisponibleByLEC_Id_Result.cs" />
     <Compile Include="Tarif.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
