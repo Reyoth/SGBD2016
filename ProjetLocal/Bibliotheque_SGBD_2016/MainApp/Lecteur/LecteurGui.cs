@@ -78,7 +78,8 @@ namespace MainApp.Lecteur
             dgvLivreReservation.Columns[3].Visible = false;
             var ListReservations = BL.Lecteur.AllReservationsByLecId(session.LEC_Id);
             dgvReservation.DataSource = ListReservations;
-
+            dgvReservation.Columns[0].Visible = false;
+            dgvReservation.Columns[5].Visible = false;
             //chargement data volet Historique
             dgvEmpruntHistorique.DataSource = null;
             var ListEmprunts = BL.Lecteur.AllEmpruntsByLecId(session.LEC_Id);
@@ -337,6 +338,21 @@ namespace MainApp.Lecteur
         }
 
         private void btnActualiserFacturation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvReservation_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            pbReservation.ImageLocation = dgvReservation.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
