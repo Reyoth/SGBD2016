@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{E449
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALEF", "DALEF\DALEF.csproj", "{7CAF4DCC-2DA0-46C4-A431-38D9640BB0EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceBilbio", "ServiceBilbio\ServiceBilbio.csproj", "{F57FD965-2C40-47B8-8E8B-9046AD32C37C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7CAF4DCC-2DA0-46C4-A431-38D9640BB0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CAF4DCC-2DA0-46C4-A431-38D9640BB0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CAF4DCC-2DA0-46C4-A431-38D9640BB0EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F57FD965-2C40-47B8-8E8B-9046AD32C37C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F57FD965-2C40-47B8-8E8B-9046AD32C37C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F57FD965-2C40-47B8-8E8B-9046AD32C37C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F57FD965-2C40-47B8-8E8B-9046AD32C37C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
