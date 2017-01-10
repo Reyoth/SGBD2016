@@ -37,18 +37,18 @@ namespace MainApp.Lecteur
             dgvExempDispo.DataSource = null;
             dgvEmpruntsEmprunt.DataSource = null;
             dgvRetardsEmprunt.DataSource = null;
-            var ListExemplairesByBibId = BL.Lecteur.AllExemplairesByBibId(biblio.BIB_ID);
+            var ListExemplairesByBibId = BL.Lecteur.EXE_AllExemplairesByBibId(biblio.BIB_ID);
             dgvLivreEmprunt.DataSource = ListExemplairesByBibId;
             dgvLivreEmprunt.Columns[0].Visible = false;
-            var ListExempplaireReservedispo = BL.Lecteur.AllExemplairesReserveDispo(session.LEC_Id, biblio.BIB_ID);
+            var ListExempplaireReservedispo = BL.Lecteur.RES_ListeReservationsDisponibleByLEC_IdByBib(session.LEC_Id, biblio.BIB_ID);
             dgvExempDispo.DataSource = ListExempplaireReservedispo;
-            var ListEmpruntsEnCoursByLecId = BL.Lecteur.AllEmpruntsEncoursByLecId(session.LEC_Id);
+            var ListEmpruntsEnCoursByLecId = BL.Lecteur.EMP_AllEmpruntsEnCoursByLEC_Id(session.LEC_Id);
             dgvEmpruntsEmprunt.DataSource = ListEmpruntsEnCoursByLecId;
             dgvEmpruntsEmprunt.Columns[0].Visible = false;
             dgvEmpruntsEmprunt.Columns[4].Visible = false;
             dgvEmpruntsEmprunt.Columns[5].Visible = false;
             dgvEmpruntsEmprunt.Columns[7].Visible = false;
-            var ListRetards = BL.Lecteur.AllRetardsByLecIdAllbib(session.LEC_Id);
+            var ListRetards = BL.Lecteur.EMP_RetardsAllBibByLec(session.LEC_Id);
             dgvRetardsEmprunt.DataSource = ListRetards;
             dgvRetardsEmprunt.Columns[0].Visible = false;
             dgvRetardsEmprunt.Columns[1].Visible = false;
@@ -72,17 +72,17 @@ namespace MainApp.Lecteur
             //chargement data volet Reservation
             dgvLivreReservation.DataSource = null;
             dgvReservation.DataSource = null;
-            var LivresByBib = BL.Lecteur.AllLLivresByBibId(biblio.BIB_ID);
+            var LivresByBib = BL.Lecteur.LIV_LivreByBib_id(biblio.BIB_ID);
             dgvLivreReservation.DataSource = LivresByBib;
             dgvLivreReservation.Columns[0].Visible = false;
             dgvLivreReservation.Columns[3].Visible = false;
-            var ListReservations = BL.Lecteur.AllReservationsByLecId(session.LEC_Id);
+            var ListReservations = BL.Lecteur.RES_ListeReservationsByLEC_Id(session.LEC_Id);
             dgvReservation.DataSource = ListReservations;
             dgvReservation.Columns[0].Visible = false;
             dgvReservation.Columns[5].Visible = false;
             //chargement data volet Historique
             dgvEmpruntHistorique.DataSource = null;
-            var ListEmprunts = BL.Lecteur.AllEmpruntsByLecId(session.LEC_Id);
+            var ListEmprunts = BL.Lecteur.EMP_AllEmpruntsRenduByLEC_Id(session.LEC_Id);
             dgvEmpruntHistorique.DataSource = ListEmprunts;
 
             //chargement data volet Profil
@@ -167,7 +167,7 @@ namespace MainApp.Lecteur
 
         private void btnMettreAJourProfile_Click(object sender, EventArgs e)
         {
-            BL.Lecteur.UpdateUserData(session.LEC_Id, txtUserDataNom.Text, 
+            BL.Lecteur.LEC_UpdateUserData(session.LEC_Id, txtUserDataNom.Text, 
                                       txtUserDataPrenom.Text, 
                                       txtUserDataSexe.Text,
                                       txtUserDataAdresse.Text,
@@ -216,13 +216,13 @@ namespace MainApp.Lecteur
 
         private void bntGoISBNEmprunt_Click(object sender, EventArgs e)
         {
-            var Livres = BL.Lecteur.AllExeplairesByISBN(biblio.BIB_ID, txtISBNEmprunt.Text);
+            var Livres = BL.Lecteur.EXE_AllExemplairesDispoByBibByISBN(biblio.BIB_ID, txtISBNEmprunt.Text);
             dgvLivreEmprunt.DataSource = Livres;
         }
 
         private void bntGoTitleEmprunt_Click(object sender, EventArgs e)
         {
-            var Livres = BL.Lecteur.AllExeplairesByTitle(biblio.BIB_ID, txtTitleEmprunt.Text);
+            var Livres = BL.Lecteur.EXE_AllExemplairesDispoByBibByTitle(biblio.BIB_ID, txtTitleEmprunt.Text);
             dgvLivreEmprunt.DataSource = Livres;
         }
 
@@ -231,10 +231,10 @@ namespace MainApp.Lecteur
             switch (focus)
             {
                 case 1:
-                    BL.Lecteur.EmprunterExemplaire((int) dgvLivreEmprunt.CurrentRow.Cells[0].Value, session.LEC_Id);
+                    BL.Lecteur.EXE_EmprunterExemplaire((int) dgvLivreEmprunt.CurrentRow.Cells[0].Value, session.LEC_Id);
                     break;
                 case 2:
-                    BL.Lecteur.EmprunterExemplaire((int) dgvExempDispo.CurrentRow.Cells[5].Value, session.LEC_Id);
+                    BL.Lecteur.EXE_EmprunterExemplaire((int) dgvExempDispo.CurrentRow.Cells[5].Value, session.LEC_Id);
                     break;
                 default:
                     MessageBox.Show("Veuillez selectionner un exemplaire.", "Information", MessageBoxButtons.OK,
@@ -261,18 +261,18 @@ namespace MainApp.Lecteur
             dgvExempDispo.DataSource = null;
             dgvEmpruntsEmprunt.DataSource = null;
             dgvRetardsEmprunt.DataSource = null;
-            var ListExemplairesByBibId = BL.Lecteur.AllExemplairesByBibId(biblio.BIB_ID);
+            var ListExemplairesByBibId = BL.Lecteur.EXE_AllExemplairesByBibId(biblio.BIB_ID);
             dgvLivreEmprunt.DataSource = ListExemplairesByBibId;
             dgvLivreEmprunt.Columns[0].Visible = false;
-            var ListExempplaireReservedispo = BL.Lecteur.AllExemplairesReserveDispo(session.LEC_Id, biblio.BIB_ID);
+            var ListExempplaireReservedispo = BL.Lecteur.RES_ListeReservationsDisponibleByLEC_IdByBib(session.LEC_Id, biblio.BIB_ID);
             dgvExempDispo.DataSource = ListExempplaireReservedispo;
-            var ListEmpruntsEnCoursByLecId = BL.Lecteur.AllEmpruntsEncoursByLecId(session.LEC_Id);
+            var ListEmpruntsEnCoursByLecId = BL.Lecteur.EMP_AllEmpruntsEnCoursByLEC_Id(session.LEC_Id);
             dgvEmpruntsEmprunt.DataSource = ListEmpruntsEnCoursByLecId;
             dgvEmpruntsEmprunt.Columns[0].Visible = false;
             dgvEmpruntsEmprunt.Columns[4].Visible = false;
             dgvEmpruntsEmprunt.Columns[5].Visible = false;
             dgvEmpruntsEmprunt.Columns[7].Visible = false;
-            var ListRetards = BL.Lecteur.AllRetardsByLecIdAllbib(session.LEC_Id);
+            var ListRetards = BL.Lecteur.EMP_RetardsAllBibByLec(session.LEC_Id);
             dgvRetardsEmprunt.DataSource = ListRetards;
             dgvRetardsEmprunt.Columns[0].Visible = false;
             dgvRetardsEmprunt.Columns[1].Visible = false;
@@ -291,19 +291,17 @@ namespace MainApp.Lecteur
                 somme += double.Parse(dgvRetardsEmprunt.Rows[i].Cells[4].Value.ToString());
             }
             lMontant.Text = somme.ToString();
-
-
         }
 
         private void btnGoISBNReservation_Click(object sender, EventArgs e)
         {
-            var livres = BL.Lecteur.AllLivresByISBN(biblio.BIB_ID,txtISBNReservation.Text);
+            var livres = BL.Lecteur.LIV_LivreByBib_idByISBN(biblio.BIB_ID,txtISBNReservation.Text);
             dgvLivreReservation.DataSource = livres;
         }
 
         private void btnGoTitleReservation_Click(object sender, EventArgs e)
         {
-            var livres = BL.Lecteur.AllLivresByTitle(biblio.BIB_ID, txtTitleReservation.Text);
+            var livres = BL.Lecteur.LIV_LivreByBib_idByTitre(biblio.BIB_ID, txtTitleReservation.Text);
             dgvLivreReservation.DataSource = livres;
         }
 
@@ -312,11 +310,11 @@ namespace MainApp.Lecteur
             //chargement data volet Reservation
             dgvLivreReservation.DataSource = null;
             dgvReservation.DataSource = null;
-            var LivresByBib = BL.Lecteur.AllLLivresByBibId(biblio.BIB_ID);
+            var LivresByBib = BL.Lecteur.LIV_LivreByBib_id(biblio.BIB_ID);
             dgvLivreReservation.DataSource = LivresByBib;
             dgvLivreReservation.Columns[0].Visible = false;
             dgvLivreReservation.Columns[3].Visible = false;
-            var ListReservations = BL.Lecteur.AllReservationsByLecId(session.LEC_Id);
+            var ListReservations = BL.Lecteur.RES_ListeReservationsByLEC_Id(session.LEC_Id);
             dgvReservation.DataSource = ListReservations;
         }
 
@@ -333,7 +331,7 @@ namespace MainApp.Lecteur
         private void btnActuReservation_Click(object sender, EventArgs e)
         {
             dgvReservation.DataSource = null;
-            var ListReservations = BL.Lecteur.AllReservationsByLecId(session.LEC_Id);
+            var ListReservations = BL.Lecteur.RES_ListeReservationsByLEC_Id(session.LEC_Id);
             dgvReservation.DataSource = ListReservations;
         }
 
