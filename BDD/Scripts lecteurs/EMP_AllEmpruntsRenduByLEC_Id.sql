@@ -15,7 +15,7 @@ GO
 -- Create date: <28/12/2016>
 -- Description:	<PROCEDURE QUI RETOURNE LA LISTE DES EMPRUNTS PAR RAPPORTS A UN LECTEUR>
 -- =============================================
-CREATE PROCEDURE [lecteur].[EMP_AllEmpruntsRenduByLEC_Id]
+ALTER PROCEDURE [lecteur].[EMP_AllEmpruntsRenduByLEC_Id]
 	--Parametres
 	@Lec_Id int
 AS
