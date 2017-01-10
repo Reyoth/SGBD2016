@@ -72,5 +72,10 @@ namespace MainApp.Lecteur
         {
 
         }
+
+        private void lBienvenue_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

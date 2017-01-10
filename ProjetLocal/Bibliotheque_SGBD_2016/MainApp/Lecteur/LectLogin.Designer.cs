@@ -59,7 +59,7 @@
             this.cbBibliotheque.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBibliotheque.ForeColor = System.Drawing.Color.Navy;
             this.cbBibliotheque.FormattingEnabled = true;
-            this.cbBibliotheque.Location = new System.Drawing.Point(462, 73);
+            this.cbBibliotheque.Location = new System.Drawing.Point(516, 73);
             this.cbBibliotheque.Name = "cbBibliotheque";
             this.cbBibliotheque.Size = new System.Drawing.Size(136, 28);
             this.cbBibliotheque.TabIndex = 41;
@@ -70,7 +70,7 @@
             this.lBibliotheque.AutoSize = true;
             this.lBibliotheque.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBibliotheque.ForeColor = System.Drawing.Color.Navy;
-            this.lBibliotheque.Location = new System.Drawing.Point(356, 76);
+            this.lBibliotheque.Location = new System.Drawing.Point(410, 77);
             this.lBibliotheque.Name = "lBibliotheque";
             this.lBibliotheque.Size = new System.Drawing.Size(100, 18);
             this.lBibliotheque.TabIndex = 40;
@@ -94,7 +94,7 @@
             this.lPassword.AutoSize = true;
             this.lPassword.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPassword.ForeColor = System.Drawing.Color.Navy;
-            this.lPassword.Location = new System.Drawing.Point(356, 143);
+            this.lPassword.Location = new System.Drawing.Point(410, 140);
             this.lPassword.Name = "lPassword";
             this.lPassword.Size = new System.Drawing.Size(100, 18);
             this.lPassword.TabIndex = 38;
@@ -105,7 +105,7 @@
             this.lUserName.AutoSize = true;
             this.lUserName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lUserName.ForeColor = System.Drawing.Color.Navy;
-            this.lUserName.Location = new System.Drawing.Point(330, 111);
+            this.lUserName.Location = new System.Drawing.Point(380, 109);
             this.lUserName.Name = "lUserName";
             this.lUserName.Size = new System.Drawing.Size(130, 18);
             this.lUserName.TabIndex = 37;
@@ -115,7 +115,7 @@
             // 
             this.txtPwd.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd.ForeColor = System.Drawing.Color.Navy;
-            this.txtPwd.Location = new System.Drawing.Point(462, 137);
+            this.txtPwd.Location = new System.Drawing.Point(516, 137);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(137, 25);
             this.txtPwd.TabIndex = 36;
@@ -125,7 +125,7 @@
             // 
             this.txtLogin.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLogin.ForeColor = System.Drawing.Color.Navy;
-            this.txtLogin.Location = new System.Drawing.Point(462, 106);
+            this.txtLogin.Location = new System.Drawing.Point(516, 106);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(137, 25);
             this.txtLogin.TabIndex = 35;
@@ -135,18 +135,19 @@
             this.lBienvenue.AutoSize = true;
             this.lBienvenue.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBienvenue.ForeColor = System.Drawing.Color.Navy;
-            this.lBienvenue.Location = new System.Drawing.Point(111, 17);
+            this.lBienvenue.Location = new System.Drawing.Point(160, 17);
             this.lBienvenue.Name = "lBienvenue";
             this.lBienvenue.Size = new System.Drawing.Size(439, 18);
             this.lBienvenue.TabIndex = 33;
             this.lBienvenue.Text = "Veuillez choisir une bibliothèqueu et vous identifier s\'il vous plait";
+            this.lBienvenue.Click += new System.EventHandler(this.lBienvenue_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MainApp.Properties.Resources.marche_du_livre1;
-            this.pictureBox1.Location = new System.Drawing.Point(-7, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 228);
+            this.pictureBox1.Size = new System.Drawing.Size(318, 245);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 34;
             this.pictureBox1.TabStop = false;
@@ -156,7 +157,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(708, 261);
+            this.ClientSize = new System.Drawing.Size(708, 279);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbBibliotheque);
             this.Controls.Add(this.lBibliotheque);

@@ -41,31 +41,36 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightBlue;
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(428, 161);
+            this.button1.ForeColor = System.Drawing.Color.Navy;
+            this.button1.Location = new System.Drawing.Point(514, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 50);
             this.button1.TabIndex = 45;
             this.button1.Text = "Changer le mode\r\nde connexion";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnConnect
             // 
+            this.btnConnect.BackColor = System.Drawing.Color.LightBlue;
             this.btnConnect.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.Location = new System.Drawing.Point(285, 161);
+            this.btnConnect.ForeColor = System.Drawing.Color.Navy;
+            this.btnConnect.Location = new System.Drawing.Point(371, 185);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(137, 50);
             this.btnConnect.TabIndex = 43;
             this.btnConnect.Text = "Connecter";
-            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.UseVisualStyleBackColor = false;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // lPassword
             // 
             this.lPassword.AutoSize = true;
             this.lPassword.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lPassword.Location = new System.Drawing.Point(275, 116);
+            this.lPassword.ForeColor = System.Drawing.Color.Navy;
+            this.lPassword.Location = new System.Drawing.Point(408, 141);
             this.lPassword.Name = "lPassword";
             this.lPassword.Size = new System.Drawing.Size(100, 18);
             this.lPassword.TabIndex = 42;
@@ -75,7 +80,8 @@
             // 
             this.lUserName.AutoSize = true;
             this.lUserName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lUserName.Location = new System.Drawing.Point(245, 87);
+            this.lUserName.ForeColor = System.Drawing.Color.Navy;
+            this.lUserName.Location = new System.Drawing.Point(378, 101);
             this.lUserName.Name = "lUserName";
             this.lUserName.Size = new System.Drawing.Size(130, 18);
             this.lUserName.TabIndex = 41;
@@ -84,7 +90,8 @@
             // txtPwd
             // 
             this.txtPwd.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPwd.Location = new System.Drawing.Point(377, 113);
+            this.txtPwd.ForeColor = System.Drawing.Color.Navy;
+            this.txtPwd.Location = new System.Drawing.Point(514, 138);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(137, 25);
             this.txtPwd.TabIndex = 40;
@@ -93,7 +100,8 @@
             // txtLogin
             // 
             this.txtLogin.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(377, 82);
+            this.txtLogin.ForeColor = System.Drawing.Color.Navy;
+            this.txtLogin.Location = new System.Drawing.Point(514, 98);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(137, 25);
             this.txtLogin.TabIndex = 39;
@@ -102,7 +110,8 @@
             // 
             this.lBienvenue.AutoSize = true;
             this.lBienvenue.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lBienvenue.Location = new System.Drawing.Point(184, 18);
+            this.lBienvenue.ForeColor = System.Drawing.Color.Navy;
+            this.lBienvenue.Location = new System.Drawing.Point(321, 31);
             this.lBienvenue.Name = "lBienvenue";
             this.lBienvenue.Size = new System.Drawing.Size(330, 18);
             this.lBienvenue.TabIndex = 38;
@@ -111,9 +120,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MainApp.Properties.Resources.livres2;
-            this.pictureBox1.Location = new System.Drawing.Point(7, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 43);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(272, 235);
+            this.pictureBox1.Size = new System.Drawing.Size(344, 236);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
@@ -123,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(572, 234);
+            this.ClientSize = new System.Drawing.Size(709, 278);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.lPassword);

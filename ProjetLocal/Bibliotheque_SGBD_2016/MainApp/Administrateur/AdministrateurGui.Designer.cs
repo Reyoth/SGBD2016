@@ -32,7 +32,6 @@
             this.lISBNrechLivre = new System.Windows.Forms.Label();
             this.gbDetReservation = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.pbLiveRetard = new System.Windows.Forms.PictureBox();
             this.txtPrenomRetardataire = new System.Windows.Forms.TextBox();
             this.txtMontantRetard = new System.Windows.Forms.TextBox();
             this.txtNbJoursRetards = new System.Windows.Forms.TextBox();
@@ -51,7 +50,6 @@
             this.gdvRetardataires = new System.Windows.Forms.DataGridView();
             this.gbUserEmprunt = new System.Windows.Forms.GroupBox();
             this.txtNomEmprunteur = new System.Windows.Forms.TextBox();
-            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
             this.txtPrenomemprunteur = new System.Windows.Forms.TextBox();
             this.txtRetardsEmprunteur = new System.Windows.Forms.TextBox();
             this.txtNbEmpruntsEmprunteur = new System.Windows.Forms.TextBox();
@@ -96,7 +94,6 @@
             this.lListeLivre = new System.Windows.Forms.Label();
             this.tbAdministrateur = new System.Windows.Forms.TabControl();
             this.tpGestionLivre = new System.Windows.Forms.TabPage();
-            this.pbLogoGestLivre = new System.Windows.Forms.PictureBox();
             this.gbAjoutManuelLivre = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtLienAjMan = new System.Windows.Forms.TextBox();
@@ -104,12 +101,11 @@
             this.txtTitreAjMan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtISBNAjMan = new System.Windows.Forms.TextBox();
-            this.pbLivre = new System.Windows.Forms.PictureBox();
             this.tpGestionExemplaires = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dgvExemplaire = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cbLivreExemp = new System.Windows.Forms.ComboBox();
             this.btnSauveExemp = new System.Windows.Forms.Button();
             this.cbBiblioExemp = new System.Windows.Forms.ComboBox();
             this.dtDateAchatExemp = new System.Windows.Forms.DateTimePicker();
@@ -119,7 +115,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtCodeExemplaire = new System.Windows.Forms.TextBox();
-            this.pbExemplaire = new System.Windows.Forms.PictureBox();
             this.tpgestionLecteurs = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.button33 = new System.Windows.Forms.Button();
@@ -132,7 +127,6 @@
             this.txtUserDataVille = new System.Windows.Forms.TextBox();
             this.dtUserDataDateNaissance = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
-            this.pbUserPictureProfil = new System.Windows.Forms.PictureBox();
             this.button15 = new System.Windows.Forms.Button();
             this.txtUserDataUsername = new System.Windows.Forms.TextBox();
             this.txtUserDataAdresse = new System.Windows.Forms.TextBox();
@@ -148,13 +142,18 @@
             this.lusername = new System.Windows.Forms.Label();
             this.picSignOut = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.cbLivreExemp = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbLogoGestLivre = new System.Windows.Forms.PictureBox();
+            this.pbLivre = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbExemplaire = new System.Windows.Forms.PictureBox();
+            this.pbLiveRetard = new System.Windows.Forms.PictureBox();
+            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
+            this.pbUserPictureProfil = new System.Windows.Forms.PictureBox();
             this.gbDetReservation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).BeginInit();
             this.tpEmpruntEtReservation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvRetardataires)).BeginInit();
             this.gbUserEmprunt.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvEmpruntEnCours)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -168,20 +167,23 @@
             this.groupBox2.SuspendLayout();
             this.tbAdministrateur.SuspendLayout();
             this.tpGestionLivre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).BeginInit();
             this.gbAjoutManuelLivre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).BeginInit();
             this.tpGestionExemplaires.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).BeginInit();
             this.tpgestionLecteurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).BeginInit();
             this.gbUserDataProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).BeginInit();
             this.SuspendLayout();
             // 
             // lISBNrechLivre
@@ -222,16 +224,6 @@
             this.label12.Size = new System.Drawing.Size(18, 18);
             this.label12.TabIndex = 39;
             this.label12.Text = "€";
-            // 
-            // pbLiveRetard
-            // 
-            this.pbLiveRetard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLiveRetard.Location = new System.Drawing.Point(337, 14);
-            this.pbLiveRetard.Name = "pbLiveRetard";
-            this.pbLiveRetard.Size = new System.Drawing.Size(137, 150);
-            this.pbLiveRetard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLiveRetard.TabIndex = 38;
-            this.pbLiveRetard.TabStop = false;
             // 
             // txtPrenomRetardataire
             // 
@@ -437,16 +429,6 @@
             this.txtNomEmprunteur.Size = new System.Drawing.Size(167, 25);
             this.txtNomEmprunteur.TabIndex = 38;
             // 
-            // pbLivreEmprunt
-            // 
-            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivreEmprunt.Location = new System.Drawing.Point(349, 17);
-            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
-            this.pbLivreEmprunt.Size = new System.Drawing.Size(118, 132);
-            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivreEmprunt.TabIndex = 37;
-            this.pbLivreEmprunt.TabStop = false;
-            // 
             // txtPrenomemprunteur
             // 
             this.txtPrenomemprunteur.BackColor = System.Drawing.SystemColors.Window;
@@ -544,13 +526,15 @@
             // 
             // btnISBNGoRechLivre
             // 
+            this.btnISBNGoRechLivre.BackColor = System.Drawing.Color.LightBlue;
             this.btnISBNGoRechLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnISBNGoRechLivre.ForeColor = System.Drawing.Color.Navy;
             this.btnISBNGoRechLivre.Location = new System.Drawing.Point(221, 22);
             this.btnISBNGoRechLivre.Name = "btnISBNGoRechLivre";
             this.btnISBNGoRechLivre.Size = new System.Drawing.Size(43, 29);
             this.btnISBNGoRechLivre.TabIndex = 1;
             this.btnISBNGoRechLivre.Text = "GO!";
-            this.btnISBNGoRechLivre.UseVisualStyleBackColor = true;
+            this.btnISBNGoRechLivre.UseVisualStyleBackColor = false;
             this.btnISBNGoRechLivre.Click += new System.EventHandler(this.btnISBNGoRechLivre_Click);
             // 
             // btnExempActualiser
@@ -676,24 +660,28 @@
             // 
             // tbnReserverLivre
             // 
+            this.tbnReserverLivre.BackColor = System.Drawing.Color.LightBlue;
             this.tbnReserverLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbnReserverLivre.ForeColor = System.Drawing.Color.Navy;
             this.tbnReserverLivre.Location = new System.Drawing.Point(989, 558);
             this.tbnReserverLivre.Name = "tbnReserverLivre";
             this.tbnReserverLivre.Size = new System.Drawing.Size(80, 31);
             this.tbnReserverLivre.TabIndex = 5;
             this.tbnReserverLivre.Text = "Editer";
-            this.tbnReserverLivre.UseVisualStyleBackColor = true;
+            this.tbnReserverLivre.UseVisualStyleBackColor = false;
             this.tbnReserverLivre.Click += new System.EventHandler(this.tbnReserverLivre_Click);
             // 
             // btnActualiserLivre
             // 
+            this.btnActualiserLivre.BackColor = System.Drawing.Color.LightBlue;
             this.btnActualiserLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualiserLivre.ForeColor = System.Drawing.Color.Navy;
             this.btnActualiserLivre.Location = new System.Drawing.Point(896, 558);
             this.btnActualiserLivre.Name = "btnActualiserLivre";
             this.btnActualiserLivre.Size = new System.Drawing.Size(87, 31);
             this.btnActualiserLivre.TabIndex = 3;
             this.btnActualiserLivre.Text = "Actualiser";
-            this.btnActualiserLivre.UseVisualStyleBackColor = true;
+            this.btnActualiserLivre.UseVisualStyleBackColor = false;
             this.btnActualiserLivre.Click += new System.EventHandler(this.btnActualiserLivre_Click);
             // 
             // gdvLivre
@@ -736,13 +724,15 @@
             // 
             // btnTitreRechLivre
             // 
+            this.btnTitreRechLivre.BackColor = System.Drawing.Color.LightBlue;
             this.btnTitreRechLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTitreRechLivre.ForeColor = System.Drawing.Color.Navy;
             this.btnTitreRechLivre.Location = new System.Drawing.Point(221, 15);
             this.btnTitreRechLivre.Name = "btnTitreRechLivre";
             this.btnTitreRechLivre.Size = new System.Drawing.Size(43, 29);
             this.btnTitreRechLivre.TabIndex = 4;
             this.btnTitreRechLivre.Text = "GO!";
-            this.btnTitreRechLivre.UseVisualStyleBackColor = true;
+            this.btnTitreRechLivre.UseVisualStyleBackColor = false;
             this.btnTitreRechLivre.Click += new System.EventHandler(this.btnTitreRechLivre_Click);
             // 
             // lTitreRechLivre
@@ -787,24 +777,28 @@
             // 
             // btnMAJLivre
             // 
+            this.btnMAJLivre.BackColor = System.Drawing.Color.LightBlue;
             this.btnMAJLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMAJLivre.ForeColor = System.Drawing.Color.Navy;
             this.btnMAJLivre.Location = new System.Drawing.Point(121, 191);
             this.btnMAJLivre.Name = "btnMAJLivre";
             this.btnMAJLivre.Size = new System.Drawing.Size(102, 31);
             this.btnMAJLivre.TabIndex = 27;
             this.btnMAJLivre.Text = "Mettre à jour";
-            this.btnMAJLivre.UseVisualStyleBackColor = true;
+            this.btnMAJLivre.UseVisualStyleBackColor = false;
             this.btnMAJLivre.Click += new System.EventHandler(this.btnMAJLivre_Click);
             // 
             // btnAjManLivre
             // 
+            this.btnAjManLivre.BackColor = System.Drawing.Color.LightBlue;
             this.btnAjManLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjManLivre.ForeColor = System.Drawing.Color.Navy;
             this.btnAjManLivre.Location = new System.Drawing.Point(35, 191);
             this.btnAjManLivre.Name = "btnAjManLivre";
             this.btnAjManLivre.Size = new System.Drawing.Size(80, 31);
             this.btnAjManLivre.TabIndex = 26;
             this.btnAjManLivre.Text = "Ajouter";
-            this.btnAjManLivre.UseVisualStyleBackColor = true;
+            this.btnAjManLivre.UseVisualStyleBackColor = false;
             this.btnAjManLivre.Click += new System.EventHandler(this.btnAjManLivre_Click);
             // 
             // label2
@@ -841,13 +835,15 @@
             // 
             // btnAjRapLivre
             // 
+            this.btnAjRapLivre.BackColor = System.Drawing.Color.LightBlue;
             this.btnAjRapLivre.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjRapLivre.ForeColor = System.Drawing.Color.Navy;
             this.btnAjRapLivre.Location = new System.Drawing.Point(221, 14);
             this.btnAjRapLivre.Name = "btnAjRapLivre";
             this.btnAjRapLivre.Size = new System.Drawing.Size(43, 29);
             this.btnAjRapLivre.TabIndex = 3;
             this.btnAjRapLivre.Text = "GO!";
-            this.btnAjRapLivre.UseVisualStyleBackColor = true;
+            this.btnAjRapLivre.UseVisualStyleBackColor = false;
             this.btnAjRapLivre.Click += new System.EventHandler(this.btnAjRapLivre_Click);
             // 
             // label1
@@ -915,22 +911,13 @@
             this.tpGestionLivre.Controls.Add(this.btnActualiserLivre);
             this.tpGestionLivre.Controls.Add(this.gdvLivre);
             this.tpGestionLivre.Controls.Add(this.gbRechLivre);
+            this.tpGestionLivre.Controls.Add(this.pictureBox1);
             this.tpGestionLivre.Location = new System.Drawing.Point(4, 27);
             this.tpGestionLivre.Name = "tpGestionLivre";
             this.tpGestionLivre.Padding = new System.Windows.Forms.Padding(3);
             this.tpGestionLivre.Size = new System.Drawing.Size(1076, 595);
             this.tpGestionLivre.TabIndex = 0;
             this.tpGestionLivre.Text = "Livres";
-            // 
-            // pbLogoGestLivre
-            // 
-            this.pbLogoGestLivre.Image = global::MainApp.Properties.Resources.Livre_2;
-            this.pbLogoGestLivre.Location = new System.Drawing.Point(845, 14);
-            this.pbLogoGestLivre.Name = "pbLogoGestLivre";
-            this.pbLogoGestLivre.Size = new System.Drawing.Size(223, 236);
-            this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogoGestLivre.TabIndex = 36;
-            this.pbLogoGestLivre.TabStop = false;
             // 
             // gbAjoutManuelLivre
             // 
@@ -1009,16 +996,6 @@
             this.txtISBNAjMan.Size = new System.Drawing.Size(151, 25);
             this.txtISBNAjMan.TabIndex = 6;
             // 
-            // pbLivre
-            // 
-            this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivre.Location = new System.Drawing.Point(266, 19);
-            this.pbLivre.Name = "pbLivre";
-            this.pbLivre.Size = new System.Drawing.Size(161, 202);
-            this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivre.TabIndex = 4;
-            this.pbLivre.TabStop = false;
-            // 
             // tpGestionExemplaires
             // 
             this.tpGestionExemplaires.BackColor = System.Drawing.SystemColors.Control;
@@ -1034,16 +1011,6 @@
             this.tpGestionExemplaires.Size = new System.Drawing.Size(1076, 595);
             this.tpGestionExemplaires.TabIndex = 5;
             this.tpGestionExemplaires.Text = "Exemplaires";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MainApp.Properties.Resources.Livre_2;
-            this.pictureBox2.Location = new System.Drawing.Point(842, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 249);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 37;
-            this.pictureBox2.TabStop = false;
             // 
             // label17
             // 
@@ -1088,6 +1055,14 @@
             this.groupBox4.TabIndex = 25;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ajouter / Modifier  un exemplaire :";
+            // 
+            // cbLivreExemp
+            // 
+            this.cbLivreExemp.FormattingEnabled = true;
+            this.cbLivreExemp.Location = new System.Drawing.Point(88, 64);
+            this.cbLivreExemp.Name = "cbLivreExemp";
+            this.cbLivreExemp.Size = new System.Drawing.Size(151, 26);
+            this.cbLivreExemp.TabIndex = 32;
             // 
             // btnSauveExemp
             // 
@@ -1173,16 +1148,6 @@
             this.txtCodeExemplaire.Name = "txtCodeExemplaire";
             this.txtCodeExemplaire.Size = new System.Drawing.Size(151, 25);
             this.txtCodeExemplaire.TabIndex = 6;
-            // 
-            // pbExemplaire
-            // 
-            this.pbExemplaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbExemplaire.Location = new System.Drawing.Point(303, 11);
-            this.pbExemplaire.Name = "pbExemplaire";
-            this.pbExemplaire.Size = new System.Drawing.Size(174, 216);
-            this.pbExemplaire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExemplaire.TabIndex = 4;
-            this.pbExemplaire.TabStop = false;
             // 
             // tpgestionLecteurs
             // 
@@ -1329,16 +1294,6 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Sexe  :";
             // 
-            // pbUserPictureProfil
-            // 
-            this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUserPictureProfil.Location = new System.Drawing.Point(925, 12);
-            this.pbUserPictureProfil.Name = "pbUserPictureProfil";
-            this.pbUserPictureProfil.Size = new System.Drawing.Size(135, 149);
-            this.pbUserPictureProfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUserPictureProfil.TabIndex = 13;
-            this.pbUserPictureProfil.TabStop = false;
-            // 
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1478,13 +1433,85 @@
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
             // 
-            // cbLivreExemp
+            // pictureBox1
             // 
-            this.cbLivreExemp.FormattingEnabled = true;
-            this.cbLivreExemp.Location = new System.Drawing.Point(88, 64);
-            this.cbLivreExemp.Name = "cbLivreExemp";
-            this.cbLivreExemp.Size = new System.Drawing.Size(151, 26);
-            this.cbLivreExemp.TabIndex = 32;
+            this.pictureBox1.Image = global::MainApp.Properties.Resources._0_62655_8bb7f0cc_XL;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 474);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1084, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pbLogoGestLivre
+            // 
+            this.pbLogoGestLivre.Image = global::MainApp.Properties.Resources.Livre_2;
+            this.pbLogoGestLivre.Location = new System.Drawing.Point(845, 14);
+            this.pbLogoGestLivre.Name = "pbLogoGestLivre";
+            this.pbLogoGestLivre.Size = new System.Drawing.Size(223, 236);
+            this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoGestLivre.TabIndex = 36;
+            this.pbLogoGestLivre.TabStop = false;
+            // 
+            // pbLivre
+            // 
+            this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivre.Location = new System.Drawing.Point(266, 19);
+            this.pbLivre.Name = "pbLivre";
+            this.pbLivre.Size = new System.Drawing.Size(161, 202);
+            this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivre.TabIndex = 4;
+            this.pbLivre.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MainApp.Properties.Resources.Livre_2;
+            this.pictureBox2.Location = new System.Drawing.Point(842, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(227, 249);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pbExemplaire
+            // 
+            this.pbExemplaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbExemplaire.Location = new System.Drawing.Point(303, 11);
+            this.pbExemplaire.Name = "pbExemplaire";
+            this.pbExemplaire.Size = new System.Drawing.Size(174, 216);
+            this.pbExemplaire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExemplaire.TabIndex = 4;
+            this.pbExemplaire.TabStop = false;
+            // 
+            // pbLiveRetard
+            // 
+            this.pbLiveRetard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLiveRetard.Location = new System.Drawing.Point(337, 14);
+            this.pbLiveRetard.Name = "pbLiveRetard";
+            this.pbLiveRetard.Size = new System.Drawing.Size(137, 150);
+            this.pbLiveRetard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLiveRetard.TabIndex = 38;
+            this.pbLiveRetard.TabStop = false;
+            // 
+            // pbLivreEmprunt
+            // 
+            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivreEmprunt.Location = new System.Drawing.Point(349, 17);
+            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
+            this.pbLivreEmprunt.Size = new System.Drawing.Size(118, 132);
+            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivreEmprunt.TabIndex = 37;
+            this.pbLivreEmprunt.TabStop = false;
+            // 
+            // pbUserPictureProfil
+            // 
+            this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbUserPictureProfil.Location = new System.Drawing.Point(925, 12);
+            this.pbUserPictureProfil.Name = "pbUserPictureProfil";
+            this.pbUserPictureProfil.Size = new System.Drawing.Size(135, 149);
+            this.pbUserPictureProfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUserPictureProfil.TabIndex = 13;
+            this.pbUserPictureProfil.TabStop = false;
             // 
             // AdministrateurGui
             // 
@@ -1502,13 +1529,11 @@
             this.Load += new System.EventHandler(this.AdministrateurGui_Load);
             this.gbDetReservation.ResumeLayout(false);
             this.gbDetReservation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).EndInit();
             this.tpEmpruntEtReservation.ResumeLayout(false);
             this.tpEmpruntEtReservation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvRetardataires)).EndInit();
             this.gbUserEmprunt.ResumeLayout(false);
             this.gbUserEmprunt.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvEmpruntEnCours)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
@@ -1528,25 +1553,28 @@
             this.tbAdministrateur.ResumeLayout(false);
             this.tpGestionLivre.ResumeLayout(false);
             this.tpGestionLivre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).EndInit();
             this.gbAjoutManuelLivre.ResumeLayout(false);
             this.gbAjoutManuelLivre.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).EndInit();
             this.tpGestionExemplaires.ResumeLayout(false);
             this.tpGestionExemplaires.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).EndInit();
             this.tpgestionLecteurs.ResumeLayout(false);
             this.tpgestionLecteurs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).EndInit();
             this.gbUserDataProfile.ResumeLayout(false);
             this.gbUserDataProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1674,5 +1702,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox cbLivreExemp;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

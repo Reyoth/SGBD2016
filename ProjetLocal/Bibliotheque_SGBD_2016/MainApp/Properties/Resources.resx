@@ -121,15 +121,6 @@
   <data name="marche-du-livre1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\marche-du-livre1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SignOUt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SignOUt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="livres2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\livres2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Livre 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Livre 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,22 +130,34 @@
   <data name="9d70653d7f974815fac9be87c204bcc2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\9d70653d7f974815fac9be87c204bcc2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SignOUt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SignOUt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SignOUt21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SignOUt21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bannerVines" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bannerVines.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ligne" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ligne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SignOUt21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SignOUt21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="biblio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\biblio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bannerVines" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bannerVines.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SignOUt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SignOUt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HomePageWave" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HomePageWave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="livres2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\livres2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SignOUt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SignOUt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="0_62655_8bb7f0cc_XL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\0_62655_8bb7f0cc_XL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

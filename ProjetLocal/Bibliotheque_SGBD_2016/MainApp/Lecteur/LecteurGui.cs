@@ -44,10 +44,10 @@ namespace MainApp.Lecteur
             dgvExempDispo.DataSource = ListExempplaireReservedispo;
             var ListEmpruntsEnCoursByLecId = BL.Lecteur.EMP_AllEmpruntsEnCoursByLEC_Id(session.LEC_Id);
             dgvEmpruntsEmprunt.DataSource = ListEmpruntsEnCoursByLecId;
-            dgvEmpruntsEmprunt.Columns[0].Visible = false;
-            dgvEmpruntsEmprunt.Columns[4].Visible = false;
-            dgvEmpruntsEmprunt.Columns[5].Visible = false;
-            dgvEmpruntsEmprunt.Columns[7].Visible = false;
+            //dgvEmpruntsEmprunt.Columns[0].Visible = false;
+            //dgvEmpruntsEmprunt.Columns[4].Visible = false;
+            //dgvEmpruntsEmprunt.Columns[5].Visible = false;
+            //dgvEmpruntsEmprunt.Columns[7].Visible = false;
             var ListRetards = BL.Lecteur.EMP_RetardsAllBibByLec(session.LEC_Id);
             dgvRetardsEmprunt.DataSource = ListRetards;
             dgvRetardsEmprunt.Columns[0].Visible = false;
@@ -234,7 +234,7 @@ namespace MainApp.Lecteur
                     BL.Lecteur.EXE_EmprunterExemplaire((int) dgvLivreEmprunt.CurrentRow.Cells[0].Value, session.LEC_Id);
                     break;
                 case 2:
-                    BL.Lecteur.EXE_EmprunterExemplaire((int) dgvExempDispo.CurrentRow.Cells[5].Value, session.LEC_Id);
+                    BL.Lecteur.EXE_EmprunterExemplaire((int) dgvExempDispo.CurrentRow.Cells[3].Value, session.LEC_Id);
                     break;
                 default:
                     MessageBox.Show("Veuillez selectionner un exemplaire.", "Information", MessageBoxButtons.OK,
@@ -337,7 +337,7 @@ namespace MainApp.Lecteur
 
         private void btnActualiserFacturation_Click(object sender, EventArgs e)
         {
-
+            var EmpuntsClotures = BL.Lecteur.EMP_AllEmpruntsRenduByLEC_Id(session.LEC_Id);
         }
 
         private void tabControl2_Click(object sender, EventArgs e)

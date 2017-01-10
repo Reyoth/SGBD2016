@@ -13,12 +13,11 @@ namespace DALEF
     
     public partial class RES_ListeReservationsDisponibleByLEC_IdByBib_Result
     {
-        public int ID_Réservation { get; set; }
         public string Titre { get; set; }
-        public System.DateTime Date_de_réservation { get; set; }
-        public Nullable<int> NombreExemplaireDisponible { get; set; }
+        public string EXE_Code { get; set; }
         public string BIB_Libelle { get; set; }
         public int EXE_Id { get; set; }
         public int LEC_Id { get; set; }
+        public string LIV_Image { get; set; }
     }
 }
