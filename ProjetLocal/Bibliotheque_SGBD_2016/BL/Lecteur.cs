@@ -34,7 +34,7 @@ namespace BL
         //        }
         //    }
         //}
-        public static List<EMP_AllEmpruntsByLEC_Id_Result> AllEmpruntsByLecId(int LecId)
+        public static List<EMP_AllEmpruntsRenduByLEC_Id_Result> AllEmpruntsByLecId(int LecId)
         {
             return DALEF.Lecteur.AllEmpruntsByLecId(LecId); 
         }

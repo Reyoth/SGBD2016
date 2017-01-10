@@ -12,6 +12,9 @@
         <Function Name="EMP_AllEmpruntsEnCoursByLEC_Id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
           <Parameter Name="Lec_Id" Type="int" Mode="In" />
         </Function>
+        <Function Name="EMP_AllEmpruntsRenduByLEC_Id" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
+          <Parameter Name="Lec_Id" Type="int" Mode="In" />
+        </Function>
         <Function Name="EMP_RetardsAllBibByLec" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="lecteur">
           <Parameter Name="Lec_id" Type="int" Mode="In" />
         </Function>
@@ -103,9 +106,6 @@
           <FunctionImport Name="LIV_LivreByTitle" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByTitle_Result)">
           <Parameter Name="Liv_Title" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="RES_ListeReservationsByLEC_Id" ReturnType="Collection(SGBD2016_BibliothequeModel.RES_ListeReservationsByLEC_Id_Result)">
-          <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="RES_ListeReservationsDisponibleByLEC_Id" ReturnType="Collection(SGBD2016_BibliothequeModel.RES_ListeReservationsDisponibleByLEC_Id_Result)">
             <Parameter Name="IdLecteur" Mode="In" Type="Int32" />
           </FunctionImport>
@@ -166,11 +166,17 @@
             <Parameter Name="ISBN" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="LIV_LivreByBib_id" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByBib_id_Result)">
-            <Parameter Name="BibId" Mode="In" Type="Int32" />
+          <Parameter Name="BibId" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="LIV_LivreByBib_idByTitre" ReturnType="Collection(SGBD2016_BibliothequeModel.LIV_LivreByBib_idByTitre_Result)">
             <Parameter Name="BibId" Mode="In" Type="Int32" />
             <Parameter Name="titre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="EMP_AllEmpruntsRenduByLEC_Id" ReturnType="Collection(SGBD2016_BibliothequeModel.EMP_AllEmpruntsRenduByLEC_Id_Result)">
+          <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RES_ListeReservationsByLEC_Id" ReturnType="Collection(SGBD2016_BibliothequeModel.RES_ListeReservationsByLEC_Id_Result)">
+            <Parameter Name="Lec_Id" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="EMP_AllEmpruntsByLEC_Id_Result">
@@ -192,11 +198,6 @@
           <Property Type="String" Name="LIV_Titre" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="LIV_Image" Nullable="true" />
           <Property Type="String" Name="LIV_Auteurs" Nullable="true" MaxLength="250" />
-        </ComplexType>
-        <ComplexType Name="RES_ListeReservationsByLEC_Id_Result">
-          <Property Type="Int32" Name="ID_Réservation" Nullable="false" />
-          <Property Type="String" Name="Titre" Nullable="false" MaxLength="50" />
-          <Property Type="DateTime" Name="Date_de_réservation" Nullable="false" Precision="23" />
         </ComplexType>
         <ComplexType Name="RES_ListeReservationsDisponibleByLEC_Id_Result">
           <Property Type="Int32" Name="ID_Réservation" Nullable="false" />
@@ -320,6 +321,22 @@
           <Property Type="String" Name="Image" Nullable="true" />
           <Property Type="String" Name="Auteurs" Nullable="true" MaxLength="250" />
         </ComplexType>
+        <ComplexType Name="EMP_AllEmpruntsRenduByLEC_Id_Result">
+          <Property Type="String" Name="Exemplaire" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Titre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Bibliothèque" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Date_d_emprunt" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="EMP_DateRetour" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="EMP_MontantPaye" Nullable="true" Precision="25" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="RES_ListeReservationsByLEC_Id_Result">
+          <Property Type="Int32" Name="ID_Réservation" Nullable="false" />
+          <Property Type="String" Name="Titre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="ISBN" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="Date_de_réservation" Nullable="false" Precision="23" />
+          <Property Type="String" Name="LIV_Auteurs" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="LIV_Image" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -356,15 +373,6 @@
                 <ScalarProperty Name="LIV_Titre" ColumnName="LIV_Titre" />
                 <ScalarProperty Name="LIV_Image" ColumnName="LIV_Image" />
                 <ScalarProperty Name="LIV_Auteurs" ColumnName="LIV_Auteurs" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="RES_ListeReservationsByLEC_Id" FunctionName="SGBD2016_BibliothequeModel.Store.RES_ListeReservationsByLEC_Id">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.RES_ListeReservationsByLEC_Id_Result">
-                <ScalarProperty Name="ID_Réservation" ColumnName="ID Réservation" />
-                <ScalarProperty Name="Titre" ColumnName="Titre" />
-                <ScalarProperty Name="Date_de_réservation" ColumnName="Date de réservation" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -539,6 +547,30 @@
                 <ScalarProperty Name="Titre" ColumnName="Titre" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Auteurs" ColumnName="Auteurs" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="EMP_AllEmpruntsRenduByLEC_Id" FunctionName="SGBD2016_BibliothequeModel.Store.EMP_AllEmpruntsRenduByLEC_Id">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.EMP_AllEmpruntsRenduByLEC_Id_Result">
+                <ScalarProperty Name="Exemplaire" ColumnName="Exemplaire" />
+                <ScalarProperty Name="Titre" ColumnName="Titre" />
+                <ScalarProperty Name="Bibliothèque" ColumnName="Bibliothèque" />
+                <ScalarProperty Name="Date_d_emprunt" ColumnName="Date d'emprunt" />
+                <ScalarProperty Name="EMP_DateRetour" ColumnName="EMP_DateRetour" />
+                <ScalarProperty Name="EMP_MontantPaye" ColumnName="EMP_MontantPaye" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RES_ListeReservationsByLEC_Id" FunctionName="SGBD2016_BibliothequeModel.Store.RES_ListeReservationsByLEC_Id">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SGBD2016_BibliothequeModel.RES_ListeReservationsByLEC_Id_Result">
+                <ScalarProperty Name="ID_Réservation" ColumnName="ID Réservation" />
+                <ScalarProperty Name="Titre" ColumnName="Titre" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="Date_de_réservation" ColumnName="Date de réservation" />
+                <ScalarProperty Name="LIV_Auteurs" ColumnName="LIV_Auteurs" />
+                <ScalarProperty Name="LIV_Image" ColumnName="LIV_Image" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

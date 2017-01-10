@@ -444,7 +444,11 @@ namespace MainApp.Administrateur
 
         private void btn_Click(object sender, EventArgs e)
         {
-            BL.Administrateur.EXE_CreerExemplaire(txtCodeExemplaire.Text, (dtDateAchatExemp.Value.Date), 0, cbBiblioExemp.SelectedItem.ToString(), cbLivreExemp.SelectedItem.ToString());
+            string code = txtCodeExemplaire.Text;
+            DateTime dateAchat = dtDateAchatExemp.Value.Date;
+            string bibliotheque = cbBiblioExemp.SelectedItem.ToString();
+            string livre = cbLivreExemp.SelectedItem.ToString();
+            BL.Administrateur.EXE_CreerExemplaire(code, dateAchat, 0,bibliotheque,livre);
         }
 
         public void ChargerLivreTitres(ComboBox cb)

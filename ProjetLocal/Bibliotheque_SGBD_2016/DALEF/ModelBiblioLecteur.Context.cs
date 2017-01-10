@@ -68,15 +68,6 @@ namespace DALEF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LIV_LivreByTitle_Result>("LIV_LivreByTitle", liv_TitleParameter);
         }
     
-        public virtual ObjectResult<RES_ListeReservationsByLEC_Id_Result> RES_ListeReservationsByLEC_Id(Nullable<int> lec_Id)
-        {
-            var lec_IdParameter = lec_Id.HasValue ?
-                new ObjectParameter("Lec_Id", lec_Id) :
-                new ObjectParameter("Lec_Id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsByLEC_Id_Result>("RES_ListeReservationsByLEC_Id", lec_IdParameter);
-        }
-    
         public virtual ObjectResult<RES_ListeReservationsDisponibleByLEC_Id_Result> RES_ListeReservationsDisponibleByLEC_Id(Nullable<int> idLecteur)
         {
             var idLecteurParameter = idLecteur.HasValue ?
@@ -292,6 +283,24 @@ namespace DALEF
                 new ObjectParameter("titre", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<LIV_LivreByBib_idByTitre_Result>("LIV_LivreByBib_idByTitre", bibIdParameter, titreParameter);
+        }
+    
+        public virtual ObjectResult<EMP_AllEmpruntsRenduByLEC_Id_Result> EMP_AllEmpruntsRenduByLEC_Id(Nullable<int> lec_Id)
+        {
+            var lec_IdParameter = lec_Id.HasValue ?
+                new ObjectParameter("Lec_Id", lec_Id) :
+                new ObjectParameter("Lec_Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_AllEmpruntsRenduByLEC_Id_Result>("EMP_AllEmpruntsRenduByLEC_Id", lec_IdParameter);
+        }
+    
+        public virtual ObjectResult<RES_ListeReservationsByLEC_Id_Result> RES_ListeReservationsByLEC_Id(Nullable<int> lec_Id)
+        {
+            var lec_IdParameter = lec_Id.HasValue ?
+                new ObjectParameter("Lec_Id", lec_Id) :
+                new ObjectParameter("Lec_Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsByLEC_Id_Result>("RES_ListeReservationsByLEC_Id", lec_IdParameter);
         }
     }
 }

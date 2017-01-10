@@ -37,11 +37,11 @@ namespace DALEF
             }
         }
 
-        public static List<EMP_AllEmpruntsByLEC_Id_Result> AllEmpruntsByLecId(int lecId)
+        public static List<EMP_AllEmpruntsRenduByLEC_Id_Result> AllEmpruntsByLecId(int lecId)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                return dbContext.EMP_AllEmpruntsByLEC_Id(lecId).ToList();
+                return dbContext.EMP_AllEmpruntsRenduByLEC_Id(lecId).ToList();
             }
         }
 

@@ -60,6 +60,9 @@
     <Compile Include="EMP_AllEmpruntsEnCoursByLEC_Id_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>
+    <Compile Include="EMP_AllEmpruntsRenduByLEC_Id_Result.cs">
+      <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
+    </Compile>
     <Compile Include="EMP_RetardsAllBibByLec_Result.cs">
       <DependentUpon>ModelBiblioLecteur.tt</DependentUpon>
     </Compile>

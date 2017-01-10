@@ -176,6 +176,26 @@ namespace MainApp.Lecteur
                                       txtUserDataUserName.Text,
                                       txtUserDataPassword.Text,
                                       pbUserPictureProfile.ImageLocation);
+                txtUserDataNom.Enabled = false;
+                txtUserDataPrenom.Enabled = false;
+                txtUserDataSexe.Enabled = false;
+                txtUserDataAdresse.Enabled = false;
+                txtUserDataVille.Enabled = false;
+                txtUserDataCodePostal.Enabled = false;
+                dtUserDataDateNaissance.Enabled = false;
+                txtUserDataUserName.Enabled = false;
+                txtUserDataPassword.Enabled = false;
+                txtLienPhoto.Enabled = false;
+
+            txtUserDataNom.ReadOnly = true;
+            txtUserDataPrenom.ReadOnly = true;
+            txtUserDataSexe.ReadOnly = true;
+            txtUserDataAdresse.ReadOnly = true;
+            txtUserDataVille.ReadOnly = true;
+            txtUserDataCodePostal.ReadOnly = true;
+            txtUserDataUserName.ReadOnly = true;
+            txtUserDataPassword.ReadOnly = true;
+            txtLienPhoto.ReadOnly = true;
         }
 
         private void lexempDispo_Click(object sender, EventArgs e)
@@ -270,6 +290,8 @@ namespace MainApp.Lecteur
                 somme += double.Parse(dgvRetardsEmprunt.Rows[i].Cells[4].Value.ToString());
             }
             lMontant.Text = somme.ToString();
+
+
         }
 
         private void btnGoISBNReservation_Click(object sender, EventArgs e)
@@ -281,6 +303,7 @@ namespace MainApp.Lecteur
         private void btnGoTitleReservation_Click(object sender, EventArgs e)
         {
             var livres = BL.Lecteur.AllLivresByTitle(biblio.BIB_ID, txtTitleReservation.Text);
+            dgvLivreReservation.DataSource = livres;
         }
 
         private void btnActuLivres_Click(object sender, EventArgs e)
@@ -302,6 +325,18 @@ namespace MainApp.Lecteur
         }
 
         private void tpReservation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActuReservation_Click(object sender, EventArgs e)
+        {
+            dgvReservation.DataSource = null;
+            var ListReservations = BL.Lecteur.AllReservationsByLecId(session.LEC_Id);
+            dgvReservation.DataSource = ListReservations;
+        }
+
+        private void btnActualiserFacturation_Click(object sender, EventArgs e)
         {
 
         }

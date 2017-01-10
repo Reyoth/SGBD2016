@@ -333,6 +333,7 @@
             this.btnActuReservation.TabIndex = 28;
             this.btnActuReservation.Text = "Actualiser reservations";
             this.btnActuReservation.UseVisualStyleBackColor = true;
+            this.btnActuReservation.Click += new System.EventHandler(this.btnActuReservation_Click);
             // 
             // dgvReservation
             // 
@@ -696,6 +697,7 @@
             this.btnActualiserFacturation.TabIndex = 10;
             this.btnActualiserFacturation.Text = "Actualiser";
             this.btnActualiserFacturation.UseVisualStyleBackColor = true;
+            this.btnActualiserFacturation.Click += new System.EventHandler(this.btnActualiserFacturation_Click);
             // 
             // tpProfile
             // 

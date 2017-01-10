@@ -11,13 +11,13 @@ namespace DALEF
 {
     using System;
     
-    public partial class RES_ListeReservationsByLEC_Id_Result
+    public partial class EMP_AllEmpruntsRenduByLEC_Id_Result
     {
-        public int ID_Réservation { get; set; }
+        public string Exemplaire { get; set; }
         public string Titre { get; set; }
-        public string ISBN { get; set; }
-        public System.DateTime Date_de_réservation { get; set; }
-        public string LIV_Auteurs { get; set; }
-        public string LIV_Image { get; set; }
+        public string Bibliothèque { get; set; }
+        public System.DateTime Date_d_emprunt { get; set; }
+        public Nullable<System.DateTime> EMP_DateRetour { get; set; }
+        public Nullable<decimal> EMP_MontantPaye { get; set; }
     }
 }
