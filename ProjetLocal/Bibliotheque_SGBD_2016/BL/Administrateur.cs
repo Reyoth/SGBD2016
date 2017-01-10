@@ -31,12 +31,12 @@ namespace BL
             return userN;
         }
 
-        public static void AllExemplairesByBibId(ref DataSet ds, int BibId)
-        {
+        //public static void AllExemplairesByBibId(ref DataSet ds, int BibId)
+        //{
 
-            DALADO.Administrateur.AllExemplairesByBibId(ds, BibId);
+        //    DALADO.Administrateur.AllExemplairesByBibId(ds, BibId);
 
-        }
+        //}
 
         public static void AllRetardataires(ref DataSet ds)
         {
@@ -74,12 +74,12 @@ namespace BL
             DALADO.Administrateur.AllEmpruntsEnCours(ds);
 
         }
-        public static void AllReservationsEnCours(ref DataSet ds)
-        {
+        //public static void AllReservationsEnCours(ref DataSet ds)
+        //{
 
-            DALADO.Administrateur.AllReservationsEnCours(ds);
+        //    DALADO.Administrateur.AllReservationsEnCours(ds);
 
-        }
+        //}
 
         public static void LivreByISBN(ref DataSet ds, string isbn)
         {
