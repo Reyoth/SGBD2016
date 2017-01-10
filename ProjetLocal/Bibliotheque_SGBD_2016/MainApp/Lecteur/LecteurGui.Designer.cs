@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LecteurGui));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tpReservation = new System.Windows.Forms.TabPage();
+            this.pbReservation = new System.Windows.Forms.PictureBox();
             this.btnActuLivres = new System.Windows.Forms.Button();
             this.btnReserver = new System.Windows.Forms.Button();
             this.lLivresRes = new System.Windows.Forms.Label();
@@ -71,8 +72,10 @@
             this.txtISBNEmprunt = new System.Windows.Forms.TextBox();
             this.lEmpruntsEmp = new System.Windows.Forms.Label();
             this.dgvEmpruntsEmprunt = new System.Windows.Forms.DataGridView();
+            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tpFacturation = new System.Windows.Forms.TabPage();
+            this.pbLivreHistorique = new System.Windows.Forms.PictureBox();
             this.lHistoriqueEmprunt = new System.Windows.Forms.Label();
             this.dgvEmpruntHistorique = new System.Windows.Forms.DataGridView();
             this.btnActualiserFacturation = new System.Windows.Forms.Button();
@@ -84,6 +87,7 @@
             this.txtUserDataPassword = new System.Windows.Forms.TextBox();
             this.txtUserDataUserName = new System.Windows.Forms.TextBox();
             this.lUserDataSexe = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtUserDataCodePostal = new System.Windows.Forms.TextBox();
             this.txtUserDataVille = new System.Windows.Forms.TextBox();
             this.txtUserDataAdresse = new System.Windows.Forms.TextBox();
@@ -99,21 +103,18 @@
             this.gbUserPictureProfile = new System.Windows.Forms.GroupBox();
             this.lUserPhoto = new System.Windows.Forms.Label();
             this.txtLienPhoto = new System.Windows.Forms.TextBox();
+            this.pbUserPictureProfile = new System.Windows.Forms.PictureBox();
             this.btnMettreAJourProfile = new System.Windows.Forms.Button();
             this.btUserDataModifier = new System.Windows.Forms.Button();
+            this.pbUserLogo = new System.Windows.Forms.PictureBox();
             this.userName = new System.Windows.Forms.Label();
             this.bibliotheque = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picSignOut = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
-            this.pbReservation = new System.Windows.Forms.PictureBox();
-            this.pbLivreHistorique = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbUserPictureProfile = new System.Windows.Forms.PictureBox();
-            this.pbUserLogo = new System.Windows.Forms.PictureBox();
             this.tpReservation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivreReservation)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -127,22 +128,21 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntsEmprunt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tpFacturation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreHistorique)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntHistorique)).BeginInit();
             this.tpProfile.SuspendLayout();
             this.gbUserDataProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.gbUserPictureProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreHistorique)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -166,7 +166,16 @@
             this.tpReservation.Size = new System.Drawing.Size(1384, 599);
             this.tpReservation.TabIndex = 2;
             this.tpReservation.Text = "Réservations";
-            this.tpReservation.Click += new System.EventHandler(this.tpReservation_Click);
+            // 
+            // pbReservation
+            // 
+            this.pbReservation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbReservation.Location = new System.Drawing.Point(1198, 251);
+            this.pbReservation.Name = "pbReservation";
+            this.pbReservation.Size = new System.Drawing.Size(168, 206);
+            this.pbReservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbReservation.TabIndex = 29;
+            this.pbReservation.TabStop = false;
             // 
             // btnActuLivres
             // 
@@ -430,6 +439,7 @@
             this.dgvRetardsEmprunt.Name = "dgvRetardsEmprunt";
             this.dgvRetardsEmprunt.Size = new System.Drawing.Size(736, 191);
             this.dgvRetardsEmprunt.TabIndex = 40;
+            this.dgvRetardsEmprunt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRetardsEmprunt_CellClick);
             // 
             // lexempDispo
             // 
@@ -608,6 +618,17 @@
             this.dgvEmpruntsEmprunt.Name = "dgvEmpruntsEmprunt";
             this.dgvEmpruntsEmprunt.Size = new System.Drawing.Size(619, 191);
             this.dgvEmpruntsEmprunt.TabIndex = 7;
+            this.dgvEmpruntsEmprunt.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpruntsEmprunt_CellClick);
+            // 
+            // pbLivreEmprunt
+            // 
+            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivreEmprunt.Location = new System.Drawing.Point(1243, 187);
+            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
+            this.pbLivreEmprunt.Size = new System.Drawing.Size(128, 157);
+            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivreEmprunt.TabIndex = 12;
+            this.pbLivreEmprunt.TabStop = false;
             // 
             // tabControl2
             // 
@@ -638,6 +659,15 @@
             this.tpFacturation.Size = new System.Drawing.Size(1384, 599);
             this.tpFacturation.TabIndex = 3;
             this.tpFacturation.Text = "Historique";
+            // 
+            // pbLivreHistorique
+            // 
+            this.pbLivreHistorique.Location = new System.Drawing.Point(1274, 3);
+            this.pbLivreHistorique.Name = "pbLivreHistorique";
+            this.pbLivreHistorique.Size = new System.Drawing.Size(94, 107);
+            this.pbLivreHistorique.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivreHistorique.TabIndex = 32;
+            this.pbLivreHistorique.TabStop = false;
             // 
             // lHistoriqueEmprunt
             // 
@@ -771,6 +801,15 @@
             this.lUserDataSexe.Size = new System.Drawing.Size(53, 20);
             this.lUserDataSexe.TabIndex = 21;
             this.lUserDataSexe.Text = "Sexe :";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(405, 20);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(79, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
             // 
             // txtUserDataCodePostal
             // 
@@ -911,6 +950,16 @@
             this.txtLienPhoto.Size = new System.Drawing.Size(255, 26);
             this.txtLienPhoto.TabIndex = 14;
             // 
+            // pbUserPictureProfile
+            // 
+            this.pbUserPictureProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbUserPictureProfile.Location = new System.Drawing.Point(94, 20);
+            this.pbUserPictureProfile.Name = "pbUserPictureProfile";
+            this.pbUserPictureProfile.Size = new System.Drawing.Size(170, 201);
+            this.pbUserPictureProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUserPictureProfile.TabIndex = 13;
+            this.pbUserPictureProfile.TabStop = false;
+            // 
             // btnMettreAJourProfile
             // 
             this.btnMettreAJourProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -932,6 +981,16 @@
             this.btUserDataModifier.Text = "Modifier";
             this.btUserDataModifier.UseVisualStyleBackColor = true;
             this.btUserDataModifier.Click += new System.EventHandler(this.btUserDataModifier_Click);
+            // 
+            // pbUserLogo
+            // 
+            this.pbUserLogo.Image = global::MainApp.Properties.Resources.images__1_;
+            this.pbUserLogo.Location = new System.Drawing.Point(610, 375);
+            this.pbUserLogo.Name = "pbUserLogo";
+            this.pbUserLogo.Size = new System.Drawing.Size(234, 205);
+            this.pbUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUserLogo.TabIndex = 16;
+            this.pbUserLogo.TabStop = false;
             // 
             // userName
             // 
@@ -963,7 +1022,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // picSignOut
             // 
@@ -997,64 +1055,6 @@
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             // 
-            // pbLivreEmprunt
-            // 
-            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivreEmprunt.Location = new System.Drawing.Point(1243, 187);
-            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
-            this.pbLivreEmprunt.Size = new System.Drawing.Size(128, 157);
-            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivreEmprunt.TabIndex = 12;
-            this.pbLivreEmprunt.TabStop = false;
-            // 
-            // pbReservation
-            // 
-            this.pbReservation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbReservation.Location = new System.Drawing.Point(1198, 251);
-            this.pbReservation.Name = "pbReservation";
-            this.pbReservation.Size = new System.Drawing.Size(168, 206);
-            this.pbReservation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbReservation.TabIndex = 29;
-            this.pbReservation.TabStop = false;
-            // 
-            // pbLivreHistorique
-            // 
-            this.pbLivreHistorique.Location = new System.Drawing.Point(1274, 3);
-            this.pbLivreHistorique.Name = "pbLivreHistorique";
-            this.pbLivreHistorique.Size = new System.Drawing.Size(94, 107);
-            this.pbLivreHistorique.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivreHistorique.TabIndex = 32;
-            this.pbLivreHistorique.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(405, 20);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(79, 86);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pbUserPictureProfile
-            // 
-            this.pbUserPictureProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUserPictureProfile.Location = new System.Drawing.Point(94, 20);
-            this.pbUserPictureProfile.Name = "pbUserPictureProfile";
-            this.pbUserPictureProfile.Size = new System.Drawing.Size(170, 201);
-            this.pbUserPictureProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUserPictureProfile.TabIndex = 13;
-            this.pbUserPictureProfile.TabStop = false;
-            // 
-            // pbUserLogo
-            // 
-            this.pbUserLogo.Image = global::MainApp.Properties.Resources.images__1_;
-            this.pbUserLogo.Location = new System.Drawing.Point(610, 375);
-            this.pbUserLogo.Name = "pbUserLogo";
-            this.pbUserLogo.Size = new System.Drawing.Size(234, 205);
-            this.pbUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUserLogo.TabIndex = 16;
-            this.pbUserLogo.TabStop = false;
-            // 
             // LecteurGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1075,6 +1075,7 @@
             this.Load += new System.EventHandler(this.LecteurGui_Load);
             this.tpReservation.ResumeLayout(false);
             this.tpReservation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivreReservation)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -1093,25 +1094,24 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntsEmprunt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tpFacturation.ResumeLayout(false);
             this.tpFacturation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreHistorique)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpruntHistorique)).EndInit();
             this.tpProfile.ResumeLayout(false);
             this.gbUserDataProfile.ResumeLayout(false);
             this.gbUserDataProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.gbUserPictureProfile.ResumeLayout(false);
             this.gbUserPictureProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreHistorique)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

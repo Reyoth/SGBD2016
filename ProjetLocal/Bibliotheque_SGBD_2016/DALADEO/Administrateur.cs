@@ -13,35 +13,34 @@ namespace DALADO
     public class Administrateur
     {
         //Methode pour inserer un exemplaire = Fonctionne
-        public static void EXE_CreerExemplaire(string code, DateTime DateAchat, byte indisponible, string BibLibelle, string LivTitre)
+        public static void EXE_CreerExemplaire(string code, DateTime DateAchat, string BibLibelle, string LivTitre)
         {
             var com = new SqlCommand();
             var da = new SqlDataAdapter();
-            try
-            {
+            //try
+            //{
                 DbConnection.db.Open();
                 com.Connection = DbConnection.db;
                 com.CommandType = CommandType.StoredProcedure;
                 com.CommandText = "[adminBiblio].[EXE_CreerExemplaire]";
                 com.Parameters.Add(new SqlParameter("Code", code));
-                com.Parameters.Add(new SqlParameter("DateAChat", DateAchat));
-                com.Parameters.Add(new SqlParameter("Indisponible", indisponible));
+                com.Parameters.Add(new SqlParameter("DateAchat", DateAchat));
                 com.Parameters.Add(new SqlParameter("Bib_Libelle", BibLibelle));
-                com.Parameters.Add(new SqlParameter("LivTitre", LivTitre));
+                com.Parameters.Add(new SqlParameter("Liv_Titre", LivTitre));
                 da.InsertCommand = com;
                 com.ExecuteNonQuery();
-            }
+            //}
 
-            catch (Exception)
-            {
-                //int IdError = 999;
+            //catch (Exception)
+            //{
+            //    //int IdError = 999;
 
-                //throw new BusinessError.CustomError(IdError);
-            }
-            finally
-            {
+            //    //throw new BusinessError.CustomError(IdError);
+            //}
+            //finally
+            //{
                 DbConnection.db.Close();
-            }
+           // }
         }
 
         public static string  ADM_Login(string userName, string password)
@@ -296,8 +295,8 @@ namespace DALADO
         {
             int nbretards = 0;
             SqlCommand com = new SqlCommand();
-            try
-            {
+            //try
+            //{
                 DbConnection.db.Open();
                 com.Connection = DbConnection.db;
                 com.CommandType = CommandType.StoredProcedure;
@@ -309,17 +308,17 @@ namespace DALADO
                     nbretards = dr.GetInt32(0);
                 }
                 dr.Close();
-            }
-            catch (Exception)
-            {
-                //int IdError = 999;
+            //}
+            //catch (Exception)
+            ////{
+            //    //int IdError = 999;
 
-                //throw new BusinessError.CustomError(IdError);
-            }
-            finally
-            {
+            //    //throw new BusinessError.CustomError(IdError);
+            //}
+            //finally
+            //{
                 DbConnection.db.Close();
-            }
+            //}
             return nbretards;
         }
 
@@ -601,7 +600,7 @@ namespace DALADO
         }
 
         //Methose pour retourner un exemplaire emprunté = Fonctionne
-        public static void RetournerExemplaire(int exemplaireId)
+        public static void RetournerExemplaire(int exemplaireId, double montant)
         {
             var com = new SqlCommand();
             try
@@ -611,6 +610,7 @@ namespace DALADO
                 com.CommandType = CommandType.StoredProcedure;
                 com.CommandText = "[adminBiblio].[EXE_RetournerExempplaire]";
                 com.Parameters.Add(new SqlParameter("ExemplaireId", exemplaireId));
+                com.Parameters.Add(new SqlParameter("montant", montant));
                 com.ExecuteNonQuery();
             }
             catch (Exception)

@@ -19,5 +19,6 @@ namespace DALEF
         public string ISBN { get; set; }
         public string Auteurs { get; set; }
         public string Bibliotheque { get; set; }
+        public string LIV_Image { get; set; }
     }
 }

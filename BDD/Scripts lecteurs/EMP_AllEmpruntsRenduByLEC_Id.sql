@@ -30,7 +30,7 @@ FROM            Emprunt INNER JOIN
                          Exemplaire ON Emprunt.EXE_Id = Exemplaire.EXE_Id INNER JOIN
                          Livre ON Exemplaire.LIV_Id = Livre.LIV_Id INNER JOIN
                          Bibliotheque ON Exemplaire.BIB_ID = Bibliotheque.BIB_ID
-WHERE        (Emprunt.LEC_Id = @Lec_Id) AND (Emprunt.EMP_DateRetour <> NULL)
+WHERE        (Emprunt.LEC_Id = @Lec_Id) AND (Emprunt.EMP_DateRetour is not NULL)
 END
 
 

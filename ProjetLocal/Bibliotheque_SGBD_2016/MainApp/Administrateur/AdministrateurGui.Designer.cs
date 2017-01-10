@@ -32,6 +32,7 @@
             this.lISBNrechLivre = new System.Windows.Forms.Label();
             this.gbDetReservation = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.pbLiveRetard = new System.Windows.Forms.PictureBox();
             this.txtPrenomRetardataire = new System.Windows.Forms.TextBox();
             this.txtMontantRetard = new System.Windows.Forms.TextBox();
             this.txtNbJoursRetards = new System.Windows.Forms.TextBox();
@@ -41,15 +42,16 @@
             this.lUserPrenomResrvation = new System.Windows.Forms.Label();
             this.lUserNomResevation = new System.Windows.Forms.Label();
             this.tpEmpruntEtReservation = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnActuExempRetard = new System.Windows.Forms.Button();
+            this.btnRendreExempRetard = new System.Windows.Forms.Button();
+            this.btnActuEmpruntEncour = new System.Windows.Forms.Button();
+            this.btnRendreExempEmpruntEncour = new System.Windows.Forms.Button();
             this.lHistoriqueEmprunt = new System.Windows.Forms.Label();
             this.lEmpruntsEnCours = new System.Windows.Forms.Label();
             this.gdvRetardataires = new System.Windows.Forms.DataGridView();
             this.gbUserEmprunt = new System.Windows.Forms.GroupBox();
             this.txtNomEmprunteur = new System.Windows.Forms.TextBox();
+            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
             this.txtPrenomemprunteur = new System.Windows.Forms.TextBox();
             this.txtRetardsEmprunteur = new System.Windows.Forms.TextBox();
             this.txtNbEmpruntsEmprunteur = new System.Windows.Forms.TextBox();
@@ -61,7 +63,7 @@
             this.gdvEmpruntEnCours = new System.Windows.Forms.DataGridView();
             this.btnISBNGoRechLivre = new System.Windows.Forms.Button();
             this.btnExempActualiser = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.btnEditExemplaire = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtTitreLivreRechExemp = new System.Windows.Forms.TextBox();
@@ -82,7 +84,7 @@
             this.txtTitreRechLivre = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.txtISBNRechLivre = new System.Windows.Forms.TextBox();
-            this.btnMAJLivre = new System.Windows.Forms.Button();
+            this.btnUpdateLivre = new System.Windows.Forms.Button();
             this.btnAjManLivre = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -94,6 +96,7 @@
             this.lListeLivre = new System.Windows.Forms.Label();
             this.tbAdministrateur = new System.Windows.Forms.TabControl();
             this.tpGestionLivre = new System.Windows.Forms.TabPage();
+            this.pbLogoGestLivre = new System.Windows.Forms.PictureBox();
             this.gbAjoutManuelLivre = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtLienAjMan = new System.Windows.Forms.TextBox();
@@ -101,24 +104,26 @@
             this.txtTitreAjMan = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtISBNAjMan = new System.Windows.Forms.TextBox();
+            this.pbLivre = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpGestionExemplaires = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.dgvExemplaire = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.cbLivreExemp = new System.Windows.Forms.ComboBox();
-            this.btnSauveExemp = new System.Windows.Forms.Button();
             this.cbBiblioExemp = new System.Windows.Forms.ComboBox();
             this.dtDateAchatExemp = new System.Windows.Forms.DateTimePicker();
-            this.btn = new System.Windows.Forms.Button();
+            this.btnAjoutExemplaire = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtCodeExemplaire = new System.Windows.Forms.TextBox();
+            this.pbExemplaire = new System.Windows.Forms.PictureBox();
             this.tpgestionLecteurs = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
+            this.btnActuLecteurs = new System.Windows.Forms.Button();
             this.gdvLecteurs = new System.Windows.Forms.DataGridView();
             this.gbUserDataProfile = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -127,6 +132,7 @@
             this.txtUserDataVille = new System.Windows.Forms.TextBox();
             this.dtUserDataDateNaissance = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
+            this.pbUserPictureProfil = new System.Windows.Forms.PictureBox();
             this.button15 = new System.Windows.Forms.Button();
             this.txtUserDataUsername = new System.Windows.Forms.TextBox();
             this.txtUserDataAdresse = new System.Windows.Forms.TextBox();
@@ -142,18 +148,12 @@
             this.lusername = new System.Windows.Forms.Label();
             this.picSignOut = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pbLogoGestLivre = new System.Windows.Forms.PictureBox();
-            this.pbLivre = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pbExemplaire = new System.Windows.Forms.PictureBox();
-            this.pbLiveRetard = new System.Windows.Forms.PictureBox();
-            this.pbLivreEmprunt = new System.Windows.Forms.PictureBox();
-            this.pbUserPictureProfil = new System.Windows.Forms.PictureBox();
             this.gbDetReservation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).BeginInit();
             this.tpEmpruntEtReservation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvRetardataires)).BeginInit();
             this.gbUserEmprunt.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvEmpruntEnCours)).BeginInit();
             this.groupBox5.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -167,23 +167,21 @@
             this.groupBox2.SuspendLayout();
             this.tbAdministrateur.SuspendLayout();
             this.tpGestionLivre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).BeginInit();
             this.gbAjoutManuelLivre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpGestionExemplaires.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).BeginInit();
             this.tpgestionLecteurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).BeginInit();
             this.gbUserDataProfile.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).BeginInit();
             this.SuspendLayout();
             // 
             // lISBNrechLivre
@@ -224,6 +222,16 @@
             this.label12.Size = new System.Drawing.Size(18, 18);
             this.label12.TabIndex = 39;
             this.label12.Text = "€";
+            // 
+            // pbLiveRetard
+            // 
+            this.pbLiveRetard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLiveRetard.Location = new System.Drawing.Point(337, 14);
+            this.pbLiveRetard.Name = "pbLiveRetard";
+            this.pbLiveRetard.Size = new System.Drawing.Size(137, 150);
+            this.pbLiveRetard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLiveRetard.TabIndex = 38;
+            this.pbLiveRetard.TabStop = false;
             // 
             // txtPrenomRetardataire
             // 
@@ -304,11 +312,11 @@
             // tpEmpruntEtReservation
             // 
             this.tpEmpruntEtReservation.BackColor = System.Drawing.SystemColors.Control;
-            this.tpEmpruntEtReservation.Controls.Add(this.button1);
-            this.tpEmpruntEtReservation.Controls.Add(this.button3);
-            this.tpEmpruntEtReservation.Controls.Add(this.button2);
+            this.tpEmpruntEtReservation.Controls.Add(this.btnActuExempRetard);
+            this.tpEmpruntEtReservation.Controls.Add(this.btnRendreExempRetard);
+            this.tpEmpruntEtReservation.Controls.Add(this.btnActuEmpruntEncour);
             this.tpEmpruntEtReservation.Controls.Add(this.gbDetReservation);
-            this.tpEmpruntEtReservation.Controls.Add(this.button6);
+            this.tpEmpruntEtReservation.Controls.Add(this.btnRendreExempEmpruntEncour);
             this.tpEmpruntEtReservation.Controls.Add(this.lHistoriqueEmprunt);
             this.tpEmpruntEtReservation.Controls.Add(this.lEmpruntsEnCours);
             this.tpEmpruntEtReservation.Controls.Add(this.gdvRetardataires);
@@ -322,49 +330,49 @@
             this.tpEmpruntEtReservation.TabIndex = 1;
             this.tpEmpruntEtReservation.Text = "Emprunts & Retards";
             // 
-            // button1
+            // btnActuExempRetard
             // 
-            this.button1.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(833, 558);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 31);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Actualiser";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnActuExempRetard.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActuExempRetard.Location = new System.Drawing.Point(833, 558);
+            this.btnActuExempRetard.Name = "btnActuExempRetard";
+            this.btnActuExempRetard.Size = new System.Drawing.Size(80, 31);
+            this.btnActuExempRetard.TabIndex = 25;
+            this.btnActuExempRetard.Text = "Actualiser";
+            this.btnActuExempRetard.UseVisualStyleBackColor = true;
+            this.btnActuExempRetard.Click += new System.EventHandler(this.btnActuExempRetard_Click);
             // 
-            // button3
+            // btnRendreExempRetard
             // 
-            this.button3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(919, 558);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 31);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Rendre Exemplaire";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRendreExempRetard.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRendreExempRetard.Location = new System.Drawing.Point(919, 558);
+            this.btnRendreExempRetard.Name = "btnRendreExempRetard";
+            this.btnRendreExempRetard.Size = new System.Drawing.Size(152, 31);
+            this.btnRendreExempRetard.TabIndex = 24;
+            this.btnRendreExempRetard.Text = "Rendre Exemplaire";
+            this.btnRendreExempRetard.UseVisualStyleBackColor = true;
+            this.btnRendreExempRetard.Click += new System.EventHandler(this.btnRendreExempRetard_Click);
             // 
-            // button2
+            // btnActuEmpruntEncour
             // 
-            this.button2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(833, 348);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 31);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Actualiser";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnActuEmpruntEncour.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActuEmpruntEncour.Location = new System.Drawing.Point(833, 348);
+            this.btnActuEmpruntEncour.Name = "btnActuEmpruntEncour";
+            this.btnActuEmpruntEncour.Size = new System.Drawing.Size(80, 31);
+            this.btnActuEmpruntEncour.TabIndex = 23;
+            this.btnActuEmpruntEncour.Text = "Actualiser";
+            this.btnActuEmpruntEncour.UseVisualStyleBackColor = true;
+            this.btnActuEmpruntEncour.Click += new System.EventHandler(this.btnActuEmpruntEncour_Click);
             // 
-            // button6
+            // btnRendreExempEmpruntEncour
             // 
-            this.button6.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(919, 348);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(152, 31);
-            this.button6.TabIndex = 21;
-            this.button6.Text = "Rendre Exemplaire";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnRendreExempEmpruntEncour.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRendreExempEmpruntEncour.Location = new System.Drawing.Point(919, 348);
+            this.btnRendreExempEmpruntEncour.Name = "btnRendreExempEmpruntEncour";
+            this.btnRendreExempEmpruntEncour.Size = new System.Drawing.Size(152, 31);
+            this.btnRendreExempEmpruntEncour.TabIndex = 21;
+            this.btnRendreExempEmpruntEncour.Text = "Rendre Exemplaire";
+            this.btnRendreExempEmpruntEncour.UseVisualStyleBackColor = true;
+            this.btnRendreExempEmpruntEncour.Click += new System.EventHandler(this.btnRendreExempEmpruntEncour_Click);
             // 
             // lHistoriqueEmprunt
             // 
@@ -428,6 +436,16 @@
             this.txtNomEmprunteur.ReadOnly = true;
             this.txtNomEmprunteur.Size = new System.Drawing.Size(167, 25);
             this.txtNomEmprunteur.TabIndex = 38;
+            // 
+            // pbLivreEmprunt
+            // 
+            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivreEmprunt.Location = new System.Drawing.Point(349, 17);
+            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
+            this.pbLivreEmprunt.Size = new System.Drawing.Size(118, 132);
+            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivreEmprunt.TabIndex = 37;
+            this.pbLivreEmprunt.TabStop = false;
             // 
             // txtPrenomemprunteur
             // 
@@ -546,18 +564,18 @@
             this.btnExempActualiser.TabIndex = 32;
             this.btnExempActualiser.Text = "Actualiser";
             this.btnExempActualiser.UseVisualStyleBackColor = true;
-            this.btnExempActualiser.Click += new System.EventHandler(this.button25_Click);
+            this.btnExempActualiser.Click += new System.EventHandler(this.btnExempActualiser_Click);
             // 
-            // button24
+            // btnEditExemplaire
             // 
-            this.button24.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button24.Location = new System.Drawing.Point(991, 555);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(80, 31);
-            this.button24.TabIndex = 31;
-            this.button24.Text = "Editer";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
+            this.btnEditExemplaire.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditExemplaire.Location = new System.Drawing.Point(991, 555);
+            this.btnEditExemplaire.Name = "btnEditExemplaire";
+            this.btnEditExemplaire.Size = new System.Drawing.Size(80, 31);
+            this.btnEditExemplaire.TabIndex = 31;
+            this.btnEditExemplaire.Text = "Editer";
+            this.btnEditExemplaire.UseVisualStyleBackColor = true;
+            this.btnEditExemplaire.Click += new System.EventHandler(this.button24_Click);
             // 
             // groupBox5
             // 
@@ -775,18 +793,18 @@
             this.txtISBNRechLivre.Size = new System.Drawing.Size(151, 25);
             this.txtISBNRechLivre.TabIndex = 0;
             // 
-            // btnMAJLivre
+            // btnUpdateLivre
             // 
-            this.btnMAJLivre.BackColor = System.Drawing.Color.LightBlue;
-            this.btnMAJLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMAJLivre.ForeColor = System.Drawing.Color.Navy;
-            this.btnMAJLivre.Location = new System.Drawing.Point(121, 191);
-            this.btnMAJLivre.Name = "btnMAJLivre";
-            this.btnMAJLivre.Size = new System.Drawing.Size(102, 31);
-            this.btnMAJLivre.TabIndex = 27;
-            this.btnMAJLivre.Text = "Mettre à jour";
-            this.btnMAJLivre.UseVisualStyleBackColor = false;
-            this.btnMAJLivre.Click += new System.EventHandler(this.btnMAJLivre_Click);
+            this.btnUpdateLivre.BackColor = System.Drawing.Color.LightBlue;
+            this.btnUpdateLivre.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateLivre.ForeColor = System.Drawing.Color.Navy;
+            this.btnUpdateLivre.Location = new System.Drawing.Point(121, 191);
+            this.btnUpdateLivre.Name = "btnUpdateLivre";
+            this.btnUpdateLivre.Size = new System.Drawing.Size(102, 31);
+            this.btnUpdateLivre.TabIndex = 27;
+            this.btnUpdateLivre.Text = "Mettre à jour";
+            this.btnUpdateLivre.UseVisualStyleBackColor = false;
+            this.btnUpdateLivre.Click += new System.EventHandler(this.btnMAJLivre_Click);
             // 
             // btnAjManLivre
             // 
@@ -919,11 +937,21 @@
             this.tpGestionLivre.TabIndex = 0;
             this.tpGestionLivre.Text = "Livres";
             // 
+            // pbLogoGestLivre
+            // 
+            this.pbLogoGestLivre.Image = global::MainApp.Properties.Resources.Livre_2;
+            this.pbLogoGestLivre.Location = new System.Drawing.Point(845, 14);
+            this.pbLogoGestLivre.Name = "pbLogoGestLivre";
+            this.pbLogoGestLivre.Size = new System.Drawing.Size(223, 236);
+            this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogoGestLivre.TabIndex = 36;
+            this.pbLogoGestLivre.TabStop = false;
+            // 
             // gbAjoutManuelLivre
             // 
             this.gbAjoutManuelLivre.Controls.Add(this.label5);
             this.gbAjoutManuelLivre.Controls.Add(this.txtLienAjMan);
-            this.gbAjoutManuelLivre.Controls.Add(this.btnMAJLivre);
+            this.gbAjoutManuelLivre.Controls.Add(this.btnUpdateLivre);
             this.gbAjoutManuelLivre.Controls.Add(this.btnAjManLivre);
             this.gbAjoutManuelLivre.Controls.Add(this.label2);
             this.gbAjoutManuelLivre.Controls.Add(this.txtNomAutAjMan);
@@ -996,12 +1024,32 @@
             this.txtISBNAjMan.Size = new System.Drawing.Size(151, 25);
             this.txtISBNAjMan.TabIndex = 6;
             // 
+            // pbLivre
+            // 
+            this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbLivre.Location = new System.Drawing.Point(266, 19);
+            this.pbLivre.Name = "pbLivre";
+            this.pbLivre.Size = new System.Drawing.Size(161, 202);
+            this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLivre.TabIndex = 4;
+            this.pbLivre.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MainApp.Properties.Resources._0_62655_8bb7f0cc_XL;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 474);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1084, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
             // tpGestionExemplaires
             // 
             this.tpGestionExemplaires.BackColor = System.Drawing.SystemColors.Control;
             this.tpGestionExemplaires.Controls.Add(this.pictureBox2);
             this.tpGestionExemplaires.Controls.Add(this.btnExempActualiser);
-            this.tpGestionExemplaires.Controls.Add(this.button24);
+            this.tpGestionExemplaires.Controls.Add(this.btnEditExemplaire);
             this.tpGestionExemplaires.Controls.Add(this.groupBox5);
             this.tpGestionExemplaires.Controls.Add(this.label17);
             this.tpGestionExemplaires.Controls.Add(this.dgvExemplaire);
@@ -1011,6 +1059,16 @@
             this.tpGestionExemplaires.Size = new System.Drawing.Size(1076, 595);
             this.tpGestionExemplaires.TabIndex = 5;
             this.tpGestionExemplaires.Text = "Exemplaires";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MainApp.Properties.Resources.Livre_2;
+            this.pictureBox2.Location = new System.Drawing.Point(842, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(227, 249);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
             // 
             // label17
             // 
@@ -1039,10 +1097,9 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.cbLivreExemp);
-            this.groupBox4.Controls.Add(this.btnSauveExemp);
             this.groupBox4.Controls.Add(this.cbBiblioExemp);
             this.groupBox4.Controls.Add(this.dtDateAchatExemp);
-            this.groupBox4.Controls.Add(this.btn);
+            this.groupBox4.Controls.Add(this.btnAjoutExemplaire);
             this.groupBox4.Controls.Add(this.label13);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label15);
@@ -1064,16 +1121,6 @@
             this.cbLivreExemp.Size = new System.Drawing.Size(151, 26);
             this.cbLivreExemp.TabIndex = 32;
             // 
-            // btnSauveExemp
-            // 
-            this.btnSauveExemp.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSauveExemp.Location = new System.Drawing.Point(130, 196);
-            this.btnSauveExemp.Name = "btnSauveExemp";
-            this.btnSauveExemp.Size = new System.Drawing.Size(107, 31);
-            this.btnSauveExemp.TabIndex = 30;
-            this.btnSauveExemp.Text = "Mettre à jour";
-            this.btnSauveExemp.UseVisualStyleBackColor = true;
-            // 
             // cbBiblioExemp
             // 
             this.cbBiblioExemp.FormattingEnabled = true;
@@ -1090,16 +1137,16 @@
             this.dtDateAchatExemp.Size = new System.Drawing.Size(151, 25);
             this.dtDateAchatExemp.TabIndex = 27;
             // 
-            // btn
+            // btnAjoutExemplaire
             // 
-            this.btn.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.Location = new System.Drawing.Point(44, 196);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(80, 31);
-            this.btn.TabIndex = 26;
-            this.btn.Text = "Ajouter";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
+            this.btnAjoutExemplaire.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjoutExemplaire.Location = new System.Drawing.Point(129, 191);
+            this.btnAjoutExemplaire.Name = "btnAjoutExemplaire";
+            this.btnAjoutExemplaire.Size = new System.Drawing.Size(110, 31);
+            this.btnAjoutExemplaire.TabIndex = 26;
+            this.btnAjoutExemplaire.Text = "Ajouter";
+            this.btnAjoutExemplaire.UseVisualStyleBackColor = true;
+            this.btnAjoutExemplaire.Click += new System.EventHandler(this.btnAjoutExemplaire_Click);
             // 
             // label13
             // 
@@ -1149,12 +1196,21 @@
             this.txtCodeExemplaire.Size = new System.Drawing.Size(151, 25);
             this.txtCodeExemplaire.TabIndex = 6;
             // 
+            // pbExemplaire
+            // 
+            this.pbExemplaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbExemplaire.Location = new System.Drawing.Point(303, 11);
+            this.pbExemplaire.Name = "pbExemplaire";
+            this.pbExemplaire.Size = new System.Drawing.Size(174, 216);
+            this.pbExemplaire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExemplaire.TabIndex = 4;
+            this.pbExemplaire.TabStop = false;
+            // 
             // tpgestionLecteurs
             // 
             this.tpgestionLecteurs.BackColor = System.Drawing.SystemColors.Control;
             this.tpgestionLecteurs.Controls.Add(this.label7);
-            this.tpgestionLecteurs.Controls.Add(this.button33);
-            this.tpgestionLecteurs.Controls.Add(this.button32);
+            this.tpgestionLecteurs.Controls.Add(this.btnActuLecteurs);
             this.tpgestionLecteurs.Controls.Add(this.gdvLecteurs);
             this.tpgestionLecteurs.Controls.Add(this.gbUserDataProfile);
             this.tpgestionLecteurs.Location = new System.Drawing.Point(4, 27);
@@ -1173,26 +1229,16 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Liste des Lecteurs";
             // 
-            // button33
+            // btnActuLecteurs
             // 
-            this.button33.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button33.Location = new System.Drawing.Point(893, 559);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(90, 31);
-            this.button33.TabIndex = 21;
-            this.button33.Text = "Actualiser";
-            this.button33.UseVisualStyleBackColor = true;
-            // 
-            // button32
-            // 
-            this.button32.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button32.Location = new System.Drawing.Point(989, 559);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(80, 31);
-            this.button32.TabIndex = 20;
-            this.button32.Text = "Editer";
-            this.button32.UseVisualStyleBackColor = true;
-            this.button32.Click += new System.EventHandler(this.button32_Click);
+            this.btnActuLecteurs.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActuLecteurs.Location = new System.Drawing.Point(979, 559);
+            this.btnActuLecteurs.Name = "btnActuLecteurs";
+            this.btnActuLecteurs.Size = new System.Drawing.Size(90, 31);
+            this.btnActuLecteurs.TabIndex = 21;
+            this.btnActuLecteurs.Text = "Actualiser";
+            this.btnActuLecteurs.UseVisualStyleBackColor = true;
+            this.btnActuLecteurs.Click += new System.EventHandler(this.btnActuLecteurs_Click);
             // 
             // gdvLecteurs
             // 
@@ -1293,6 +1339,16 @@
             this.label6.Size = new System.Drawing.Size(50, 18);
             this.label6.TabIndex = 20;
             this.label6.Text = "Sexe  :";
+            // 
+            // pbUserPictureProfil
+            // 
+            this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbUserPictureProfil.Location = new System.Drawing.Point(925, 12);
+            this.pbUserPictureProfil.Name = "pbUserPictureProfil";
+            this.pbUserPictureProfil.Size = new System.Drawing.Size(135, 149);
+            this.pbUserPictureProfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUserPictureProfil.TabIndex = 13;
+            this.pbUserPictureProfil.TabStop = false;
             // 
             // button15
             // 
@@ -1433,86 +1489,6 @@
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MainApp.Properties.Resources._0_62655_8bb7f0cc_XL;
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 474);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1084, 121);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pbLogoGestLivre
-            // 
-            this.pbLogoGestLivre.Image = global::MainApp.Properties.Resources.Livre_2;
-            this.pbLogoGestLivre.Location = new System.Drawing.Point(845, 14);
-            this.pbLogoGestLivre.Name = "pbLogoGestLivre";
-            this.pbLogoGestLivre.Size = new System.Drawing.Size(223, 236);
-            this.pbLogoGestLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogoGestLivre.TabIndex = 36;
-            this.pbLogoGestLivre.TabStop = false;
-            // 
-            // pbLivre
-            // 
-            this.pbLivre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivre.Location = new System.Drawing.Point(266, 19);
-            this.pbLivre.Name = "pbLivre";
-            this.pbLivre.Size = new System.Drawing.Size(161, 202);
-            this.pbLivre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivre.TabIndex = 4;
-            this.pbLivre.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::MainApp.Properties.Resources.Livre_2;
-            this.pictureBox2.Location = new System.Drawing.Point(842, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(227, 249);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 37;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pbExemplaire
-            // 
-            this.pbExemplaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbExemplaire.Location = new System.Drawing.Point(303, 11);
-            this.pbExemplaire.Name = "pbExemplaire";
-            this.pbExemplaire.Size = new System.Drawing.Size(174, 216);
-            this.pbExemplaire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbExemplaire.TabIndex = 4;
-            this.pbExemplaire.TabStop = false;
-            // 
-            // pbLiveRetard
-            // 
-            this.pbLiveRetard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLiveRetard.Location = new System.Drawing.Point(337, 14);
-            this.pbLiveRetard.Name = "pbLiveRetard";
-            this.pbLiveRetard.Size = new System.Drawing.Size(137, 150);
-            this.pbLiveRetard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLiveRetard.TabIndex = 38;
-            this.pbLiveRetard.TabStop = false;
-            // 
-            // pbLivreEmprunt
-            // 
-            this.pbLivreEmprunt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbLivreEmprunt.Location = new System.Drawing.Point(349, 17);
-            this.pbLivreEmprunt.Name = "pbLivreEmprunt";
-            this.pbLivreEmprunt.Size = new System.Drawing.Size(118, 132);
-            this.pbLivreEmprunt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLivreEmprunt.TabIndex = 37;
-            this.pbLivreEmprunt.TabStop = false;
-            // 
-            // pbUserPictureProfil
-            // 
-            this.pbUserPictureProfil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUserPictureProfil.Location = new System.Drawing.Point(925, 12);
-            this.pbUserPictureProfil.Name = "pbUserPictureProfil";
-            this.pbUserPictureProfil.Size = new System.Drawing.Size(135, 149);
-            this.pbUserPictureProfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUserPictureProfil.TabIndex = 13;
-            this.pbUserPictureProfil.TabStop = false;
-            // 
             // AdministrateurGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1529,11 +1505,13 @@
             this.Load += new System.EventHandler(this.AdministrateurGui_Load);
             this.gbDetReservation.ResumeLayout(false);
             this.gbDetReservation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).EndInit();
             this.tpEmpruntEtReservation.ResumeLayout(false);
             this.tpEmpruntEtReservation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvRetardataires)).EndInit();
             this.gbUserEmprunt.ResumeLayout(false);
             this.gbUserEmprunt.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvEmpruntEnCours)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
@@ -1553,28 +1531,26 @@
             this.tbAdministrateur.ResumeLayout(false);
             this.tpGestionLivre.ResumeLayout(false);
             this.tpGestionLivre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).EndInit();
             this.gbAjoutManuelLivre.ResumeLayout(false);
             this.gbAjoutManuelLivre.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tpGestionExemplaires.ResumeLayout(false);
             this.tpGestionExemplaires.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvExemplaire)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).EndInit();
             this.tpgestionLecteurs.ResumeLayout(false);
             this.tpgestionLecteurs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdvLecteurs)).EndInit();
             this.gbUserDataProfile.ResumeLayout(false);
             this.gbUserDataProfile.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogoGestLivre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbExemplaire)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLiveRetard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLivreEmprunt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1593,7 +1569,7 @@
         private System.Windows.Forms.Label lUserPrenomResrvation;
         private System.Windows.Forms.Label lUserNomResevation;
         private System.Windows.Forms.TabPage tpEmpruntEtReservation;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnRendreExempEmpruntEncour;
         private System.Windows.Forms.Label lHistoriqueEmprunt;
         private System.Windows.Forms.Label lEmpruntsEnCours;
         private System.Windows.Forms.DataGridView gdvRetardataires;
@@ -1609,7 +1585,7 @@
         private System.Windows.Forms.DataGridView gdvEmpruntEnCours;
         private System.Windows.Forms.Button btnISBNGoRechLivre;
         private System.Windows.Forms.Button btnExempActualiser;
-        private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.Button btnEditExemplaire;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Button btnGoRchExmpTitre;
@@ -1628,7 +1604,7 @@
         private System.Windows.Forms.TextBox txtTitreRechLivre;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TextBox txtISBNRechLivre;
-        private System.Windows.Forms.Button btnMAJLivre;
+        private System.Windows.Forms.Button btnUpdateLivre;
         private System.Windows.Forms.Button btnAjManLivre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1648,8 +1624,7 @@
         private System.Windows.Forms.PictureBox pbLivre;
         private System.Windows.Forms.TabPage tpgestionLecteurs;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button btnActuLecteurs;
         private System.Windows.Forms.DataGridView gdvLecteurs;
         private System.Windows.Forms.GroupBox gbUserDataProfile;
         private System.Windows.Forms.PictureBox pbUserPictureProfil;
@@ -1669,10 +1644,9 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.DataGridView dgvExemplaire;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btnSauveExemp;
         private System.Windows.Forms.ComboBox cbBiblioExemp;
         private System.Windows.Forms.DateTimePicker dtDateAchatExemp;
-        private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Button btnAjoutExemplaire;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -1698,9 +1672,9 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtTitreLivreRechExemp;
         private System.Windows.Forms.TextBox txtNomEmprunteur;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnActuEmpruntEncour;
+        private System.Windows.Forms.Button btnActuExempRetard;
+        private System.Windows.Forms.Button btnRendreExempRetard;
         private System.Windows.Forms.ComboBox cbLivreExemp;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

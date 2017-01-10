@@ -12,9 +12,9 @@ namespace BL
 {
     public class Administrateur
     {
-        public static void EXE_CreerExemplaire(string code, DateTime DateAchat, byte indisponible, string BibLibelle, string LivTitre)
+        public static void EXE_CreerExemplaire(string code, DateTime DateAchat, string BibLibelle, string LivTitre)
         {
-           DALADO.Administrateur.EXE_CreerExemplaire(code, DateAchat, indisponible, BibLibelle, LivTitre);
+           DALADO.Administrateur.EXE_CreerExemplaire(code, DateAchat, BibLibelle, LivTitre);
         }
 
         public static void AllExemplairesAllBib(ref DataSet ds)
@@ -57,9 +57,9 @@ namespace BL
             bibliotheques = DALADO.Administrateur.BIB_AllLibelle();
         }
 
-        public static void RetournerExemplaire(int exemplaireId)
+        public static void RetournerExemplaire(int exemplaireId, double montant)
         {
-            DALADO.Administrateur.RetournerExemplaire(exemplaireId);
+            DALADO.Administrateur.RetournerExemplaire(exemplaireId, montant);
         }
 
         public static void AllLecteurs(ref DataSet ds)
@@ -117,7 +117,8 @@ namespace BL
 
         public static void NbRetardByLecId(ref int nbRetards, int LecId)
         {
-            int NbRet = DALADO.Administrateur.NbRetardsByLecId(LecId);
+            nbRetards = DALADO.Administrateur.NbRetardsByLecId(LecId);
+
         }
 
         public static void AllExemplairesByTitle(ref DataSet ds, string Title)

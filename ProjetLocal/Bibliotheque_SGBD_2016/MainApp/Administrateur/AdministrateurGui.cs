@@ -20,6 +20,7 @@ namespace MainApp.Administrateur
         {
             InitializeComponent();
             timer1.Start();
+            this.user = userName;
         }
 
         private void AdministrateurGui_Load(object sender, EventArgs e)
@@ -33,41 +34,29 @@ namespace MainApp.Administrateur
             ChargerLivreTitres(cbLivreExemp);
 
             ////txt volet Gestion LIvre
-            txtISBNAjMan.Enabled = false;
-            txtTitreAjMan.Enabled = false;
-            txtLienAjMan.Enabled = false;
-            txtNomAutAjMan.Enabled = false;
+            DesactiverChampsGestLivre();
 
             //txt volet Exemplaires
-            txtCodeExemplaire.Enabled = false;
-            cbLivreExemp.Enabled = false;
-            dtDateAchatExemp.Enabled = false;
-            txtCodeExemplaire.ReadOnly = true;
-            cbBiblioExemp.Enabled = false;
-
+            DesactiverChampsGestExemplaire();
+           
             //txt volet Emprunts et retards
-            //enable
-
-            txtNomEmprunteur.Enabled = false;
-            txtPrenomemprunteur.Enabled = false;
-            txtNbEmpruntsEmprunteur.Enabled = false;
-            txtRetardsEmprunteur.Enabled = false;
-            txtNomretardataire.Enabled = false;
-            txtPrenomRetardataire.Enabled = false;
-            txtNbJoursRetards.Enabled = false;
-            txtMontantRetard.Enabled = false;
-            //readonly
-            txtNomEmprunteur.ReadOnly = true;
-            txtPrenomemprunteur.ReadOnly = true;
-            txtNbEmpruntsEmprunteur.ReadOnly = true;
-            txtRetardsEmprunteur.ReadOnly = true;
-            txtNomretardataire.ReadOnly = true;
-            txtPrenomRetardataire.ReadOnly = true;
-            txtNbJoursRetards.ReadOnly = true;
-            txtMontantRetard.ReadOnly = true;
-
+            DesactiverChampsGestEmprunt();
+            DesactiverChampsGestRetard();
+            
             //txt volet Lecteur
-                //enable
+            DesactiverChampsGestLecteur();
+            
+            ////Data grid view de tout les volets
+            ChargerLivres();
+            ChargerExemplaires();
+            ChargerEmpruntsEnCours();
+            ChargerRetardataires();
+            ChargerLecteurs();
+            
+        }
+
+        private void DesactiverChampsGestLecteur()
+        {
             txtUserDataNom.Enabled = false;
             txtUserDataPrenom.Enabled = false;
             txtUserDataSexe.Enabled = false;
@@ -76,8 +65,6 @@ namespace MainApp.Administrateur
             txtUserDataCodePostal.Enabled = false;
             txtUserDataUsername.Enabled = false;
             dtUserDataDateNaissance.Enabled = false;
-
-            //readOnly
             txtUserDataNom.ReadOnly = true;
             txtUserDataPrenom.ReadOnly = true;
             txtUserDataSexe.ReadOnly = true;
@@ -85,40 +72,105 @@ namespace MainApp.Administrateur
             txtUserDataVille.ReadOnly = true;
             txtUserDataCodePostal.ReadOnly = true;
             txtUserDataUsername.ReadOnly = true;
+        }
 
+        private void DesactiverChampsGestRetard()
+        {
+            txtNomretardataire.Enabled = false;
+            txtPrenomRetardataire.Enabled = false;
+            txtNbJoursRetards.Enabled = false;
+            txtMontantRetard.Enabled = false;
 
-            ////Data grid view de tout les volets
-            gdvLivre.DataSource = null;
-            dgvExemplaire.DataSource = null;
-            gdvEmpruntEnCours.DataSource = null;
-            gdvRetardataires.DataSource = null;
+            txtNomretardataire.ReadOnly = true;
+            txtPrenomRetardataire.ReadOnly = true;
+            txtNbJoursRetards.ReadOnly = true;
+            txtMontantRetard.ReadOnly = true;
+        }
+
+        private void DesactiverChampsGestEmprunt()
+        {
+            txtNomEmprunteur.Enabled = false;
+            txtPrenomemprunteur.Enabled = false;
+            txtNbEmpruntsEmprunteur.Enabled = false;
+            txtRetardsEmprunteur.Enabled = false;
+
+            txtNomEmprunteur.ReadOnly = true;
+            txtPrenomemprunteur.ReadOnly = true;
+            txtNbEmpruntsEmprunteur.ReadOnly = true;
+            txtRetardsEmprunteur.ReadOnly = true;
+        }
+
+        private void DesactiverChampsGestExemplaire()
+        {
+            txtCodeExemplaire.Enabled = false;
+            cbLivreExemp.Enabled = false;
+            dtDateAchatExemp.Enabled = false;
+            txtCodeExemplaire.ReadOnly = true;
+            cbBiblioExemp.Enabled = false;
+        }
+
+        private void DesactiverChampsGestLivre()
+        {
+            txtISBNAjMan.Enabled = false;
+            txtTitreAjMan.Enabled = false;
+            txtLienAjMan.Enabled = false;
+            txtNomAutAjMan.Enabled = false;
+        }
+
+        private void ChargerLecteurs()
+        {
             gdvLecteurs.DataSource = null;
             DataSet ds = new DataSet();
-            BL.Administrateur.AllLivres(ref ds);
-           
-            BL.Administrateur.AllExemplairesAllBib(ref ds);
-            BL.Administrateur.AllEmpruntsEnCours(ref ds);
-            BL.Administrateur.AllRetardataires(ref ds);
             BL.Administrateur.AllLecteurs(ref ds);
+            gdvLecteurs.DataSource = ds.Tables[0].DefaultView;
+        }
+
+        private void ChargerRetardataires()
+        {
+            gdvRetardataires.DataSource = null;
+            DataSet ds = new DataSet();
+            BL.Administrateur.AllRetardataires(ref ds);
+            gdvRetardataires.DataSource = ds.Tables[0].DefaultView;
+            gdvRetardataires.Columns[0].Visible = false;
+            gdvRetardataires.Columns[5].Visible = false;
+            gdvRetardataires.Columns[8].Visible = false;
+            gdvRetardataires.Columns[11].Visible = false;
+
+        }
+
+        private void ChargerEmpruntsEnCours()
+        {
+            gdvEmpruntEnCours.DataSource = null;
+            DataSet ds = new DataSet();
+            BL.Administrateur.AllEmpruntsEnCours(ref ds);
+            gdvEmpruntEnCours.DataSource = ds.Tables[0].DefaultView;
+            gdvEmpruntEnCours.Columns[0].Visible = false;
+            gdvEmpruntEnCours.Columns[5].Visible = false;
+            gdvEmpruntEnCours.Columns[8].Visible = false;
+            gdvEmpruntEnCours.Columns[11].Visible = false;
+
+        }
+
+        private void ChargerExemplaires()
+        {
+            dgvExemplaire.DataSource = null;
+            DataSet ds = new DataSet();
+            BL.Administrateur.AllExemplairesAllBib(ref ds);
+            dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
+            dgvExemplaire.Columns[0].Visible = false;
+            dgvExemplaire.Columns[7].Visible = false;
+            dgvExemplaire.Columns[8].Visible = false;
+            dgvExemplaire.Columns[9].Visible = false;
+        }
+
+        private void ChargerLivres()
+        {
+            DataSet ds = new DataSet();
+            gdvLivre.DataSource = null;
+            BL.Administrateur.AllLivres(ref ds);
             gdvLivre.DataSource = ds.Tables[0].DefaultView;
             gdvLivre.Columns[0].Visible = false;
             gdvLivre.Columns[4].Visible = false;
-            dgvExemplaire.DataSource = ds.Tables[1].DefaultView;
-            dgvExemplaire.Columns[0].Visible = false;
-            dgvExemplaire.Columns[7].Visible = false;
-            gdvEmpruntEnCours.DataSource = ds.Tables[2].DefaultView;
-            gdvEmpruntEnCours.Columns[0].Visible = false;
-            gdvEmpruntEnCours.Columns[1].Visible = false;
-            gdvEmpruntEnCours.Columns[5].Visible = false;
-            gdvEmpruntEnCours.Columns[9].Visible = false;
-            gdvRetardataires.DataSource = ds.Tables[3].DefaultView;
-            gdvRetardataires.Columns[0].Visible = false;
-            gdvRetardataires.Columns[5].Visible = false;
-            gdvRetardataires.Columns[7].Visible = false;
-            gdvRetardataires.Columns[10].Visible = false;
-            gdvRetardataires.Columns[12].Visible = false;
-            gdvRetardataires.Columns[13].Visible = false;
-            gdvLecteurs.DataSource = ds.Tables[4].DefaultView;
         }
 
         private void btnISBNGoRechLivre_Click(object sender, EventArgs e)
@@ -182,18 +234,22 @@ namespace MainApp.Administrateur
         {
             if (gdvEmpruntEnCours.SelectedCells.Count == 1)
             {
-                txtNomEmprunteur.Text = gdvEmpruntEnCours.CurrentRow.Cells[6].Value.ToString();
-                txtPrenomemprunteur.Text = gdvEmpruntEnCours.CurrentRow.Cells[7].Value.ToString();
+                txtNomEmprunteur.Text = gdvEmpruntEnCours.CurrentRow.Cells[1].Value.ToString();
+                txtPrenomemprunteur.Text = gdvEmpruntEnCours.CurrentRow.Cells[2].Value.ToString();
                 pbLivreEmprunt.ImageLocation = gdvEmpruntEnCours.CurrentRow.Cells[8].Value.ToString();
                 //Calcul du nombre d'emprunt par id
                 int LecId = 0;
-                LecId = Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[6].Value.ToString());
+                LecId = Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[11].Value.ToString());
                 int NbreEmprunts = 0;
                 BL.Administrateur.NbEmpruntsByLecId(ref NbreEmprunts, LecId);
                 txtNbEmpruntsEmprunteur.Text = NbreEmprunts.ToString();
                 //Calcul du nombre des retards
                 int NbRetards = 0;
                 BL.Administrateur.NbRetardByLecId(ref NbRetards, LecId);
+                if (NbRetards >= 2)
+                {
+                    txtRetardsEmprunteur.ForeColor = Color.Red;
+                }
                 txtRetardsEmprunteur.Text = NbRetards.ToString();
             }
         }
@@ -278,6 +334,12 @@ namespace MainApp.Administrateur
 
         private void button24_Click(object sender, EventArgs e)
         {
+
+            ActiverChampsGestExemplaire();
+        }
+
+        private void ActiverChampsGestExemplaire()
+        {
             txtCodeExemplaire.Enabled = true;
             cbLivreExemp.Enabled = true;
             dtDateAchatExemp.Enabled = true;
@@ -348,7 +410,7 @@ namespace MainApp.Administrateur
                 txtPrenomRetardataire.Text = gdvRetardataires.CurrentRow.Cells[2].Value.ToString(); 
                 txtNbJoursRetards.Text = gdvRetardataires.CurrentRow.Cells[3].Value.ToString(); ;
                 txtMontantRetard.Text = gdvRetardataires.CurrentRow.Cells[4].Value.ToString();
-                pbLiveRetard.ImageLocation = gdvRetardataires.CurrentRow.Cells[10].Value.ToString();
+                pbLiveRetard.ImageLocation = gdvRetardataires.CurrentRow.Cells[8].Value.ToString();
 
             }
         }
@@ -368,16 +430,7 @@ namespace MainApp.Administrateur
             dgvExemplaire.DataSource = null;
             dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
         }
-
-        private void button25_Click(object sender, EventArgs e)
-        {
-            dgvExemplaire.DataSource = null;
-            DataSet ds = new DataSet();
-            BL.Administrateur.AllExemplairesAllBib(ref ds);
-            dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
-            dgvExemplaire.Columns[0].Visible = false;
-            dgvExemplaire.Columns[7].Visible = false;
-        }
+        
         public void ChargerBibLibelle(ComboBox cb)
         {
 
@@ -405,50 +458,13 @@ namespace MainApp.Administrateur
             dgvExemplaire.Columns[0].Visible = false;
             dgvExemplaire.Columns[7].Visible = false;
         }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            BL.Administrateur.RetournerExemplaire(Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[0].Value.ToString()));
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            BL.Administrateur.RetournerExemplaire(Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[13].Value.ToString()));
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            gdvEmpruntEnCours.DataSource = null;
-            DataSet ds = new DataSet();
-            BL.Administrateur.AllEmpruntsEnCours(ref ds);
-            gdvEmpruntEnCours.DataSource = ds.Tables[0].DefaultView;
-            gdvEmpruntEnCours.Columns[0].Visible = false;
-            gdvEmpruntEnCours.Columns[1].Visible = false;
-            gdvEmpruntEnCours.Columns[5].Visible = false;
-            gdvEmpruntEnCours.Columns[9].Visible = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DataSet ds = new DataSet();
-            gdvRetardataires.DataSource = null;
-            BL.Administrateur.AllRetardataires(ref ds);
-            gdvRetardataires.DataSource = ds.Tables[0].DefaultView;
-            gdvRetardataires.Columns[0].Visible = false;
-            gdvRetardataires.Columns[5].Visible = false;
-            gdvRetardataires.Columns[7].Visible = false;
-            gdvRetardataires.Columns[10].Visible = false;
-            gdvRetardataires.Columns[12].Visible = false;
-            gdvRetardataires.Columns[13].Visible = false;
-        }
-
-        private void btn_Click(object sender, EventArgs e)
+        private void btnAjoutExemplaire_Click(object sender, EventArgs e)
         {
             string code = txtCodeExemplaire.Text;
             DateTime dateAchat = dtDateAchatExemp.Value.Date;
             string bibliotheque = cbBiblioExemp.SelectedItem.ToString();
             string livre = cbLivreExemp.SelectedItem.ToString();
-            BL.Administrateur.EXE_CreerExemplaire(code, dateAchat, 0,bibliotheque,livre);
+            BL.Administrateur.EXE_CreerExemplaire(code, dateAchat,bibliotheque,livre);
         }
 
         public void ChargerLivreTitres(ComboBox cb)
@@ -459,6 +475,42 @@ namespace MainApp.Administrateur
             {
                 cb.Items.Add(t);
             }
+        }
+
+        private void btnRendreExempRetard_Click(object sender, EventArgs e)
+        {
+            BL.Administrateur.RetournerExemplaire(Int32.Parse(gdvRetardataires.CurrentRow.Cells[0].Value.ToString()), Double.Parse(gdvRetardataires.CurrentRow.Cells[9].Value.ToString()));
+
+        }
+
+        private void btnRendreExempEmpruntEncour_Click(object sender, EventArgs e)
+        {
+            BL.Administrateur.RetournerExemplaire(Int32.Parse(gdvEmpruntEnCours.CurrentRow.Cells[0].Value.ToString()), Double.Parse(gdvEmpruntEnCours.CurrentRow.Cells[9].Value.ToString()));
+        }
+
+        private void btnActuExempRetard_Click(object sender, EventArgs e)
+        {
+            ChargerRetardataires();
+        }
+
+        private void btnActuEmpruntEncour_Click(object sender, EventArgs e)
+        {
+            ChargerEmpruntsEnCours();
+        }
+
+        private void btnActuLecteurs_Click(object sender, EventArgs e)
+        {
+            ChargerLecteurs();
+        }
+
+        private void btnExempActualiser_Click(object sender, EventArgs e)
+        {
+            ChargerExemplaires();
+        }
+
+        private void btnSauveExemp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,17 +23,6 @@ namespace BL
             return  DALEF.Lecteur.LEC_Login(login,password);
 
         }
-        //public static void BIB_AllBibliotheques(ref List<Bibliotheque> biblios)
-        //{
-        //    using (SGBD2016_BibliothequeEntities context = new SGBD2016_BibliothequeEntities())
-        //    {
-        //        var bibs = context.BIB_AllLibelle();
-        //        foreach (var bib in bibs)
-        //        {
-        //            Console.WriteLine(bib.ToString());
-        //        }
-        //    }
-        //}
         public static List<EMP_AllEmpruntsRenduByLEC_Id_Result> EMP_AllEmpruntsRenduByLEC_Id(int LecId)
         {
             return DALEF.Lecteur.EMP_AllEmpruntsRenduByLEC_Id(LecId); 
