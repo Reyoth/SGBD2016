@@ -103,6 +103,16 @@ namespace MainApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bibliotheque_livres {
+            get {
+                object obj = ResourceManager.GetObject("bibliotheque-livres", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HomePageWave {
             get {
                 object obj = ResourceManager.GetObject("HomePageWave", resourceCulture);
@@ -136,6 +146,16 @@ namespace MainApp.Properties {
         internal static System.Drawing.Bitmap Livre_2 {
             get {
                 object obj = ResourceManager.GetObject("Livre 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap livre1 {
+            get {
+                object obj = ResourceManager.GetObject("livre1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +216,16 @@ namespace MainApp.Properties {
         internal static System.Drawing.Bitmap téléchargement {
             get {
                 object obj = ResourceManager.GetObject("téléchargement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User {
+            get {
+                object obj = ResourceManager.GetObject("User", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -422,5 +422,10 @@ namespace MainApp.Lecteur
         {
             pbLivreEmprunt.ImageLocation = dgvEmpruntsEmprunt.CurrentRow.Cells[4].Value.ToString();
         }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
