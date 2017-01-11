@@ -878,29 +878,31 @@ namespace MainApp.ServiceReferenceLecteur {
     [System.SerializableAttribute()]
     public partial class EMP_AllEmpruntsEnCoursByLEC_Id_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
+
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EXE_CodeField;
+
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LIV_TitreField;
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BIB_LibelleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime EMP_DateEmpruntField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EXE_CodeField;
+        private System.DateTime EMP_DateEmpruntField;     
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LIV_ImageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LIV_TitreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> RetardField;
-        
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private decimal TAR_EmpruntField;
+
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> RetardField;
+
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -911,7 +913,41 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EXE_Code
+        {
+            get
+            {
+                return this.EXE_CodeField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.EXE_CodeField, value) != true))
+                {
+                    this.EXE_CodeField = value;
+                    this.RaisePropertyChanged("EXE_Code");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LIV_Titre
+        {
+            get
+            {
+                return this.LIV_TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.LIV_TitreField, value) != true))
+                {
+                    this.LIV_TitreField = value;
+                    this.RaisePropertyChanged("LIV_Titre");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string BIB_Libelle {
             get {
@@ -938,18 +974,7 @@ namespace MainApp.ServiceReferenceLecteur {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EXE_Code {
-            get {
-                return this.EXE_CodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EXE_CodeField, value) != true)) {
-                    this.EXE_CodeField = value;
-                    this.RaisePropertyChanged("EXE_Code");
-                }
-            }
-        }
+        
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string LIV_Image {
@@ -963,20 +988,24 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LIV_Titre {
-            get {
-                return this.LIV_TitreField;
+        public decimal TAR_Emprunt
+        {
+            get
+            {
+                return this.TAR_EmpruntField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LIV_TitreField, value) != true)) {
-                    this.LIV_TitreField = value;
-                    this.RaisePropertyChanged("LIV_Titre");
+            set
+            {
+                if ((this.TAR_EmpruntField.Equals(value) != true))
+                {
+                    this.TAR_EmpruntField = value;
+                    this.RaisePropertyChanged("TAR_Emprunt");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> Retard {
             get {
@@ -990,18 +1019,7 @@ namespace MainApp.ServiceReferenceLecteur {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal TAR_Emprunt {
-            get {
-                return this.TAR_EmpruntField;
-            }
-            set {
-                if ((this.TAR_EmpruntField.Equals(value) != true)) {
-                    this.TAR_EmpruntField = value;
-                    this.RaisePropertyChanged("TAR_Emprunt");
-                }
-            }
-        }
+        
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
