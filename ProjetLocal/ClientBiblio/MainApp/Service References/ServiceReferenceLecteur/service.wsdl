@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceLecteur" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceLecteur_BIB_AllLibelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:BIB_AllLibelle" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_BIB_AllLibelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BIB_AllLibelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LEC_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:LEC_Login" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LEC_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LEC_LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EMP_AllEmpruntsRenduByLEC_Id_InputMessage">
+    <wsdl:part name="parameters" element="tns:EMP_AllEmpruntsRenduByLEC_Id" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EMP_AllEmpruntsRenduByLEC_Id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EMP_AllEmpruntsRenduByLEC_IdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_GetUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserData" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_GetUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LEC_UpdateUserData_InputMessage">
+    <wsdl:part name="parameters" element="tns:LEC_UpdateUserData" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LEC_UpdateUserData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LEC_UpdateUserDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_RES_ListeReservationsDisponibleByLEC_IdByBib_InputMessage">
+    <wsdl:part name="parameters" element="tns:RES_ListeReservationsDisponibleByLEC_IdByBib" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_RES_ListeReservationsDisponibleByLEC_IdByBib_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RES_ListeReservationsDisponibleByLEC_IdByBibResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EMP_RetardsAllBibByLec_InputMessage">
+    <wsdl:part name="parameters" element="tns:EMP_RetardsAllBibByLec" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EMP_RetardsAllBibByLec_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EMP_RetardsAllBibByLecResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_RES_ListeReservationsByLEC_Id_InputMessage">
+    <wsdl:part name="parameters" element="tns:RES_ListeReservationsByLEC_Id" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_RES_ListeReservationsByLEC_Id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RES_ListeReservationsByLEC_IdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EMP_AllEmpruntsEnCoursByLEC_Id_InputMessage">
+    <wsdl:part name="parameters" element="tns:EMP_AllEmpruntsEnCoursByLEC_Id" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EMP_AllEmpruntsEnCoursByLEC_Id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EMP_AllEmpruntsEnCoursByLEC_IdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EXE_AllExemplairesByBibId_InputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_AllExemplairesByBibId" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EXE_AllExemplairesByBibId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_AllExemplairesByBibIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EXE_AllExemplairesDispoByBibByISBN_InputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_AllExemplairesDispoByBibByISBN" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EXE_AllExemplairesDispoByBibByISBN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_AllExemplairesDispoByBibByISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EXE_AllExemplairesDispoByBibByTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_AllExemplairesDispoByBibByTitle" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EXE_AllExemplairesDispoByBibByTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_AllExemplairesDispoByBibByTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EXE_EmprunterExemplaire_InputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_EmprunterExemplaire" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_EXE_EmprunterExemplaire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_EmprunterExemplaireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LIV_LivreByBib_idByISBN_InputMessage">
+    <wsdl:part name="parameters" element="tns:LIV_LivreByBib_idByISBN" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LIV_LivreByBib_idByISBN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LIV_LivreByBib_idByISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LIV_LivreByBib_idByTitre_InputMessage">
+    <wsdl:part name="parameters" element="tns:LIV_LivreByBib_idByTitre" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LIV_LivreByBib_idByTitre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LIV_LivreByBib_idByTitreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_ReserverLivre_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReserverLivre" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_ReserverLivre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReserverLivreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LIV_LivreByBib_id_InputMessage">
+    <wsdl:part name="parameters" element="tns:LIV_LivreByBib_id" />
+  </wsdl:message>
+  <wsdl:message name="IServiceLecteur_LIV_LivreByBib_id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LIV_LivreByBib_idResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceLecteur">
+    <wsdl:operation name="BIB_AllLibelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/BIB_AllLibelle" message="tns:IServiceLecteur_BIB_AllLibelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/BIB_AllLibelleResponse" message="tns:IServiceLecteur_BIB_AllLibelle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LEC_Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/LEC_Login" message="tns:IServiceLecteur_LEC_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/LEC_LoginResponse" message="tns:IServiceLecteur_LEC_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EMP_AllEmpruntsRenduByLEC_Id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsRenduByLEC_Id" message="tns:IServiceLecteur_EMP_AllEmpruntsRenduByLEC_Id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsRenduByLEC_IdResponse" message="tns:IServiceLecteur_EMP_AllEmpruntsRenduByLEC_Id_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/GetUserData" message="tns:IServiceLecteur_GetUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/GetUserDataResponse" message="tns:IServiceLecteur_GetUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LEC_UpdateUserData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/LEC_UpdateUserData" message="tns:IServiceLecteur_LEC_UpdateUserData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/LEC_UpdateUserDataResponse" message="tns:IServiceLecteur_LEC_UpdateUserData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RES_ListeReservationsDisponibleByLEC_IdByBib">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBib" message="tns:IServiceLecteur_RES_ListeReservationsDisponibleByLEC_IdByBib_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBibResponse" message="tns:IServiceLecteur_RES_ListeReservationsDisponibleByLEC_IdByBib_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EMP_RetardsAllBibByLec">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/EMP_RetardsAllBibByLec" message="tns:IServiceLecteur_EMP_RetardsAllBibByLec_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/EMP_RetardsAllBibByLecResponse" message="tns:IServiceLecteur_EMP_RetardsAllBibByLec_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RES_ListeReservationsByLEC_Id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsByLEC_Id" message="tns:IServiceLecteur_RES_ListeReservationsByLEC_Id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsByLEC_IdResponse" message="tns:IServiceLecteur_RES_ListeReservationsByLEC_Id_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EMP_AllEmpruntsEnCoursByLEC_Id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsEnCoursByLEC_Id" message="tns:IServiceLecteur_EMP_AllEmpruntsEnCoursByLEC_Id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsEnCoursByLEC_IdResponse" message="tns:IServiceLecteur_EMP_AllEmpruntsEnCoursByLEC_Id_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EXE_AllExemplairesByBibId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesByBibId" message="tns:IServiceLecteur_EXE_AllExemplairesByBibId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesByBibIdResponse" message="tns:IServiceLecteur_EXE_AllExemplairesByBibId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EXE_AllExemplairesDispoByBibByISBN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByISBN" message="tns:IServiceLecteur_EXE_AllExemplairesDispoByBibByISBN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByISBNResponse" message="tns:IServiceLecteur_EXE_AllExemplairesDispoByBibByISBN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EXE_AllExemplairesDispoByBibByTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByTitle" message="tns:IServiceLecteur_EXE_AllExemplairesDispoByBibByTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByTitleResponse" message="tns:IServiceLecteur_EXE_AllExemplairesDispoByBibByTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EXE_EmprunterExemplaire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaire" message="tns:IServiceLecteur_EXE_EmprunterExemplaire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaireResponse" message="tns:IServiceLecteur_EXE_EmprunterExemplaire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LIV_LivreByBib_idByISBN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBN" message="tns:IServiceLecteur_LIV_LivreByBib_idByISBN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBNResponse" message="tns:IServiceLecteur_LIV_LivreByBib_idByISBN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LIV_LivreByBib_idByTitre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByTitre" message="tns:IServiceLecteur_LIV_LivreByBib_idByTitre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByTitreResponse" message="tns:IServiceLecteur_LIV_LivreByBib_idByTitre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReserverLivre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/ReserverLivre" message="tns:IServiceLecteur_ReserverLivre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/ReserverLivreResponse" message="tns:IServiceLecteur_ReserverLivre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LIV_LivreByBib_id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_id" message="tns:IServiceLecteur_LIV_LivreByBib_id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idResponse" message="tns:IServiceLecteur_LIV_LivreByBib_id_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceLecteur" type="tns:IServiceLecteur">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BIB_AllLibelle">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/BIB_AllLibelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LEC_Login">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/LEC_Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EMP_AllEmpruntsRenduByLEC_Id">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsRenduByLEC_Id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserData">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/GetUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LEC_UpdateUserData">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/LEC_UpdateUserData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RES_ListeReservationsDisponibleByLEC_IdByBib">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EMP_RetardsAllBibByLec">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/EMP_RetardsAllBibByLec" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RES_ListeReservationsByLEC_Id">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/RES_ListeReservationsByLEC_Id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EMP_AllEmpruntsEnCoursByLEC_Id">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsEnCoursByLEC_Id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXE_AllExemplairesByBibId">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesByBibId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXE_AllExemplairesDispoByBibByISBN">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByISBN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXE_AllExemplairesDispoByBibByTitle">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXE_EmprunterExemplaire">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LIV_LivreByBib_idByISBN">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LIV_LivreByBib_idByTitre">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByTitre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserverLivre">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/ReserverLivre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LIV_LivreByBib_id">
+      <soap:operation soapAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceLecteur">
+    <wsdl:port name="BasicHttpBinding_IServiceLecteur" binding="tns:BasicHttpBinding_IServiceLecteur">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Entities" />
+  <xs:element name="BIB_AllLibelle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="bibs" nillable="true" type="q1:ArrayOfBIB_AllLibelle_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BIB_AllLibelleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="bibs" nillable="true" type="q2:ArrayOfBIB_AllLibelle_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LEC_Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LEC_LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LEC_LoginResult" nillable="true" type="q3:LEC_Login_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EMP_AllEmpruntsRenduByLEC_Id">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LecId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EMP_AllEmpruntsRenduByLEC_IdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_AllEmpruntsRenduByLEC_IdResult" nillable="true" type="q4:ArrayOfEMP_AllEmpruntsRenduByLEC_Id_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lEC_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="GetUserDataResult" nillable="true" type="q5:LEC_GetUserData_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LEC_UpdateUserData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Lec_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="nom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prenom" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sexe" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="adresse" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ville" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codePostal" type="xs:int" />
+        <xs:element minOccurs="0" name="dateNaissanceDateTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="image" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LEC_UpdateUserDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RES_ListeReservationsDisponibleByLEC_IdByBib">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lEC_Id" type="xs:int" />
+        <xs:element minOccurs="0" name="bib_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RES_ListeReservationsDisponibleByLEC_IdByBibResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="RES_ListeReservationsDisponibleByLEC_IdByBibResult" nillable="true" type="q6:ArrayOfRES_ListeReservationsDisponibleByLEC_IdByBib_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EMP_RetardsAllBibByLec">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lEC_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EMP_RetardsAllBibByLecResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_RetardsAllBibByLecResult" nillable="true" type="q7:ArrayOfEMP_RetardsAllBibByLec_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RES_ListeReservationsByLEC_Id">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lEC_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RES_ListeReservationsByLEC_IdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="RES_ListeReservationsByLEC_IdResult" nillable="true" type="q8:ArrayOfRES_ListeReservationsByLEC_Id_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EMP_AllEmpruntsEnCoursByLEC_Id">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lEC_Id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EMP_AllEmpruntsEnCoursByLEC_IdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_AllEmpruntsEnCoursByLEC_IdResult" nillable="true" type="q9:ArrayOfEMP_AllEmpruntsEnCoursByLEC_Id_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXE_AllExemplairesByBibId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bib_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXE_AllExemplairesByBibIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesByBibIdResult" nillable="true" type="q10:ArrayOfEXE_AllExemplairesByBibId_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXE_AllExemplairesDispoByBibByISBN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bibId" type="xs:int" />
+        <xs:element minOccurs="0" name="isbn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXE_AllExemplairesDispoByBibByISBNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesDispoByBibByISBNResult" nillable="true" type="q11:ArrayOfEXE_AllExemplairesDispoByBibByISBN_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXE_AllExemplairesDispoByBibByTitle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bibId" type="xs:int" />
+        <xs:element minOccurs="0" name="titre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXE_AllExemplairesDispoByBibByTitleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesDispoByBibByTitleResult" nillable="true" type="q12:ArrayOfEXE_AllExemplairesDispoByBibByTitle_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXE_EmprunterExemplaire">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exeId" type="xs:int" />
+        <xs:element minOccurs="0" name="lecId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EXE_EmprunterExemplaireResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LIV_LivreByBib_idByISBN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bibId" type="xs:int" />
+        <xs:element minOccurs="0" name="isbn" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LIV_LivreByBib_idByISBNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idByISBNResult" nillable="true" type="q13:ArrayOfLIV_LivreByBib_idByISBN_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LIV_LivreByBib_idByTitre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bibId" type="xs:int" />
+        <xs:element minOccurs="0" name="titre" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LIV_LivreByBib_idByTitreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idByTitreResult" nillable="true" type="q14:ArrayOfLIV_LivreByBib_idByTitre_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReserverLivre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="livId" type="xs:int" />
+        <xs:element minOccurs="0" name="lecId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReserverLivreResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LIV_LivreByBib_id">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="bIB_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LIV_LivreByBib_idResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idResult" nillable="true" type="q15:ArrayOfLIV_LivreByBib_id_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

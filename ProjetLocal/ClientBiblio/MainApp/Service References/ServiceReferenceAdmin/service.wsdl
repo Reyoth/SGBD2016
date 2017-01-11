@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceAdmin" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceAdmin_EXE_CreerExemplaire_InputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_CreerExemplaire" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_EXE_CreerExemplaire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_CreerExemplaireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllExemplairesAllBib_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllExemplairesAllBib" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllExemplairesAllBib_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllExemplairesAllBibResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_ADM_Lgin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ADM_Lgin" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_ADM_Lgin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ADM_LginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllRetardataires_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllRetardataires" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllRetardataires_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllRetardatairesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllLivres_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllLivres" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllLivres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllLivresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_BIB_AllLibelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:BIB_AllLibelle" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_BIB_AllLibelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BIB_AllLibelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_RetournerExemplaire_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetournerExemplaire" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_RetournerExemplaire_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetournerExemplaireResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllLecteurs_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllLecteurs" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllLecteurs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllLecteursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllEmpruntsEnCours_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllEmpruntsEnCours" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllEmpruntsEnCours_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllEmpruntsEnCoursResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_LivreByISBN_InputMessage">
+    <wsdl:part name="parameters" element="tns:LivreByISBN" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_LivreByISBN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LivreByISBNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_LivreByTitre_InputMessage">
+    <wsdl:part name="parameters" element="tns:LivreByTitre" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_LivreByTitre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LivreByTitreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AjoutManuelLivre_InputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutManuelLivre" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AjoutManuelLivre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AjoutManuelLivreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_UpdateLivre_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLivre" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_UpdateLivre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLivreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_DeleteLivre_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLivre" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_DeleteLivre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLivreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_NbEmpruntsByLecId_InputMessage">
+    <wsdl:part name="parameters" element="tns:NbEmpruntsByLecId" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_NbEmpruntsByLecId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NbEmpruntsByLecIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_NbRetardByLecId_InputMessage">
+    <wsdl:part name="parameters" element="tns:NbRetardByLecId" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_NbRetardByLecId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NbRetardByLecIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllExemplairesByTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllExemplairesByTitle" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllExemplairesByTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllExemplairesByTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllExemplairesByExeCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:AllExemplairesByExeCode" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_AllExemplairesByExeCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AllExemplairesByExeCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_EXE_AllExemplaireByBIB_Libelle_InputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_AllExemplaireByBIB_Libelle" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_EXE_AllExemplaireByBIB_Libelle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EXE_AllExemplaireByBIB_LibelleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_ChargerLivreTitres_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerLivreTitres" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAdmin_ChargerLivreTitres_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargerLivreTitresResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceAdmin">
+    <wsdl:operation name="EXE_CreerExemplaire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/EXE_CreerExemplaire" message="tns:IServiceAdmin_EXE_CreerExemplaire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/EXE_CreerExemplaireResponse" message="tns:IServiceAdmin_EXE_CreerExemplaire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllExemplairesAllBib">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/AllExemplairesAllBib" message="tns:IServiceAdmin_AllExemplairesAllBib_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/AllExemplairesAllBibResponse" message="tns:IServiceAdmin_AllExemplairesAllBib_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ADM_Lgin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/ADM_Lgin" message="tns:IServiceAdmin_ADM_Lgin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/ADM_LginResponse" message="tns:IServiceAdmin_ADM_Lgin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllRetardataires">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/AllRetardataires" message="tns:IServiceAdmin_AllRetardataires_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/AllRetardatairesResponse" message="tns:IServiceAdmin_AllRetardataires_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllLivres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/AllLivres" message="tns:IServiceAdmin_AllLivres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/AllLivresResponse" message="tns:IServiceAdmin_AllLivres_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BIB_AllLibelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/BIB_AllLibelle" message="tns:IServiceAdmin_BIB_AllLibelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/BIB_AllLibelleResponse" message="tns:IServiceAdmin_BIB_AllLibelle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetournerExemplaire">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/RetournerExemplaire" message="tns:IServiceAdmin_RetournerExemplaire_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/RetournerExemplaireResponse" message="tns:IServiceAdmin_RetournerExemplaire_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllLecteurs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/AllLecteurs" message="tns:IServiceAdmin_AllLecteurs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/AllLecteursResponse" message="tns:IServiceAdmin_AllLecteurs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllEmpruntsEnCours">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/AllEmpruntsEnCours" message="tns:IServiceAdmin_AllEmpruntsEnCours_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/AllEmpruntsEnCoursResponse" message="tns:IServiceAdmin_AllEmpruntsEnCours_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LivreByISBN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/LivreByISBN" message="tns:IServiceAdmin_LivreByISBN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/LivreByISBNResponse" message="tns:IServiceAdmin_LivreByISBN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LivreByTitre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/LivreByTitre" message="tns:IServiceAdmin_LivreByTitre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/LivreByTitreResponse" message="tns:IServiceAdmin_LivreByTitre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AjoutManuelLivre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/AjoutManuelLivre" message="tns:IServiceAdmin_AjoutManuelLivre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/AjoutManuelLivreResponse" message="tns:IServiceAdmin_AjoutManuelLivre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLivre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/UpdateLivre" message="tns:IServiceAdmin_UpdateLivre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/UpdateLivreResponse" message="tns:IServiceAdmin_UpdateLivre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLivre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/DeleteLivre" message="tns:IServiceAdmin_DeleteLivre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/DeleteLivreResponse" message="tns:IServiceAdmin_DeleteLivre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NbEmpruntsByLecId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/NbEmpruntsByLecId" message="tns:IServiceAdmin_NbEmpruntsByLecId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/NbEmpruntsByLecIdResponse" message="tns:IServiceAdmin_NbEmpruntsByLecId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NbRetardByLecId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/NbRetardByLecId" message="tns:IServiceAdmin_NbRetardByLecId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/NbRetardByLecIdResponse" message="tns:IServiceAdmin_NbRetardByLecId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllExemplairesByTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/AllExemplairesByTitle" message="tns:IServiceAdmin_AllExemplairesByTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/AllExemplairesByTitleResponse" message="tns:IServiceAdmin_AllExemplairesByTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AllExemplairesByExeCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/AllExemplairesByExeCode" message="tns:IServiceAdmin_AllExemplairesByExeCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/AllExemplairesByExeCodeResponse" message="tns:IServiceAdmin_AllExemplairesByExeCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EXE_AllExemplaireByBIB_Libelle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/EXE_AllExemplaireByBIB_Libelle" message="tns:IServiceAdmin_EXE_AllExemplaireByBIB_Libelle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/EXE_AllExemplaireByBIB_LibelleResponse" message="tns:IServiceAdmin_EXE_AllExemplaireByBIB_Libelle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargerLivreTitres">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAdmin/ChargerLivreTitres" message="tns:IServiceAdmin_ChargerLivreTitres_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAdmin/ChargerLivreTitresResponse" message="tns:IServiceAdmin_ChargerLivreTitres_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceAdmin" type="tns:IServiceAdmin">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EXE_CreerExemplaire">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/EXE_CreerExemplaire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllExemplairesAllBib">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/AllExemplairesAllBib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ADM_Lgin">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/ADM_Lgin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllRetardataires">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/AllRetardataires" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllLivres">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/AllLivres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BIB_AllLibelle">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/BIB_AllLibelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetournerExemplaire">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/RetournerExemplaire" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllLecteurs">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/AllLecteurs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllEmpruntsEnCours">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/AllEmpruntsEnCours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LivreByISBN">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/LivreByISBN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LivreByTitre">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/LivreByTitre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AjoutManuelLivre">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/AjoutManuelLivre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLivre">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/UpdateLivre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLivre">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/DeleteLivre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NbEmpruntsByLecId">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/NbEmpruntsByLecId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NbRetardByLecId">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/NbRetardByLecId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllExemplairesByTitle">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/AllExemplairesByTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllExemplairesByExeCode">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/AllExemplairesByExeCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EXE_AllExemplaireByBIB_Libelle">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/EXE_AllExemplaireByBIB_Libelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargerLivreTitres">
+      <soap:operation soapAction="http://tempuri.org/IServiceAdmin/ChargerLivreTitres" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceAdmin">
+    <wsdl:port name="BasicHttpBinding_IServiceAdmin" binding="tns:BasicHttpBinding_IServiceAdmin">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceAdmin/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95E39692-6DF7-434F-A576-1C0D47950D92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MainApp</RootNamespace>
+    <AssemblyName>MainApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrateur\AdministrateurGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrateur\AdministrateurGui.Designer.cs">
+      <DependentUpon>AdministrateurGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrateur\AdmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrateur\AdmLogin.Designer.cs">
+      <DependentUpon>AdmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecteur\LecteurGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecteur\LecteurGui.Designer.cs">
+      <DependentUpon>LecteurGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecteur\LectLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecteur\LectLogin.Designer.cs">
+      <DependentUpon>LectLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServiceReferenceAdmin\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceLecteur\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrateur\AdministrateurGui.resx">
+      <DependentUpon>AdministrateurGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrateur\AdmLogin.resx">
+      <DependentUpon>AdmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecteur\LecteurGui.resx">
+      <DependentUpon>LecteurGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecteur\LectLogin.resx">
+      <DependentUpon>LectLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ServiceReferenceAdmin\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.AllEmpruntsEnCoursResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.AllExemplairesAllBibResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.AllExemplairesByExeCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.AllExemplairesByTitleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.AllLecteursResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.AllLivresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.AllRetardatairesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.BIB_AllLibelleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.ChargerLivreTitresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.LivreByISBNResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.LivreByTitreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.NbEmpruntsByLecIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\MainApp.ServiceReferenceAdmin.NbRetardByLecIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\service.wsdl" />
+    <None Include="Service References\ServiceReferenceAdmin\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceAdmin\System.Data.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\Entities.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.BIB_AllLibelleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.LEC_GetUserData_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.LEC_Login_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\service.wsdl" />
+    <None Include="Service References\ServiceReferenceLecteur\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceLecteur\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{e4490c89-0ecc-49f8-ac17-c0575f60160e}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{cc050749-4975-4b77-a9d0-30c5e2738a7c}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Errors\Errors.csproj">
+      <Project>{8690d2d1-0d4b-46cd-b6e7-2cb7b7ffaa2c}</Project>
+      <Name>Errors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignOUt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biblio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\téléchargement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignOUt2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignOUt21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Livre 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\livres2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9d70653d7f974815fac9be87c204bcc2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marche-du-livre1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ligne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bannerVines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HomePageWave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_62655_8bb7f0cc_XL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReferenceAdmin\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceLecteur\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceAdmin\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceAdmin\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceAdmin\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceLecteur\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceLecteur\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReferenceLecteur\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
