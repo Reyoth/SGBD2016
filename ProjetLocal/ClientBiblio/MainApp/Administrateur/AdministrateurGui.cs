@@ -31,7 +31,7 @@ namespace MainApp.Administrateur
 
             //replissage des comboBox
             ChargerBibLibelle(cbBiblioExemp);
-            ChargerBibLibelle(cbBibLibelle);
+            //ChargerBibLibelle(cbBibLibelle);
             ChargerLivreTitres(cbLivreExemp);
 
             ////txt volet Gestion LIvre
@@ -423,8 +423,8 @@ namespace MainApp.Administrateur
             {
                 txtNomretardataire.Text = gdvRetardataires.CurrentRow.Cells[1].Value.ToString();
                 txtPrenomRetardataire.Text = gdvRetardataires.CurrentRow.Cells[2].Value.ToString(); 
-                txtNbJoursRetards.Text = gdvRetardataires.CurrentRow.Cells[3].Value.ToString(); ;
-                txtMontantRetard.Text = gdvRetardataires.CurrentRow.Cells[4].Value.ToString();
+                txtNbJoursRetards.Text = gdvRetardataires.CurrentRow.Cells[10].Value.ToString(); ;
+                txtMontantRetard.Text = gdvRetardataires.CurrentRow.Cells[9].Value.ToString();
                 pbLiveRetard.ImageLocation = gdvRetardataires.CurrentRow.Cells[8].Value.ToString();
 
             }
@@ -433,8 +433,8 @@ namespace MainApp.Administrateur
         private void tbnGoRchExmpCode_Click(object sender, EventArgs e)
         {
             var client = new ServiceAdminClient();
-            DataSet ds = null;
-            client.AllExemplairesByExeCode(ref ds, txtCodeExemplaire.Text);
+            DataSet ds = new DataSet();
+            client.AllExemplairesByExeCode(ref ds, txtCodeRechExemp.Text);
             dgvExemplaire.DataSource = null;
             dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
         }
@@ -442,7 +442,7 @@ namespace MainApp.Administrateur
         private void tbnGoRchExmpTitre_Click(object sender, EventArgs e)
         {
             var client = new ServiceAdminClient();
-            DataSet ds=null;
+            DataSet ds= new DataSet();
             client.AllExemplairesByTitle(ref ds, txtTitreLivreRechExemp.Text);
             dgvExemplaire.DataSource = null;
             dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
@@ -467,16 +467,16 @@ namespace MainApp.Administrateur
             gdvLivre.DataSource = ds.Tables[0].DefaultView;
         }
 
-        private void tbnGoRchExmpBib_Click(object sender, EventArgs e)
-        {
-            var client = new ServiceAdminClient();
-            dgvExemplaire.DataSource = null;
-            DataTable dt = new DataTable();
-            client.EXE_AllExemplaireByBIB_Libelle(ref dt, cbBibLibelle.SelectedItem.ToString());
-            dgvExemplaire.DataSource = dt.DefaultView;
-            dgvExemplaire.Columns[0].Visible = false;
-            dgvExemplaire.Columns[7].Visible = false;
-        }
+        //private void tbnGoRchExmpBib_Click(object sender, EventArgs e)
+        //{
+        //    var client = new ServiceAdminClient();
+        //    dgvExemplaire.DataSource = null;
+        //    DataSet ds = new DataSet();
+        //    client.EXE_AllExemplaireByBIB_Libelle(ref ds, cbBibLibelle.SelectedItem.ToString());
+        //    dgvExemplaire.DataSource = ds.Tables[0].DefaultView;
+        //    dgvExemplaire.Columns[0].Visible = false;
+        //    dgvExemplaire.Columns[7].Visible = false;
+        //}
         private void btnAjoutExemplaire_Click(object sender, EventArgs e)
         {
             var client = new ServiceAdminClient();

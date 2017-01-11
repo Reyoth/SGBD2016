@@ -863,13 +863,13 @@ namespace MainApp.ServiceReferenceAdmin {
             return base.Channel.EXE_AllExemplaireByBIB_Libelle(request);
         }
         
-        public void EXE_AllExemplaireByBIB_Libelle(ref System.Data.DataTable dt, string Libelle) {
-            MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleRequest inValue = new MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleRequest();
-            inValue.dt = dt;
-            inValue.Libelle = Libelle;
-            MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleResponse retVal = ((MainApp.ServiceReferenceAdmin.IServiceAdmin)(this)).EXE_AllExemplaireByBIB_Libelle(inValue);
-            dt = retVal.dt;
-        }
+        //public void EXE_AllExemplaireByBIB_Libelle(ref System.Data.DataSet ds, string Libelle) {
+        //    MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleRequest inValue = new MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleRequest();
+        //    inValue. = ds;
+        //    inValue.Libelle = Libelle;
+        //    MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleResponse retVal = ((MainApp.ServiceReferenceAdmin.IServiceAdmin)(this)).EXE_AllExemplaireByBIB_Libelle(inValue);
+        //    ds = retVal.dt;
+        //}
         
         public System.Threading.Tasks.Task<MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleResponse> EXE_AllExemplaireByBIB_LibelleAsync(MainApp.ServiceReferenceAdmin.EXE_AllExemplaireByBIB_LibelleRequest request) {
             return base.Channel.EXE_AllExemplaireByBIB_LibelleAsync(request);
