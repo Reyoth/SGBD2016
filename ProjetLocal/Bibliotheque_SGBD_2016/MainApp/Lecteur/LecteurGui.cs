@@ -203,6 +203,10 @@ namespace MainApp.Lecteur
 
         private void btnMettreAJourProfile_Click(object sender, EventArgs e)
         {
+            if (txtLienPhoto.Text != "")
+            {
+                pbUserPictureProfile.ImageLocation = txtLienPhoto.Text;
+            }
             BL.Lecteur.LEC_UpdateUserData(session.LEC_Id, txtUserDataNom.Text, 
                                       txtUserDataPrenom.Text, 
                                       txtUserDataSexe.Text,
