@@ -50,8 +50,8 @@ namespace MainApp.Lecteur
         public void ChargerBibLibelle(ComboBox cb)
         {
             var client = new ServiceLecteurClient();
-            
-            client.BIB_AllLibelle(ref biblios);
+
+            var biblios = client.BIB_AllLibelle();
            foreach (var bib in biblios)
             {
                 cb.Items.Add(bib.BIB_Libelle);

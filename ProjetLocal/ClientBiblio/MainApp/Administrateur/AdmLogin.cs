@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MainApp.Lecteur;
+using MainApp.ServiceReferenceAdmin;
 
 namespace MainApp.Administrateur
 {
@@ -21,11 +22,11 @@ namespace MainApp.Administrateur
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-
+            var client = new ServiceAdminClient();
             if (txtLogin.Text == "" || txtPwd.Text == "") { }
             else
             {
-                string userName = BL.Administrateur.ADM_Lgin(txtLogin.Text, txtPwd.Text);
+                string userName = client.ADM_Lgin(txtLogin.Text, txtPwd.Text);
                 AdministrateurGui AdmGui = new AdministrateurGui(userName);
                 this.Hide();
                 AdmGui.Show();

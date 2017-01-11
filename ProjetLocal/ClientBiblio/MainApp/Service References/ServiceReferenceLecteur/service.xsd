@@ -3,15 +3,13 @@
   <xs:import namespace="http://schemas.datacontract.org/2004/07/Entities" />
   <xs:element name="BIB_AllLibelle">
     <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="bibs" nillable="true" type="q1:ArrayOfBIB_AllLibelle_Result" />
-      </xs:sequence>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
   <xs:element name="BIB_AllLibelleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="bibs" nillable="true" type="q2:ArrayOfBIB_AllLibelle_Result" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="BIB_AllLibelleResult" nillable="true" type="q1:ArrayOfBIB_AllLibelle_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -26,7 +24,7 @@
   <xs:element name="LEC_LoginResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LEC_LoginResult" nillable="true" type="q3:LEC_Login_Result" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LEC_LoginResult" nillable="true" type="q2:LEC_Login_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -40,7 +38,7 @@
   <xs:element name="EMP_AllEmpruntsRenduByLEC_IdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_AllEmpruntsRenduByLEC_IdResult" nillable="true" type="q4:ArrayOfEMP_AllEmpruntsRenduByLEC_Id_Result" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_AllEmpruntsRenduByLEC_IdResult" nillable="true" type="q3:ArrayOfEMP_AllEmpruntsRenduByLEC_Id_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -54,7 +52,7 @@
   <xs:element name="GetUserDataResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="GetUserDataResult" nillable="true" type="q5:LEC_GetUserData_Result" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="GetUserDataResult" nillable="true" type="q4:LEC_GetUserData_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -91,7 +89,7 @@
   <xs:element name="RES_ListeReservationsDisponibleByLEC_IdByBibResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="RES_ListeReservationsDisponibleByLEC_IdByBibResult" nillable="true" type="q6:ArrayOfRES_ListeReservationsDisponibleByLEC_IdByBib_Result" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="RES_ListeReservationsDisponibleByLEC_IdByBibResult" nillable="true" type="q5:ArrayOfRES_ListeReservationsDisponibleByLEC_IdByBib_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -105,7 +103,7 @@
   <xs:element name="EMP_RetardsAllBibByLecResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_RetardsAllBibByLecResult" nillable="true" type="q7:ArrayOfEMP_RetardsAllBibByLec_Result" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_RetardsAllBibByLecResult" nillable="true" type="q6:ArrayOfEMP_RetardsAllBibByLec_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -119,7 +117,7 @@
   <xs:element name="RES_ListeReservationsByLEC_IdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="RES_ListeReservationsByLEC_IdResult" nillable="true" type="q8:ArrayOfRES_ListeReservationsByLEC_Id_Result" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="RES_ListeReservationsByLEC_IdResult" nillable="true" type="q7:ArrayOfRES_ListeReservationsByLEC_Id_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -133,7 +131,7 @@
   <xs:element name="EMP_AllEmpruntsEnCoursByLEC_IdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_AllEmpruntsEnCoursByLEC_IdResult" nillable="true" type="q9:ArrayOfEMP_AllEmpruntsEnCoursByLEC_Id_Result" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EMP_AllEmpruntsEnCoursByLEC_IdResult" nillable="true" type="q8:ArrayOfEMP_AllEmpruntsEnCoursByLEC_Id_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -147,7 +145,7 @@
   <xs:element name="EXE_AllExemplairesByBibIdResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesByBibIdResult" nillable="true" type="q10:ArrayOfEXE_AllExemplairesByBibId_Result" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesByBibIdResult" nillable="true" type="q9:ArrayOfEXE_AllExemplairesByBibId_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -162,7 +160,7 @@
   <xs:element name="EXE_AllExemplairesDispoByBibByISBNResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesDispoByBibByISBNResult" nillable="true" type="q11:ArrayOfEXE_AllExemplairesDispoByBibByISBN_Result" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesDispoByBibByISBNResult" nillable="true" type="q10:ArrayOfEXE_AllExemplairesDispoByBibByISBN_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -177,7 +175,7 @@
   <xs:element name="EXE_AllExemplairesDispoByBibByTitleResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesDispoByBibByTitleResult" nillable="true" type="q12:ArrayOfEXE_AllExemplairesDispoByBibByTitle_Result" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="EXE_AllExemplairesDispoByBibByTitleResult" nillable="true" type="q11:ArrayOfEXE_AllExemplairesDispoByBibByTitle_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -205,7 +203,7 @@
   <xs:element name="LIV_LivreByBib_idByISBNResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idByISBNResult" nillable="true" type="q13:ArrayOfLIV_LivreByBib_idByISBN_Result" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idByISBNResult" nillable="true" type="q12:ArrayOfLIV_LivreByBib_idByISBN_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -220,7 +218,7 @@
   <xs:element name="LIV_LivreByBib_idByTitreResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idByTitreResult" nillable="true" type="q14:ArrayOfLIV_LivreByBib_idByTitre_Result" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idByTitreResult" nillable="true" type="q13:ArrayOfLIV_LivreByBib_idByTitre_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -247,7 +245,7 @@
   <xs:element name="LIV_LivreByBib_idResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idResult" nillable="true" type="q15:ArrayOfLIV_LivreByBib_id_Result" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Entities" minOccurs="0" name="LIV_LivreByBib_idResult" nillable="true" type="q14:ArrayOfLIV_LivreByBib_id_Result" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

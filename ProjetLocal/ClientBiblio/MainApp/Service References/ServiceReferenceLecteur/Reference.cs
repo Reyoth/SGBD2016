@@ -1736,11 +1736,10 @@ namespace MainApp.ServiceReferenceLecteur {
     public interface IServiceLecteur {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/BIB_AllLibelle", ReplyAction="http://tempuri.org/IServiceLecteur/BIB_AllLibelleResponse")]
-        MainApp.ServiceReferenceLecteur.BIB_AllLibelleResponse BIB_AllLibelle(MainApp.ServiceReferenceLecteur.BIB_AllLibelleRequest request);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result> BIB_AllLibelle();
         
-        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/BIB_AllLibelle", ReplyAction="http://tempuri.org/IServiceLecteur/BIB_AllLibelleResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.BIB_AllLibelleResponse> BIB_AllLibelleAsync(MainApp.ServiceReferenceLecteur.BIB_AllLibelleRequest request);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result>> BIB_AllLibelleAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LEC_Login", ReplyAction="http://tempuri.org/IServiceLecteur/LEC_LoginResponse")]
         MainApp.ServiceReferenceLecteur.LEC_Login_Result LEC_Login(string login, string password);
@@ -1749,10 +1748,10 @@ namespace MainApp.ServiceReferenceLecteur {
         System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LEC_Login_Result> LEC_LoginAsync(string login, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsRenduByLEC_Id", ReplyAction="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsRenduByLEC_IdResponse")]
-        MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result[] EMP_AllEmpruntsRenduByLEC_Id(int LecId);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result> EMP_AllEmpruntsRenduByLEC_Id(int LecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsRenduByLEC_Id", ReplyAction="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsRenduByLEC_IdResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result[]> EMP_AllEmpruntsRenduByLEC_IdAsync(int LecId);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result>> EMP_AllEmpruntsRenduByLEC_IdAsync(int LecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/GetUserData", ReplyAction="http://tempuri.org/IServiceLecteur/GetUserDataResponse")]
         MainApp.ServiceReferenceLecteur.LEC_GetUserData_Result GetUserData(int lEC_Id);
@@ -1768,47 +1767,47 @@ namespace MainApp.ServiceReferenceLecteur {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBib", ReplyAction="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBibRe" +
             "sponse")]
-        MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result[] RES_ListeReservationsDisponibleByLEC_IdByBib(int lEC_Id, int bib_ID);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(int lEC_Id, int bib_ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBib", ReplyAction="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBibRe" +
             "sponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result[]> RES_ListeReservationsDisponibleByLEC_IdByBibAsync(int lEC_Id, int bib_ID);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result>> RES_ListeReservationsDisponibleByLEC_IdByBibAsync(int lEC_Id, int bib_ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EMP_RetardsAllBibByLec", ReplyAction="http://tempuri.org/IServiceLecteur/EMP_RetardsAllBibByLecResponse")]
-        MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result[] EMP_RetardsAllBibByLec(int lEC_Id);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result> EMP_RetardsAllBibByLec(int lEC_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EMP_RetardsAllBibByLec", ReplyAction="http://tempuri.org/IServiceLecteur/EMP_RetardsAllBibByLecResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result[]> EMP_RetardsAllBibByLecAsync(int lEC_Id);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result>> EMP_RetardsAllBibByLecAsync(int lEC_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsByLEC_Id", ReplyAction="http://tempuri.org/IServiceLecteur/RES_ListeReservationsByLEC_IdResponse")]
-        MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result[] RES_ListeReservationsByLEC_Id(int lEC_Id);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result> RES_ListeReservationsByLEC_Id(int lEC_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsByLEC_Id", ReplyAction="http://tempuri.org/IServiceLecteur/RES_ListeReservationsByLEC_IdResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result[]> RES_ListeReservationsByLEC_IdAsync(int lEC_Id);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result>> RES_ListeReservationsByLEC_IdAsync(int lEC_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsEnCoursByLEC_Id", ReplyAction="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsEnCoursByLEC_IdResponse")]
-        MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result[] EMP_AllEmpruntsEnCoursByLEC_Id(int lEC_Id);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result> EMP_AllEmpruntsEnCoursByLEC_Id(int lEC_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsEnCoursByLEC_Id", ReplyAction="http://tempuri.org/IServiceLecteur/EMP_AllEmpruntsEnCoursByLEC_IdResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result[]> EMP_AllEmpruntsEnCoursByLEC_IdAsync(int lEC_Id);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result>> EMP_AllEmpruntsEnCoursByLEC_IdAsync(int lEC_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesByBibId", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesByBibIdResponse")]
-        MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result[] EXE_AllExemplairesByBibId(int bib_ID);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result> EXE_AllExemplairesByBibId(int bib_ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesByBibId", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesByBibIdResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result[]> EXE_AllExemplairesByBibIdAsync(int bib_ID);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result>> EXE_AllExemplairesByBibIdAsync(int bib_ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByISBN", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByISBNResponse")]
-        MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result[] EXE_AllExemplairesDispoByBibByISBN(int bibId, string isbn);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result> EXE_AllExemplairesDispoByBibByISBN(int bibId, string isbn);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByISBN", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByISBNResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result[]> EXE_AllExemplairesDispoByBibByISBNAsync(int bibId, string isbn);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result>> EXE_AllExemplairesDispoByBibByISBNAsync(int bibId, string isbn);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByTitle", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByTitleResponse")]
-        MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result[] EXE_AllExemplairesDispoByBibByTitle(int bibId, string titre);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result> EXE_AllExemplairesDispoByBibByTitle(int bibId, string titre);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByTitle", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_AllExemplairesDispoByBibByTitleResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result[]> EXE_AllExemplairesDispoByBibByTitleAsync(int bibId, string titre);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result>> EXE_AllExemplairesDispoByBibByTitleAsync(int bibId, string titre);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaire", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaireResponse")]
         void EXE_EmprunterExemplaire(int exeId, int lecId);
@@ -1817,16 +1816,16 @@ namespace MainApp.ServiceReferenceLecteur {
         System.Threading.Tasks.Task EXE_EmprunterExemplaireAsync(int exeId, int lecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBN", ReplyAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBNResponse")]
-        MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result[] LIV_LivreByBib_idByISBN(int bibId, string isbn);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result> LIV_LivreByBib_idByISBN(int bibId, string isbn);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBN", ReplyAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBNResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result[]> LIV_LivreByBib_idByISBNAsync(int bibId, string isbn);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result>> LIV_LivreByBib_idByISBNAsync(int bibId, string isbn);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByTitre", ReplyAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByTitreResponse")]
-        MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result[] LIV_LivreByBib_idByTitre(int bibId, string titre);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result> LIV_LivreByBib_idByTitre(int bibId, string titre);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByTitre", ReplyAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByTitreResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result[]> LIV_LivreByBib_idByTitreAsync(int bibId, string titre);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result>> LIV_LivreByBib_idByTitreAsync(int bibId, string titre);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/ReserverLivre", ReplyAction="http://tempuri.org/IServiceLecteur/ReserverLivreResponse")]
         void ReserverLivre(int livId, int lecId);
@@ -1835,42 +1834,10 @@ namespace MainApp.ServiceReferenceLecteur {
         System.Threading.Tasks.Task ReserverLivreAsync(int livId, int lecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_id", ReplyAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idResponse")]
-        MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result[] LIV_LivreByBib_id(int bIB_ID);
+        System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result> LIV_LivreByBib_id(int bIB_ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_id", ReplyAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result[]> LIV_LivreByBib_idAsync(int bIB_ID);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="BIB_AllLibelle", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class BIB_AllLibelleRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result[] bibs;
-        
-        public BIB_AllLibelleRequest() {
-        }
-        
-        public BIB_AllLibelleRequest(MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result[] bibs) {
-            this.bibs = bibs;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="BIB_AllLibelleResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class BIB_AllLibelleResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result[] bibs;
-        
-        public BIB_AllLibelleResponse() {
-        }
-        
-        public BIB_AllLibelleResponse(MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result[] bibs) {
-            this.bibs = bibs;
-        }
+        System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result>> LIV_LivreByBib_idAsync(int bIB_ID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -1900,20 +1867,12 @@ namespace MainApp.ServiceReferenceLecteur {
                 base(binding, remoteAddress) {
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MainApp.ServiceReferenceLecteur.BIB_AllLibelleResponse MainApp.ServiceReferenceLecteur.IServiceLecteur.BIB_AllLibelle(MainApp.ServiceReferenceLecteur.BIB_AllLibelleRequest request) {
-            return base.Channel.BIB_AllLibelle(request);
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result> BIB_AllLibelle() {
+            return base.Channel.BIB_AllLibelle();
         }
         
-        public void BIB_AllLibelle(ref MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result[] bibs) {
-            MainApp.ServiceReferenceLecteur.BIB_AllLibelleRequest inValue = new MainApp.ServiceReferenceLecteur.BIB_AllLibelleRequest();
-            inValue.bibs = bibs;
-            MainApp.ServiceReferenceLecteur.BIB_AllLibelleResponse retVal = ((MainApp.ServiceReferenceLecteur.IServiceLecteur)(this)).BIB_AllLibelle(inValue);
-            bibs = retVal.bibs;
-        }
-        
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.BIB_AllLibelleResponse> BIB_AllLibelleAsync(MainApp.ServiceReferenceLecteur.BIB_AllLibelleRequest request) {
-            return base.Channel.BIB_AllLibelleAsync(request);
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.BIB_AllLibelle_Result>> BIB_AllLibelleAsync() {
+            return base.Channel.BIB_AllLibelleAsync();
         }
         
         public MainApp.ServiceReferenceLecteur.LEC_Login_Result LEC_Login(string login, string password) {
@@ -1924,11 +1883,11 @@ namespace MainApp.ServiceReferenceLecteur {
             return base.Channel.LEC_LoginAsync(login, password);
         }
         
-        public MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result[] EMP_AllEmpruntsRenduByLEC_Id(int LecId) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result> EMP_AllEmpruntsRenduByLEC_Id(int LecId) {
             return base.Channel.EMP_AllEmpruntsRenduByLEC_Id(LecId);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result[]> EMP_AllEmpruntsRenduByLEC_IdAsync(int LecId) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsRenduByLEC_Id_Result>> EMP_AllEmpruntsRenduByLEC_IdAsync(int LecId) {
             return base.Channel.EMP_AllEmpruntsRenduByLEC_IdAsync(LecId);
         }
         
@@ -1948,59 +1907,59 @@ namespace MainApp.ServiceReferenceLecteur {
             return base.Channel.LEC_UpdateUserDataAsync(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissanceDateTime, username, password, image);
         }
         
-        public MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result[] RES_ListeReservationsDisponibleByLEC_IdByBib(int lEC_Id, int bib_ID) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(int lEC_Id, int bib_ID) {
             return base.Channel.RES_ListeReservationsDisponibleByLEC_IdByBib(lEC_Id, bib_ID);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result[]> RES_ListeReservationsDisponibleByLEC_IdByBibAsync(int lEC_Id, int bib_ID) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.RES_ListeReservationsDisponibleByLEC_IdByBib_Result>> RES_ListeReservationsDisponibleByLEC_IdByBibAsync(int lEC_Id, int bib_ID) {
             return base.Channel.RES_ListeReservationsDisponibleByLEC_IdByBibAsync(lEC_Id, bib_ID);
         }
         
-        public MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result[] EMP_RetardsAllBibByLec(int lEC_Id) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result> EMP_RetardsAllBibByLec(int lEC_Id) {
             return base.Channel.EMP_RetardsAllBibByLec(lEC_Id);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result[]> EMP_RetardsAllBibByLecAsync(int lEC_Id) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_RetardsAllBibByLec_Result>> EMP_RetardsAllBibByLecAsync(int lEC_Id) {
             return base.Channel.EMP_RetardsAllBibByLecAsync(lEC_Id);
         }
         
-        public MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result[] RES_ListeReservationsByLEC_Id(int lEC_Id) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result> RES_ListeReservationsByLEC_Id(int lEC_Id) {
             return base.Channel.RES_ListeReservationsByLEC_Id(lEC_Id);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result[]> RES_ListeReservationsByLEC_IdAsync(int lEC_Id) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.RES_ListeReservationsByLEC_Id_Result>> RES_ListeReservationsByLEC_IdAsync(int lEC_Id) {
             return base.Channel.RES_ListeReservationsByLEC_IdAsync(lEC_Id);
         }
         
-        public MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result[] EMP_AllEmpruntsEnCoursByLEC_Id(int lEC_Id) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result> EMP_AllEmpruntsEnCoursByLEC_Id(int lEC_Id) {
             return base.Channel.EMP_AllEmpruntsEnCoursByLEC_Id(lEC_Id);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result[]> EMP_AllEmpruntsEnCoursByLEC_IdAsync(int lEC_Id) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EMP_AllEmpruntsEnCoursByLEC_Id_Result>> EMP_AllEmpruntsEnCoursByLEC_IdAsync(int lEC_Id) {
             return base.Channel.EMP_AllEmpruntsEnCoursByLEC_IdAsync(lEC_Id);
         }
         
-        public MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result[] EXE_AllExemplairesByBibId(int bib_ID) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result> EXE_AllExemplairesByBibId(int bib_ID) {
             return base.Channel.EXE_AllExemplairesByBibId(bib_ID);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result[]> EXE_AllExemplairesByBibIdAsync(int bib_ID) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesByBibId_Result>> EXE_AllExemplairesByBibIdAsync(int bib_ID) {
             return base.Channel.EXE_AllExemplairesByBibIdAsync(bib_ID);
         }
         
-        public MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result[] EXE_AllExemplairesDispoByBibByISBN(int bibId, string isbn) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result> EXE_AllExemplairesDispoByBibByISBN(int bibId, string isbn) {
             return base.Channel.EXE_AllExemplairesDispoByBibByISBN(bibId, isbn);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result[]> EXE_AllExemplairesDispoByBibByISBNAsync(int bibId, string isbn) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByISBN_Result>> EXE_AllExemplairesDispoByBibByISBNAsync(int bibId, string isbn) {
             return base.Channel.EXE_AllExemplairesDispoByBibByISBNAsync(bibId, isbn);
         }
         
-        public MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result[] EXE_AllExemplairesDispoByBibByTitle(int bibId, string titre) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result> EXE_AllExemplairesDispoByBibByTitle(int bibId, string titre) {
             return base.Channel.EXE_AllExemplairesDispoByBibByTitle(bibId, titre);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result[]> EXE_AllExemplairesDispoByBibByTitleAsync(int bibId, string titre) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result>> EXE_AllExemplairesDispoByBibByTitleAsync(int bibId, string titre) {
             return base.Channel.EXE_AllExemplairesDispoByBibByTitleAsync(bibId, titre);
         }
         
@@ -2012,19 +1971,19 @@ namespace MainApp.ServiceReferenceLecteur {
             return base.Channel.EXE_EmprunterExemplaireAsync(exeId, lecId);
         }
         
-        public MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result[] LIV_LivreByBib_idByISBN(int bibId, string isbn) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result> LIV_LivreByBib_idByISBN(int bibId, string isbn) {
             return base.Channel.LIV_LivreByBib_idByISBN(bibId, isbn);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result[]> LIV_LivreByBib_idByISBNAsync(int bibId, string isbn) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result>> LIV_LivreByBib_idByISBNAsync(int bibId, string isbn) {
             return base.Channel.LIV_LivreByBib_idByISBNAsync(bibId, isbn);
         }
         
-        public MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result[] LIV_LivreByBib_idByTitre(int bibId, string titre) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result> LIV_LivreByBib_idByTitre(int bibId, string titre) {
             return base.Channel.LIV_LivreByBib_idByTitre(bibId, titre);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result[]> LIV_LivreByBib_idByTitreAsync(int bibId, string titre) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result>> LIV_LivreByBib_idByTitreAsync(int bibId, string titre) {
             return base.Channel.LIV_LivreByBib_idByTitreAsync(bibId, titre);
         }
         
@@ -2036,11 +1995,11 @@ namespace MainApp.ServiceReferenceLecteur {
             return base.Channel.ReserverLivreAsync(livId, lecId);
         }
         
-        public MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result[] LIV_LivreByBib_id(int bIB_ID) {
+        public System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result> LIV_LivreByBib_id(int bIB_ID) {
             return base.Channel.LIV_LivreByBib_id(bIB_ID);
         }
         
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result[]> LIV_LivreByBib_idAsync(int bIB_ID) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result>> LIV_LivreByBib_idAsync(int bIB_ID) {
             return base.Channel.LIV_LivreByBib_idAsync(bIB_ID);
         }
     }

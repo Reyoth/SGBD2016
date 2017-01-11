@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MainApp.Resources;
 using MainApp.ServiceReferenceAdmin;
 
 namespace MainApp.Administrateur
@@ -301,8 +302,9 @@ namespace MainApp.Administrateur
         private void btnAjRapLivre_Click(object sender, EventArgs e)
         {
             var client = new ServiceAdminClient();
+            
             Livre Livre = new Livre();
-            bool ajouté = BL.GoogleBooks.requestLivre(ref Livre, txtISBNAjRapLivre.Text);
+            bool ajouté = Books.requestLivre(ref Livre, txtISBNAjRapLivre.Text);
             if (ajouté)
             {
                 client.AjoutManuelLivre(Livre.ISBN, Livre.Titre, Livre.Image, Livre.Authors);
@@ -449,7 +451,7 @@ namespace MainApp.Administrateur
         public void ChargerBibLibelle(ComboBox cb)
         {
             var client = new ServiceAdminClient();
-            client.BIB_AllLibelle(ref bibliotheques);
+            var bibliotheques = client.BIB_AllLibelle();
             foreach (var bib in bibliotheques)
             {
                 cb.Items.Add(bib);

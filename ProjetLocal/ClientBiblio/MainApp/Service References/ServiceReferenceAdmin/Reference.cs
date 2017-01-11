@@ -49,11 +49,10 @@ namespace MainApp.ServiceReferenceAdmin {
         System.Threading.Tasks.Task<MainApp.ServiceReferenceAdmin.AllLivresResponse> AllLivresAsync(MainApp.ServiceReferenceAdmin.AllLivresRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAdmin/BIB_AllLibelle", ReplyAction="http://tempuri.org/IServiceAdmin/BIB_AllLibelleResponse")]
-        MainApp.ServiceReferenceAdmin.BIB_AllLibelleResponse BIB_AllLibelle(MainApp.ServiceReferenceAdmin.BIB_AllLibelleRequest request);
+        System.Collections.Generic.List<string> BIB_AllLibelle();
         
-        // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAdmin/BIB_AllLibelle", ReplyAction="http://tempuri.org/IServiceAdmin/BIB_AllLibelleResponse")]
-        System.Threading.Tasks.Task<MainApp.ServiceReferenceAdmin.BIB_AllLibelleResponse> BIB_AllLibelleAsync(MainApp.ServiceReferenceAdmin.BIB_AllLibelleRequest request);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<string>> BIB_AllLibelleAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceAdmin/RetournerExemplaire", ReplyAction="http://tempuri.org/IServiceAdmin/RetournerExemplaireResponse")]
         void RetournerExemplaire(int exemplaireId, double montant);
@@ -243,38 +242,6 @@ namespace MainApp.ServiceReferenceAdmin {
         
         public AllLivresResponse(System.Data.DataSet ds) {
             this.ds = ds;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="BIB_AllLibelle", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class BIB_AllLibelleRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public string[] bibliotheques;
-        
-        public BIB_AllLibelleRequest() {
-        }
-        
-        public BIB_AllLibelleRequest(string[] bibliotheques) {
-            this.bibliotheques = bibliotheques;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="BIB_AllLibelleResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class BIB_AllLibelleResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public string[] bibliotheques;
-        
-        public BIB_AllLibelleResponse() {
-        }
-        
-        public BIB_AllLibelleResponse(string[] bibliotheques) {
-            this.bibliotheques = bibliotheques;
         }
     }
     
@@ -600,12 +567,12 @@ namespace MainApp.ServiceReferenceAdmin {
     public partial class ChargerLivreTitresRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public string[] titres;
+        public System.Collections.Generic.List<string> titres;
         
         public ChargerLivreTitresRequest() {
         }
         
-        public ChargerLivreTitresRequest(string[] titres) {
+        public ChargerLivreTitresRequest(System.Collections.Generic.List<string> titres) {
             this.titres = titres;
         }
     }
@@ -616,12 +583,12 @@ namespace MainApp.ServiceReferenceAdmin {
     public partial class ChargerLivreTitresResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public string[] titres;
+        public System.Collections.Generic.List<string> titres;
         
         public ChargerLivreTitresResponse() {
         }
         
-        public ChargerLivreTitresResponse(string[] titres) {
+        public ChargerLivreTitresResponse(System.Collections.Generic.List<string> titres) {
             this.titres = titres;
         }
     }
@@ -717,20 +684,12 @@ namespace MainApp.ServiceReferenceAdmin {
             return base.Channel.AllLivresAsync(request);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        MainApp.ServiceReferenceAdmin.BIB_AllLibelleResponse MainApp.ServiceReferenceAdmin.IServiceAdmin.BIB_AllLibelle(MainApp.ServiceReferenceAdmin.BIB_AllLibelleRequest request) {
-            return base.Channel.BIB_AllLibelle(request);
+        public System.Collections.Generic.List<string> BIB_AllLibelle() {
+            return base.Channel.BIB_AllLibelle();
         }
         
-        public void BIB_AllLibelle(ref string[] bibliotheques) {
-            MainApp.ServiceReferenceAdmin.BIB_AllLibelleRequest inValue = new MainApp.ServiceReferenceAdmin.BIB_AllLibelleRequest();
-            inValue.bibliotheques = bibliotheques;
-            MainApp.ServiceReferenceAdmin.BIB_AllLibelleResponse retVal = ((MainApp.ServiceReferenceAdmin.IServiceAdmin)(this)).BIB_AllLibelle(inValue);
-            bibliotheques = retVal.bibliotheques;
-        }
-        
-        public System.Threading.Tasks.Task<MainApp.ServiceReferenceAdmin.BIB_AllLibelleResponse> BIB_AllLibelleAsync(MainApp.ServiceReferenceAdmin.BIB_AllLibelleRequest request) {
-            return base.Channel.BIB_AllLibelleAsync(request);
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<string>> BIB_AllLibelleAsync() {
+            return base.Channel.BIB_AllLibelleAsync();
         }
         
         public void RetournerExemplaire(int exemplaireId, double montant) {
@@ -921,7 +880,7 @@ namespace MainApp.ServiceReferenceAdmin {
             return base.Channel.ChargerLivreTitres(request);
         }
         
-        public void ChargerLivreTitres(ref string[] titres) {
+        public void ChargerLivreTitres(ref System.Collections.Generic.List<string> titres) {
             MainApp.ServiceReferenceAdmin.ChargerLivreTitresRequest inValue = new MainApp.ServiceReferenceAdmin.ChargerLivreTitresRequest();
             inValue.titres = titres;
             MainApp.ServiceReferenceAdmin.ChargerLivreTitresResponse retVal = ((MainApp.ServiceReferenceAdmin.IServiceAdmin)(this)).ChargerLivreTitres(inValue);
