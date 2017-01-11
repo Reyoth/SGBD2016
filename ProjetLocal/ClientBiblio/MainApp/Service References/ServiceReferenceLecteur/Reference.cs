@@ -143,7 +143,13 @@ namespace MainApp.ServiceReferenceLecteur {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
+
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExemplaireField;
+
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitreField;
+
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BibliothèqueField;
         
@@ -156,11 +162,9 @@ namespace MainApp.ServiceReferenceLecteur {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<decimal> EMP_MontantPayeField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ExemplaireField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TitreField;
+        
+        
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -171,7 +175,41 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Exemplaire
+        {
+            get
+            {
+                return this.ExemplaireField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ExemplaireField, value) != true))
+                {
+                    this.ExemplaireField = value;
+                    this.RaisePropertyChanged("Exemplaire");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Bibliothèque {
             get {
@@ -224,31 +262,9 @@ namespace MainApp.ServiceReferenceLecteur {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Exemplaire {
-            get {
-                return this.ExemplaireField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ExemplaireField, value) != true)) {
-                    this.ExemplaireField = value;
-                    this.RaisePropertyChanged("Exemplaire");
-                }
-            }
-        }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+        
+        
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -485,7 +501,41 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EXE_Code
+        {
+            get
+            {
+                return this.EXE_CodeField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.EXE_CodeField, value) != true))
+                {
+                    this.EXE_CodeField = value;
+                    this.RaisePropertyChanged("EXE_Code");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string BIB_Libelle {
             get {
@@ -499,18 +549,6 @@ namespace MainApp.ServiceReferenceLecteur {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EXE_Code {
-            get {
-                return this.EXE_CodeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EXE_CodeField, value) != true)) {
-                    this.EXE_CodeField = value;
-                    this.RaisePropertyChanged("EXE_Code");
-                }
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int EXE_Id {
@@ -551,18 +589,7 @@ namespace MainApp.ServiceReferenceLecteur {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+        
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -619,7 +646,75 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID_Exemplaire
+        {
+            get
+            {
+                return this.ID_ExemplaireField;
+            }
+            set
+            {
+                if ((this.ID_ExemplaireField.Equals(value) != true))
+                {
+                    this.ID_ExemplaireField = value;
+                    this.RaisePropertyChanged("ID_Exemplaire");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Exemplaire
+        {
+            get
+            {
+                return this.ExemplaireField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ExemplaireField, value) != true))
+                {
+                    this.ExemplaireField = value;
+                    this.RaisePropertyChanged("Exemplaire");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISBN
+        {
+            get
+            {
+                return this.ISBNField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ISBNField, value) != true))
+                {
+                    this.ISBNField = value;
+                    this.RaisePropertyChanged("ISBN");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Bibliotheque {
             get {
@@ -646,44 +741,6 @@ namespace MainApp.ServiceReferenceLecteur {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Exemplaire {
-            get {
-                return this.ExemplaireField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ExemplaireField, value) != true)) {
-                    this.ExemplaireField = value;
-                    this.RaisePropertyChanged("Exemplaire");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID_Exemplaire {
-            get {
-                return this.ID_ExemplaireField;
-            }
-            set {
-                if ((this.ID_ExemplaireField.Equals(value) != true)) {
-                    this.ID_ExemplaireField = value;
-                    this.RaisePropertyChanged("ID_Exemplaire");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISBN {
-            get {
-                return this.ISBNField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISBNField, value) != true)) {
-                    this.ISBNField = value;
-                    this.RaisePropertyChanged("ISBN");
-                }
-            }
-        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> Jours_de_retard {
@@ -697,7 +754,24 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> Montant_total_du__
+        {
+            get
+            {
+                return this.Montant_total_du__Field;
+            }
+            set
+            {
+                if ((this.Montant_total_du__Field.Equals(value) != true))
+                {
+                    this.Montant_total_du__Field = value;
+                    this.RaisePropertyChanged("Montant_total_du__");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string LIV_Image {
             get {
@@ -710,32 +784,7 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<decimal> Montant_total_du__ {
-            get {
-                return this.Montant_total_du__Field;
-            }
-            set {
-                if ((this.Montant_total_du__Field.Equals(value) != true)) {
-                    this.Montant_total_du__Field = value;
-                    this.RaisePropertyChanged("Montant_total_du__");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+     
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -783,7 +832,58 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID_Réservation
+        {
+            get
+            {
+                return this.ID_RéservationField;
+            }
+            set
+            {
+                if ((this.ID_RéservationField.Equals(value) != true))
+                {
+                    this.ID_RéservationField = value;
+                    this.RaisePropertyChanged("ID_Réservation");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISBN
+        {
+            get
+            {
+                return this.ISBNField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ISBNField, value) != true))
+                {
+                    this.ISBNField = value;
+                    this.RaisePropertyChanged("ISBN");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime Date_de_réservation {
             get {
@@ -796,32 +896,7 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID_Réservation {
-            get {
-                return this.ID_RéservationField;
-            }
-            set {
-                if ((this.ID_RéservationField.Equals(value) != true)) {
-                    this.ID_RéservationField = value;
-                    this.RaisePropertyChanged("ID_Réservation");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISBN {
-            get {
-                return this.ISBNField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISBNField, value) != true)) {
-                    this.ISBNField = value;
-                    this.RaisePropertyChanged("ISBN");
-                }
-            }
-        }
+
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string LIV_Auteurs {
@@ -849,18 +924,7 @@ namespace MainApp.ServiceReferenceLecteur {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+        
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1070,7 +1134,75 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID_Exemplaire
+        {
+            get
+            {
+                return this.ID_ExemplaireField;
+            }
+            set
+            {
+                if ((this.ID_ExemplaireField.Equals(value) != true))
+                {
+                    this.ID_ExemplaireField = value;
+                    this.RaisePropertyChanged("ID_Exemplaire");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Exemplaire
+        {
+            get
+            {
+                return this.ExemplaireField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ExemplaireField, value) != true))
+                {
+                    this.ExemplaireField = value;
+                    this.RaisePropertyChanged("Exemplaire");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISBN
+        {
+            get
+            {
+                return this.ISBNField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ISBNField, value) != true))
+                {
+                    this.ISBNField = value;
+                    this.RaisePropertyChanged("ISBN");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Auteurs {
             get {
@@ -1098,45 +1230,6 @@ namespace MainApp.ServiceReferenceLecteur {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Exemplaire {
-            get {
-                return this.ExemplaireField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ExemplaireField, value) != true)) {
-                    this.ExemplaireField = value;
-                    this.RaisePropertyChanged("Exemplaire");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID_Exemplaire {
-            get {
-                return this.ID_ExemplaireField;
-            }
-            set {
-                if ((this.ID_ExemplaireField.Equals(value) != true)) {
-                    this.ID_ExemplaireField = value;
-                    this.RaisePropertyChanged("ID_Exemplaire");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISBN {
-            get {
-                return this.ISBNField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISBNField, value) != true)) {
-                    this.ISBNField = value;
-                    this.RaisePropertyChanged("ISBN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string LIV_Image {
             get {
                 return this.LIV_ImageField;
@@ -1149,18 +1242,6 @@ namespace MainApp.ServiceReferenceLecteur {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1208,7 +1289,75 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID_Exemplaire
+        {
+            get
+            {
+                return this.ID_ExemplaireField;
+            }
+            set
+            {
+                if ((this.ID_ExemplaireField.Equals(value) != true))
+                {
+                    this.ID_ExemplaireField = value;
+                    this.RaisePropertyChanged("ID_Exemplaire");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Exemplaire
+        {
+            get
+            {
+                return this.ExemplaireField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ExemplaireField, value) != true))
+                {
+                    this.ExemplaireField = value;
+                    this.RaisePropertyChanged("Exemplaire");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISBN
+        {
+            get
+            {
+                return this.ISBNField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ISBNField, value) != true))
+                {
+                    this.ISBNField = value;
+                    this.RaisePropertyChanged("ISBN");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Auteurs {
             get {
@@ -1234,58 +1383,7 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Exemplaire {
-            get {
-                return this.ExemplaireField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ExemplaireField, value) != true)) {
-                    this.ExemplaireField = value;
-                    this.RaisePropertyChanged("Exemplaire");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID_Exemplaire {
-            get {
-                return this.ID_ExemplaireField;
-            }
-            set {
-                if ((this.ID_ExemplaireField.Equals(value) != true)) {
-                    this.ID_ExemplaireField = value;
-                    this.RaisePropertyChanged("ID_Exemplaire");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISBN {
-            get {
-                return this.ISBNField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISBNField, value) != true)) {
-                    this.ISBNField = value;
-                    this.RaisePropertyChanged("ISBN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+     
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1333,7 +1431,75 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int EXE_Id
+        {
+            get
+            {
+                return this.EXE_IdField;
+            }
+            set
+            {
+                if ((this.EXE_IdField.Equals(value) != true))
+                {
+                    this.EXE_IdField = value;
+                    this.RaisePropertyChanged("EXE_Id");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Exemplaire
+        {
+            get
+            {
+                return this.ExemplaireField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ExemplaireField, value) != true))
+                {
+                    this.ExemplaireField = value;
+                    this.RaisePropertyChanged("Exemplaire");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISBN
+        {
+            get
+            {
+                return this.ISBNField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ISBNField, value) != true))
+                {
+                    this.ISBNField = value;
+                    this.RaisePropertyChanged("ISBN");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Auteurs {
             get {
@@ -1359,58 +1525,7 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EXE_Id {
-            get {
-                return this.EXE_IdField;
-            }
-            set {
-                if ((this.EXE_IdField.Equals(value) != true)) {
-                    this.EXE_IdField = value;
-                    this.RaisePropertyChanged("EXE_Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Exemplaire {
-            get {
-                return this.ExemplaireField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ExemplaireField, value) != true)) {
-                    this.ExemplaireField = value;
-                    this.RaisePropertyChanged("Exemplaire");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISBN {
-            get {
-                return this.ISBNField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISBNField, value) != true)) {
-                    this.ISBNField = value;
-                    this.RaisePropertyChanged("ISBN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+          
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1455,7 +1570,76 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID
+        {
+            get
+            {
+                return this.IDField;
+            }
+            set
+            {
+                if ((this.IDField.Equals(value) != true))
+                {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISBN
+        {
+            get
+            {
+                return this.ISBNField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ISBNField, value) != true))
+                {
+                    this.ISBNField = value;
+                    this.RaisePropertyChanged("ISBN");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Image
+        {
+            get
+            {
+                return this.ImageField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ImageField, value) != true))
+                {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
+                }
+            }
+        }
+
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Auteurs {
             get {
@@ -1468,58 +1652,7 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISBN {
-            get {
-                return this.ISBNField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISBNField, value) != true)) {
-                    this.ISBNField = value;
-                    this.RaisePropertyChanged("ISBN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Image {
-            get {
-                return this.ImageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
-                    this.ImageField = value;
-                    this.RaisePropertyChanged("Image");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+         
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1564,7 +1697,75 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID
+        {
+            get
+            {
+                return this.IDField;
+            }
+            set
+            {
+                if ((this.IDField.Equals(value) != true))
+                {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISBN
+        {
+            get
+            {
+                return this.ISBNField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ISBNField, value) != true))
+                {
+                    this.ISBNField = value;
+                    this.RaisePropertyChanged("ISBN");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Image
+        {
+            get
+            {
+                return this.ImageField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ImageField, value) != true))
+                {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Auteurs {
             get {
@@ -1577,58 +1778,7 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISBN {
-            get {
-                return this.ISBNField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISBNField, value) != true)) {
-                    this.ISBNField = value;
-                    this.RaisePropertyChanged("ISBN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Image {
-            get {
-                return this.ImageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
-                    this.ImageField = value;
-                    this.RaisePropertyChanged("Image");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+  
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1673,7 +1823,75 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID
+        {
+            get
+            {
+                return this.IDField;
+            }
+            set
+            {
+                if ((this.IDField.Equals(value) != true))
+                {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISBN
+        {
+            get
+            {
+                return this.ISBNField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ISBNField, value) != true))
+                {
+                    this.ISBNField = value;
+                    this.RaisePropertyChanged("ISBN");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Titre
+        {
+            get
+            {
+                return this.TitreField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.TitreField, value) != true))
+                {
+                    this.TitreField = value;
+                    this.RaisePropertyChanged("Titre");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Image
+        {
+            get
+            {
+                return this.ImageField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ImageField, value) != true))
+                {
+                    this.ImageField = value;
+                    this.RaisePropertyChanged("Image");
+                }
+            }
+        }
+
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Auteurs {
             get {
@@ -1686,58 +1904,7 @@ namespace MainApp.ServiceReferenceLecteur {
                 }
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ISBN {
-            get {
-                return this.ISBNField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ISBNField, value) != true)) {
-                    this.ISBNField = value;
-                    this.RaisePropertyChanged("ISBN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Image {
-            get {
-                return this.ImageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ImageField, value) != true)) {
-                    this.ImageField = value;
-                    this.RaisePropertyChanged("Image");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Titre {
-            get {
-                return this.TitreField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TitreField, value) != true)) {
-                    this.TitreField = value;
-                    this.RaisePropertyChanged("Titre");
-                }
-            }
-        }
+     
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
