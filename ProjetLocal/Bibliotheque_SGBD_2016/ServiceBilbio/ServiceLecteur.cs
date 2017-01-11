@@ -14,22 +14,22 @@ namespace ServiceBilbio
     {
         public void BIB_AllLibelle(ref List<BIB_AllLibelle_Result> bibs)
         {
-            throw new NotImplementedException();
+            BL.Lecteur.BIB_AllLibelle(ref bibs);
         }
 
         public LEC_Login_Result LEC_Login(string login, string password)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.LEC_Login(login, password);
         }
 
         public List<EMP_AllEmpruntsRenduByLEC_Id_Result> EMP_AllEmpruntsRenduByLEC_Id(int LecId)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.EMP_AllEmpruntsRenduByLEC_Id(LecId);
         }
 
         public LEC_GetUserData_Result GetUserData(int lEC_Id)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.GetUserData(lEC_Id);
         }
 
         public void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal,
