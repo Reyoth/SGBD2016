@@ -27,75 +27,75 @@ namespace ServiceBilbio
             return BL.Lecteur.EMP_AllEmpruntsRenduByLEC_Id(LecId);
         }
 
-        public LEC_GetUserData_Result GetUserData(int lEC_Id)
+        public LEC_GetUserData_Result GetUserData(int LecId)
         {
-            return BL.Lecteur.GetUserData(lEC_Id);
+            return BL.Lecteur.GetUserData(LecId);
         }
 
-        public void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal,
-            DateTime dateNaissanceDateTime, string username, string password, string image)
+        public void LEC_UpdateUserData(int LecId, string nom, string prenom, string sexe, string adresse, string ville, int codePostal,
+            DateTime dateNaissance, string username, string password, string image)
         {
-            throw new NotImplementedException();
+            BL.Lecteur.LEC_UpdateUserData(LecId, nom, prenom, sexe, adresse, ville, codePostal, dateNaissance, username, password, image);
         }
 
-        public List<RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(int lEC_Id, int bib_ID)
+        public List<RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(int LecId, int bibId)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.RES_ListeReservationsDisponibleByLEC_IdByBib(LecId, bibId);
         }
 
-        public List<EMP_RetardsAllBibByLec_Result> EMP_RetardsAllBibByLec(int lEC_Id)
+        public List<EMP_RetardsAllBibByLec_Result> EMP_RetardsAllBibByLec(int LecId)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.EMP_RetardsAllBibByLec(LecId);
         }
 
-        public List<RES_ListeReservationsByLEC_Id_Result> RES_ListeReservationsByLEC_Id(int lEC_Id)
+        public List<RES_ListeReservationsByLEC_Id_Result> RES_ListeReservationsByLEC_Id(int LecId)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.RES_ListeReservationsByLEC_Id(LecId);
         }
 
-        public List<EMP_AllEmpruntsEnCoursByLEC_Id_Result> EMP_AllEmpruntsEnCoursByLEC_Id(int lEC_Id)
+        public List<EMP_AllEmpruntsEnCoursByLEC_Id_Result> EMP_AllEmpruntsEnCoursByLEC_Id(int LecId)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.EMP_AllEmpruntsEnCoursByLEC_Id(LecId);
         }
 
-        public List<EXE_AllExemplairesByBibId_Result> EXE_AllExemplairesByBibId(int bib_ID)
+        public List<EXE_AllExemplairesByBibId_Result> EXE_AllExemplairesByBibId(int bibId)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.EXE_AllExemplairesByBibId(bibId);
         }
 
         public List<EXE_AllExemplairesDispoByBibByISBN_Result> EXE_AllExemplairesDispoByBibByISBN(int bibId, string isbn)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.EXE_AllExemplairesDispoByBibByISBN(bibId, isbn);
         }
 
         public List<EXE_AllExemplairesDispoByBibByTitle_Result> EXE_AllExemplairesDispoByBibByTitle(int bibId, string titre)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.EXE_AllExemplairesDispoByBibByTitle(bibId, titre);
         }
 
         public void EXE_EmprunterExemplaire(int exeId, int lecId)
         {
-            throw new NotImplementedException();
+            BL.Lecteur.EXE_EmprunterExemplaire(exeId, lecId);
         }
 
         public List<LIV_LivreByBib_idByISBN_Result> LIV_LivreByBib_idByISBN(int bibId, string isbn)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.LIV_LivreByBib_idByISBN(bibId, isbn);
         }
 
         public List<LIV_LivreByBib_idByTitre_Result> LIV_LivreByBib_idByTitre(int bibId, string titre)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.LIV_LivreByBib_idByTitre(bibId, titre);
         }
 
         public void ReserverLivre(int livId, int lecId)
         {
-            throw new NotImplementedException();
+            BL.Lecteur.ReserverLivre(livId, lecId);
         }
 
-        public List<LIV_LivreByBib_id_Result> LIV_LivreByBib_id(int bIB_ID)
+        public List<LIV_LivreByBib_id_Result> LIV_LivreByBib_id(int bibId)
         {
-            throw new NotImplementedException();
+            return BL.Lecteur.LIV_LivreByBib_id(bibId);
         }
     }
 }
