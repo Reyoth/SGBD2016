@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5768d739-dbb9-4581-8426-2f902a95e981" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="916e562f-8971-4037-a5f3-ca6c8d02841c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -9,9 +9,7 @@
     <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
-    <CollectionMappings>
-      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
-    </CollectionMappings>
+    <CollectionMappings />
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
@@ -24,10 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="c69fb7c2-c035-478e-a391-0671d8c2539d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="f8a0dc68-398e-49f5-a762-0ff3d085c93a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="bde8974c-a02f-401f-8eec-1fd1caff2c8d" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" />
-    <MetadataFile FileName="Entities.xsd" MetadataType="Schema" ID="38846a82-92d9-45b3-ad4a-a0d698f92695" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="3050505f-b536-4d28-af6d-4b13182a943e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="65eba9ac-bf3c-43fe-8dfb-1abb3fce8818" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="650ae58d-20b2-4fbb-9fea-10425d33e69b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" />
+    <MetadataFile FileName="Entities.xsd" MetadataType="Schema" ID="bc3496ce-a763-48fe-82e5-c57979285d83" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/ServiceBilbio/ServiceLecteur/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

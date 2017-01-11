@@ -276,15 +276,6 @@ namespace DALEF
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RES_ListeReservationsDisponibleByLEC_IdByBib_Result>("RES_ListeReservationsDisponibleByLEC_IdByBib", idLecteurParameter, idBibliothequeParameter);
         }
     
-        public virtual ObjectResult<EMP_AllEmpruntsEnCoursByLEC_Id_Result> EMP_AllEmpruntsEnCoursByLEC_Id(Nullable<int> lec_Id)
-        {
-            var lec_IdParameter = lec_Id.HasValue ?
-                new ObjectParameter("Lec_Id", lec_Id) :
-                new ObjectParameter("Lec_Id", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_AllEmpruntsEnCoursByLEC_Id_Result>("EMP_AllEmpruntsEnCoursByLEC_Id", lec_IdParameter);
-        }
-    
         public virtual ObjectResult<EMP_RetardsAllBibByLec_Result> EMP_RetardsAllBibByLec(Nullable<int> lec_id)
         {
             var lec_idParameter = lec_id.HasValue ?
@@ -301,6 +292,15 @@ namespace DALEF
                 new ObjectParameter("Bib_Id", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EXE_AllExemplairesByBibId_Result>("EXE_AllExemplairesByBibId", bib_IdParameter);
+        }
+    
+        public virtual ObjectResult<EMP_AllEmpruntsEnCoursByLEC_Id_Result> EMP_AllEmpruntsEnCoursByLEC_Id(Nullable<int> lec_Id)
+        {
+            var lec_IdParameter = lec_Id.HasValue ?
+                new ObjectParameter("Lec_Id", lec_Id) :
+                new ObjectParameter("Lec_Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<EMP_AllEmpruntsEnCoursByLEC_Id_Result>("EMP_AllEmpruntsEnCoursByLEC_Id", lec_IdParameter);
         }
     }
 }

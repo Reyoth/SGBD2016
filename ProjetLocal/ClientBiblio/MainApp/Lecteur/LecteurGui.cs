@@ -115,8 +115,8 @@ namespace MainApp.Lecteur
             dgvLivreReservation.DataSource = null;
             var LivresByBib = client.LIV_LivreByBib_id(biblio.BIB_ID);
             dgvLivreReservation.DataSource = LivresByBib;
-            dgvLivreReservation.Columns[0].Visible = false;
-            dgvLivreReservation.Columns[3].Visible = false;
+            //dgvLivreReservation.Columns[0].Visible = false;
+            //dgvLivreReservation.Columns[3].Visible = false;
         }
 
         private void ActualiserRetardsEmprunt()

@@ -73,16 +73,16 @@ namespace BL
             var result = DALEF.Lecteur.GetUserData(lEC_Id);
             Entities.LEC_GetUserData_Result user = new Entities.LEC_GetUserData_Result
             {
-                LEC_UserName = result.LEC_UserName,
-                LEC_Adresse = result.LEC_Adresse,
-                LEC_CodePostal = result.LEC_CodePostal,
-                LEC_DateDeNaissance = result.LEC_DateDeNaissance,
                 LEC_Nom = result.LEC_Nom,
-                LEC_Password = result.LEC_Password,
-                LEC_Photo = result.LEC_Photo,
                 LEC_Prenom = result.LEC_Prenom,
                 LEC_Sexe = result.LEC_Sexe,
-                LEC_Ville = result.LEC_Ville
+                LEC_Adresse = result.LEC_Adresse,
+                LEC_Ville = result.LEC_Ville,
+                LEC_CodePostal = result.LEC_CodePostal,
+                LEC_DateDeNaissance = result.LEC_DateDeNaissance,
+                LEC_UserName = result.LEC_UserName,
+                LEC_Password = result.LEC_Password,
+                LEC_Photo = result.LEC_Photo,
             };
             return user;
         }
@@ -120,16 +120,16 @@ namespace BL
             {
                 entitie.Add(new EMP_RetardsAllBibByLec_Result
                 {
+                    ID_Exemplaire = ligne.ID_Exemplaire,
+                    Exemplaire = ligne.Exemplaire,
+                    Titre = ligne.Titre,
+                    ISBN = ligne.ISBN,
                     Bibliotheque = ligne.Bibliotheque ,
                     Date_d_emprunt = ligne.Date_d_emprunt ,
-                    Exemplaire = ligne.Exemplaire,
-                    ID_Exemplaire = ligne.ID_Exemplaire,
-                    ISBN = ligne.ISBN,
                     Jours_de_retard = ligne.Jours_de_retard,
-                    LIV_Image = ligne.LIV_Image,
                     Montant_total_du__ = ligne.Montant_total_du__,
-                    Titre =ligne.Titre
-            });
+                    LIV_Image = ligne.LIV_Image
+                });
             }
             
             return entitie;
@@ -144,11 +144,11 @@ namespace BL
                 entitie.Add(new Entities.RES_ListeReservationsByLEC_Id_Result
                 {
                     ID_Réservation = ligne.ID_Réservation,
-                    Date_de_réservation = ligne.Date_de_réservation,
+                    Titre = ligne.Titre,
                     ISBN = ligne.ISBN,
+                    Date_de_réservation = ligne.Date_de_réservation,
                     LIV_Auteurs = ligne.LIV_Auteurs,
                     LIV_Image = ligne.LIV_Image,
-                    Titre = ligne.Titre
                 });
             }
             return entitie;
@@ -162,13 +162,13 @@ namespace BL
             {
                 entitie.Add(new EMP_AllEmpruntsEnCoursByLEC_Id_Result
                 {
+                    EXE_Code = ligne.EXE_Code,
+                    LIV_Titre = ligne.LIV_Titre,
                     BIB_Libelle = ligne.BIB_Libelle,
                     EMP_DateEmprunt =  ligne.EMP_DateEmprunt,
-                    EXE_Code = ligne.EXE_Code,
                     LIV_Image = ligne.LIV_Image,
-                    LIV_Titre = ligne.LIV_Titre,
+                    TAR_Emprunt = ligne.TAR_Emprunt,
                     Retard = ligne.Retard,
-                    TAR_Emprunt = ligne.TAR_Emprunt
                 });
             }
             return entitie;
@@ -288,11 +288,11 @@ namespace BL
             {
                 entitie.Add(new LIV_LivreByBib_id_Result
                 {
-                    Auteurs = ligne.Auteurs,
                     ID = ligne.ID,
                     Image = ligne.Image,
                     ISBN = ligne.ISBN,
-                    Titre = ligne.Titre
+                    Titre = ligne.Titre,
+                    Auteurs = ligne.Auteurs,
                 });
             }
             return entitie;

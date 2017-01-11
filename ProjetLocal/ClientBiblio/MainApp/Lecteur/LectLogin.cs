@@ -15,6 +15,8 @@ namespace MainApp.Lecteur
     public partial class LectLogin : Form
     {
         List<BIB_AllLibelle_Result> biblios = new List<BIB_AllLibelle_Result>();
+        List<int> idbiblios = new List<int>();
+
         BIB_AllLibelle_Result biblio = new BIB_AllLibelle_Result();
         LEC_Login_Result session = new LEC_Login_Result();
         
@@ -50,21 +52,20 @@ namespace MainApp.Lecteur
         public void ChargerBibLibelle(ComboBox cb)
         {
             var client = new ServiceLecteurClient();
-
+            
             var biblios = client.BIB_AllLibelle();
+            //var idbiblios = new List<int>();
            foreach (var bib in biblios)
             {
                 cb.Items.Add(bib.BIB_Libelle);
+                idbiblios.Add(bib.BIB_ID);
             }
         }
 
         private void cbBibliotheque_SelectionChangeCommitted(object sender, EventArgs e)
         {
-
-            var x = from bib in biblios
-                    where bib.BIB_Libelle.Equals(cbBibliotheque.SelectedItem.ToString())
-                    select bib.BIB_ID;
-            biblio.BIB_ID = x.ElementAt(0);
+            var a = cbBibliotheque.SelectedIndex;
+            biblio.BIB_ID = idbiblios.ElementAt(a);
             biblio.BIB_Libelle = cbBibliotheque.SelectedItem.ToString();
 
 
