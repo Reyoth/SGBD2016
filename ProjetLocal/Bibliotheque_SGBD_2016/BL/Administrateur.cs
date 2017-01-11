@@ -52,9 +52,9 @@ namespace BL
 
         }
 
-        public static void BIB_AllLibelle(ref List<string> bibliotheques)
+        public static List<string> BIB_AllLibelle()
         {
-            bibliotheques = DALADO.Administrateur.BIB_AllLibelle();
+            return DALADO.Administrateur.BIB_AllLibelle();
         }
 
         public static void RetournerExemplaire(int exemplaireId, double montant)

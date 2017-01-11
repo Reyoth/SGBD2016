@@ -57,9 +57,9 @@ namespace ServiceBilbio
             BL.Administrateur.AllLivres(ref ds);
         }
 
-        public void BIB_AllLibelle(ref List<string> bibliotheques)
+        public List<string> BIB_AllLibelle()
         {
-            BL.Administrateur.BIB_AllLibelle(ref bibliotheques);
+           return  BL.Administrateur.BIB_AllLibelle();
         }
 
         public void RetournerExemplaire(int exemplaireId, double montant)

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DALEF;
 using Entities;
+using BIB_AllLibelle_Result = Entities.BIB_AllLibelle_Result;
 using EMP_AllEmpruntsEnCoursByLEC_Id_Result = Entities.EMP_AllEmpruntsEnCoursByLEC_Id_Result;
 using EMP_AllEmpruntsRenduByLEC_Id_Result = Entities.EMP_AllEmpruntsRenduByLEC_Id_Result;
 using EMP_RetardsAllBibByLec_Result = Entities.EMP_RetardsAllBibByLec_Result;
@@ -21,9 +22,10 @@ namespace BL
     public class Lecteur
     {
 
-        public static void BIB_AllLibelle(ref List<Entities.BIB_AllLibelle_Result> bibs )
+        public static List<Entities.BIB_AllLibelle_Result> BIB_AllLibelle( )
         {
-            
+            List<Entities.BIB_AllLibelle_Result> bibs = new List<BIB_AllLibelle_Result>();
+
             var dalBibs = DALEF.Lecteur.BIB_AllLibelle();
             foreach (var bibAllLibelleResult in dalBibs)
             {
@@ -33,6 +35,7 @@ namespace BL
                  BIB_Libelle = bibAllLibelleResult.BIB_Libelle
                 });
             }
+            return bibs;
 
         }
         public static Entities.LEC_Login_Result LEC_Login(string login, string password)

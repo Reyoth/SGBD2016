@@ -16,37 +16,53 @@ namespace ServiceBilbio
         
         //LECTEUR
         [OperationContract]
-        void BIB_AllLibelle(ref List<BIB_AllLibelle_Result> bibs);
+        List<BIB_AllLibelle_Result> BIB_AllLibelle();
+
         [OperationContract]
         LEC_Login_Result LEC_Login(string login, string password);
+
         [OperationContract]
         List<EMP_AllEmpruntsRenduByLEC_Id_Result> EMP_AllEmpruntsRenduByLEC_Id(int LecId);
+
         [OperationContract]
         LEC_GetUserData_Result GetUserData(int lEC_Id);
+
         [OperationContract]
         void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissanceDateTime, string username, string password, string image);
+
         [OperationContract]
         List<RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(int lEC_Id, int bib_ID);
+
         [OperationContract]
         List<EMP_RetardsAllBibByLec_Result> EMP_RetardsAllBibByLec(int lEC_Id);
+
         [OperationContract]
         List<RES_ListeReservationsByLEC_Id_Result> RES_ListeReservationsByLEC_Id(int lEC_Id);
+
         [OperationContract]
         List<EMP_AllEmpruntsEnCoursByLEC_Id_Result> EMP_AllEmpruntsEnCoursByLEC_Id(int lEC_Id);
+
         [OperationContract]
         List<EXE_AllExemplairesByBibId_Result> EXE_AllExemplairesByBibId(int bib_ID);
+
         [OperationContract]
         List<EXE_AllExemplairesDispoByBibByISBN_Result> EXE_AllExemplairesDispoByBibByISBN(int bibId, string isbn);
+
         [OperationContract]
         List<EXE_AllExemplairesDispoByBibByTitle_Result> EXE_AllExemplairesDispoByBibByTitle(int bibId, string titre);
+
         [OperationContract]
         void EXE_EmprunterExemplaire(int exeId, int lecId);
+
         [OperationContract]
         List<LIV_LivreByBib_idByISBN_Result> LIV_LivreByBib_idByISBN(int bibId, string isbn);
+
         [OperationContract]
         List<LIV_LivreByBib_idByTitre_Result> LIV_LivreByBib_idByTitre(int bibId, string titre);
+
         [OperationContract]
         void ReserverLivre(int livId, int lecId);
+
         [OperationContract]
         List<LIV_LivreByBib_id_Result> LIV_LivreByBib_id(int bIB_ID);
 

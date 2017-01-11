@@ -12,9 +12,9 @@ namespace ServiceBilbio
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in both code and config file together.
     public class ServiceLecteur : IServiceLecteur
     {
-        public void BIB_AllLibelle(ref List<BIB_AllLibelle_Result> bibs)
+        public List<BIB_AllLibelle_Result> BIB_AllLibelle()
         {
-            BL.Lecteur.BIB_AllLibelle(ref bibs);
+            return BL.Lecteur.BIB_AllLibelle();
         }
 
         public LEC_Login_Result LEC_Login(string login, string password)
