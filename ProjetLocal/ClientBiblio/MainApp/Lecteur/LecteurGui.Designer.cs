@@ -100,10 +100,6 @@
             this.lUserDataUsername = new System.Windows.Forms.Label();
             this.lUserDataPassword = new System.Windows.Forms.Label();
             this.lUserDataNom = new System.Windows.Forms.Label();
-            this.gbUserPictureProfile = new System.Windows.Forms.GroupBox();
-            this.lUserPhoto = new System.Windows.Forms.Label();
-            this.txtLienPhoto = new System.Windows.Forms.TextBox();
-            this.pbUserPictureProfile = new System.Windows.Forms.PictureBox();
             this.btnMettreAJourProfile = new System.Windows.Forms.Button();
             this.btUserDataModifier = new System.Windows.Forms.Button();
             this.pbUserLogo = new System.Windows.Forms.PictureBox();
@@ -113,6 +109,10 @@
             this.picSignOut = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbUserPictureProfile = new System.Windows.Forms.PictureBox();
+            this.txtLienPhoto = new System.Windows.Forms.TextBox();
+            this.lUserPhoto = new System.Windows.Forms.Label();
+            this.gbUserPictureProfile = new System.Windows.Forms.GroupBox();
             this.tpReservation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbReservation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivreReservation)).BeginInit();
@@ -136,13 +136,13 @@
             this.tpProfile.SuspendLayout();
             this.gbUserDataProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.gbUserPictureProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).BeginInit();
+            this.gbUserPictureProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -920,50 +920,10 @@
             this.lUserDataNom.TabIndex = 1;
             this.lUserDataNom.Text = "Nom :";
             // 
-            // gbUserPictureProfile
-            // 
-            this.gbUserPictureProfile.Controls.Add(this.lUserPhoto);
-            this.gbUserPictureProfile.Controls.Add(this.txtLienPhoto);
-            this.gbUserPictureProfile.Controls.Add(this.pbUserPictureProfile);
-            this.gbUserPictureProfile.Location = new System.Drawing.Point(553, 30);
-            this.gbUserPictureProfile.Name = "gbUserPictureProfile";
-            this.gbUserPictureProfile.Size = new System.Drawing.Size(359, 272);
-            this.gbUserPictureProfile.TabIndex = 15;
-            this.gbUserPictureProfile.TabStop = false;
-            this.gbUserPictureProfile.Text = "Photo ";
-            // 
-            // lUserPhoto
-            // 
-            this.lUserPhoto.AutoSize = true;
-            this.lUserPhoto.Location = new System.Drawing.Point(6, 234);
-            this.lUserPhoto.Name = "lUserPhoto";
-            this.lUserPhoto.Size = new System.Drawing.Size(93, 20);
-            this.lUserPhoto.TabIndex = 15;
-            this.lUserPhoto.Text = "Lien Photo :";
-            // 
-            // txtLienPhoto
-            // 
-            this.txtLienPhoto.Enabled = false;
-            this.txtLienPhoto.Location = new System.Drawing.Point(99, 231);
-            this.txtLienPhoto.Name = "txtLienPhoto";
-            this.txtLienPhoto.ReadOnly = true;
-            this.txtLienPhoto.Size = new System.Drawing.Size(255, 26);
-            this.txtLienPhoto.TabIndex = 14;
-            // 
-            // pbUserPictureProfile
-            // 
-            this.pbUserPictureProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbUserPictureProfile.Location = new System.Drawing.Point(94, 20);
-            this.pbUserPictureProfile.Name = "pbUserPictureProfile";
-            this.pbUserPictureProfile.Size = new System.Drawing.Size(170, 201);
-            this.pbUserPictureProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUserPictureProfile.TabIndex = 13;
-            this.pbUserPictureProfile.TabStop = false;
-            // 
             // btnMettreAJourProfile
             // 
             this.btnMettreAJourProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMettreAJourProfile.Location = new System.Drawing.Point(716, 308);
+            this.btnMettreAJourProfile.Location = new System.Drawing.Point(716, 421);
             this.btnMettreAJourProfile.Name = "btnMettreAJourProfile";
             this.btnMettreAJourProfile.Size = new System.Drawing.Size(110, 31);
             this.btnMettreAJourProfile.TabIndex = 10;
@@ -974,7 +934,7 @@
             // btUserDataModifier
             // 
             this.btUserDataModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btUserDataModifier.Location = new System.Drawing.Point(832, 308);
+            this.btUserDataModifier.Location = new System.Drawing.Point(832, 421);
             this.btUserDataModifier.Name = "btUserDataModifier";
             this.btUserDataModifier.Size = new System.Drawing.Size(80, 31);
             this.btUserDataModifier.TabIndex = 18;
@@ -985,9 +945,9 @@
             // pbUserLogo
             // 
             this.pbUserLogo.Image = global::MainApp.Properties.Resources.images__1_;
-            this.pbUserLogo.Location = new System.Drawing.Point(610, 375);
+            this.pbUserLogo.Location = new System.Drawing.Point(968, 9);
             this.pbUserLogo.Name = "pbUserLogo";
-            this.pbUserLogo.Size = new System.Drawing.Size(234, 205);
+            this.pbUserLogo.Size = new System.Drawing.Size(405, 347);
             this.pbUserLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbUserLogo.TabIndex = 16;
             this.pbUserLogo.TabStop = false;
@@ -1055,6 +1015,46 @@
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             // 
+            // pbUserPictureProfile
+            // 
+            this.pbUserPictureProfile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbUserPictureProfile.Location = new System.Drawing.Point(83, 25);
+            this.pbUserPictureProfile.Name = "pbUserPictureProfile";
+            this.pbUserPictureProfile.Size = new System.Drawing.Size(207, 255);
+            this.pbUserPictureProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbUserPictureProfile.TabIndex = 13;
+            this.pbUserPictureProfile.TabStop = false;
+            // 
+            // txtLienPhoto
+            // 
+            this.txtLienPhoto.Enabled = false;
+            this.txtLienPhoto.Location = new System.Drawing.Point(98, 298);
+            this.txtLienPhoto.Name = "txtLienPhoto";
+            this.txtLienPhoto.ReadOnly = true;
+            this.txtLienPhoto.Size = new System.Drawing.Size(255, 26);
+            this.txtLienPhoto.TabIndex = 14;
+            // 
+            // lUserPhoto
+            // 
+            this.lUserPhoto.AutoSize = true;
+            this.lUserPhoto.Location = new System.Drawing.Point(5, 301);
+            this.lUserPhoto.Name = "lUserPhoto";
+            this.lUserPhoto.Size = new System.Drawing.Size(93, 20);
+            this.lUserPhoto.TabIndex = 15;
+            this.lUserPhoto.Text = "Lien Photo :";
+            // 
+            // gbUserPictureProfile
+            // 
+            this.gbUserPictureProfile.Controls.Add(this.lUserPhoto);
+            this.gbUserPictureProfile.Controls.Add(this.txtLienPhoto);
+            this.gbUserPictureProfile.Controls.Add(this.pbUserPictureProfile);
+            this.gbUserPictureProfile.Location = new System.Drawing.Point(553, 75);
+            this.gbUserPictureProfile.Name = "gbUserPictureProfile";
+            this.gbUserPictureProfile.Size = new System.Drawing.Size(359, 340);
+            this.gbUserPictureProfile.TabIndex = 15;
+            this.gbUserPictureProfile.TabStop = false;
+            this.gbUserPictureProfile.Text = "Photo ";
+            // 
             // LecteurGui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1104,14 +1104,14 @@
             this.gbUserDataProfile.ResumeLayout(false);
             this.gbUserDataProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.gbUserPictureProfile.ResumeLayout(false);
-            this.gbUserPictureProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUserLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSignOut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUserPictureProfile)).EndInit();
+            this.gbUserPictureProfile.ResumeLayout(false);
+            this.gbUserPictureProfile.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1147,8 +1147,6 @@
         private System.Windows.Forms.Label lUserDataUsername;
         private System.Windows.Forms.Label lUserDataPassword;
         private System.Windows.Forms.Label lUserDataNom;
-        private System.Windows.Forms.GroupBox gbUserPictureProfile;
-        private System.Windows.Forms.PictureBox pbUserPictureProfile;
         private System.Windows.Forms.Button btnMettreAJourProfile;
         private System.Windows.Forms.PictureBox pbUserLogo;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1188,8 +1186,6 @@
         private System.Windows.Forms.Label bibliotheque;
         private System.Windows.Forms.DateTimePicker dtUserDataDateNaissance;
         private System.Windows.Forms.TextBox txtUserDataUserName;
-        private System.Windows.Forms.Label lUserPhoto;
-        private System.Windows.Forms.TextBox txtLienPhoto;
         private System.Windows.Forms.Label lexempDispo;
         private System.Windows.Forms.DataGridView dgvExempDispo;
         private System.Windows.Forms.Label lEmpruntsEmp;
@@ -1201,5 +1197,9 @@
         private System.Windows.Forms.Label lTotal;
         private System.Windows.Forms.Button btnActuLivres;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox gbUserPictureProfile;
+        private System.Windows.Forms.Label lUserPhoto;
+        private System.Windows.Forms.TextBox txtLienPhoto;
+        private System.Windows.Forms.PictureBox pbUserPictureProfile;
     }
 }

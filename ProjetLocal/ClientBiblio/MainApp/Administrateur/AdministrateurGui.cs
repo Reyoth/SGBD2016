@@ -125,6 +125,8 @@ namespace MainApp.Administrateur
             DataSet ds = new DataSet();
             client.AllLecteurs(ref ds);
             gdvLecteurs.DataSource = ds.Tables[0].DefaultView;
+            gdvLecteurs.Columns[9].Visible = false;
+            gdvLecteurs.Columns[10].Visible = false;
         }
 
         private void ChargerRetardataires()
