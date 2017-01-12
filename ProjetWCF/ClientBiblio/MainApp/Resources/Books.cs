@@ -49,6 +49,8 @@ namespace MainApp.Resources
                                         string responseString = reader.ReadToEnd();
 
                                         Volume livreVolume = new Volume();
+                                        if (Newtonsoft.Json.JsonConvert.DeserializeObject<Volumes>(responseString).Items.Count > 0)
+                                        {
                                         livreVolume = Newtonsoft.Json.JsonConvert.DeserializeObject<Volumes>(responseString).Items[0];
 
                                         livre.ISBN = isbn;
@@ -59,6 +61,8 @@ namespace MainApp.Resources
                                             livre.Authors += auteurs + ", ";
                                         }
                                         status = true;
+                                        }
+                                        
                                     }
                                 }
                             }
