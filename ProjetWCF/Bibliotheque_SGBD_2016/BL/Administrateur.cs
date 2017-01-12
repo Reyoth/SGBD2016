@@ -14,7 +14,7 @@ namespace BL
     {
         public static void EXE_CreerExemplaire(string code, DateTime DateAchat, string BibLibelle, string LivTitre)
         {
-           DALADO.Administrateur.EXE_CreerExemplaire(code, DateAchat, BibLibelle, LivTitre);
+            DALADO.Administrateur.EXE_CreerExemplaire(code, DateAchat, BibLibelle, LivTitre);
         }
 
         public static void AllExemplairesAllBib(ref DataSet ds)
@@ -27,8 +27,17 @@ namespace BL
 
         public static string ADM_Lgin(string userName, string password)
         {
-            string userN = DALADO.Administrateur.ADM_Login(userName, password);
-            return userN;
+            try
+            {
+                string userN = DALADO.Administrateur.ADM_Login(userName, password);
+                return userN;
+            }
+            catch (Exception ex)
+            {
+                
+                return null;
+            }
+           
         }
 
         //public static void AllExemplairesByBibId(ref DataSet ds, int BibId)

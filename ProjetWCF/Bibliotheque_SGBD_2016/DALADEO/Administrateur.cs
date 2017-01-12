@@ -45,44 +45,40 @@ namespace DALADO
 
         public static string  ADM_Login(string userName, string password)
         {
-            
+            string retour=null;
             SqlCommand com = new SqlCommand();
             SqlDataReader dr;
             try
             {
+                
                 DbConnection.db.Open();
                 com.Connection = DbConnection.db;
                 com.CommandType = CommandType.StoredProcedure;
                 com.CommandText = "[adminBiblio].[ADM_Login]";
                 com.Parameters.Add(new SqlParameter("UserName", userName));
                 com.Parameters.Add(new SqlParameter("Password", password));
-                int resultat = com.ExecuteNonQuery();
-                if (resultat == 0)
-                {
-                    userName = "";
-                }
-                else
-                {
-                    dr = com.ExecuteReader();
-                    while (dr.Read())
-                    {
-                        userName = dr.GetString(0);
-                    }
-                }
+                com.ExecuteNonQuery();
                 
-            }
-            catch (Exception)
-            {
-                //int IdError = 999;
+                dr = com.ExecuteReader();
+                while (dr.Read())
+                {
+                    retour = dr.GetString(0);
+                }
 
-                //throw new BusinessError.CustomError(IdError);
+        }
+            catch (Exception ex)
+            {
+
+                //return null;
+
+
             }
             finally
             {
                 DbConnection.db.Close();
             }
             
-            return userName;
+            return retour;
         }
 
         public static List<string> BIB_AllLibelle()

@@ -303,18 +303,23 @@ namespace MainApp.Administrateur
 
         private void btnAjRapLivre_Click(object sender, EventArgs e)
         {
-            var client = new ServiceAdminClient();
+            if (txtISBNAjRapLivre.Text.Length==10 || txtISBNAjRapLivre.Text.Length==13)
+            {
+                var client = new ServiceAdminClient();
+
+                Livre Livre = new Livre();
+
+                bool ajouté = Books.requestLivre(ref Livre, txtISBNAjRapLivre.Text);
+                if (ajouté)
+                {
+                    client.AjoutManuelLivre(Livre.ISBN, Livre.Titre, Livre.Image, Livre.Authors);
+                }
+                else
+                {
+                    //error
+                }
+            }
             
-            Livre Livre = new Livre();
-            bool ajouté = Books.requestLivre(ref Livre, txtISBNAjRapLivre.Text);
-            if (ajouté)
-            {
-                client.AjoutManuelLivre(Livre.ISBN, Livre.Titre, Livre.Image, Livre.Authors);
-            }
-            else
-            {
-                //error
-            }
         }
 
         private void btnActualiserLivre_Click(object sender, EventArgs e)

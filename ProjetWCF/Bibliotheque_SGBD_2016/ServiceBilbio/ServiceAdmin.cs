@@ -35,7 +35,7 @@ namespace ServiceBilbio
         {
             BL.Administrateur.EXE_CreerExemplaire(code, DateAchat, BibLibelle, LivTitre);
         }
-        
+
         public void AllExemplairesAllBib(ref DataSet ds)
         {
             BL.Administrateur.AllExemplairesAllBib(ref ds);
@@ -43,8 +43,18 @@ namespace ServiceBilbio
 
         public string ADM_Lgin(string userName, string password)
         {
-            string retour = BL.Administrateur.ADM_Lgin(userName, password);
-            return retour;
+
+            try
+            {
+                string retour = BL.Administrateur.ADM_Lgin(userName, password);
+                return retour;
+            }
+            catch (Exception ex)
+            {
+                
+                return null;
+            }
+            
         }
 
         public void AllRetardataires(ref DataSet ds)
