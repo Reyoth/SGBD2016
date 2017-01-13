@@ -97,6 +97,9 @@ namespace MainApp.Lecteur
             dgvEmpruntHistorique.DataSource = null;
             var ListEmprunts = client.EMP_AllEmpruntsRenduByLEC_Id(session.LEC_Id);
             dgvEmpruntHistorique.DataSource = ListEmprunts;
+            dgvEmpruntHistorique.Columns[3].HeaderText = "Date d'emprunt";
+            dgvEmpruntHistorique.Columns[4].HeaderText = "Date de retour";
+            dgvEmpruntHistorique.Columns[5].HeaderText = "Montant payé";
         }
 
         private void ActualiserListeReservation()
@@ -106,6 +109,8 @@ namespace MainApp.Lecteur
             var ListReservations = client.RES_ListeReservationsByLEC_Id(session.LEC_Id);
             dgvReservation.DataSource = ListReservations;
             dgvReservation.Columns[0].Visible = false;
+            dgvReservation.Columns[3].HeaderText = "Date de réservation";
+            dgvReservation.Columns[4].HeaderText = "Auteurs";
             dgvReservation.Columns[5].Visible = false;
         }
 
@@ -115,8 +120,8 @@ namespace MainApp.Lecteur
             dgvLivreReservation.DataSource = null;
             var LivresByBib = client.LIV_LivreByBib_id(biblio.BIB_ID);
             dgvLivreReservation.DataSource = LivresByBib;
-            //dgvLivreReservation.Columns[0].Visible = false;
-            //dgvLivreReservation.Columns[3].Visible = false;
+            dgvLivreReservation.Columns[0].Visible = false;
+            dgvLivreReservation.Columns[3].Visible = false;
         }
 
         private void ActualiserRetardsEmprunt()
@@ -212,6 +217,10 @@ namespace MainApp.Lecteur
         private void btnMettreAJourProfile_Click(object sender, EventArgs e)
         {
             var client = new ServiceLecteurClient();
+            if (txtLienPhoto.Text!="")
+            {
+                pbUserPictureProfile.ImageLocation = txtLienPhoto.Text;
+            }
             client.LEC_UpdateUserData(session.LEC_Id, txtUserDataNom.Text, 
                                       txtUserDataPrenom.Text, 
                                       txtUserDataSexe.Text,

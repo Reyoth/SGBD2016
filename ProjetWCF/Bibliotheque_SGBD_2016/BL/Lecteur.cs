@@ -26,7 +26,7 @@ namespace BL
         {
             List<Entities.BIB_AllLibelle_Result> bibs = new List<BIB_AllLibelle_Result>();
 
-            var dalBibs = DALEF.Lecteur.BIB_AllLibelle();
+            var dalBibs =  DALEF.Lecteur.BIB_AllLibelle();
             foreach (var bibAllLibelleResult in dalBibs)
             {
                 bibs.Add(new Entities.BIB_AllLibelle_Result
