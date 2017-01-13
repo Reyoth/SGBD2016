@@ -286,7 +286,17 @@ namespace MainApp.Lecteur
             switch (focus)
             {
                 case 1:
+                    
+                    if(checkEmp(dgvLivreEmprunt.CurrentRow.Cells[0].Value.ToString()))
                     client.EXE_EmprunterExemplaire((int) dgvLivreEmprunt.CurrentRow.Cells[0].Value, session.LEC_Id);
+                    else
+                    {
+                        MessageBox.Show("L'exemplaire est indisponible, voulez vous le reserver ?", "Erreur", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                        if (DialogResult == DialogResult.Yes)
+                        {
+                            //client.ReserverLivre();
+                        }
+                    }
                     break;
                 case 2:
                     client.EXE_EmprunterExemplaire((int) dgvExempDispo.CurrentRow.Cells[3].Value, session.LEC_Id);
@@ -426,6 +436,24 @@ namespace MainApp.Lecteur
         private void pictureBox5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private bool checkEmp(string check)
+        {
+            
+            var client = new MainApp.ServiceReferenceAdmin.ServiceAdminClient();
+            DataSet ds = new DataSet();
+            client.AllEmpruntsEnCours(ref ds);
+            
+            bool b = false;
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                if (ds.Tables[0].Rows[i].ItemArray[1].ToString() == check)
+                {
+                    b = true;
+                }
+            }
+            return b;
         }
     }
 }

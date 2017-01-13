@@ -94,9 +94,11 @@ namespace BL
             return user;
         }
 
-        public static void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissanceDateTime, string username, string password, string image)
+        public static int LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissanceDateTime, string username, string password, string image)
         {
-            DALEF.Lecteur.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissanceDateTime, username, password, image);
+            int i = 0;
+            i =DALEF.Lecteur.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissanceDateTime, username, password, image);
+            return i;
         }
 
         public static List<Entities.RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(int lEC_Id, int bib_ID)
@@ -239,9 +241,11 @@ namespace BL
             return entitie;
         }
 
-        public static void EXE_EmprunterExemplaire(int exeId, int lecId)
+        public static int EXE_EmprunterExemplaire(int exeId, int lecId)
         {
-            DALEF.Lecteur.EXE_EmprunterExemplaire(exeId, lecId);
+            int i = 0;
+            i=DALEF.Lecteur.EXE_EmprunterExemplaire(exeId, lecId);
+            return i;
         }
 
         public static List<Entities.LIV_LivreByBib_idByISBN_Result> LIV_LivreByBib_idByISBN(int bibId, string isbn)
@@ -282,9 +286,11 @@ namespace BL
             return entitie;
         }
 
-        public static void ReserverLivre(int livId, int lecId)
+        public static int ReserverLivre(int livId, int lecId)
         {
-           DALEF.Lecteur.RES_ReserverLivre(livId, lecId);
+            int i = 0;
+            i =DALEF.Lecteur.RES_ReserverLivre(livId, lecId);
+            return i;
         }
 
         public static List<Entities.LIV_LivreByBib_id_Result> LIV_LivreByBib_id(int bIB_ID)

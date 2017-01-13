@@ -109,23 +109,27 @@ namespace DALEF
             }
         }
 
-        public static void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse,
+        public static int LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse,
             string ville, int codePostal, DateTime dateNaissance, string username, string password, string image)
         {
+            int i = 0;
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                dbContext.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissance,
+                i=dbContext.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissance,
                     username, password, image);
             }
+            return i;
         }
 
 
-        public static void EXE_EmprunterExemplaire(int exeId, int lecId)
+        public static int EXE_EmprunterExemplaire(int exeId, int lecId)
         {
+            int i = 0;
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                dbContext.EXE_EmprunterExemplaire(exeId, lecId);
+                i = dbContext.EXE_EmprunterExemplaire(exeId, lecId);
             }
+            return i;
         }
 
         public static LEC_Login_Result LEC_Login(string username, string password)
@@ -180,12 +184,14 @@ namespace DALEF
                 return dbContext.RES_ListeReservationsDisponibleByLEC_IdByBib(lecId, bibId).ToList();
             }
         }
-        public static void RES_ReserverLivre(int livId, int lecId)
+        public static int RES_ReserverLivre(int livId, int lecId)
         {
+            int i = 0;
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                dbContext.RES_ReserverLivre(livId, lecId);
+                i=dbContext.RES_ReserverLivre(livId, lecId);
             }
+            return i;
         }
 
 

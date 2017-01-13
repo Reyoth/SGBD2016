@@ -28,7 +28,7 @@ namespace ServiceBilbio
         LEC_GetUserData_Result GetUserData(int lEC_Id);
 
         [OperationContract]
-        void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissanceDateTime, string username, string password, string image);
+        int LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissanceDateTime, string username, string password, string image);
 
         [OperationContract]
         List<RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(int lEC_Id, int bib_ID);
@@ -52,7 +52,7 @@ namespace ServiceBilbio
         List<EXE_AllExemplairesDispoByBibByTitle_Result> EXE_AllExemplairesDispoByBibByTitle(int bibId, string titre);
 
         [OperationContract]
-        void EXE_EmprunterExemplaire(int exeId, int lecId);
+        int EXE_EmprunterExemplaire(int exeId, int lecId);
 
         [OperationContract]
         List<LIV_LivreByBib_idByISBN_Result> LIV_LivreByBib_idByISBN(int bibId, string isbn);
@@ -61,7 +61,7 @@ namespace ServiceBilbio
         List<LIV_LivreByBib_idByTitre_Result> LIV_LivreByBib_idByTitre(int bibId, string titre);
 
         [OperationContract]
-        void ReserverLivre(int livId, int lecId);
+        int ReserverLivre(int livId, int lecId);
 
         [OperationContract]
         List<LIV_LivreByBib_id_Result> LIV_LivreByBib_id(int bIB_ID);

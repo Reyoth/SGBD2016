@@ -32,10 +32,12 @@ namespace ServiceBilbio
             return BL.Lecteur.GetUserData(LecId);
         }
 
-        public void LEC_UpdateUserData(int LecId, string nom, string prenom, string sexe, string adresse, string ville, int codePostal,
+        public int LEC_UpdateUserData(int LecId, string nom, string prenom, string sexe, string adresse, string ville, int codePostal,
             DateTime dateNaissance, string username, string password, string image)
         {
-            BL.Lecteur.LEC_UpdateUserData(LecId, nom, prenom, sexe, adresse, ville, codePostal, dateNaissance, username, password, image);
+            int i = 0;
+            i=BL.Lecteur.LEC_UpdateUserData(LecId, nom, prenom, sexe, adresse, ville, codePostal, dateNaissance, username, password, image);
+            return i;
         }
 
         public List<RES_ListeReservationsDisponibleByLEC_IdByBib_Result> RES_ListeReservationsDisponibleByLEC_IdByBib(int LecId, int bibId)
@@ -73,9 +75,11 @@ namespace ServiceBilbio
             return BL.Lecteur.EXE_AllExemplairesDispoByBibByTitle(bibId, titre);
         }
 
-        public void EXE_EmprunterExemplaire(int exeId, int lecId)
+        public int EXE_EmprunterExemplaire(int exeId, int lecId)
         {
-            BL.Lecteur.EXE_EmprunterExemplaire(exeId, lecId);
+            int i = 0;
+            i=BL.Lecteur.EXE_EmprunterExemplaire(exeId, lecId);
+            return i;
         }
 
         public List<LIV_LivreByBib_idByISBN_Result> LIV_LivreByBib_idByISBN(int bibId, string isbn)
@@ -88,9 +92,11 @@ namespace ServiceBilbio
             return BL.Lecteur.LIV_LivreByBib_idByTitre(bibId, titre);
         }
 
-        public void ReserverLivre(int livId, int lecId)
+        public int ReserverLivre(int livId, int lecId)
         {
-            BL.Lecteur.ReserverLivre(livId, lecId);
+            int i = 0;
+            i =BL.Lecteur.ReserverLivre(livId, lecId);
+            return i;
         }
 
         public List<LIV_LivreByBib_id_Result> LIV_LivreByBib_id(int bibId)
