@@ -1,0 +1,10 @@
+liste des erreurs
+
+
+RAISERROR (20000,-1,-1, 'L"exemplaire que vous essayez d"emprunter est actuellement indisponible')
+RAISERROR (21000,-1,-1, 'vous avez emprunté trop de livres')
+RAISERROR (22000,-1,-1, 'Vous ne pouvez pas emprunter de livre tant que vous n''avez pas reglé vos retards')
+RAISERROR (23000,-1,-1, 'Emprunt impossible, exemplaire indisponible')
+RAISERROR (24000,-1,-1, 'Action impossible, vous avez déjà reservé ce livre')
+RAISERROR (25000,-1,-1, 'Login ou password incorrect') (LEC_Login)
+RAISERROR (26000,-1,-1, 'Login ou password incorrect') (ADM_Login)

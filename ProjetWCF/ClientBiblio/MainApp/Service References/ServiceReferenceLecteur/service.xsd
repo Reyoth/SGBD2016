@@ -75,7 +75,9 @@
   </xs:element>
   <xs:element name="LEC_UpdateUserDataResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LEC_UpdateUserDataResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="RES_ListeReservationsDisponibleByLEC_IdByBib">
@@ -189,7 +191,9 @@
   </xs:element>
   <xs:element name="EXE_EmprunterExemplaireResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EXE_EmprunterExemplaireResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="LIV_LivreByBib_idByISBN">
@@ -232,7 +236,9 @@
   </xs:element>
   <xs:element name="ReserverLivreResponse">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReserverLivreResult" type="xs:int" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="LIV_LivreByBib_id">

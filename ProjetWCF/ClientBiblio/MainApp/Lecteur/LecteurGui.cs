@@ -258,7 +258,12 @@ namespace MainApp.Lecteur
         private void btnReserver_Click(object sender, EventArgs e)
         {
             var client = new ServiceLecteurClient();
-            client.ReserverLivre(Int32.Parse(dgvLivreReservation.CurrentRow.Cells[0].Value.ToString()), session.LEC_Id);
+            if (
+                client.ReserverLivre(Int32.Parse(dgvLivreReservation.CurrentRow.Cells[0].Value.ToString()),
+                    session.LEC_Id) == 24000)
+            {
+                MessageBox.Show("Vous avez déjà reservé ce livre", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void dgvEmpruntHistorique_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -280,26 +285,19 @@ namespace MainApp.Lecteur
             dgvLivreEmprunt.DataSource = Livres;
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void buttonReserver_Click(object sender, EventArgs e)
         {
             var client = new ServiceLecteurClient();
             switch (focus)
             {
                 case 1:
-                    
-                    if(checkEmp(dgvLivreEmprunt.CurrentRow.Cells[0].Value.ToString()))
-                    client.EXE_EmprunterExemplaire((int) dgvLivreEmprunt.CurrentRow.Cells[0].Value, session.LEC_Id);
-                    else
-                    {
-                        MessageBox.Show("L'exemplaire est indisponible, voulez vous le reserver ?", "Erreur", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-                        if (DialogResult == DialogResult.Yes)
-                        {
-                            //client.ReserverLivre();
-                        }
-                    }
+                    gestionErreurEmprunt(client.EXE_EmprunterExemplaire(
+                        (int) dgvLivreEmprunt.CurrentRow.Cells[0].Value, session.LEC_Id));
+                    focus = 0;
                     break;
                 case 2:
                     client.EXE_EmprunterExemplaire((int) dgvExempDispo.CurrentRow.Cells[3].Value, session.LEC_Id);
+                    focus = 0;
                     break;
                 default:
                     MessageBox.Show("Veuillez selectionner un exemplaire.", "Information", MessageBoxButtons.OK,
@@ -438,22 +436,43 @@ namespace MainApp.Lecteur
 
         }
 
-        private bool checkEmp(string check)
+        public void gestionErreurEmprunt( int i)
         {
             
-            var client = new MainApp.ServiceReferenceAdmin.ServiceAdminClient();
-            DataSet ds = new DataSet();
-            client.AllEmpruntsEnCours(ref ds);
-            
-            bool b = false;
-            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            switch (i)
             {
-                if (ds.Tables[0].Rows[i].ItemArray[1].ToString() == check)
-                {
-                    b = true;
-                }
+                case 20000:
+                    DialogResult result = MessageBox.Show("L'exemplaire que vous essayez d'emprunter est actuellement indisponible" + ", voulez vous le reserver ? ", "Erreur",
+                                            MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+                    if (result == DialogResult.Yes)
+                    {
+                        Console.WriteLine("il a dit oui !");
+                        var client = new ServiceLecteurClient();
+                        var livres = client.LIV_LivreByBib_idByTitre(biblio.BIB_ID, dgvLivreEmprunt.CurrentRow.Cells[2].ToString());
+                        ;
+                        if (client.ReserverLivre(livres[0].ID, session.LEC_Id) == 24000)
+                        {
+                            MessageBox.Show("Vous avez déjà reservé ce livre", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    break;
+                case 21000:
+                    MessageBox.Show("vous avez emprunté trop de livres", "Erreur",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                    break;
+                case 22000:
+                    MessageBox.Show("Vous ne pouvez pas emprunter de livre tant que vous n'avez pas reglé vos retards", "Erreur",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
+                        ;
+                    break;
+                case 23000:
+                    MessageBox.Show("Emprunt impossible, exemplaire indisponible", "Erreur",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    break;    
+
             }
-            return b;
         }
     }
 }

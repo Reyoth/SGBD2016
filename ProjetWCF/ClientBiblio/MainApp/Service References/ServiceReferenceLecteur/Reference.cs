@@ -143,13 +143,7 @@ namespace MainApp.ServiceReferenceLecteur {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ExemplaireField;
-
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TitreField;
-
+        
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BibliothèqueField;
         
@@ -162,9 +156,11 @@ namespace MainApp.ServiceReferenceLecteur {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<decimal> EMP_MontantPayeField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ExemplaireField;
         
-        
-        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TitreField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -211,61 +207,75 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bibliothèque {
-            get {
+        public string Bibliothèque
+        {
+            get
+            {
                 return this.BibliothèqueField;
             }
-            set {
-                if ((object.ReferenceEquals(this.BibliothèqueField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.BibliothèqueField, value) != true))
+                {
                     this.BibliothèqueField = value;
                     this.RaisePropertyChanged("Bibliothèque");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Date_d_emprunt {
-            get {
+        public System.DateTime Date_d_emprunt
+        {
+            get
+            {
                 return this.Date_d_empruntField;
             }
-            set {
-                if ((this.Date_d_empruntField.Equals(value) != true)) {
+            set
+            {
+                if ((this.Date_d_empruntField.Equals(value) != true))
+                {
                     this.Date_d_empruntField = value;
                     this.RaisePropertyChanged("Date_d_emprunt");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> EMP_DateRetour {
-            get {
+        public System.Nullable<System.DateTime> EMP_DateRetour
+        {
+            get
+            {
                 return this.EMP_DateRetourField;
             }
-            set {
-                if ((this.EMP_DateRetourField.Equals(value) != true)) {
+            set
+            {
+                if ((this.EMP_DateRetourField.Equals(value) != true))
+                {
                     this.EMP_DateRetourField = value;
                     this.RaisePropertyChanged("EMP_DateRetour");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<decimal> EMP_MontantPaye {
-            get {
+        public System.Nullable<decimal> EMP_MontantPaye
+        {
+            get
+            {
                 return this.EMP_MontantPayeField;
             }
-            set {
-                if ((this.EMP_MontantPayeField.Equals(value) != true)) {
+            set
+            {
+                if ((this.EMP_MontantPayeField.Equals(value) != true))
+                {
                     this.EMP_MontantPayeField = value;
                     this.RaisePropertyChanged("EMP_MontantPaye");
                 }
             }
         }
-        
-        
-        
-        
-        
+
+
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -324,137 +334,177 @@ namespace MainApp.ServiceReferenceLecteur {
                 this.extensionDataField = value;
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_Adresse {
-            get {
+        public string LEC_Adresse
+        {
+            get
+            {
                 return this.LEC_AdresseField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_AdresseField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_AdresseField, value) != true))
+                {
                     this.LEC_AdresseField = value;
                     this.RaisePropertyChanged("LEC_Adresse");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int LEC_CodePostal {
-            get {
+        public int LEC_CodePostal
+        {
+            get
+            {
                 return this.LEC_CodePostalField;
             }
-            set {
-                if ((this.LEC_CodePostalField.Equals(value) != true)) {
+            set
+            {
+                if ((this.LEC_CodePostalField.Equals(value) != true))
+                {
                     this.LEC_CodePostalField = value;
                     this.RaisePropertyChanged("LEC_CodePostal");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_DateDeNaissance {
-            get {
+        public string LEC_DateDeNaissance
+        {
+            get
+            {
                 return this.LEC_DateDeNaissanceField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_DateDeNaissanceField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_DateDeNaissanceField, value) != true))
+                {
                     this.LEC_DateDeNaissanceField = value;
                     this.RaisePropertyChanged("LEC_DateDeNaissance");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_Nom {
-            get {
+        public string LEC_Nom
+        {
+            get
+            {
                 return this.LEC_NomField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_NomField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_NomField, value) != true))
+                {
                     this.LEC_NomField = value;
                     this.RaisePropertyChanged("LEC_Nom");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_Password {
-            get {
+        public string LEC_Password
+        {
+            get
+            {
                 return this.LEC_PasswordField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_PasswordField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_PasswordField, value) != true))
+                {
                     this.LEC_PasswordField = value;
                     this.RaisePropertyChanged("LEC_Password");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_Photo {
-            get {
+        public string LEC_Photo
+        {
+            get
+            {
                 return this.LEC_PhotoField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_PhotoField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_PhotoField, value) != true))
+                {
                     this.LEC_PhotoField = value;
                     this.RaisePropertyChanged("LEC_Photo");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_Prenom {
-            get {
+        public string LEC_Prenom
+        {
+            get
+            {
                 return this.LEC_PrenomField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_PrenomField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_PrenomField, value) != true))
+                {
                     this.LEC_PrenomField = value;
                     this.RaisePropertyChanged("LEC_Prenom");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_Sexe {
-            get {
+        public string LEC_Sexe
+        {
+            get
+            {
                 return this.LEC_SexeField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_SexeField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_SexeField, value) != true))
+                {
                     this.LEC_SexeField = value;
                     this.RaisePropertyChanged("LEC_Sexe");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_UserName {
-            get {
+        public string LEC_UserName
+        {
+            get
+            {
                 return this.LEC_UserNameField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_UserNameField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_UserNameField, value) != true))
+                {
                     this.LEC_UserNameField = value;
                     this.RaisePropertyChanged("LEC_UserName");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LEC_Ville {
-            get {
+        public string LEC_Ville
+        {
+            get
+            {
                 return this.LEC_VilleField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LEC_VilleField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LEC_VilleField, value) != true))
+                {
                     this.LEC_VilleField = value;
                     this.RaisePropertyChanged("LEC_Ville");
                 }
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -537,60 +587,74 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string BIB_Libelle {
-            get {
+        public string BIB_Libelle
+        {
+            get
+            {
                 return this.BIB_LibelleField;
             }
-            set {
-                if ((object.ReferenceEquals(this.BIB_LibelleField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.BIB_LibelleField, value) != true))
+                {
                     this.BIB_LibelleField = value;
                     this.RaisePropertyChanged("BIB_Libelle");
                 }
             }
         }
-        
-        
+
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int EXE_Id {
-            get {
+        public int EXE_Id
+        {
+            get
+            {
                 return this.EXE_IdField;
             }
-            set {
-                if ((this.EXE_IdField.Equals(value) != true)) {
+            set
+            {
+                if ((this.EXE_IdField.Equals(value) != true))
+                {
                     this.EXE_IdField = value;
                     this.RaisePropertyChanged("EXE_Id");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int LEC_Id {
-            get {
+        public int LEC_Id
+        {
+            get
+            {
                 return this.LEC_IdField;
             }
-            set {
-                if ((this.LEC_IdField.Equals(value) != true)) {
+            set
+            {
+                if ((this.LEC_IdField.Equals(value) != true))
+                {
                     this.LEC_IdField = value;
                     this.RaisePropertyChanged("LEC_Id");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LIV_Image {
-            get {
+        public string LIV_Image
+        {
+            get
+            {
                 return this.LIV_ImageField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true))
+                {
                     this.LIV_ImageField = value;
                     this.RaisePropertyChanged("LIV_Image");
                 }
             }
         }
-        
-        
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -716,39 +780,51 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bibliotheque {
-            get {
+        public string Bibliotheque
+        {
+            get
+            {
                 return this.BibliothequeField;
             }
-            set {
-                if ((object.ReferenceEquals(this.BibliothequeField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.BibliothequeField, value) != true))
+                {
                     this.BibliothequeField = value;
                     this.RaisePropertyChanged("Bibliotheque");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Date_d_emprunt {
-            get {
+        public System.DateTime Date_d_emprunt
+        {
+            get
+            {
                 return this.Date_d_empruntField;
             }
-            set {
-                if ((this.Date_d_empruntField.Equals(value) != true)) {
+            set
+            {
+                if ((this.Date_d_empruntField.Equals(value) != true))
+                {
                     this.Date_d_empruntField = value;
                     this.RaisePropertyChanged("Date_d_emprunt");
                 }
             }
         }
-        
-        
+
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Jours_de_retard {
-            get {
+        public System.Nullable<int> Jours_de_retard
+        {
+            get
+            {
                 return this.Jours_de_retardField;
             }
-            set {
-                if ((this.Jours_de_retardField.Equals(value) != true)) {
+            set
+            {
+                if ((this.Jours_de_retardField.Equals(value) != true))
+                {
                     this.Jours_de_retardField = value;
                     this.RaisePropertyChanged("Jours_de_retard");
                 }
@@ -773,19 +849,23 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LIV_Image {
-            get {
+        public string LIV_Image
+        {
+            get
+            {
                 return this.LIV_ImageField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true))
+                {
                     this.LIV_ImageField = value;
                     this.RaisePropertyChanged("LIV_Image");
                 }
             }
         }
-     
-        
+
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -885,47 +965,57 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Date_de_réservation {
-            get {
+        public System.DateTime Date_de_réservation
+        {
+            get
+            {
                 return this.Date_de_réservationField;
             }
-            set {
-                if ((this.Date_de_réservationField.Equals(value) != true)) {
+            set
+            {
+                if ((this.Date_de_réservationField.Equals(value) != true))
+                {
                     this.Date_de_réservationField = value;
                     this.RaisePropertyChanged("Date_de_réservation");
                 }
             }
         }
 
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LIV_Auteurs {
-            get {
+        public string LIV_Auteurs
+        {
+            get
+            {
                 return this.LIV_AuteursField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LIV_AuteursField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LIV_AuteursField, value) != true))
+                {
                     this.LIV_AuteursField = value;
                     this.RaisePropertyChanged("LIV_Auteurs");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LIV_Image {
-            get {
+        public string LIV_Image
+        {
+            get
+            {
                 return this.LIV_ImageField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true))
+                {
                     this.LIV_ImageField = value;
                     this.RaisePropertyChanged("LIV_Image");
                 }
             }
         }
-        
-        
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -942,31 +1032,29 @@ namespace MainApp.ServiceReferenceLecteur {
     [System.SerializableAttribute()]
     public partial class EMP_AllEmpruntsEnCoursByLEC_Id_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EXE_CodeField;
-
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string LIV_TitreField;
-
+        
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BIB_LibelleField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime EMP_DateEmpruntField;     
+        private System.DateTime EMP_DateEmpruntField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string EXE_CodeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string LIV_ImageField;
-
+        
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal TAR_EmpruntField;
-
+        private string LIV_TitreField;
+        
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> RetardField;
-
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private decimal TAR_EmpruntField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1013,40 +1101,52 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string BIB_Libelle {
-            get {
+        public string BIB_Libelle
+        {
+            get
+            {
                 return this.BIB_LibelleField;
             }
-            set {
-                if ((object.ReferenceEquals(this.BIB_LibelleField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.BIB_LibelleField, value) != true))
+                {
                     this.BIB_LibelleField = value;
                     this.RaisePropertyChanged("BIB_Libelle");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime EMP_DateEmprunt {
-            get {
+        public System.DateTime EMP_DateEmprunt
+        {
+            get
+            {
                 return this.EMP_DateEmpruntField;
             }
-            set {
-                if ((this.EMP_DateEmpruntField.Equals(value) != true)) {
+            set
+            {
+                if ((this.EMP_DateEmpruntField.Equals(value) != true))
+                {
                     this.EMP_DateEmpruntField = value;
                     this.RaisePropertyChanged("EMP_DateEmprunt");
                 }
             }
         }
-        
-        
-        
+
+
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LIV_Image {
-            get {
+        public string LIV_Image
+        {
+            get
+            {
                 return this.LIV_ImageField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true))
+                {
                     this.LIV_ImageField = value;
                     this.RaisePropertyChanged("LIV_Image");
                 }
@@ -1071,20 +1171,22 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Retard {
-            get {
+        public System.Nullable<int> Retard
+        {
+            get
+            {
                 return this.RetardField;
             }
-            set {
-                if ((this.RetardField.Equals(value) != true)) {
+            set
+            {
+                if ((this.RetardField.Equals(value) != true))
+                {
                     this.RetardField = value;
                     this.RaisePropertyChanged("Retard");
                 }
             }
         }
-        
-        
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1204,45 +1306,56 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Auteurs {
-            get {
+        public string Auteurs
+        {
+            get
+            {
                 return this.AuteursField;
             }
-            set {
-                if ((object.ReferenceEquals(this.AuteursField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.AuteursField, value) != true))
+                {
                     this.AuteursField = value;
                     this.RaisePropertyChanged("Auteurs");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bibliotheque {
-            get {
+        public string Bibliotheque
+        {
+            get
+            {
                 return this.BibliothequeField;
             }
-            set {
-                if ((object.ReferenceEquals(this.BibliothequeField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.BibliothequeField, value) != true))
+                {
                     this.BibliothequeField = value;
                     this.RaisePropertyChanged("Bibliotheque");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LIV_Image {
-            get {
+        public string LIV_Image
+        {
+            get
+            {
                 return this.LIV_ImageField;
             }
-            set {
-                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.LIV_ImageField, value) != true))
+                {
                     this.LIV_ImageField = value;
                     this.RaisePropertyChanged("LIV_Image");
                 }
             }
         }
-        
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1359,32 +1472,39 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Auteurs {
-            get {
+        public string Auteurs
+        {
+            get
+            {
                 return this.AuteursField;
             }
-            set {
-                if ((object.ReferenceEquals(this.AuteursField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.AuteursField, value) != true))
+                {
                     this.AuteursField = value;
                     this.RaisePropertyChanged("Auteurs");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bibliotheque {
-            get {
+        public string Bibliotheque
+        {
+            get
+            {
                 return this.BibliothequeField;
             }
-            set {
-                if ((object.ReferenceEquals(this.BibliothequeField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.BibliothequeField, value) != true))
+                {
                     this.BibliothequeField = value;
                     this.RaisePropertyChanged("Bibliotheque");
                 }
             }
         }
-     
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1501,32 +1621,39 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Auteurs {
-            get {
+        public string Auteurs
+        {
+            get
+            {
                 return this.AuteursField;
             }
-            set {
-                if ((object.ReferenceEquals(this.AuteursField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.AuteursField, value) != true))
+                {
                     this.AuteursField = value;
                     this.RaisePropertyChanged("Auteurs");
                 }
             }
         }
-        
+
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Bibliothèque {
-            get {
+        public string Bibliothèque
+        {
+            get
+            {
                 return this.BibliothèqueField;
             }
-            set {
-                if ((object.ReferenceEquals(this.BibliothèqueField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.BibliothèqueField, value) != true))
+                {
                     this.BibliothèqueField = value;
                     this.RaisePropertyChanged("Bibliothèque");
                 }
             }
         }
-          
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1641,19 +1768,22 @@ namespace MainApp.ServiceReferenceLecteur {
 
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Auteurs {
-            get {
+        public string Auteurs
+        {
+            get
+            {
                 return this.AuteursField;
             }
-            set {
-                if ((object.ReferenceEquals(this.AuteursField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.AuteursField, value) != true))
+                {
                     this.AuteursField = value;
                     this.RaisePropertyChanged("Auteurs");
                 }
             }
         }
-         
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1767,19 +1897,22 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Auteurs {
-            get {
+        public string Auteurs
+        {
+            get
+            {
                 return this.AuteursField;
             }
-            set {
-                if ((object.ReferenceEquals(this.AuteursField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.AuteursField, value) != true))
+                {
                     this.AuteursField = value;
                     this.RaisePropertyChanged("Auteurs");
                 }
             }
         }
-  
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1893,19 +2026,22 @@ namespace MainApp.ServiceReferenceLecteur {
         }
 
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Auteurs {
-            get {
+        public string Auteurs
+        {
+            get
+            {
                 return this.AuteursField;
             }
-            set {
-                if ((object.ReferenceEquals(this.AuteursField, value) != true)) {
+            set
+            {
+                if ((object.ReferenceEquals(this.AuteursField, value) != true))
+                {
                     this.AuteursField = value;
                     this.RaisePropertyChanged("Auteurs");
                 }
             }
         }
-     
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
         protected void RaisePropertyChanged(string propertyName) {
@@ -1945,10 +2081,10 @@ namespace MainApp.ServiceReferenceLecteur {
         System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LEC_GetUserData_Result> GetUserDataAsync(int lEC_Id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LEC_UpdateUserData", ReplyAction="http://tempuri.org/IServiceLecteur/LEC_UpdateUserDataResponse")]
-        void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, System.DateTime dateNaissanceDateTime, string username, string password, string image);
+        int LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, System.DateTime dateNaissanceDateTime, string username, string password, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LEC_UpdateUserData", ReplyAction="http://tempuri.org/IServiceLecteur/LEC_UpdateUserDataResponse")]
-        System.Threading.Tasks.Task LEC_UpdateUserDataAsync(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, System.DateTime dateNaissanceDateTime, string username, string password, string image);
+        System.Threading.Tasks.Task<int> LEC_UpdateUserDataAsync(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, System.DateTime dateNaissanceDateTime, string username, string password, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBib", ReplyAction="http://tempuri.org/IServiceLecteur/RES_ListeReservationsDisponibleByLEC_IdByBibRe" +
             "sponse")]
@@ -1995,10 +2131,10 @@ namespace MainApp.ServiceReferenceLecteur {
         System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.EXE_AllExemplairesDispoByBibByTitle_Result[]> EXE_AllExemplairesDispoByBibByTitleAsync(int bibId, string titre);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaire", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaireResponse")]
-        void EXE_EmprunterExemplaire(int exeId, int lecId);
+        int EXE_EmprunterExemplaire(int exeId, int lecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaire", ReplyAction="http://tempuri.org/IServiceLecteur/EXE_EmprunterExemplaireResponse")]
-        System.Threading.Tasks.Task EXE_EmprunterExemplaireAsync(int exeId, int lecId);
+        System.Threading.Tasks.Task<int> EXE_EmprunterExemplaireAsync(int exeId, int lecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBN", ReplyAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idByISBNResponse")]
         MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByISBN_Result[] LIV_LivreByBib_idByISBN(int bibId, string isbn);
@@ -2013,10 +2149,10 @@ namespace MainApp.ServiceReferenceLecteur {
         System.Threading.Tasks.Task<MainApp.ServiceReferenceLecteur.LIV_LivreByBib_idByTitre_Result[]> LIV_LivreByBib_idByTitreAsync(int bibId, string titre);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/ReserverLivre", ReplyAction="http://tempuri.org/IServiceLecteur/ReserverLivreResponse")]
-        void ReserverLivre(int livId, int lecId);
+        int ReserverLivre(int livId, int lecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/ReserverLivre", ReplyAction="http://tempuri.org/IServiceLecteur/ReserverLivreResponse")]
-        System.Threading.Tasks.Task ReserverLivreAsync(int livId, int lecId);
+        System.Threading.Tasks.Task<int> ReserverLivreAsync(int livId, int lecId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_id", ReplyAction="http://tempuri.org/IServiceLecteur/LIV_LivreByBib_idResponse")]
         MainApp.ServiceReferenceLecteur.LIV_LivreByBib_id_Result[] LIV_LivreByBib_id(int bIB_ID);
@@ -2084,11 +2220,11 @@ namespace MainApp.ServiceReferenceLecteur {
             return base.Channel.GetUserDataAsync(lEC_Id);
         }
         
-        public void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, System.DateTime dateNaissanceDateTime, string username, string password, string image) {
-            base.Channel.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissanceDateTime, username, password, image);
+        public int LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, System.DateTime dateNaissanceDateTime, string username, string password, string image) {
+            return base.Channel.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissanceDateTime, username, password, image);
         }
         
-        public System.Threading.Tasks.Task LEC_UpdateUserDataAsync(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, System.DateTime dateNaissanceDateTime, string username, string password, string image) {
+        public System.Threading.Tasks.Task<int> LEC_UpdateUserDataAsync(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, System.DateTime dateNaissanceDateTime, string username, string password, string image) {
             return base.Channel.LEC_UpdateUserDataAsync(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissanceDateTime, username, password, image);
         }
         
@@ -2148,11 +2284,11 @@ namespace MainApp.ServiceReferenceLecteur {
             return base.Channel.EXE_AllExemplairesDispoByBibByTitleAsync(bibId, titre);
         }
         
-        public void EXE_EmprunterExemplaire(int exeId, int lecId) {
-            base.Channel.EXE_EmprunterExemplaire(exeId, lecId);
+        public int EXE_EmprunterExemplaire(int exeId, int lecId) {
+            return base.Channel.EXE_EmprunterExemplaire(exeId, lecId);
         }
         
-        public System.Threading.Tasks.Task EXE_EmprunterExemplaireAsync(int exeId, int lecId) {
+        public System.Threading.Tasks.Task<int> EXE_EmprunterExemplaireAsync(int exeId, int lecId) {
             return base.Channel.EXE_EmprunterExemplaireAsync(exeId, lecId);
         }
         
@@ -2172,11 +2308,11 @@ namespace MainApp.ServiceReferenceLecteur {
             return base.Channel.LIV_LivreByBib_idByTitreAsync(bibId, titre);
         }
         
-        public void ReserverLivre(int livId, int lecId) {
-            base.Channel.ReserverLivre(livId, lecId);
+        public int ReserverLivre(int livId, int lecId) {
+            return base.Channel.ReserverLivre(livId, lecId);
         }
         
-        public System.Threading.Tasks.Task ReserverLivreAsync(int livId, int lecId) {
+        public System.Threading.Tasks.Task<int> ReserverLivreAsync(int livId, int lecId) {
             return base.Channel.ReserverLivreAsync(livId, lecId);
         }
         

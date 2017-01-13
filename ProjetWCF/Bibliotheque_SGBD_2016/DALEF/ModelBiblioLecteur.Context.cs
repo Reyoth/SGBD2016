@@ -7,6 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Data.Entity.Core;
+using System.Data.SqlClient;
+using System.Data.SqlTypes;
+
 namespace DALEF
 {
     using System;
@@ -54,10 +58,33 @@ namespace DALEF
                     exe_IdParameter, lec_IdParameter);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                return -1;
+                int i = 0;
+                SqlException error = (SqlException)ex.InnerException;
+                i = error.Number;
+                if (error.Message.Contains("20000"))
+                {
+                    i = 20000;
+                    return i;
+                }
+                if (error.Message.Contains("21000"))
+                {
+                    i = 21000;
+                    return i;
+                }
+                if (error.Message.Contains("22000"))
+                {
+                    i = 22000;
+                    return i;
+                }
+                if (error.Message.Contains("23000"))
+                {
+                    i = 23000;
+                    return i;
+                }
+                
+                return i;
             }
         }
 
@@ -111,10 +138,17 @@ namespace DALEF
                 return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("RES_ReserverLivre", liv_IdParameter,
                     lec_IdParameter);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                return -1;
+                int i = 0;
+                SqlException error = (SqlException)ex.InnerException;
+                i = error.Number;
+                if (error.Message.Contains("24000"))
+                {
+                    i = 24000;
+                    return i;
+                }
+                return i;
             }
             
         }
@@ -267,10 +301,12 @@ namespace DALEF
                 return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("LEC_UpdateUserData", userIdParameter, lEC_NomParameter, lEC_PrenomParameter, lEC_SexeParameter, lEC_AdresseParameter, lEC_VilleParameter, lEC_CodePostalParameter, lEC_DateDeNaissanceParameter, lEC_UserNameParameter, lEC_PasswordParameter, lEC_PhotoParameter);
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                return -1;
+                SqlException error = (SqlException)ex.InnerException;
+
+                return error.Number;
             }
         }
     
