@@ -38,7 +38,7 @@ namespace MainApp.Administrateur
             DesactiverChampsGestLivre();
 
             //txt volet Exemplaires
-            DesactiverChampsGestExemplaire();
+            //DesactiverChampsGestExemplaire();
            
             //txt volet Emprunts et retards
             DesactiverChampsGestEmprunt();
@@ -316,10 +316,16 @@ namespace MainApp.Administrateur
                 }
                 else
                 {
-                    //error
+                    MessageBox.Show("Livre introuvable depuis l'API Google Books", "Error", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
-            
+            else
+            {
+                MessageBox.Show("ISBN non valide", "Error", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnActualiserLivre_Click(object sender, EventArgs e)
@@ -486,12 +492,38 @@ namespace MainApp.Administrateur
         //}
         private void btnAjoutExemplaire_Click(object sender, EventArgs e)
         {
-            var client = new ServiceAdminClient();
-            string code = txtCodeExemplaire.Text;
-            DateTime dateAchat = dtDateAchatExemp.Value.Date;
-            string bibliotheque = cbBiblioExemp.SelectedItem.ToString();
-            string livre = cbLivreExemp.SelectedItem.ToString();
-            client.EXE_CreerExemplaire(code, dateAchat,bibliotheque,livre);
+            //ActiverChampsGestExemplaire();
+            if (txtCodeExemplaire.Text == "" || cbBiblioExemp.SelectedItem == null || cbLivreExemp.SelectedItem == null)
+            {
+                MessageBox.Show("Le livre est incomplet", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                ChargerExemplaires();
+                bool b=false;
+                for (int i = 0; i < dgvExemplaire.Rows.Count; i++)
+                {
+                    if (dgvExemplaire.Rows[i].Cells[1].Value.ToString() == txtCodeExemplaire.Text)
+                    {
+                        b = true;
+                    }
+                }
+             
+                if (!b)
+                {
+                    var client = new ServiceAdminClient();
+                    string code = txtCodeExemplaire.Text;
+                    DateTime dateAchat = dtDateAchatExemp.Value.Date;
+                    string bibliotheque = cbBiblioExemp.SelectedItem.ToString();
+                    string livre = cbLivreExemp.SelectedItem.ToString();
+                    client.EXE_CreerExemplaire(code, dateAchat, bibliotheque, livre);
+                }
+                else
+                {
+                    MessageBox.Show("L'exemplaire existe deja", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            
         }
 
         public void ChargerLivreTitres(ComboBox cb)

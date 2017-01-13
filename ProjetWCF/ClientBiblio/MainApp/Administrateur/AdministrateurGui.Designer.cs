@@ -321,7 +321,7 @@
             this.tpEmpruntEtReservation.Controls.Add(this.gdvEmpruntEnCours);
             this.tpEmpruntEtReservation.Location = new System.Drawing.Point(4, 29);
             this.tpEmpruntEtReservation.Name = "tpEmpruntEtReservation";
-            this.tpEmpruntEtReservation.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpEmpruntEtReservation.Padding = new System.Windows.Forms.Padding(3);
             this.tpEmpruntEtReservation.Size = new System.Drawing.Size(1076, 593);
             this.tpEmpruntEtReservation.TabIndex = 1;
             this.tpEmpruntEtReservation.Text = "Emprunts & Retards";
@@ -898,7 +898,7 @@
             this.tpGestionLivre.Controls.Add(this.pictureBox1);
             this.tpGestionLivre.Location = new System.Drawing.Point(4, 29);
             this.tpGestionLivre.Name = "tpGestionLivre";
-            this.tpGestionLivre.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpGestionLivre.Padding = new System.Windows.Forms.Padding(3);
             this.tpGestionLivre.Size = new System.Drawing.Size(1076, 593);
             this.tpGestionLivre.TabIndex = 0;
             this.tpGestionLivre.Text = "Livres";
@@ -1128,7 +1128,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(25, 97);
+            this.label14.Location = new System.Drawing.Point(16, 97);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 40);
             this.label14.TabIndex = 11;
@@ -1148,7 +1148,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(41, 23);
+            this.label16.Location = new System.Drawing.Point(29, 23);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(55, 20);
             this.label16.TabIndex = 7;
