@@ -32,7 +32,7 @@ namespace BL
                 string userN = DALADO.Administrateur.ADM_Login(userName, password);
                 return userN;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
                 return null;
