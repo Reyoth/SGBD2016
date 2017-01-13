@@ -179,24 +179,28 @@
             // 
             // btnActuLivres
             // 
+            this.btnActuLivres.BackColor = System.Drawing.Color.LightBlue;
             this.btnActuLivres.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActuLivres.ForeColor = System.Drawing.Color.Navy;
             this.btnActuLivres.Location = new System.Drawing.Point(1198, 184);
             this.btnActuLivres.Name = "btnActuLivres";
             this.btnActuLivres.Size = new System.Drawing.Size(168, 31);
             this.btnActuLivres.TabIndex = 36;
             this.btnActuLivres.Text = "Actualiser livres";
-            this.btnActuLivres.UseVisualStyleBackColor = true;
+            this.btnActuLivres.UseVisualStyleBackColor = false;
             this.btnActuLivres.Click += new System.EventHandler(this.btnActuLivres_Click);
             // 
             // btnReserver
             // 
+            this.btnReserver.BackColor = System.Drawing.Color.LightBlue;
             this.btnReserver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReserver.ForeColor = System.Drawing.Color.Navy;
             this.btnReserver.Location = new System.Drawing.Point(1196, 506);
             this.btnReserver.Name = "btnReserver";
             this.btnReserver.Size = new System.Drawing.Size(170, 31);
             this.btnReserver.TabIndex = 35;
             this.btnReserver.Text = "Reserver";
-            this.btnReserver.UseVisualStyleBackColor = true;
+            this.btnReserver.UseVisualStyleBackColor = false;
             this.btnReserver.Click += new System.EventHandler(this.btnReserver_Click);
             // 
             // lLivresRes
@@ -258,18 +262,20 @@
             // 
             // btnGoTitleReservation
             // 
+            this.btnGoTitleReservation.BackColor = System.Drawing.Color.LightBlue;
             this.btnGoTitleReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoTitleReservation.ForeColor = System.Drawing.Color.Navy;
             this.btnGoTitleReservation.Location = new System.Drawing.Point(242, 14);
             this.btnGoTitleReservation.Name = "btnGoTitleReservation";
             this.btnGoTitleReservation.Size = new System.Drawing.Size(54, 26);
             this.btnGoTitleReservation.TabIndex = 2;
             this.btnGoTitleReservation.Text = "GO !";
-            this.btnGoTitleReservation.UseVisualStyleBackColor = true;
+            this.btnGoTitleReservation.UseVisualStyleBackColor = false;
             this.btnGoTitleReservation.Click += new System.EventHandler(this.btnGoTitleReservation_Click);
             // 
             // txtTitleReservation
             // 
-            this.txtTitleReservation.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTitleReservation.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtTitleReservation.Location = new System.Drawing.Point(64, 15);
             this.txtTitleReservation.Name = "txtTitleReservation";
             this.txtTitleReservation.Size = new System.Drawing.Size(172, 26);
@@ -299,18 +305,20 @@
             // 
             // btnGoISBNReservation
             // 
+            this.btnGoISBNReservation.BackColor = System.Drawing.Color.LightBlue;
             this.btnGoISBNReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoISBNReservation.ForeColor = System.Drawing.Color.Navy;
             this.btnGoISBNReservation.Location = new System.Drawing.Point(242, 14);
             this.btnGoISBNReservation.Name = "btnGoISBNReservation";
             this.btnGoISBNReservation.Size = new System.Drawing.Size(54, 28);
             this.btnGoISBNReservation.TabIndex = 1;
             this.btnGoISBNReservation.Text = "GO !";
-            this.btnGoISBNReservation.UseVisualStyleBackColor = true;
+            this.btnGoISBNReservation.UseVisualStyleBackColor = false;
             this.btnGoISBNReservation.Click += new System.EventHandler(this.btnGoISBNReservation_Click);
             // 
             // txtISBNReservation
             // 
-            this.txtISBNReservation.BackColor = System.Drawing.SystemColors.Window;
+            this.txtISBNReservation.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtISBNReservation.Location = new System.Drawing.Point(64, 15);
             this.txtISBNReservation.Name = "txtISBNReservation";
             this.txtISBNReservation.Size = new System.Drawing.Size(172, 26);
@@ -327,13 +335,15 @@
             // 
             // btnActuReservation
             // 
+            this.btnActuReservation.BackColor = System.Drawing.Color.LightBlue;
             this.btnActuReservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActuReservation.ForeColor = System.Drawing.Color.Navy;
             this.btnActuReservation.Location = new System.Drawing.Point(1196, 543);
             this.btnActuReservation.Name = "btnActuReservation";
             this.btnActuReservation.Size = new System.Drawing.Size(170, 51);
             this.btnActuReservation.TabIndex = 28;
             this.btnActuReservation.Text = "Actualiser reservations";
-            this.btnActuReservation.UseVisualStyleBackColor = true;
+            this.btnActuReservation.UseVisualStyleBackColor = false;
             this.btnActuReservation.Click += new System.EventHandler(this.btnActuReservation_Click);
             // 
             // dgvReservation
@@ -353,13 +363,15 @@
             // 
             // button11
             // 
+            this.button11.BackColor = System.Drawing.Color.LightBlue;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.Navy;
             this.button11.Location = new System.Drawing.Point(1279, 563);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(93, 31);
             this.button11.TabIndex = 10;
             this.button11.Text = "Actualiser";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // tpEmprunt
@@ -469,13 +481,15 @@
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.LightBlue;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Navy;
             this.button6.Location = new System.Drawing.Point(1180, 562);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(93, 31);
             this.button6.TabIndex = 26;
             this.button6.Text = "Emprunter";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.buttonReserver_Click);
             // 
             // lExempEmp
@@ -537,18 +551,20 @@
             // 
             // bntGoTitleEmprunt
             // 
+            this.bntGoTitleEmprunt.BackColor = System.Drawing.Color.LightBlue;
             this.bntGoTitleEmprunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntGoTitleEmprunt.ForeColor = System.Drawing.Color.Navy;
             this.bntGoTitleEmprunt.Location = new System.Drawing.Point(216, 14);
             this.bntGoTitleEmprunt.Name = "bntGoTitleEmprunt";
             this.bntGoTitleEmprunt.Size = new System.Drawing.Size(54, 30);
             this.bntGoTitleEmprunt.TabIndex = 2;
             this.bntGoTitleEmprunt.Text = "GO !";
-            this.bntGoTitleEmprunt.UseVisualStyleBackColor = true;
+            this.bntGoTitleEmprunt.UseVisualStyleBackColor = false;
             this.bntGoTitleEmprunt.Click += new System.EventHandler(this.bntGoTitleEmprunt_Click);
             // 
             // txtTitleEmprunt
             // 
-            this.txtTitleEmprunt.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTitleEmprunt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtTitleEmprunt.Location = new System.Drawing.Point(64, 15);
             this.txtTitleEmprunt.Name = "txtTitleEmprunt";
             this.txtTitleEmprunt.Size = new System.Drawing.Size(149, 26);
@@ -578,18 +594,20 @@
             // 
             // bntGoISBNEmprunt
             // 
+            this.bntGoISBNEmprunt.BackColor = System.Drawing.Color.LightBlue;
             this.bntGoISBNEmprunt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntGoISBNEmprunt.ForeColor = System.Drawing.Color.Navy;
             this.bntGoISBNEmprunt.Location = new System.Drawing.Point(217, 18);
             this.bntGoISBNEmprunt.Name = "bntGoISBNEmprunt";
             this.bntGoISBNEmprunt.Size = new System.Drawing.Size(54, 28);
             this.bntGoISBNEmprunt.TabIndex = 1;
             this.bntGoISBNEmprunt.Text = "GO !";
-            this.bntGoISBNEmprunt.UseVisualStyleBackColor = true;
+            this.bntGoISBNEmprunt.UseVisualStyleBackColor = false;
             this.bntGoISBNEmprunt.Click += new System.EventHandler(this.bntGoISBNEmprunt_Click);
             // 
             // txtISBNEmprunt
             // 
-            this.txtISBNEmprunt.BackColor = System.Drawing.SystemColors.Window;
+            this.txtISBNEmprunt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtISBNEmprunt.Location = new System.Drawing.Point(64, 19);
             this.txtISBNEmprunt.Name = "txtISBNEmprunt";
             this.txtISBNEmprunt.Size = new System.Drawing.Size(149, 26);
@@ -695,13 +713,15 @@
             // 
             // btnActualiserFacturation
             // 
+            this.btnActualiserFacturation.BackColor = System.Drawing.Color.LightBlue;
             this.btnActualiserFacturation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualiserFacturation.ForeColor = System.Drawing.Color.Navy;
             this.btnActualiserFacturation.Location = new System.Drawing.Point(1274, 562);
             this.btnActualiserFacturation.Name = "btnActualiserFacturation";
             this.btnActualiserFacturation.Size = new System.Drawing.Size(93, 31);
             this.btnActualiserFacturation.TabIndex = 10;
             this.btnActualiserFacturation.Text = "Actualiser";
-            this.btnActualiserFacturation.UseVisualStyleBackColor = true;
+            this.btnActualiserFacturation.UseVisualStyleBackColor = false;
             this.btnActualiserFacturation.Click += new System.EventHandler(this.btnActualiserFacturation_Click);
             // 
             // tpProfile
@@ -973,24 +993,28 @@
             // 
             // btnMettreAJourProfile
             // 
+            this.btnMettreAJourProfile.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnMettreAJourProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMettreAJourProfile.ForeColor = System.Drawing.Color.Navy;
             this.btnMettreAJourProfile.Location = new System.Drawing.Point(716, 421);
             this.btnMettreAJourProfile.Name = "btnMettreAJourProfile";
             this.btnMettreAJourProfile.Size = new System.Drawing.Size(110, 31);
             this.btnMettreAJourProfile.TabIndex = 10;
             this.btnMettreAJourProfile.Text = "Mettre à jour";
-            this.btnMettreAJourProfile.UseVisualStyleBackColor = true;
+            this.btnMettreAJourProfile.UseVisualStyleBackColor = false;
             this.btnMettreAJourProfile.Click += new System.EventHandler(this.btnMettreAJourProfile_Click);
             // 
             // btUserDataModifier
             // 
+            this.btUserDataModifier.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btUserDataModifier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btUserDataModifier.ForeColor = System.Drawing.Color.Navy;
             this.btUserDataModifier.Location = new System.Drawing.Point(832, 421);
             this.btUserDataModifier.Name = "btUserDataModifier";
             this.btUserDataModifier.Size = new System.Drawing.Size(80, 31);
             this.btUserDataModifier.TabIndex = 18;
             this.btUserDataModifier.Text = "Modifier";
-            this.btUserDataModifier.UseVisualStyleBackColor = true;
+            this.btUserDataModifier.UseVisualStyleBackColor = false;
             this.btUserDataModifier.Click += new System.EventHandler(this.btUserDataModifier_Click);
             // 
             // userName
