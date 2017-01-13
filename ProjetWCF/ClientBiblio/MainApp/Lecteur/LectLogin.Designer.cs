@@ -70,7 +70,7 @@
             this.lBibliotheque.AutoSize = true;
             this.lBibliotheque.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBibliotheque.ForeColor = System.Drawing.Color.Navy;
-            this.lBibliotheque.Location = new System.Drawing.Point(410, 77);
+            this.lBibliotheque.Location = new System.Drawing.Point(404, 77);
             this.lBibliotheque.Name = "lBibliotheque";
             this.lBibliotheque.Size = new System.Drawing.Size(100, 18);
             this.lBibliotheque.TabIndex = 40;
@@ -94,7 +94,7 @@
             this.lPassword.AutoSize = true;
             this.lPassword.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lPassword.ForeColor = System.Drawing.Color.Navy;
-            this.lPassword.Location = new System.Drawing.Point(410, 140);
+            this.lPassword.Location = new System.Drawing.Point(405, 140);
             this.lPassword.Name = "lPassword";
             this.lPassword.Size = new System.Drawing.Size(100, 18);
             this.lPassword.TabIndex = 38;
@@ -105,7 +105,7 @@
             this.lUserName.AutoSize = true;
             this.lUserName.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lUserName.ForeColor = System.Drawing.Color.Navy;
-            this.lUserName.Location = new System.Drawing.Point(380, 109);
+            this.lUserName.Location = new System.Drawing.Point(375, 110);
             this.lUserName.Name = "lUserName";
             this.lUserName.Size = new System.Drawing.Size(130, 18);
             this.lUserName.TabIndex = 37;
