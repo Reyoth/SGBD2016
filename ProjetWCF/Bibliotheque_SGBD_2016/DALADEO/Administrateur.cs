@@ -66,10 +66,10 @@ namespace DALADO
                 }
 
         }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                //return null;
+                return null;
 
 
             }

@@ -27,11 +27,27 @@ namespace MainApp.Lecteur
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            var client = new ServiceLecteurClient();
-            session = client.LEC_Login(txtLogin.Text, txtPwd.Text);
-            LecteurGui lectGui = new LecteurGui(biblio, session);
-            this.Hide();
-            lectGui.Show();
+            if (cbBibliotheque.SelectedItem == null || txtLogin.Text == "" || txtPwd.Text == "")
+            {
+                MessageBox.Show("Veuillez completer tous les champs", "Alerte", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var client = new ServiceLecteurClient();
+                session = client.LEC_Login(txtLogin.Text, txtPwd.Text);
+                if (session == null)
+                {
+                    MessageBox.Show("Login ou Password incorrect", "Error", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                else
+                {
+                    LecteurGui lectGui = new LecteurGui(biblio, session);
+                    this.Hide();
+                    lectGui.Show();
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

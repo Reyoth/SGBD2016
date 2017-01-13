@@ -49,7 +49,7 @@ namespace ServiceBilbio
                 string retour = BL.Administrateur.ADM_Lgin(userName, password);
                 return retour;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
                 return null;

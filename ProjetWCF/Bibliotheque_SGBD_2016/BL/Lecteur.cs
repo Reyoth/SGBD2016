@@ -41,12 +41,19 @@ namespace BL
         public static Entities.LEC_Login_Result LEC_Login(string login, string password)
         {
             var session = DALEF.Lecteur.LEC_Login(login, password);
-            Entities.LEC_Login_Result resultat = new Entities.LEC_Login_Result
+            if (session== null)
             {
-                LEC_UserName = session.LEC_UserName,
-                LEC_Id = session.LEC_Id
-            };
-            return resultat;
+                return null;
+            }
+            else
+            {
+                Entities.LEC_Login_Result resultat = new Entities.LEC_Login_Result
+                {
+                    LEC_UserName = session.LEC_UserName,
+                    LEC_Id = session.LEC_Id
+                };
+                return resultat;
+            }
 
         }
         public static List<Entities.EMP_AllEmpruntsRenduByLEC_Id_Result> EMP_AllEmpruntsRenduByLEC_Id(int LecId)

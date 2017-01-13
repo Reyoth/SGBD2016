@@ -16,8 +16,16 @@ namespace DALEF
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                
-                return dbContext.BIB_AllLibelle().ToList();
+                try
+                {
+                    return dbContext.BIB_AllLibelle().ToList();
+                }
+                catch (Exception)
+                {
+
+                    return null;
+                }
+
             }
         }
 
@@ -101,14 +109,16 @@ namespace DALEF
             }
         }
 
-        public static void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse, string ville, int codePostal, DateTime dateNaissance, string username, string password, string image)
+        public static void LEC_UpdateUserData(int Lec_Id, string nom, string prenom, string sexe, string adresse,
+            string ville, int codePostal, DateTime dateNaissance, string username, string password, string image)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                dbContext.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissance, username, password, image);
+                dbContext.LEC_UpdateUserData(Lec_Id, nom, prenom, sexe, adresse, ville, codePostal, dateNaissance,
+                    username, password, image);
             }
         }
-        
+
 
         public static void EXE_EmprunterExemplaire(int exeId, int lecId)
         {
@@ -117,11 +127,21 @@ namespace DALEF
                 dbContext.EXE_EmprunterExemplaire(exeId, lecId);
             }
         }
+
         public static LEC_Login_Result LEC_Login(string username, string password)
         {
             using (SGBD2016_BibliothequeEntities dbContext = new SGBD2016_BibliothequeEntities())
             {
-                return dbContext.LEC_Login(username, password).ElementAt(0);
+                try
+                {
+                    return dbContext.LEC_Login(username, password).ElementAt(0);
+
+                }
+                catch (Exception)
+                {
+
+                    return null;
+                }
             }
         }
         public static List<EXE_AllExemplairesDispoByBibByISBN_Result> EXE_AllExemplairesDispoByBibByISBN(int bibId, string isbn)
